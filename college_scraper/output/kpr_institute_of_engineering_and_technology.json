@@ -1,5 +1,6 @@
 {
   "source_url": "http://127.0.0.1:8765/college/kpriet",
+  "scrape_duration": 1.6439433097839355,
   "college_name": "KPR Institute of Engineering and Technology",
   "location": "Coimbatore, Tamil Nadu, India",
   "country": "India",
@@ -9,27 +10,27 @@
   "faculty_staff": 412,
   "international_students": 38,
   "ug_programs": [
-    "B.E Computer Science & Engineering",
-    "B.E Electronics & Communication Engineering",
-    "B.E Electrical & Electronics Engineering",
+    "B.E Computer Science and Engineering",
+    "B.E Electronics and Communication Engineering",
+    "B.E Electrical and Electronics Engineering",
     "B.E Mechanical Engineering",
     "B.E Civil Engineering",
     "B.Tech Information Technology",
     "B.E Aeronautical Engineering",
-    "B.Tech Artificial Intelligence & Data Science",
-    "B.Tech Computer Science & Business Systems",
+    "B.Tech Artificial Intelligence and Data Science",
+    "B.Tech Computer Science and Business Systems",
     "B.Tech Cyber Security",
     "B.E Agricultural Engineering",
     "B.Tech Internet of Things",
-    "B.Tech Robotics & Automation",
+    "B.Tech Robotics and Automation",
     "B.E Chemical Engineering",
     "B.Tech Biomedical Engineering",
     "B.Tech Food Technology"
   ],
   "pg_programs": [
-    "M.E Computer Science & Engineering",
+    "M.E Computer Science and Engineering",
     "M.E VLSI Design",
-    "M.E Power Electronics & Drives",
+    "M.E Power Electronics and Drives",
     "M.E Engineering Design",
     "M.E Structural Engineering",
     "M.Tech Computer Integrated Manufacturing",
@@ -41,8 +42,8 @@
     "M.E Embedded System Technologies"
   ],
   "phd_programs": [
-    "PhD Computer Science & Engineering",
-    "PhD Electronics & Communication Engineering",
+    "PhD Computer Science and Engineering",
+    "PhD Electronics and Communication Engineering",
     "PhD Mechanical Engineering",
     "PhD Electrical Engineering",
     "PhD Civil Engineering",
@@ -69,15 +70,15 @@
     "Industry-sponsored Scholarship (TCS, Wipro, Infosys)"
   ],
   "departments": [
-    "Computer Science & Engineering",
+    "Computer Science and Engineering",
     "Information Technology",
-    "Electronics & Communication Engineering",
-    "Electrical & Electronics Engineering",
+    "Electronics and Communication Engineering",
+    "Electrical and Electronics Engineering",
     "Mechanical Engineering",
     "Civil Engineering",
     "Aeronautical Engineering",
-    "Artificial Intelligence & Data Science",
-    "Computer Science & Business Systems",
+    "Artificial Intelligence and Data Science",
+    "Computer Science and Business Systems",
     "Mathematics",
     "Physics",
     "Chemistry"
@@ -203,5 +204,116 @@
     "QS World University Rankings 2025",
     "Times Higher Education Rankings 2025",
     "Official College Website"
-  ]
+  ],
+  "validation_report": {
+    "college_name": "KPR Institute of Engineering and Technology",
+    "total_rules": 7,
+    "rules_passed": 7,
+    "rules_failed": 0,
+    "error_count": 0,
+    "warning_count": 0,
+    "validation_score": 1.0,
+    "rule_results": [
+      {
+        "rule": "required_fields",
+        "passed": true,
+        "severity": "info",
+        "message": "All required fields present",
+        "details": {}
+      },
+      {
+        "rule": "student_count_math",
+        "passed": true,
+        "severity": "info",
+        "message": "Student count check passed: 6842 ≈ 6842 (diff 0.0%)",
+        "details": {
+          "computed_sum": 6842,
+          "total": 6842,
+          "diff_pct": 0.0
+        }
+      },
+      {
+        "rule": "placement_logic",
+        "passed": true,
+        "severity": "info",
+        "message": "Placement logic check passed",
+        "details": {}
+      },
+      {
+        "rule": "ranking_consistency",
+        "passed": true,
+        "severity": "info",
+        "message": "Ranking consistency check passed",
+        "details": {}
+      },
+      {
+        "rule": "fee_sanity",
+        "passed": true,
+        "severity": "info",
+        "message": "Fee sanity check passed",
+        "details": {}
+      },
+      {
+        "rule": "gender_ratio",
+        "passed": true,
+        "severity": "info",
+        "message": "Gender ratio check passed",
+        "details": {}
+      },
+      {
+        "rule": "dept_program_crosscheck",
+        "passed": true,
+        "severity": "info",
+        "message": "Department/programme cross-check passed (75% match)",
+        "details": {
+          "match_rate": 0.75
+        }
+      }
+    ],
+    "summary": "7/7 rules passed | 0 errors, 0 warnings | score: 1.0"
+  },
+  "data_confidence_score": 0.64,
+  "field_confidence": {
+    "college_name": 1.0,
+    "location": 1.0,
+    "about": 1.0,
+    "departments": 1.0,
+    "ug_programs": 1.0,
+    "pg_programs": 1.0,
+    "phd_programs": 1.0,
+    "scholarships": 1.0,
+    "established": 1.0,
+    "campus_area": 1.0,
+    "official_website": 1.0,
+    "global_ranking": 0.5,
+    "student_statistics": 0.7,
+    "fees": 0.8,
+    "faculty_staff": 0.6,
+    "international_students": 0.5
+  },
+  "data_version": "2026.1",
+  "last_updated": "2026-02-26",
+  "manual_verified": false,
+  "sources_metadata": {
+    "mock_server": {
+      "url": "http://127.0.0.1:8765/college/kpriet",
+      "status": "extracted"
+    },
+    "nirf_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "qs_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "the_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "placement_pdf": {
+      "url": "",
+      "status": "not_parsed"
+    }
+  }
 }

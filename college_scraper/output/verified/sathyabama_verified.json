@@ -1,0 +1,366 @@
+{
+  "college_name": "Sathyabama Institute of Science and Technology",
+  "short_name": "SIST",
+  "location": "Chennai, Tamil Nadu, India",
+  "country": "India",
+  "established": 1987,
+  "affiliation": "Deemed",
+  "institution_type": "Deemed",
+  "accreditation": {
+    "NAAC": "A++",
+    "NBA": "Accredited"
+  },
+  "campus_area": "165 acres",
+  "official_website": "https://www.sathyabama.ac.in",
+  "global_ranking": "NIRF 42 (Engineering) | QS World: 1001+ | THE: 1001+",
+  "rankings": {
+    "NIRF Engineering": 42,
+    "QS World": "1001+",
+    "THE": "1001+"
+  },
+  "rankings_history": {
+    "2023": {
+      "NIRF Engineering": 51,
+      "NIRF Overall": 58,
+      "QS World": "1001+",
+      "THE": "1001+"
+    },
+    "2024": {
+      "NIRF Engineering": 45,
+      "NIRF Overall": 50,
+      "QS World": "1001+",
+      "THE": "1001+"
+    },
+    "2025": {
+      "NIRF Engineering": 42,
+      "NIRF Overall": 47,
+      "QS World": "1001+",
+      "THE": "1001+"
+    }
+  },
+  "faculty_staff": 1040,
+  "student_faculty_ratio": "15:1",
+  "international_students": 90,
+  "ug_programs": [
+    "B.Tech Computer Science and Engineering",
+    "B.Tech Electronics and Communication Engineering",
+    "B.Tech Mechanical Engineering",
+    "B.Tech Civil Engineering",
+    "B.Tech Electrical Engineering",
+    "B.Tech Chemical Engineering",
+    "B.Tech Biotechnology",
+    "B.Sc Physics",
+    "B.Sc Chemistry",
+    "B.Sc Mathematics",
+    "B.A Economics",
+    "B.A Business Administration",
+    "B.Sc Data Science",
+    "B.Tech Production Engineering",
+    "B.Tech Material Science",
+    "B.Tech Aerospace Engineering"
+  ],
+  "pg_programs": [
+    "M.Tech Computer Science",
+    "M.Tech Electronics and Communication",
+    "M.Tech Mechanical Engineering",
+    "M.Tech Civil Engineering",
+    "M.Tech Electrical Engineering",
+    "M.Tech Biotechnology",
+    "Master of Business Administration",
+    "M.Sc Physics",
+    "M.Sc Chemistry",
+    "M.Sc Mathematics",
+    "M.A Economics",
+    "M.Phil Research",
+    "M.E Software Engineering"
+  ],
+  "phd_programs": [
+    "PhD Computer Science",
+    "PhD Physics",
+    "PhD Chemistry",
+    "PhD Mathematics",
+    "PhD Mechanical Engineering",
+    "PhD Electrical Engineering",
+    "PhD Biotechnology",
+    "PhD Materials Science",
+    "PhD Environmental Science"
+  ],
+  "fees": {
+    "ug_yearly_min": 150000,
+    "ug_yearly_max": 350000,
+    "pg_yearly_min": 100000,
+    "pg_yearly_max": 250000,
+    "phd_yearly_min": 50000,
+    "phd_yearly_max": 150000
+  },
+  "scholarships": [
+    "Merit-based Scholarship (50-75% tuition)",
+    "Need-based Financial Aid",
+    "Government Scholarship (SC/ST/OBC)",
+    "International Student Scholarship",
+    "Sports Excellence Scholarship",
+    "Research Scholarship for PhD",
+    "Institute Free Studentship"
+  ],
+  "departments": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering",
+    "Mechanical Engineering",
+    "Civil Engineering",
+    "Electrical Engineering",
+    "Chemical Engineering",
+    "Aerospace Engineering",
+    "Biotechnology",
+    "Physics",
+    "Chemistry",
+    "Mathematics",
+    "Business Administration",
+    "Economics",
+    "Environmental Science"
+  ],
+  "student_gender_ratio": {
+    "male_percentage": 62,
+    "female_percentage": 38
+  },
+  "yearly_statistics": {
+    "2023": {
+      "total_students": 14500,
+      "ug_students": 9280,
+      "pg_students": 3750,
+      "phd_students": 1470,
+      "male_students": 8990,
+      "female_students": 5510,
+      "international_students": 78,
+      "total_placed": 8250,
+      "ug_placed": 6400,
+      "pg_placed": 1850,
+      "phd_placed": 0,
+      "placement_rate_ug": 68.97,
+      "average_package": "₹8.5 LPA",
+      "median_package": "₹8.5 LPA",
+      "highest_package": "₹38 LPA",
+      "lowest_package": "₹4.5 LPA"
+    },
+    "2024": {
+      "total_students": 15000,
+      "ug_students": 9600,
+      "pg_students": 3900,
+      "phd_students": 1500,
+      "male_students": 9300,
+      "female_students": 5700,
+      "international_students": 85,
+      "total_placed": 8750,
+      "ug_placed": 6800,
+      "pg_placed": 1950,
+      "phd_placed": 0,
+      "placement_rate_ug": 70.83,
+      "average_package": "₹9.2 LPA",
+      "median_package": "₹9.2 LPA",
+      "highest_package": "₹42 LPA",
+      "lowest_package": "₹5 LPA"
+    },
+    "2025": {
+      "total_students": 15500,
+      "ug_students": 9920,
+      "pg_students": 4030,
+      "phd_students": 1550,
+      "male_students": 9610,
+      "female_students": 5890,
+      "international_students": 90,
+      "total_placed": 9126,
+      "ug_placed": 7118,
+      "pg_placed": 2008,
+      "phd_placed": 0,
+      "placement_rate_ug": 71.68,
+      "average_package": "₹10 LPA",
+      "median_package": "₹10 LPA",
+      "highest_package": "₹45 LPA",
+      "lowest_package": "₹5.5 LPA"
+    }
+  },
+  "placements_by_year": {
+    "2023": {
+      "placement_rate": 68.97,
+      "highest_package": "₹38 LPA",
+      "median_package": "₹8.5 LPA",
+      "average_package": "₹8.5 LPA",
+      "lowest_package": "₹4.5 LPA"
+    },
+    "2024": {
+      "placement_rate": 70.83,
+      "highest_package": "₹42 LPA",
+      "median_package": "₹9.2 LPA",
+      "average_package": "₹9.2 LPA",
+      "lowest_package": "₹5 LPA"
+    },
+    "2025": {
+      "placement_rate": 71.68,
+      "highest_package": "₹45 LPA",
+      "median_package": "₹10 LPA",
+      "average_package": "₹10 LPA",
+      "lowest_package": "₹5.5 LPA"
+    }
+  },
+  "infrastructure": {
+    "library_books": "500,000+",
+    "labs": "60+"
+  },
+  "additional_details": [
+    {
+      "category": "NIRF Ranking (Engineering) 2023",
+      "value": "51"
+    },
+    {
+      "category": "NIRF Ranking (Overall) 2023",
+      "value": "58"
+    },
+    {
+      "category": "NIRF Ranking (Engineering) 2024",
+      "value": "45"
+    },
+    {
+      "category": "NIRF Ranking (Overall) 2024",
+      "value": "50"
+    },
+    {
+      "category": "NIRF Ranking (Engineering) 2025",
+      "value": "42"
+    },
+    {
+      "category": "NIRF Ranking (Overall) 2025",
+      "value": "47"
+    },
+    {
+      "category": "Times Higher Education World University Rankings",
+      "value": "1001+"
+    },
+    {
+      "category": "QS World Ranking 2023",
+      "value": "1001+"
+    },
+    {
+      "category": "QS World Ranking 2024",
+      "value": "1001+"
+    },
+    {
+      "category": "QS World Ranking 2025",
+      "value": "1001+"
+    },
+    {
+      "category": "Student\u2013faculty ratio",
+      "value": "15:1"
+    },
+    {
+      "category": "Median CTC (2023)",
+      "value": "\u20b98.5 LPA"
+    },
+    {
+      "category": "Median CTC (2024)",
+      "value": "\u20b99.2 LPA"
+    },
+    {
+      "category": "Median CTC (2025)",
+      "value": "\u20b910 LPA"
+    },
+    {
+      "category": "Highest Package (2023)",
+      "value": "\u20b938 LPA"
+    },
+    {
+      "category": "Highest Package (2024)",
+      "value": "\u20b942 LPA"
+    },
+    {
+      "category": "Highest Package (2025)",
+      "value": "\u20b945 LPA"
+    },
+    {
+      "category": "Lowest Package (2023)",
+      "value": "\u20b94.5 LPA"
+    },
+    {
+      "category": "Lowest Package (2024)",
+      "value": "\u20b95 LPA"
+    },
+    {
+      "category": "Lowest Package (2025)",
+      "value": "\u20b95.5 LPA"
+    },
+    {
+      "category": "Campus Area",
+      "value": "165 acres"
+    },
+    {
+      "category": "Established",
+      "value": "1987"
+    },
+    {
+      "category": "Official Website",
+      "value": "https://www.sathyabama.ac.in"
+    },
+    {
+      "category": "Library Books",
+      "value": "500,000+"
+    },
+    {
+      "category": "Laboratories",
+      "value": "60+"
+    }
+  ],
+  "llm_verified": true,
+  "llm_corrections": [
+    "phd_programs: PhD placements (2025) → 0 (PhD placement count: realistic — typically 30–60% of PhD batch, not 60%+)",
+    "student_statistics: PG 2-year students placed (2025) → 2008 (Total students placed = UG + PG + PhD)",
+    "placements: placement_rate → 71.68 (Placement rate = (UG placed / UG batch size) × 100)",
+    "placements: highest_package → ₹45 LPA (Highest Package (2025) from additional_details)",
+    "placements: median_package → ₹10 LPA (Median CTC (2025) from additional_details)",
+    "placements: average_package → ₹10 LPA (Average package (2025) from student_statistics)",
+    "placements.lowest_package: None → '₹5.5 LPA' (from additional_details)"
+  ],
+  "placement_data_type": "verified",
+  "field_confidence": {
+    "college_name": 1.0,
+    "location": 1.0,
+    "about": 1.0,
+    "departments": 1.0,
+    "ug_programs": 1.0,
+    "pg_programs": 1.0,
+    "phd_programs": 0.9,
+    "scholarships": 1.0,
+    "established": 1.0,
+    "campus_area": 1.0,
+    "official_website": 1.0,
+    "global_ranking": 1.0,
+    "yearly_statistics": 0.9,
+    "fees": 0.8,
+    "faculty_staff": 0.6,
+    "international_students": 0.5
+  },
+  "sources_metadata": {
+    "mock_server": {
+      "url": "http://127.0.0.1:8765/college/sathyabama",
+      "status": "extracted"
+    },
+    "nirf_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "qs_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "the_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "placement_pdf": {
+      "url": "",
+      "status": "not_parsed"
+    }
+  },
+  "data_confidence_score": 0.785,
+  "data_version": "2026.3_multi_year",
+  "last_updated": "2026-02-26",
+  "llm_processing_time_seconds": 3.43,
+  "llm_model": "llama-3.3-70b-versatile"
+}

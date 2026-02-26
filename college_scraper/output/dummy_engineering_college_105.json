@@ -1,0 +1,274 @@
+{
+  "source_url": "http://127.0.0.1:8765/college/college-105",
+  "scrape_duration": 1.4415874481201172,
+  "college_name": "Dummy Engineering College 105",
+  "location": "Generic City, India",
+  "country": "India",
+  "about": "Dummy Engineering College 105 is a dummy institution for performance testing.",
+  "summary": "Dummy Engineering College 105 is a dummy institution for performance testing.",
+  "global_ranking": "NIRF 105 (Engineering) | QS World: 1000+ | THE: 1000+",
+  "faculty_staff": 200,
+  "international_students": 10,
+  "ug_programs": [
+    "B.Tech CSE",
+    "B.Tech ECE"
+  ],
+  "pg_programs": [
+    "M.Tech CSE"
+  ],
+  "phd_programs": [
+    "PhD CSE"
+  ],
+  "fees": {
+    "ug_yearly_min": 50000,
+    "ug_yearly_max": 150000,
+    "pg_yearly_min": 32500,
+    "pg_yearly_max": 82500,
+    "phd_yearly_min": 30000,
+    "phd_yearly_max": 120000
+  },
+  "scholarships": [
+    "Merit Scholarship"
+  ],
+  "departments": [
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering",
+    "Electrical and Electronics Engineering",
+    "Mechanical",
+    "CIVIL"
+  ],
+  "student_gender_ratio": {
+    "male_percentage": 60,
+    "female_percentage": 40
+  },
+  "student_statistics": [
+    {
+      "category": "Total students (2025)",
+      "value": 3000
+    },
+    {
+      "category": "Undergraduate (UG) students (2025)",
+      "value": 1920
+    },
+    {
+      "category": "Postgraduate (PG) students (2025)",
+      "value": 780
+    },
+    {
+      "category": "PhD students (2025)",
+      "value": 300
+    },
+    {
+      "category": "Male students (2025)",
+      "value": 1800
+    },
+    {
+      "category": "Female students (2025)",
+      "value": 1200
+    },
+    {
+      "category": "International students (2025)",
+      "value": 10
+    },
+    {
+      "category": "Total students placed (2025)",
+      "value": 1766
+    },
+    {
+      "category": "UG 4-year students placed (2025)",
+      "value": 1377
+    },
+    {
+      "category": "PG 2-year students placed (2025)",
+      "value": 585
+    },
+    {
+      "category": "PhD placements (2025)",
+      "value": 186
+    },
+    {
+      "category": "Placement rate (UG 4-year, 2025)",
+      "value": 92
+    },
+    {
+      "category": "Average package (2025)",
+      "value": "₹5 LPA"
+    }
+  ],
+  "additional_details": [
+    {
+      "category": "NIRF Ranking (Engineering) 2024",
+      "value": "105"
+    },
+    {
+      "category": "NIRF Ranking (Overall) 2024",
+      "value": "110"
+    },
+    {
+      "category": "Times Higher Education World University Rankings",
+      "value": "1000+"
+    },
+    {
+      "category": "QS World Ranking 2025",
+      "value": "1000+"
+    },
+    {
+      "category": "Student–faculty ratio",
+      "value": "15:1"
+    },
+    {
+      "category": "Median CTC (2025)",
+      "value": "₹5 LPA"
+    },
+    {
+      "category": "Median CTC (UG 4-year, 2025)",
+      "value": "₹5 LPA"
+    },
+    {
+      "category": "Highest Package (2025)",
+      "value": "₹12 LPA"
+    },
+    {
+      "category": "Lowest Package (2025)",
+      "value": "₹3 LPA"
+    },
+    {
+      "category": "Campus Area",
+      "value": "50 acres"
+    },
+    {
+      "category": "Established",
+      "value": "2010"
+    },
+    {
+      "category": "Official Website",
+      "value": "https://www.college-105.ac.in"
+    },
+    {
+      "category": "Library Books",
+      "value": "500,000+"
+    },
+    {
+      "category": "Laboratories",
+      "value": "30+"
+    }
+  ],
+  "sources": [
+    "NIRF Rankings 2024 (nirfindia.org)",
+    "QS World University Rankings 2025",
+    "Times Higher Education Rankings 2025",
+    "Official College Website"
+  ],
+  "validation_report": {
+    "college_name": "Dummy Engineering College 105",
+    "total_rules": 7,
+    "rules_passed": 6,
+    "rules_failed": 1,
+    "error_count": 0,
+    "warning_count": 1,
+    "validation_score": 0.807,
+    "rule_results": [
+      {
+        "rule": "required_fields",
+        "passed": true,
+        "severity": "info",
+        "message": "All required fields present",
+        "details": {}
+      },
+      {
+        "rule": "student_count_math",
+        "passed": true,
+        "severity": "info",
+        "message": "Student count check passed: 3000 ≈ 3000 (diff 0.0%)",
+        "details": {
+          "computed_sum": 3000,
+          "total": 3000,
+          "diff_pct": 0.0
+        }
+      },
+      {
+        "rule": "placement_logic",
+        "passed": true,
+        "severity": "info",
+        "message": "Placement logic check passed",
+        "details": {}
+      },
+      {
+        "rule": "ranking_consistency",
+        "passed": true,
+        "severity": "info",
+        "message": "Ranking consistency check passed",
+        "details": {}
+      },
+      {
+        "rule": "fee_sanity",
+        "passed": true,
+        "severity": "info",
+        "message": "Fee sanity check passed",
+        "details": {}
+      },
+      {
+        "rule": "gender_ratio",
+        "passed": true,
+        "severity": "info",
+        "message": "Gender ratio check passed",
+        "details": {}
+      },
+      {
+        "rule": "dept_program_crosscheck",
+        "passed": false,
+        "severity": "warning",
+        "message": "Only 0% of departments match programme names",
+        "details": {
+          "match_rate": 0.0,
+          "dept_count": 5
+        }
+      }
+    ],
+    "summary": "6/7 rules passed | 0 errors, 1 warnings | score: 0.807"
+  },
+  "data_confidence_score": 0.921,
+  "field_confidence": {
+    "college_name": 1.0,
+    "location": 1.0,
+    "about": 1.0,
+    "departments": 1.0,
+    "ug_programs": 1.0,
+    "pg_programs": 1.0,
+    "phd_programs": 1.0,
+    "scholarships": 1.0,
+    "established": 1.0,
+    "campus_area": 1.0,
+    "official_website": 1.0,
+    "global_ranking": 1.0,
+    "student_statistics": 0.7,
+    "fees": 0.8,
+    "faculty_staff": 0.6,
+    "international_students": 0.5
+  },
+  "data_version": "2026.1",
+  "last_updated": "2026-02-26",
+  "manual_verified": false,
+  "sources_metadata": {
+    "mock_server": {
+      "url": "http://127.0.0.1:8765/college/college-105",
+      "status": "extracted"
+    },
+    "nirf_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "qs_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "the_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "placement_pdf": {
+      "url": "",
+      "status": "not_parsed"
+    }
+  }
+}

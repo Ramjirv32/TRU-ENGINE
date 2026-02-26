@@ -583,3 +583,36 @@ COLLEGES.append({
         "Industry-sponsored Scholarship (TCS, Wipro, Infosys)",
     ],
 })
+
+# Generate 50 more colleges to reach 100+
+for i in range(1, 61):
+    slug = f"college-{i+50}"
+    name = f"Dummy Engineering College {i+50}"
+    COLLEGES.append({
+        "slug": slug,
+        "name": name,
+        "short": f"DEC {i+50}",
+        "location": "Generic City, India",
+        "nirf": 50 + i,
+        "qs": "1000+",
+        "the": "1000+",
+        "established": "2010",
+        "campus": "50 acres",
+        "total_students": 3000,
+        "faculty": 200,
+        "intl": 10,
+        "ug_min": 50000, "ug_max": 150000,
+        "pg_min": 40000, "pg_max": 100000,
+        "male_pct": 60,
+        "avg_ctc": "₹5 LPA",
+        "high_ctc": "₹12 LPA",
+        "low_ctc": "₹3 LPA",
+        "labs": "30+",
+        "website": f"https://www.{slug}.ac.in",
+        "about": f"{name} is a dummy institution for performance testing.",
+        "departments": ["CSE", "ECE", "EEE", "MECH", "CIVIL"],
+        "ug_programs": ["B.Tech CSE", "B.Tech ECE"],
+        "pg_programs": ["M.Tech CSE"],
+        "phd_programs": ["PhD CSE"],
+        "scholarships": ["Merit Scholarship"],
+    })

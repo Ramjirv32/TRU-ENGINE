@@ -1,5 +1,6 @@
 {
   "source_url": "http://127.0.0.1:8765/college/iit-delhi",
+  "scrape_duration": 2.072859287261963,
   "college_name": "Indian Institute of Technology Delhi",
   "location": "New Delhi, Delhi, India",
   "country": "India",
@@ -9,21 +10,21 @@
   "faculty_staff": 592,
   "international_students": 360,
   "ug_programs": [
-    "B.Tech Computer Science & Engineering",
+    "B.Tech Computer Science and Engineering",
     "B.Tech Electrical Engineering",
     "B.Tech Mechanical Engineering",
     "B.Tech Civil Engineering",
     "B.Tech Chemical Engineering",
     "B.Tech Textile Technology",
-    "B.Tech Production & Industrial Engineering",
+    "B.Tech Production and Industrial Engineering",
     "B.Tech Engineering Physics",
     "B.Tech Biochemical Engineering",
     "B.Sc Mathematics",
     "B.Sc Physics",
     "B.Sc Chemistry",
-    "B.Tech Polymer Science & Technology",
+    "B.Tech Polymer Science and Technology",
     "B.A Humanities",
-    "B.Tech Mathematics & Computing",
+    "B.Tech Mathematics and Computing",
     "B.Tech Materials Engineering"
   ],
   "pg_programs": [
@@ -53,7 +54,7 @@
     "PhD Mathematics",
     "PhD Biotechnology",
     "PhD Management Studies",
-    "PhD Humanities & Social Sciences",
+    "PhD Humanities and Social Sciences",
     "PhD Textile Engineering"
   ],
   "fees": {
@@ -75,18 +76,18 @@
   ],
   "departments": [
     "Applied Mechanics",
-    "Biochemical Engineering & Biotechnology",
+    "Biochemical Engineering and Biotechnology",
     "Chemical Engineering",
     "Chemistry",
     "Civil Engineering",
-    "Computer Science & Engineering",
+    "Computer Science and Engineering",
     "Electrical Engineering",
-    "Humanities & Social Sciences",
+    "Humanities and Social Sciences",
     "Management Studies",
     "Mathematics",
     "Mechanical Engineering",
     "Physics",
-    "Textile & Fibre Engineering"
+    "Textile and Fibre Engineering"
   ],
   "student_gender_ratio": {
     "male_percentage": 80,
@@ -209,5 +210,116 @@
     "QS World University Rankings 2025",
     "Times Higher Education Rankings 2025",
     "Official College Website"
-  ]
+  ],
+  "validation_report": {
+    "college_name": "Indian Institute of Technology Delhi",
+    "total_rules": 7,
+    "rules_passed": 7,
+    "rules_failed": 0,
+    "error_count": 0,
+    "warning_count": 0,
+    "validation_score": 1.0,
+    "rule_results": [
+      {
+        "rule": "required_fields",
+        "passed": true,
+        "severity": "info",
+        "message": "All required fields present",
+        "details": {}
+      },
+      {
+        "rule": "student_count_math",
+        "passed": true,
+        "severity": "info",
+        "message": "Student count check passed: 8724 ≈ 8724 (diff 0.0%)",
+        "details": {
+          "computed_sum": 8724,
+          "total": 8724,
+          "diff_pct": 0.0
+        }
+      },
+      {
+        "rule": "placement_logic",
+        "passed": true,
+        "severity": "info",
+        "message": "Placement logic check passed",
+        "details": {}
+      },
+      {
+        "rule": "ranking_consistency",
+        "passed": true,
+        "severity": "info",
+        "message": "Ranking consistency check passed",
+        "details": {}
+      },
+      {
+        "rule": "fee_sanity",
+        "passed": true,
+        "severity": "info",
+        "message": "Fee sanity check passed",
+        "details": {}
+      },
+      {
+        "rule": "gender_ratio",
+        "passed": true,
+        "severity": "info",
+        "message": "Gender ratio check passed",
+        "details": {}
+      },
+      {
+        "rule": "dept_program_crosscheck",
+        "passed": true,
+        "severity": "info",
+        "message": "Department/programme cross-check passed (69% match)",
+        "details": {
+          "match_rate": 0.692
+        }
+      }
+    ],
+    "summary": "7/7 rules passed | 0 errors, 0 warnings | score: 1.0"
+  },
+  "data_confidence_score": 0.94,
+  "field_confidence": {
+    "college_name": 1.0,
+    "location": 1.0,
+    "about": 1.0,
+    "departments": 1.0,
+    "ug_programs": 1.0,
+    "pg_programs": 1.0,
+    "phd_programs": 1.0,
+    "scholarships": 1.0,
+    "established": 1.0,
+    "campus_area": 1.0,
+    "official_website": 1.0,
+    "global_ranking": 1.0,
+    "student_statistics": 0.7,
+    "fees": 0.8,
+    "faculty_staff": 0.6,
+    "international_students": 0.5
+  },
+  "data_version": "2026.1",
+  "last_updated": "2026-02-26",
+  "manual_verified": false,
+  "sources_metadata": {
+    "mock_server": {
+      "url": "http://127.0.0.1:8765/college/iit-delhi",
+      "status": "extracted"
+    },
+    "nirf_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "qs_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "the_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "placement_pdf": {
+      "url": "",
+      "status": "not_parsed"
+    }
+  }
 }

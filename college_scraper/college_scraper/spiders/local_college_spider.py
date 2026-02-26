@@ -22,6 +22,7 @@ from typing import Generator
 from urllib.parse import urljoin
 
 import scrapy
+import time
 from scrapy.http import HtmlResponse
 
 from college_scraper.items import CollegeItem
@@ -40,7 +41,7 @@ class LocalCollegeSpider(scrapy.Spider):
     custom_settings = {
         "ROBOTSTXT_OBEY": False,   # local server has open robots.txt anyway
         "DOWNLOAD_DELAY": 0,
-        "CONCURRENT_REQUESTS": 4,
+        "CONCURRENT_REQUESTS": 16,
     }
 
     # ── Listing page ──────────────────────────────────────────────────────────
@@ -50,13 +51,20 @@ class LocalCollegeSpider(scrapy.Spider):
                          len(response.css("a[href*='/college/']")))
 
         for href in response.css("a[href*='/college/']::attr(href)").getall():
-            yield response.follow(href, callback=self.parse_college)
+            yield response.follow(
+                href,
+                callback=self.parse_college,
+                meta={'start_time': time.time()}  # Track start time
+            )
 
     # ── Detail page ───────────────────────────────────────────────────────────
     def parse_college(self, response: HtmlResponse) -> Generator:
-        self.logger.info("Parsing college: %s", response.url)
+        start_time = response.meta.get('start_time')
+        duration = time.time() - start_time if start_time else 0
+        self.logger.info("Parsing college: %s (Time taken: %.4fs)", response.url, duration)
         item = CollegeItem()
         item["source_url"] = response.url
+        item["scrape_duration"] = duration  # Save for reporting
 
         # ── Name / location / country ─────────────────────────────────────
         item["college_name"] = _clean(

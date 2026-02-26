@@ -46,9 +46,11 @@ DOWNLOADER_MIDDLEWARES = {
     "scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware": 810,
 }
 
-# ── Item pipelines ────────────────────────────────────────────────────────────
+# ── Item pipelines (3-layer architecture) ─────────────────────────────────────
 ITEM_PIPELINES = {
-    "college_scraper.pipelines.CollegeJsonPipeline": 300,
+    "college_scraper.pipelines.NormalizationPipeline": 100,   # Layer: Normalize & Dedup
+    "college_scraper.pipelines.ValidationPipeline": 200,      # Layer: Validate & Score
+    "college_scraper.pipelines.CollegeJsonPipeline": 300,     # Layer: Serialise JSON
 }
 
 # Output directory for scraped JSON files

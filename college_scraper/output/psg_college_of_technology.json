@@ -1,5 +1,6 @@
 {
   "source_url": "http://127.0.0.1:8765/college/psg-tech",
+  "scrape_duration": 2.022334098815918,
   "college_name": "PSG College of Technology",
   "location": "Coimbatore, Tamil Nadu, India",
   "country": "India",
@@ -9,8 +10,8 @@
   "faculty_staff": 382,
   "international_students": 45,
   "ug_programs": [
-    "B.Tech Computer Science & Engineering",
-    "B.Tech Electronics & Communication Engineering",
+    "B.Tech Computer Science and Engineering",
+    "B.Tech Electronics and Communication Engineering",
     "B.Tech Mechanical Engineering",
     "B.Tech Civil Engineering",
     "B.Tech Electrical Engineering",
@@ -28,12 +29,12 @@
   ],
   "pg_programs": [
     "M.Tech Computer Science",
-    "M.Tech Electronics & Communication",
+    "M.Tech Electronics and Communication",
     "M.Tech Mechanical Engineering",
     "M.Tech Civil Engineering",
     "M.Tech Electrical Engineering",
     "M.Tech Biotechnology",
-    "MBA",
+    "Master of Business Administration",
     "M.Sc Physics",
     "M.Sc Chemistry",
     "M.Sc Mathematics",
@@ -70,8 +71,8 @@
     "Institute Free Studentship"
   ],
   "departments": [
-    "Computer Science & Engineering",
-    "Electronics & Communication Engineering",
+    "Computer Science and Engineering",
+    "Electronics and Communication Engineering",
     "Mechanical Engineering",
     "Civil Engineering",
     "Electrical Engineering",
@@ -206,5 +207,116 @@
     "QS World University Rankings 2025",
     "Times Higher Education Rankings 2025",
     "Official College Website"
-  ]
+  ],
+  "validation_report": {
+    "college_name": "PSG College of Technology",
+    "total_rules": 7,
+    "rules_passed": 7,
+    "rules_failed": 0,
+    "error_count": 0,
+    "warning_count": 0,
+    "validation_score": 1.0,
+    "rule_results": [
+      {
+        "rule": "required_fields",
+        "passed": true,
+        "severity": "info",
+        "message": "All required fields present",
+        "details": {}
+      },
+      {
+        "rule": "student_count_math",
+        "passed": true,
+        "severity": "info",
+        "message": "Student count check passed: 6524 ≈ 6524 (diff 0.0%)",
+        "details": {
+          "computed_sum": 6524,
+          "total": 6524,
+          "diff_pct": 0.0
+        }
+      },
+      {
+        "rule": "placement_logic",
+        "passed": true,
+        "severity": "info",
+        "message": "Placement logic check passed",
+        "details": {}
+      },
+      {
+        "rule": "ranking_consistency",
+        "passed": true,
+        "severity": "info",
+        "message": "Ranking consistency check passed",
+        "details": {}
+      },
+      {
+        "rule": "fee_sanity",
+        "passed": true,
+        "severity": "info",
+        "message": "Fee sanity check passed",
+        "details": {}
+      },
+      {
+        "rule": "gender_ratio",
+        "passed": true,
+        "severity": "info",
+        "message": "Gender ratio check passed",
+        "details": {}
+      },
+      {
+        "rule": "dept_program_crosscheck",
+        "passed": true,
+        "severity": "info",
+        "message": "Department/programme cross-check passed (64% match)",
+        "details": {
+          "match_rate": 0.643
+        }
+      }
+    ],
+    "summary": "7/7 rules passed | 0 errors, 0 warnings | score: 1.0"
+  },
+  "data_confidence_score": 0.94,
+  "field_confidence": {
+    "college_name": 1.0,
+    "location": 1.0,
+    "about": 1.0,
+    "departments": 1.0,
+    "ug_programs": 1.0,
+    "pg_programs": 1.0,
+    "phd_programs": 1.0,
+    "scholarships": 1.0,
+    "established": 1.0,
+    "campus_area": 1.0,
+    "official_website": 1.0,
+    "global_ranking": 1.0,
+    "student_statistics": 0.7,
+    "fees": 0.8,
+    "faculty_staff": 0.6,
+    "international_students": 0.5
+  },
+  "data_version": "2026.1",
+  "last_updated": "2026-02-26",
+  "manual_verified": false,
+  "sources_metadata": {
+    "mock_server": {
+      "url": "http://127.0.0.1:8765/college/psg-tech",
+      "status": "extracted"
+    },
+    "nirf_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "qs_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "the_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "placement_pdf": {
+      "url": "",
+      "status": "not_parsed"
+    }
+  }
 }

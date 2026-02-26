@@ -1,5 +1,6 @@
 {
   "source_url": "http://127.0.0.1:8765/college/iit-roorkee",
+  "scrape_duration": 2.0669727325439453,
   "college_name": "Indian Institute of Technology Roorkee",
   "location": "Roorkee, Uttarakhand, India",
   "country": "India",
@@ -9,15 +10,15 @@
   "faculty_staff": 582,
   "international_students": 315,
   "ug_programs": [
-    "B.Tech Computer Science & Engineering",
+    "B.Tech Computer Science and Engineering",
     "B.Tech Electrical Engineering",
-    "B.Tech Electronics & Communication Engineering",
+    "B.Tech Electronics and Communication Engineering",
     "B.Tech Mechanical Engineering",
     "B.Tech Civil Engineering",
     "B.Tech Chemical Engineering",
     "B.Tech Metallurgical Engineering",
     "B.Tech Biotechnology",
-    "B.Tech Production & Industrial Engineering",
+    "B.Tech Production and Industrial Engineering",
     "B.Tech Earthquake Engineering",
     "B.Tech Geophysics",
     "B.Arch Architecture",
@@ -74,25 +75,25 @@
     "Prime Minister Research Fellowship"
   ],
   "departments": [
-    "Architecture & Planning",
+    "Architecture and Planning",
     "Biotechnology",
     "Chemical Engineering",
     "Chemistry",
     "Civil Engineering",
-    "Computer Science & Engineering",
+    "Computer Science and Engineering",
     "Earth Sciences",
     "Electrical Engineering",
-    "Electronics & Communication Engineering",
-    "Humanities & Social Sciences",
+    "Electronics and Communication Engineering",
+    "Humanities and Social Sciences",
     "Hydrology",
     "Management Studies",
     "Mathematics",
-    "Mechanical & Industrial Engineering",
-    "Metallurgical & Materials Engineering",
+    "Mechanical and Industrial Engineering",
+    "Metallurgical and Materials Engineering",
     "Paper Technology",
     "Physics",
-    "Polymer & Process Engineering",
-    "Water Resources Development & Management"
+    "Polymer and Process Engineering",
+    "Water Resources Development and Management"
   ],
   "student_gender_ratio": {
     "male_percentage": 77,
@@ -215,5 +216,116 @@
     "QS World University Rankings 2025",
     "Times Higher Education Rankings 2025",
     "Official College Website"
-  ]
+  ],
+  "validation_report": {
+    "college_name": "Indian Institute of Technology Roorkee",
+    "total_rules": 7,
+    "rules_passed": 7,
+    "rules_failed": 0,
+    "error_count": 0,
+    "warning_count": 0,
+    "validation_score": 1.0,
+    "rule_results": [
+      {
+        "rule": "required_fields",
+        "passed": true,
+        "severity": "info",
+        "message": "All required fields present",
+        "details": {}
+      },
+      {
+        "rule": "student_count_math",
+        "passed": true,
+        "severity": "info",
+        "message": "Student count check passed: 11248 ≈ 11248 (diff 0.0%)",
+        "details": {
+          "computed_sum": 11248,
+          "total": 11248,
+          "diff_pct": 0.0
+        }
+      },
+      {
+        "rule": "placement_logic",
+        "passed": true,
+        "severity": "info",
+        "message": "Placement logic check passed",
+        "details": {}
+      },
+      {
+        "rule": "ranking_consistency",
+        "passed": true,
+        "severity": "info",
+        "message": "Ranking consistency check passed",
+        "details": {}
+      },
+      {
+        "rule": "fee_sanity",
+        "passed": true,
+        "severity": "info",
+        "message": "Fee sanity check passed",
+        "details": {}
+      },
+      {
+        "rule": "gender_ratio",
+        "passed": true,
+        "severity": "info",
+        "message": "Gender ratio check passed",
+        "details": {}
+      },
+      {
+        "rule": "dept_program_crosscheck",
+        "passed": true,
+        "severity": "info",
+        "message": "Department/programme cross-check passed (53% match)",
+        "details": {
+          "match_rate": 0.526
+        }
+      }
+    ],
+    "summary": "7/7 rules passed | 0 errors, 0 warnings | score: 1.0"
+  },
+  "data_confidence_score": 0.94,
+  "field_confidence": {
+    "college_name": 1.0,
+    "location": 1.0,
+    "about": 1.0,
+    "departments": 1.0,
+    "ug_programs": 1.0,
+    "pg_programs": 1.0,
+    "phd_programs": 1.0,
+    "scholarships": 1.0,
+    "established": 1.0,
+    "campus_area": 1.0,
+    "official_website": 1.0,
+    "global_ranking": 1.0,
+    "student_statistics": 0.7,
+    "fees": 0.8,
+    "faculty_staff": 0.6,
+    "international_students": 0.5
+  },
+  "data_version": "2026.1",
+  "last_updated": "2026-02-26",
+  "manual_verified": false,
+  "sources_metadata": {
+    "mock_server": {
+      "url": "http://127.0.0.1:8765/college/iit-roorkee",
+      "status": "extracted"
+    },
+    "nirf_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "qs_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "the_official": {
+      "url": "",
+      "status": "not_scraped"
+    },
+    "placement_pdf": {
+      "url": "",
+      "status": "not_parsed"
+    }
+  }
 }
