@@ -1,0 +1,218 @@
+{
+  "source_url": "http://127.0.0.1:8765/college/iit-madras",
+  "college_name": "Indian Institute of Technology Madras",
+  "location": "Chennai, Tamil Nadu, India",
+  "country": "India",
+  "about": "IIT Madras, established in 1959 with assistance from the West German government, is consistently ranked as India's top engineering institution. Located in a 617-acre campus within a forest reserve in Chennai, it houses over 550 faculty, 8,000+ students, and research centres of global repute. It has been ranked #1 in NIRF (Engineering) every year since 2018 and features in the QS World Rankings 201-300.",
+  "summary": "IIT Madras, established in 1959 with assistance from the West German government, is consistently ranked as India's top engineering institution. Locate",
+  "global_ranking": "NIRF 1 (Engineering) | QS World: 285 | THE: 251-300",
+  "faculty_staff": 625,
+  "international_students": 380,
+  "ug_programs": [
+    "B.Tech Aerospace Engineering",
+    "B.Tech Chemical Engineering",
+    "B.Tech Civil Engineering",
+    "B.Tech Computer Science & Engineering",
+    "B.Tech Electrical Engineering",
+    "B.Tech Engineering Design",
+    "B.Tech Mechanical Engineering",
+    "B.Tech Metallurgical Engineering",
+    "B.Tech Naval Architecture",
+    "B.Tech Ocean Engineering",
+    "B.Sc Engineering Physics",
+    "B.Sc Mathematics",
+    "B.Sc Chemistry",
+    "B.Sc Physics",
+    "B.A Humanities & Social Sciences",
+    "B.Tech Biotechnology",
+    "B.Tech Applied Mechanics"
+  ],
+  "pg_programs": [
+    "M.Tech Computer Science",
+    "M.Tech Electrical Engineering",
+    "M.Tech Mechanical Engineering",
+    "M.Tech Civil Engineering",
+    "M.Tech Aerospace Engineering",
+    "M.Tech Chemical Engineering",
+    "M.Tech Ocean Engineering",
+    "M.Tech Nano Science & Technology",
+    "M.Sc Mathematics",
+    "M.Sc Physics",
+    "M.Sc Chemistry",
+    "MBA (EMBA)",
+    "M.Tech Biomedical Engineering",
+    "M.Tech Data Science"
+  ],
+  "phd_programs": [
+    "PhD Computer Science",
+    "PhD Electrical Engineering",
+    "PhD Mechanical Engineering",
+    "PhD Mathematics",
+    "PhD Physics",
+    "PhD Chemistry",
+    "PhD Chemical Engineering",
+    "PhD Biotechnology",
+    "PhD Aerospace Engineering",
+    "PhD Ocean Engineering",
+    "PhD Climate Science",
+    "PhD Materials Science"
+  ],
+  "fees": {
+    "ug_yearly_min": 118300,
+    "ug_yearly_max": 239200,
+    "pg_yearly_min": 76895,
+    "pg_yearly_max": 131560,
+    "phd_yearly_min": 30000,
+    "phd_yearly_max": 120000
+  },
+  "scholarships": [
+    "IITM Merit cum Means Scholarship (full tuition)",
+    "Institute Free Studentship (SC/ST)",
+    "National Fellowship for SC/ST (UGC)",
+    "Prime Minister's Special Scholarship",
+    "Defence Research Fellowship",
+    "Industry-sponsored Research Scholarship",
+    "International Collaboration Scholarship"
+  ],
+  "departments": [
+    "Aerospace Engineering",
+    "Applied Mechanics",
+    "Biotechnology",
+    "Chemical Engineering",
+    "Chemistry",
+    "Civil Engineering",
+    "Computer Science & Engineering",
+    "Electrical Engineering",
+    "Engineering Design",
+    "Humanities & Social Sciences",
+    "Management Studies",
+    "Mathematics",
+    "Mechanical Engineering",
+    "Metallurgical & Materials Engineering",
+    "Ocean Engineering",
+    "Physics",
+    "Engineering Physics"
+  ],
+  "student_gender_ratio": {
+    "male_percentage": 78,
+    "female_percentage": 22
+  },
+  "student_statistics": [
+    {
+      "category": "Total students (2025)",
+      "value": 9812
+    },
+    {
+      "category": "Undergraduate (UG) students (2025)",
+      "value": 6279
+    },
+    {
+      "category": "Postgraduate (PG) students (2025)",
+      "value": 2551
+    },
+    {
+      "category": "PhD students (2025)",
+      "value": 982
+    },
+    {
+      "category": "Male students (2025)",
+      "value": 7653
+    },
+    {
+      "category": "Female students (2025)",
+      "value": 2159
+    },
+    {
+      "category": "International students (2025)",
+      "value": 380
+    },
+    {
+      "category": "Total students placed (2025)",
+      "value": 5777
+    },
+    {
+      "category": "UG 4-year students placed (2025)",
+      "value": 4506
+    },
+    {
+      "category": "PG 2-year students placed (2025)",
+      "value": 1913
+    },
+    {
+      "category": "PhD placements (2025)",
+      "value": 609
+    },
+    {
+      "category": "Placement rate (UG 4-year, 2025)",
+      "value": 92
+    },
+    {
+      "category": "Average package (2025)",
+      "value": "₹21.8 LPA"
+    }
+  ],
+  "additional_details": [
+    {
+      "category": "NIRF Ranking (Engineering) 2024",
+      "value": "1"
+    },
+    {
+      "category": "NIRF Ranking (Overall) 2024",
+      "value": "6"
+    },
+    {
+      "category": "Times Higher Education World University Rankings",
+      "value": "251-300"
+    },
+    {
+      "category": "QS World Ranking 2025",
+      "value": "285"
+    },
+    {
+      "category": "Student–faculty ratio",
+      "value": "16:1"
+    },
+    {
+      "category": "Median CTC (2025)",
+      "value": "₹21.8 LPA"
+    },
+    {
+      "category": "Median CTC (UG 4-year, 2025)",
+      "value": "₹21.8 LPA"
+    },
+    {
+      "category": "Highest Package (2025)",
+      "value": "₹3.67 Cr (International)"
+    },
+    {
+      "category": "Lowest Package (2025)",
+      "value": "₹8.5 LPA"
+    },
+    {
+      "category": "Campus Area",
+      "value": "617 acres"
+    },
+    {
+      "category": "Established",
+      "value": "1959"
+    },
+    {
+      "category": "Official Website",
+      "value": "https://www.iitm.ac.in"
+    },
+    {
+      "category": "Library Books",
+      "value": "500,000+"
+    },
+    {
+      "category": "Laboratories",
+      "value": "120+"
+    }
+  ],
+  "sources": [
+    "NIRF Rankings 2024 (nirfindia.org)",
+    "QS World University Rankings 2025",
+    "Times Higher Education Rankings 2025",
+    "Official College Website"
+  ]
+}

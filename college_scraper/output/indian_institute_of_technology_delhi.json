@@ -1,0 +1,213 @@
+{
+  "source_url": "http://127.0.0.1:8765/college/iit-delhi",
+  "college_name": "Indian Institute of Technology Delhi",
+  "location": "New Delhi, Delhi, India",
+  "country": "India",
+  "about": "IIT Delhi was established in 1961 and granted the status of an 'Institute of National Importance' by an Act of Parliament in 1963. Situated in New Delhi on a 325-acre campus, it has 13 departments and 4 interdisciplinary centres. IITD is ranked #197 by QS World University Rankings 2025 and is known for its vibrant research ecosystem, robust international collaborations, and exceptional placement records.",
+  "summary": "IIT Delhi was established in 1961 and granted the status of an 'Institute of National Importance' by an Act of Parliament in 1963. Situated in New Del",
+  "global_ranking": "NIRF 3 (Engineering) | QS World: 197 | THE: 251-300",
+  "faculty_staff": 592,
+  "international_students": 360,
+  "ug_programs": [
+    "B.Tech Computer Science & Engineering",
+    "B.Tech Electrical Engineering",
+    "B.Tech Mechanical Engineering",
+    "B.Tech Civil Engineering",
+    "B.Tech Chemical Engineering",
+    "B.Tech Textile Technology",
+    "B.Tech Production & Industrial Engineering",
+    "B.Tech Engineering Physics",
+    "B.Tech Biochemical Engineering",
+    "B.Sc Mathematics",
+    "B.Sc Physics",
+    "B.Sc Chemistry",
+    "B.Tech Polymer Science & Technology",
+    "B.A Humanities",
+    "B.Tech Mathematics & Computing",
+    "B.Tech Materials Engineering"
+  ],
+  "pg_programs": [
+    "M.Tech Computer Science",
+    "M.Tech VLSI Design",
+    "M.Tech Power Systems",
+    "M.Tech Structural Engineering",
+    "M.Tech Manufacturing Engineering",
+    "M.Tech Biotechnology",
+    "M.Sc Physics",
+    "M.Sc Chemistry",
+    "M.Sc Mathematics",
+    "MBA (DMS)",
+    "M.Tech Polymer Science",
+    "M.Tech Geomatics",
+    "M.Tech Textile Engineering",
+    "M.Tech Instrumentation"
+  ],
+  "phd_programs": [
+    "PhD Computer Science",
+    "PhD Electrical Engineering",
+    "PhD Mechanical Engineering",
+    "PhD Civil Engineering",
+    "PhD Chemical Engineering",
+    "PhD Physics",
+    "PhD Chemistry",
+    "PhD Mathematics",
+    "PhD Biotechnology",
+    "PhD Management Studies",
+    "PhD Humanities & Social Sciences",
+    "PhD Textile Engineering"
+  ],
+  "fees": {
+    "ug_yearly_min": 105700,
+    "ug_yearly_max": 245000,
+    "pg_yearly_min": 68705,
+    "pg_yearly_max": 134750,
+    "phd_yearly_min": 30000,
+    "phd_yearly_max": 120000
+  },
+  "scholarships": [
+    "IITD Merit cum Means Scholarship",
+    "SC/ST Free Studentship",
+    "OBC Non-Creamy Layer Scholarship",
+    "INSPIRE Fellowship (DST)",
+    "Prime Minister Research Fellowship",
+    "CSIR Junior Research Fellowship",
+    "Industry PhD Fellowship (TCS, Infosys)"
+  ],
+  "departments": [
+    "Applied Mechanics",
+    "Biochemical Engineering & Biotechnology",
+    "Chemical Engineering",
+    "Chemistry",
+    "Civil Engineering",
+    "Computer Science & Engineering",
+    "Electrical Engineering",
+    "Humanities & Social Sciences",
+    "Management Studies",
+    "Mathematics",
+    "Mechanical Engineering",
+    "Physics",
+    "Textile & Fibre Engineering"
+  ],
+  "student_gender_ratio": {
+    "male_percentage": 80,
+    "female_percentage": 20
+  },
+  "student_statistics": [
+    {
+      "category": "Total students (2025)",
+      "value": 8724
+    },
+    {
+      "category": "Undergraduate (UG) students (2025)",
+      "value": 5583
+    },
+    {
+      "category": "Postgraduate (PG) students (2025)",
+      "value": 2268
+    },
+    {
+      "category": "PhD students (2025)",
+      "value": 873
+    },
+    {
+      "category": "Male students (2025)",
+      "value": 6979
+    },
+    {
+      "category": "Female students (2025)",
+      "value": 1745
+    },
+    {
+      "category": "International students (2025)",
+      "value": 360
+    },
+    {
+      "category": "Total students placed (2025)",
+      "value": 5136
+    },
+    {
+      "category": "UG 4-year students placed (2025)",
+      "value": 4006
+    },
+    {
+      "category": "PG 2-year students placed (2025)",
+      "value": 1701
+    },
+    {
+      "category": "PhD placements (2025)",
+      "value": 541
+    },
+    {
+      "category": "Placement rate (UG 4-year, 2025)",
+      "value": 92
+    },
+    {
+      "category": "Average package (2025)",
+      "value": "₹24.5 LPA"
+    }
+  ],
+  "additional_details": [
+    {
+      "category": "NIRF Ranking (Engineering) 2024",
+      "value": "3"
+    },
+    {
+      "category": "NIRF Ranking (Overall) 2024",
+      "value": "8"
+    },
+    {
+      "category": "Times Higher Education World University Rankings",
+      "value": "251-300"
+    },
+    {
+      "category": "QS World Ranking 2025",
+      "value": "197"
+    },
+    {
+      "category": "Student–faculty ratio",
+      "value": "15:1"
+    },
+    {
+      "category": "Median CTC (2025)",
+      "value": "₹24.5 LPA"
+    },
+    {
+      "category": "Median CTC (UG 4-year, 2025)",
+      "value": "₹24.5 LPA"
+    },
+    {
+      "category": "Highest Package (2025)",
+      "value": "₹2.1 Cr"
+    },
+    {
+      "category": "Lowest Package (2025)",
+      "value": "₹9 LPA"
+    },
+    {
+      "category": "Campus Area",
+      "value": "325 acres"
+    },
+    {
+      "category": "Established",
+      "value": "1961"
+    },
+    {
+      "category": "Official Website",
+      "value": "https://home.iitd.ac.in"
+    },
+    {
+      "category": "Library Books",
+      "value": "500,000+"
+    },
+    {
+      "category": "Laboratories",
+      "value": "105+"
+    }
+  ],
+  "sources": [
+    "NIRF Rankings 2024 (nirfindia.org)",
+    "QS World University Rankings 2025",
+    "Times Higher Education Rankings 2025",
+    "Official College Website"
+  ]
+}

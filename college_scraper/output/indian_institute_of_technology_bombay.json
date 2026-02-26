@@ -1,0 +1,216 @@
+{
+  "source_url": "http://127.0.0.1:8765/college/iit-bombay",
+  "college_name": "Indian Institute of Technology Bombay",
+  "location": "Mumbai, Maharashtra, India",
+  "country": "India",
+  "about": "IIT Bombay, founded in 1958 with Soviet assistance, is one of India's most prestigious engineering institutions and is located on the Powai lake campus in Mumbai. It houses 17 academic departments, 4 schools, and over 2 research parks. IIT Bombay is ranked #118 globally by QS and is known for stellar placement records and vibrant startup culture with numerous unicorn alumni companies.",
+  "summary": "IIT Bombay, founded in 1958 with Soviet assistance, is one of India's most prestigious engineering institutions and is located on the Powai lake campu",
+  "global_ranking": "NIRF 2 (Engineering) | QS World: 118 | THE: 201-250",
+  "faculty_staff": 678,
+  "international_students": 425,
+  "ug_programs": [
+    "B.Tech Aerospace Engineering",
+    "B.Tech Chemical Engineering",
+    "B.Tech Civil Engineering",
+    "B.Tech Computer Science & Engineering",
+    "B.Tech Electrical Engineering",
+    "B.Tech Mechanical Engineering",
+    "B.Tech Engineering Physics",
+    "B.Tech Metallurgical Engineering",
+    "B.Tech Energy Science & Engineering",
+    "B.Sc Chemistry",
+    "B.Sc Mathematics",
+    "B.Sc Physics",
+    "B.Tech Biosciences",
+    "B.Tech Systems & Control",
+    "B.Des Industrial Design",
+    "B.Tech Earth Sciences"
+  ],
+  "pg_programs": [
+    "M.Tech Computer Science",
+    "M.Tech Electrical Engineering",
+    "M.Tech Mechanical Engineering",
+    "M.Tech Aerospace Engineering",
+    "M.Tech Chemical Engineering",
+    "M.Tech Systems & Control",
+    "M.Sc Mathematics",
+    "M.Sc Physics",
+    "M.Sc Chemistry",
+    "MBA (SJMSOM)",
+    "M.Tech Industrial Design",
+    "M.Tech Energy Science",
+    "M.Tech Geoinformatics",
+    "M.Tech Structural Engineering"
+  ],
+  "phd_programs": [
+    "PhD Computer Science",
+    "PhD Electrical Engineering",
+    "PhD Mechanical Engineering",
+    "PhD Mathematics",
+    "PhD Physics",
+    "PhD Chemistry",
+    "PhD Chemical Engineering",
+    "PhD Biosciences",
+    "PhD Aerospace Engineering",
+    "PhD Earth Sciences",
+    "PhD Industrial Design",
+    "PhD Materials Science"
+  ],
+  "fees": {
+    "ug_yearly_min": 119950,
+    "ug_yearly_max": 248750,
+    "pg_yearly_min": 77967,
+    "pg_yearly_max": 136812,
+    "phd_yearly_min": 30000,
+    "phd_yearly_max": 120000
+  },
+  "scholarships": [
+    "IITB Merit cum Means Scholarship",
+    "Institute Free Studentship (SC/ST/PH)",
+    "National Scholarship for Higher Education",
+    "Aditya Birla Scholarship",
+    "Reliance Industries Scholarship",
+    "Prime Minister Research Fellowship (PhD)",
+    "International Student Scholarship"
+  ],
+  "departments": [
+    "Aerospace Engineering",
+    "Chemical Engineering",
+    "Chemistry",
+    "Civil Engineering",
+    "Computer Science & Engineering",
+    "Earth Sciences",
+    "Electrical Engineering",
+    "Energy Science & Engineering",
+    "Humanities & Social Sciences",
+    "Industrial Design Centre",
+    "Mathematics",
+    "Mechanical Engineering",
+    "Metallurgical Engineering & Materials Science",
+    "Physics",
+    "Systems & Control Engineering",
+    "Biosciences & Bioengineering"
+  ],
+  "student_gender_ratio": {
+    "male_percentage": 79,
+    "female_percentage": 21
+  },
+  "student_statistics": [
+    {
+      "category": "Total students (2025)",
+      "value": 10519
+    },
+    {
+      "category": "Undergraduate (UG) students (2025)",
+      "value": 6732
+    },
+    {
+      "category": "Postgraduate (PG) students (2025)",
+      "value": 2734
+    },
+    {
+      "category": "PhD students (2025)",
+      "value": 1053
+    },
+    {
+      "category": "Male students (2025)",
+      "value": 8310
+    },
+    {
+      "category": "Female students (2025)",
+      "value": 2209
+    },
+    {
+      "category": "International students (2025)",
+      "value": 425
+    },
+    {
+      "category": "Total students placed (2025)",
+      "value": 6193
+    },
+    {
+      "category": "UG 4-year students placed (2025)",
+      "value": 4831
+    },
+    {
+      "category": "PG 2-year students placed (2025)",
+      "value": 2050
+    },
+    {
+      "category": "PhD placements (2025)",
+      "value": 653
+    },
+    {
+      "category": "Placement rate (UG 4-year, 2025)",
+      "value": 92
+    },
+    {
+      "category": "Average package (2025)",
+      "value": "₹26.35 LPA"
+    }
+  ],
+  "additional_details": [
+    {
+      "category": "NIRF Ranking (Engineering) 2024",
+      "value": "2"
+    },
+    {
+      "category": "NIRF Ranking (Overall) 2024",
+      "value": "7"
+    },
+    {
+      "category": "Times Higher Education World University Rankings",
+      "value": "201-250"
+    },
+    {
+      "category": "QS World Ranking 2025",
+      "value": "118"
+    },
+    {
+      "category": "Student–faculty ratio",
+      "value": "16:1"
+    },
+    {
+      "category": "Median CTC (2025)",
+      "value": "₹26.35 LPA"
+    },
+    {
+      "category": "Median CTC (UG 4-year, 2025)",
+      "value": "₹26.35 LPA"
+    },
+    {
+      "category": "Highest Package (2025)",
+      "value": "₹3.67 Cr (International)"
+    },
+    {
+      "category": "Lowest Package (2025)",
+      "value": "₹9 LPA"
+    },
+    {
+      "category": "Campus Area",
+      "value": "550 acres"
+    },
+    {
+      "category": "Established",
+      "value": "1958"
+    },
+    {
+      "category": "Official Website",
+      "value": "https://www.iitb.ac.in"
+    },
+    {
+      "category": "Library Books",
+      "value": "500,000+"
+    },
+    {
+      "category": "Laboratories",
+      "value": "115+"
+    }
+  ],
+  "sources": [
+    "NIRF Rankings 2024 (nirfindia.org)",
+    "QS World University Rankings 2025",
+    "Times Higher Education Rankings 2025",
+    "Official College Website"
+  ]
+}

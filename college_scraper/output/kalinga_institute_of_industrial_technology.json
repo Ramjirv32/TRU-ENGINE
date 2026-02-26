@@ -1,0 +1,210 @@
+{
+  "source_url": "http://127.0.0.1:8765/college/kiit",
+  "college_name": "Kalinga Institute of Industrial Technology",
+  "location": "Bhubaneswar, Odisha, India",
+  "country": "India",
+  "about": "Kalinga Institute of Industrial Technology, established in 1992, is a premier engineering institution in India located in Bhubaneswar, Odisha, India. It is ranked 35 in NIRF Engineering 2024 and 801-1000 in QS World University Rankings 2025.",
+  "summary": "Kalinga Institute of Industrial Technology, established in 1992, is a premier engineering institution in India located in Bhubaneswar, Odisha, India.",
+  "global_ranking": "NIRF 35 (Engineering) | QS World: 801-1000 | THE: 1001+",
+  "faculty_staff": 1850,
+  "international_students": 490,
+  "ug_programs": [
+    "B.Tech Computer Science & Engineering",
+    "B.Tech Electronics & Communication Engineering",
+    "B.Tech Mechanical Engineering",
+    "B.Tech Civil Engineering",
+    "B.Tech Electrical Engineering",
+    "B.Tech Chemical Engineering",
+    "B.Tech Biotechnology",
+    "B.Sc Physics",
+    "B.Sc Chemistry",
+    "B.Sc Mathematics",
+    "B.A Economics",
+    "B.A Business Administration",
+    "B.Sc Data Science",
+    "B.Tech Production Engineering",
+    "B.Tech Material Science",
+    "B.Tech Aerospace Engineering"
+  ],
+  "pg_programs": [
+    "M.Tech Computer Science",
+    "M.Tech Electronics & Communication",
+    "M.Tech Mechanical Engineering",
+    "M.Tech Civil Engineering",
+    "M.Tech Electrical Engineering",
+    "M.Tech Biotechnology",
+    "MBA",
+    "M.Sc Physics",
+    "M.Sc Chemistry",
+    "M.Sc Mathematics",
+    "M.A Economics",
+    "M.Phil Research",
+    "M.E Software Engineering"
+  ],
+  "phd_programs": [
+    "PhD Computer Science",
+    "PhD Physics",
+    "PhD Chemistry",
+    "PhD Mathematics",
+    "PhD Mechanical Engineering",
+    "PhD Electrical Engineering",
+    "PhD Biotechnology",
+    "PhD Materials Science",
+    "PhD Environmental Science"
+  ],
+  "fees": {
+    "ug_yearly_min": 105700,
+    "ug_yearly_max": 245000,
+    "pg_yearly_min": 68705,
+    "pg_yearly_max": 134750,
+    "phd_yearly_min": 30000,
+    "phd_yearly_max": 120000
+  },
+  "scholarships": [
+    "Merit-based Scholarship (50-75% tuition)",
+    "Need-based Financial Aid",
+    "Government Scholarship (SC/ST/OBC)",
+    "International Student Scholarship",
+    "Sports Excellence Scholarship",
+    "Research Scholarship for PhD",
+    "Institute Free Studentship"
+  ],
+  "departments": [
+    "Computer Science & Engineering",
+    "Electronics & Communication Engineering",
+    "Mechanical Engineering",
+    "Civil Engineering",
+    "Electrical Engineering",
+    "Chemical Engineering",
+    "Aerospace Engineering",
+    "Biotechnology",
+    "Physics",
+    "Chemistry",
+    "Mathematics",
+    "Business Administration",
+    "Economics",
+    "Environmental Science"
+  ],
+  "student_gender_ratio": {
+    "male_percentage": 78,
+    "female_percentage": 22
+  },
+  "student_statistics": [
+    {
+      "category": "Total students (2025)",
+      "value": 30000
+    },
+    {
+      "category": "Undergraduate (UG) students (2025)",
+      "value": 19200
+    },
+    {
+      "category": "Postgraduate (PG) students (2025)",
+      "value": 7800
+    },
+    {
+      "category": "PhD students (2025)",
+      "value": 3000
+    },
+    {
+      "category": "Male students (2025)",
+      "value": 23400
+    },
+    {
+      "category": "Female students (2025)",
+      "value": 6600
+    },
+    {
+      "category": "International students (2025)",
+      "value": 490
+    },
+    {
+      "category": "Total students placed (2025)",
+      "value": 17664
+    },
+    {
+      "category": "UG 4-year students placed (2025)",
+      "value": 13778
+    },
+    {
+      "category": "PG 2-year students placed (2025)",
+      "value": 5850
+    },
+    {
+      "category": "PhD placements (2025)",
+      "value": 1860
+    },
+    {
+      "category": "Placement rate (UG 4-year, 2025)",
+      "value": 92
+    },
+    {
+      "category": "Average package (2025)",
+      "value": "₹20 LPA"
+    }
+  ],
+  "additional_details": [
+    {
+      "category": "NIRF Ranking (Engineering) 2024",
+      "value": "35"
+    },
+    {
+      "category": "NIRF Ranking (Overall) 2024",
+      "value": "40"
+    },
+    {
+      "category": "Times Higher Education World University Rankings",
+      "value": "1001+"
+    },
+    {
+      "category": "QS World Ranking 2025",
+      "value": "801-1000"
+    },
+    {
+      "category": "Student–faculty ratio",
+      "value": "16:1"
+    },
+    {
+      "category": "Median CTC (2025)",
+      "value": "₹20 LPA"
+    },
+    {
+      "category": "Median CTC (UG 4-year, 2025)",
+      "value": "₹20 LPA"
+    },
+    {
+      "category": "Highest Package (2025)",
+      "value": "₹1.8 Cr"
+    },
+    {
+      "category": "Lowest Package (2025)",
+      "value": "₹8 LPA"
+    },
+    {
+      "category": "Campus Area",
+      "value": "25 sq km"
+    },
+    {
+      "category": "Established",
+      "value": "1992"
+    },
+    {
+      "category": "Official Website",
+      "value": "https://www.kiit.ac.in"
+    },
+    {
+      "category": "Library Books",
+      "value": "500,000+"
+    },
+    {
+      "category": "Laboratories",
+      "value": "90+"
+    }
+  ],
+  "sources": [
+    "NIRF Rankings 2024 (nirfindia.org)",
+    "QS World University Rankings 2025",
+    "Times Higher Education Rankings 2025",
+    "Official College Website"
+  ]
+}

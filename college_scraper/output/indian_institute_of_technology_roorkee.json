@@ -1,0 +1,219 @@
+{
+  "source_url": "http://127.0.0.1:8765/college/iit-roorkee",
+  "college_name": "Indian Institute of Technology Roorkee",
+  "location": "Roorkee, Uttarakhand, India",
+  "country": "India",
+  "about": "IIT Roorkee is India's oldest technical institution, founded in 1847 as the Thomason College of Civil Engineering. It became an IIT in 2001 and is located in Roorkee, Uttarakhand. With 22 departments and 28 academic centres, IITR excels in civil/structural engineering, earthquake engineering, and water resources. It is ranked 5th by NIRF and 369th by QS 2025.",
+  "summary": "IIT Roorkee is India's oldest technical institution, founded in 1847 as the Thomason College of Civil Engineering. It became an IIT in 2001 and is loc",
+  "global_ranking": "NIRF 5 (Engineering) | QS World: 369 | THE: 351-400",
+  "faculty_staff": 582,
+  "international_students": 315,
+  "ug_programs": [
+    "B.Tech Computer Science & Engineering",
+    "B.Tech Electrical Engineering",
+    "B.Tech Electronics & Communication Engineering",
+    "B.Tech Mechanical Engineering",
+    "B.Tech Civil Engineering",
+    "B.Tech Chemical Engineering",
+    "B.Tech Metallurgical Engineering",
+    "B.Tech Biotechnology",
+    "B.Tech Production & Industrial Engineering",
+    "B.Tech Earthquake Engineering",
+    "B.Tech Geophysics",
+    "B.Arch Architecture",
+    "B.Tech Paper Technology",
+    "B.Sc Mathematics",
+    "B.Sc Physics",
+    "B.Sc Chemistry"
+  ],
+  "pg_programs": [
+    "M.Tech Computer Science",
+    "M.Tech VLSI Design",
+    "M.Tech Structural Engineering",
+    "M.Tech Hydrology",
+    "M.Tech Environmental Engineering",
+    "M.Tech Machine Design",
+    "M.Tech Biotechnology",
+    "M.Tech Power Electronics",
+    "M.Sc Mathematics",
+    "M.Sc Physics",
+    "M.Sc Chemistry",
+    "MBA (DMS Roorkee)",
+    "M.Tech Software Engineering",
+    "M.Tech Earthquake Engineering"
+  ],
+  "phd_programs": [
+    "PhD Computer Science",
+    "PhD Electrical Engineering",
+    "PhD Civil Engineering",
+    "PhD Mechanical Engineering",
+    "PhD Chemistry",
+    "PhD Physics",
+    "PhD Mathematics",
+    "PhD Biotechnology",
+    "PhD Earth Sciences",
+    "PhD Hydrology",
+    "PhD Management",
+    "PhD Architecture"
+  ],
+  "fees": {
+    "ug_yearly_min": 105700,
+    "ug_yearly_max": 235000,
+    "pg_yearly_min": 68705,
+    "pg_yearly_max": 129250,
+    "phd_yearly_min": 30000,
+    "phd_yearly_max": 120000
+  },
+  "scholarships": [
+    "IITR Merit cum Means Scholarship",
+    "SC/ST Full Fee Waiver",
+    "OBC Non-Creamy Layer 2/3rd Fee Waiver",
+    "MHRD Research Fellowship",
+    "Ministry of Water Resources Fellowship (Water Resources)",
+    "National Fellowship for ST Students",
+    "Prime Minister Research Fellowship"
+  ],
+  "departments": [
+    "Architecture & Planning",
+    "Biotechnology",
+    "Chemical Engineering",
+    "Chemistry",
+    "Civil Engineering",
+    "Computer Science & Engineering",
+    "Earth Sciences",
+    "Electrical Engineering",
+    "Electronics & Communication Engineering",
+    "Humanities & Social Sciences",
+    "Hydrology",
+    "Management Studies",
+    "Mathematics",
+    "Mechanical & Industrial Engineering",
+    "Metallurgical & Materials Engineering",
+    "Paper Technology",
+    "Physics",
+    "Polymer & Process Engineering",
+    "Water Resources Development & Management"
+  ],
+  "student_gender_ratio": {
+    "male_percentage": 77,
+    "female_percentage": 23
+  },
+  "student_statistics": [
+    {
+      "category": "Total students (2025)",
+      "value": 11248
+    },
+    {
+      "category": "Undergraduate (UG) students (2025)",
+      "value": 7198
+    },
+    {
+      "category": "Postgraduate (PG) students (2025)",
+      "value": 2924
+    },
+    {
+      "category": "PhD students (2025)",
+      "value": 1126
+    },
+    {
+      "category": "Male students (2025)",
+      "value": 8661
+    },
+    {
+      "category": "Female students (2025)",
+      "value": 2587
+    },
+    {
+      "category": "International students (2025)",
+      "value": 315
+    },
+    {
+      "category": "Total students placed (2025)",
+      "value": 6622
+    },
+    {
+      "category": "UG 4-year students placed (2025)",
+      "value": 5165
+    },
+    {
+      "category": "PG 2-year students placed (2025)",
+      "value": 2193
+    },
+    {
+      "category": "PhD placements (2025)",
+      "value": 698
+    },
+    {
+      "category": "Placement rate (UG 4-year, 2025)",
+      "value": 92
+    },
+    {
+      "category": "Average package (2025)",
+      "value": "₹20.3 LPA"
+    }
+  ],
+  "additional_details": [
+    {
+      "category": "NIRF Ranking (Engineering) 2024",
+      "value": "5"
+    },
+    {
+      "category": "NIRF Ranking (Overall) 2024",
+      "value": "10"
+    },
+    {
+      "category": "Times Higher Education World University Rankings",
+      "value": "351-400"
+    },
+    {
+      "category": "QS World Ranking 2025",
+      "value": "369"
+    },
+    {
+      "category": "Student–faculty ratio",
+      "value": "19:1"
+    },
+    {
+      "category": "Median CTC (2025)",
+      "value": "₹20.3 LPA"
+    },
+    {
+      "category": "Median CTC (UG 4-year, 2025)",
+      "value": "₹20.3 LPA"
+    },
+    {
+      "category": "Highest Package (2025)",
+      "value": "₹1.98 Cr"
+    },
+    {
+      "category": "Lowest Package (2025)",
+      "value": "₹8.5 LPA"
+    },
+    {
+      "category": "Campus Area",
+      "value": "365 acres"
+    },
+    {
+      "category": "Established",
+      "value": "1847"
+    },
+    {
+      "category": "Official Website",
+      "value": "https://www.iitr.ac.in"
+    },
+    {
+      "category": "Library Books",
+      "value": "500,000+"
+    },
+    {
+      "category": "Laboratories",
+      "value": "90+"
+    }
+  ],
+  "sources": [
+    "NIRF Rankings 2024 (nirfindia.org)",
+    "QS World University Rankings 2025",
+    "Times Higher Education Rankings 2025",
+    "Official College Website"
+  ]
+}
