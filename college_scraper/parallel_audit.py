@@ -16,8 +16,14 @@ SECTIONS = {
     "Placements_General": "official 2024 placement report highest package average package average lpa median package",
     "Placement_Yearly_Counts": "yearly placement statistics 2024 2023 2022 total students graduated vs total students placed counts",
     "Placement_Gender_Stats": "gender wise placement report male vs female student placement percentages and counts",
+    "Sector_Wise_Placements": "sector wise placement IT core engineering management finance healthcare companies hired 2024",
     "Rankings": "NIRF 2025 rankings NIRF 2024 QS World Ranking THE ranking global national score",
-    "Infrastructure": "campus area in acres infrastructure facilities library lab hostel sports"
+    "Infrastructure": "campus area in acres infrastructure facilities library lab hostel sports",
+    "Faculty_Staff": "total number of faculty staff professors PhD faculty ratio student faculty ratio department wise",
+    "Scholarships": "scholarships available merit based need based government scholarships amount eligibility criteria",
+    "Student_Statistics": "total student enrollment count 2024 2023 undergraduate postgraduate PhD students admitted per year",
+    "Student_Gender_Ratio": "male female student ratio gender diversity total male female students enrolled",
+    "International_Students": "international students foreign students NRI students enrolled count countries represented"
 }
 
 async def fetch_section(client, college_name, section_name, query_context):

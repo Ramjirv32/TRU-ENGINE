@@ -1,0 +1,295 @@
+{
+  "college_name": "KPR Institute of Engineering and Technology",
+  "short_name": "KPRIET",
+  "location": "Coimbatore, Tamil Nadu",
+  "country": "India",
+  "established": 2009,
+  "institution_type": "Private",
+  "campus_area": "150 Acres of Land",
+  "about": "KPR Institute of Engineering and Technology (KPRIET) is a private autonomous engineering college established in 2009 and located in the suburbs of Coimbatore, Tamil Nadu, India.",
+  "additional_details": [
+    {
+      "category": "Accreditation",
+      "value": "NAAC 'A', NBA"
+    },
+    {
+      "category": "Approved By",
+      "value": "AICTE"
+    },
+    {
+      "category": "Affiliated To",
+      "value": "Anna University, Chennai"
+    }
+  ],
+  "departments": [
+    "Civil Engineering",
+    "Mechanical Engineering",
+    "Electrical and Electronics Engineering",
+    "Electronics and Communication Engineering",
+    "Computer Science and Engineering",
+    "Information Technology",
+    "Chemical Engineering",
+    "Biomedical Engineering",
+    "Artificial Intelligence and Data Science",
+    "Mechatronics Engineering",
+    "Management Studies",
+    "Science and Humanities"
+  ],
+  "ug_programs": [
+    {
+      "name": "B.E. Civil Engineering",
+      "duration": "4 years",
+      "seats": 60,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.E. Mechanical Engineering",
+      "duration": "4 years",
+      "seats": 60,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.E. Electrical and Electronics Engineering",
+      "duration": "4 years",
+      "seats": 60,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.E. Electronics and Communication Engineering",
+      "duration": "4 years",
+      "seats": 240,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.Tech Information Technology",
+      "duration": "4 years",
+      "seats": 180,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.E. Computer Science and Engineering",
+      "duration": "4 years",
+      "seats": 300,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.Tech Chemical Engineering",
+      "duration": "4 years",
+      "seats": 60,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.E. Biomedical Engineering",
+      "duration": "4 years",
+      "seats": 60,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.Tech Artificial Intelligence and Data Science",
+      "duration": "4 years",
+      "seats": 180,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.E. Mechatronics Engineering",
+      "duration": "4 years",
+      "seats": 60,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.E. Artificial Intelligence and Machine Learning",
+      "duration": "4 years",
+      "seats": 120,
+      "fees_total_inr": 388000
+    },
+    {
+      "name": "B.E. Computer Science and Business Systems",
+      "duration": "4 years",
+      "seats": 60,
+      "fees_total_inr": 388000
+    }
+  ],
+  "pg_programs": [
+    {
+      "name": "M.E. Computer-Aided Design/Computer-Aided Manufacturing (CAD/CAM)",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 50000
+    },
+    {
+      "name": "M.E. Computer Science and Engineering",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 50000
+    },
+    {
+      "name": "M.E. Data Sciences",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 50000
+    },
+    {
+      "name": "M.E. Structural Engineering",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 50000
+    },
+    {
+      "name": "M.E. VLSI Design",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 50000
+    },
+    {
+      "name": "MBA",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": null
+    }
+  ],
+  "phd_programs": [
+    {
+      "name": "Ph.D. Biomedical Engineering",
+      "duration": null,
+      "seats": null
+    },
+    {
+      "name": "Ph.D. Chemical Engineering",
+      "duration": null,
+      "seats": null
+    },
+    {
+      "name": "Ph.D. Chemistry",
+      "duration": null,
+      "seats": null
+    },
+    {
+      "name": "Ph.D. Civil Engineering",
+      "duration": null,
+      "seats": null
+    },
+    {
+      "name": "Ph.D. Computer Science Engineering",
+      "duration": null,
+      "seats": null
+    }
+  ],
+  "fees": {
+    "UG": {
+      "per_year": 85000,
+      "total_course": 340000
+    },
+    "PG": {
+      "per_year": 50000,
+      "total_course": 100000
+    },
+    "hostel_per_year": 80000
+  },
+  "sources": [],
+  "source_url": "https://www.kpriet.ac.in/",
+  "summary": "KPR Institute of Engineering and Technology is a private autonomous engineering college located in Coimbatore, Tamil Nadu. It offers undergraduate, postgraduate, and PhD programs in various fields of engineering and management.",
+  "last_updated": "2025-10-18",
+  "data_confidence_score": null,
+  "rankings": {
+    "nirf_2025": "101-150",
+    "the_world_2024": "902"
+  },
+  "global_ranking": {
+    "the_world": "902"
+  },
+  "faculty_staff": {},
+  "student_statistics": {},
+  "placement_comparison_last_3_years": [
+    {
+      "year": "2022",
+      "highest_package_lpa": 2024.0,
+      "average_package_lpa": null,
+      "median_package_lpa": null,
+      "students_placed": 902,
+      "placement_rate_percent": 88
+    }
+  ],
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": "2024",
+      "sector": "Core Engineering",
+      "companies": [
+        "Bosch",
+        "Hyundai",
+        "Mahindra"
+      ],
+      "percent": null
+    },
+    {
+      "year": "2024",
+      "sector": "Consulting",
+      "companies": [
+        "Accenture",
+        "Cognizant",
+        "EY"
+      ],
+      "percent": null
+    }
+  ],
+  "infrastructure": [
+    {
+      "facility": "Library",
+      "details": "40000 books, subscriptions to 124 print journals, magazines, newspapers, and more resources"
+    },
+    {
+      "facility": "Hostel",
+      "details": "Located opposite campus; connected via steel arch skywalk over Avinashi Road"
+    },
+    {
+      "facility": "Health Centre",
+      "details": "On-campus health centre providing medical facilities to students"
+    },
+    {
+      "facility": "Sports",
+      "details": "Playfields, gardens, and sports complex across 45-acre campus"
+    },
+    {
+      "facility": "Campus",
+      "details": "45 acres; 5 km from Coimbatore Junction railway station and airport"
+    }
+  ],
+  "scholarships": [
+    {
+      "name": "Merit Cum Means Scholarship (Central Scheme)",
+      "amount": "Variable",
+      "eligibility": "Minority community; family income < Rs. 2.5 Lakhs"
+    },
+    {
+      "name": "Central Sector Scheme of Scholarships",
+      "amount": "Up to INR 20,000/year",
+      "eligibility": "Scored 80%+ in Class 12; income criteria"
+    },
+    {
+      "name": "AICTE Pragati Scholarship",
+      "amount": "INR 50,000/year",
+      "eligibility": "Female students; family income < INR 8 Lakhs"
+    },
+    {
+      "name": "AICTE Saksham Scholarship",
+      "amount": "INR 50,000/year",
+      "eligibility": "Students with disability (PwD)"
+    },
+    {
+      "name": "Tamil Nadu State Government Scholarship",
+      "amount": "INR 10,000–50,000/year",
+      "eligibility": "Tamil Nadu domicile; merit-based"
+    },
+    {
+      "name": "Alumni Scholarship",
+      "amount": "Variable",
+      "eligibility": "Meritorious students nominated by departments"
+    }
+  ],
+  "placements": {},
+  "gender_based_placement_last_3_years": {},
+  "student_gender_ratio": {},
+  "student_count_comparison_last_3_years": {},
+  "international_students": {},
+  "rankings_history": {},
+  "validation_report": ""
+}

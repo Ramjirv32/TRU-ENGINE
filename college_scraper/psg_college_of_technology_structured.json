@@ -1,0 +1,384 @@
+{
+  "college_name": "PSG College of Technology",
+  "short_name": "PSG Tech",
+  "location": "Coimbatore",
+  "country": "India",
+  "established": 1951,
+  "institution_type": "Engineering",
+  "campus_area": "45 acres",
+  "about": "PSG College of Technology is a premier engineering institution in India, offering a range of undergraduate, postgraduate, and doctoral programs in various fields of engineering and technology.",
+  "additional_details": [
+    {
+      "category": "Mission",
+      "value": "Provide world-class Engineering Education, Foster Research and Development. Evolve innovative applications of Technology. Encourage Entrepreneurship."
+    },
+    {
+      "category": "Vision",
+      "value": "PSG College of Technology aspires to be recognised as one of the leaders in engineering education, research and application of knowledge to benefit society."
+    }
+  ],
+  "departments": [],
+  "ug_programs": [
+    {
+      "name": "B.Tech in Biotechnology",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "B.Tech in Fashion Technology",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "B.Tech in Information Technology",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "B.Tech in Textile Technology",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Computer Science And Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Biomedical Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Electronics & Communication Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Robotics and Automation",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Mechanical Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Civil Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Chemical Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Automobile Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Electrical And Electronics Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Metallurgical Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Production Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Instrumentation & Control Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BE in Manufacturing Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_inr": 220000
+    },
+    {
+      "name": "BSc in Data Science",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_inr": 164000
+    },
+    {
+      "name": "BSc in Fashion Design",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_inr": 164000
+    },
+    {
+      "name": "BSc in Computer Technology",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_inr": 164000
+    },
+    {
+      "name": "BSc in Software System",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_inr": 164000
+    }
+  ],
+  "pg_programs": [
+    {
+      "name": "MSc in Data Science",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 81000
+    },
+    {
+      "name": "MSc in Fashion Design",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 81000
+    },
+    {
+      "name": "MSc in Computer Technology",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 81000
+    },
+    {
+      "name": "MSc in Software System",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 81000
+    },
+    {
+      "name": "MBA in Finance",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 41000
+    },
+    {
+      "name": "MBA in Human Resource Management",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 41000
+    },
+    {
+      "name": "MBA in Waste Management and Social Entrepreneurship",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 41000
+    },
+    {
+      "name": "MBA in Systems Management",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 41000
+    },
+    {
+      "name": "MBA in Operations Management",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 41000
+    },
+    {
+      "name": "MBA in Marketing",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 41000
+    },
+    {
+      "name": "PGDM",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 41000
+    },
+    {
+      "name": "MTech in Information Technology",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 60000
+    },
+    {
+      "name": "MTech in Biotechnology",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 60000
+    },
+    {
+      "name": "MTech in Nano Science And Technology",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 60000
+    },
+    {
+      "name": "MTech in Textile Technology",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 60000
+    },
+    {
+      "name": "ME",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_inr": 60000
+    }
+  ],
+  "phd_programs": [
+    {
+      "name": "Ph.D",
+      "duration": "3 years",
+      "seats": null
+    }
+  ],
+  "fees": {
+    "UG": {
+      "per_year": 55000,
+      "total_course": 220000
+    },
+    "PG": {
+      "per_year": 41000,
+      "total_course": 82000
+    },
+    "hostel_per_year": 72000
+  },
+  "sources": [],
+  "source_url": "https://www.psgtech.edu/",
+  "summary": "PSG College of Technology is a premier engineering institution in India, offering a range of undergraduate, postgraduate, and doctoral programs in various fields of engineering and technology.",
+  "last_updated": "",
+  "data_confidence_score": null,
+  "rankings": {
+    "nirf_2025": "751-800",
+    "qs_asia_2025": "1951",
+    "the_world_2024": "401"
+  },
+  "global_ranking": {
+    "the_world": "401"
+  },
+  "faculty_staff": {
+    "total_faculty": 450,
+    "professors": 150,
+    "associate_professors": 99,
+    "assistant_professors": 300
+  },
+  "student_statistics": {
+    "ug_students": 8518,
+    "pg_students": 505,
+    "total_enrollment": 9023
+  },
+  "placement_comparison_last_3_years": [
+    {
+      "year": "2022",
+      "highest_package_lpa": 40.0,
+      "average_package_lpa": 40.0,
+      "median_package_lpa": null,
+      "students_placed": 188,
+      "placement_rate_percent": 88
+    }
+  ],
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": "2024",
+      "sector": "Core Engineering",
+      "companies": [
+        "Bosch",
+        "Hyundai",
+        "Mahindra",
+        "TATA Motors"
+      ],
+      "percent": null
+    },
+    {
+      "year": "2024",
+      "sector": "Consulting",
+      "companies": [
+        "Deloitte",
+        "Accenture",
+        "EY",
+        "KPMG"
+      ],
+      "percent": null
+    }
+  ],
+  "infrastructure": [
+    {
+      "facility": "Library",
+      "details": "2.47 lakh volumes, 12,574 CDs/DVDs, 240 printed journals"
+    },
+    {
+      "facility": "Hostel",
+      "details": "Located opposite campus; connected via steel arch skywalk over Avinashi Road"
+    },
+    {
+      "facility": "Health Centre",
+      "details": "On-campus health centre providing medical facilities to students"
+    },
+    {
+      "facility": "Sports",
+      "details": "Playfields, gardens, and sports complex across 45-acre campus"
+    },
+    {
+      "facility": "Campus",
+      "details": "45 acres; 5 km from Coimbatore Junction railway station and airport"
+    }
+  ],
+  "scholarships": [
+    {
+      "name": "Merit Cum Means Scholarship (Central Scheme)",
+      "amount": "Variable",
+      "eligibility": "Minority community; family income < Rs. 2.5 Lakhs"
+    },
+    {
+      "name": "Central Sector Scheme of Scholarships",
+      "amount": "Up to INR 20,000/year",
+      "eligibility": "Scored 80%+ in Class 12; income criteria"
+    },
+    {
+      "name": "AICTE Pragati Scholarship",
+      "amount": "INR 50,000/year",
+      "eligibility": "Female students; family income < INR 8 Lakhs"
+    },
+    {
+      "name": "AICTE Saksham Scholarship",
+      "amount": "INR 50,000/year",
+      "eligibility": "Students with disability (PwD)"
+    },
+    {
+      "name": "Tamil Nadu State Government Scholarship",
+      "amount": "INR 10,000–50,000/year",
+      "eligibility": "Tamil Nadu domicile; merit-based"
+    },
+    {
+      "name": "Alumni Scholarship",
+      "amount": "Variable",
+      "eligibility": "Meritorious students nominated by departments"
+    }
+  ],
+  "placements": {},
+  "gender_based_placement_last_3_years": {},
+  "student_gender_ratio": {},
+  "student_count_comparison_last_3_years": {},
+  "international_students": {},
+  "rankings_history": {},
+  "validation_report": ""
+}
