@@ -81,7 +81,7 @@ def call_groq(system_prompt: str, user_content: str, label: str) -> dict | None:
         try:
             print(f"  ↳ Groq call '{label}' (attempt {attempt+1})…")
             resp = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="meta-llama/llama-4-scout-17b-16e-instruct",
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user",   "content": user_content},
@@ -900,7 +900,7 @@ def process_audit_with_groq(filename: str):
     print(f"\n🚀 Processing: {college_name}")
     print(f"   Sections in audit: {[s.get('section') for s in sections]}\n")
 
-    SLEEP = 3  # seconds between batches
+    SLEEP = 1  # seconds between batches (safe minimum for 12k TPM free tier)
 
     # ---- Batch A: Rankings / Faculty / Students / International ----
     batchA_sections = [
@@ -1056,6 +1056,20 @@ def process_audit_with_groq(filename: str):
 # Gemini Validation — parallel section-by-section
 # ---------------------------------------------------------------------------
 
+_ANTI_CONTAMINATION_RULES = """
+ANTI-CONTAMINATION RULES (CRITICAL — NEVER VIOLATE):
+1. ONLY use data explicitly found in the SCRAPED CONTEXT or that you are 100% certain is true for THIS SPECIFIC institution from your training knowledge.
+2. NEVER copy patterns from other institutions. Do NOT apply Indian B-school metrics to non-Indian colleges.
+3. NEVER use data from generic college ranking portals (Shiksha, Collegedunia) for a different college.
+4. COUNTRY AWARENESS:
+   - "placement_rate_percent", "highest_package", "average_package", "median_package", "total_students_placed", "total_companies_visited" → these fields use the Indian B-school reporting format. For NON-INDIAN colleges, set ALL of these to "not_applicable" UNLESS the context explicitly uses this format.
+   - European/Western universities track "graduate employment rate" (%) through national surveys, NOT campus-drive style placement cells. If the college is NOT in India, set placement fields to "not_applicable" and only record employment_rate_percent if found in context.
+5. FEES: If context or your knowledge indicates this is a tuition-free / government-funded institution, set fees to 0 or "free" - do NOT insert random figures.
+6. SCHOLARSHIPS: ONLY list scholarships that you know are specifically available TO students of THIS institution. Do NOT paste generic global scholarship lists (Fulbright, Erasmus+ is OK if the college is actually a partner, but ACES/Canadian scholarships → NOT for this college).
+7. NUMBERS: Never round-trip plausible-but-invented figures (e.g. exactly 153 placed, 40 companies). If the number is not in context, set to null or "not_available".
+8. RETURN null / "not_available" over a plausible fabrication. Accuracy > completeness.
+"""
+
 GEMINI_SECTIONS = {
     "identity": {
         "keys": ["college_name", "short_name", "established", "institution_type",
@@ -1063,76 +1077,52 @@ GEMINI_SECTIONS = {
                  "accreditations", "affiliations", "website", "contact_info",
                  "recognition", "additional_details"],
         "audit_sections": ["Identity", "About"],
-        "prompt": """You are an expert college data validator and enricher. Given CURRENT DATA (extracted by another AI)
-and ORIGINAL SCRAPED CONTEXT, do the following for EVERY field:
+        "prompt": """You are an expert college data validator. Given CURRENT DATA (extracted by another AI) and ORIGINAL SCRAPED CONTEXT, correct and enrich the data.
 
-STEP 1 — FIX from context: If a value is WRONG or MISSING and the context has the correct info, fix it.
-STEP 2 — ENRICH from knowledge: If a value is still null/"not_available" AFTER checking context,
-  use YOUR OWN TRAINING KNOWLEDGE about this specific college to fill it in.
-  You likely know: founding year, affiliation, NAAC/NBA grade, AICTE approval, key departments, website, etc.
-STEP 3 — NOT APPLICABLE: If a field genuinely does not apply to this institution type/country, set "not_applicable".
-  E.g. "NIRF rank" for a non-Indian college → "not_applicable".
-
-FIELD RULES:
-- "about": 2-3 clean sentences covering founding year, affiliation, accreditation, notable strengths. No HTML/markdown.
-- "campus_area": exact value with unit (e.g. "150 Acres"). Search context first, then use knowledge.
-- "location": "City, State, Country" clean format.
-- "departments": full list of all departments at this college — use context + your knowledge.
-- "accreditations": list all accreditations (NAAC, NBA, ISO, ABET, etc.) with grade/year if known.
-  e.g. [{"body": "NAAC", "grade": "A", "year": "2023"}, {"body": "NBA", "programs": 6}]
-- "affiliations": university/board affiliations (e.g. "Anna University").
-- "website": official URL if known.
-- "contact_info": {"phone": "", "email": "", "address": ""} — fill from context or knowledge.
-- "recognition": any government/ministry recognitions (AICTE, UGC, etc.).
-- "additional_details": list of {"category": "", "value": ""} for any other relevant facts.
-
-RETURN a JSON object with ALL these keys. Missing/inapplicable → "not_applicable". No markdown fences."""
+RULES:
+- FIX any wrong values using context.
+- ENRICH from your training knowledge ONLY for THIS specific institution (name/location specified in the prompt).
+- "campus_area": use context value. If not in context but you know it from training, fill it. Otherwise "not_available".
+- "about": 2-3 clean factual sentences. Only verified facts.
+- "departments": list departments CONFIRMED in context or well-known from training for THIS college.
+- "accreditations": list only accreditations you can confirm for this institution.
+- "affiliations": confirmed affiliations only.
+- "website": official URL if confirmed.
+- "contact_info": from context only.
+- "additional_details": list of strings with notable verified facts about this college.
+""" + _ANTI_CONTAMINATION_RULES + """
+RETURN a JSON object with ALL keys. Use "not_available" only when genuinely unknown. No markdown fences."""
     },
     "programs": {
         "keys": ["ug_programs", "pg_programs", "phd_programs"],
         "audit_sections": ["UG_Programs", "PG_Programs", "About"],
-        "prompt": """You are an expert college programs validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
+        "prompt": """You are an expert college programs validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT, correct and enrich the programs list.
 
-STEP 1 — FIX from context: Correct/add any program found in context.
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE about this specific college to:
-  - Add any missing programs you know this college offers.
-  - Fill in missing seats/fees/duration if you know them.
-STEP 3 — NOT APPLICABLE: e.g. if a college has no PhD program, set phd_programs to "not_applicable".
-
-FIELD RULES:
-- Each UG program: {"name": "B.E. in Computer Science and Engineering", "duration": "4 years", "seats": 60, "fees_total_local": 240000}
-- Each PG program: {"name": "M.E. in Embedded Systems", "duration": "2 years", "seats": 18, "fees_total_local": 120000}
-- Each PhD program: {"name": "Ph.D. in Engineering", "duration": "3-5 years", "seats": null}
-- Full program names only (no abbreviations like just "M.E." or "B.E.").
-- Private engineering college UG seats typically 60–120 per program.
-- Include ALL programs: engineering, management, sciences, arts if this college offers them.
-- Add a "specializations" field to programs with multiple specializations if applicable.
-
-RETURN JSON with keys: ug_programs (array), pg_programs (array), phd_programs (array or "not_applicable"). No markdown fences."""
+RULES:
+- FIX/ADD programs found in context.
+- USE your training knowledge to add programs you can CONFIRM this specific college offers.
+- Duration: Use standard durations (3 years UG/Bologna, 2 years PG in Europe; 4 years BE/BTech in India).
+- Fees: Use CONTEXT values. If the college is government-funded or tuition-free, set fees to 0 or null.
+- Seats: Use context values. If not found, set to null — do NOT invent seat counts.
+- phd_programs: set to [] if the college does not offer PhDs.
+""" + _ANTI_CONTAMINATION_RULES + """
+RETURN JSON: {"ug_programs": [...], "pg_programs": [...], "phd_programs": [...]}. No markdown fences."""
     },
     "rankings": {
         "keys": ["rankings", "rankings_history", "global_ranking"],
         "audit_sections": ["Rankings", "About", "Identity"],
         "prompt": """You are an expert college rankings validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
 
-STEP 1 — FIX from context: Correct any wrong ranking values using context.
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE (up to your knowledge cutoff) to:
-  - Fill NIRF rank if this is an Indian college and you know the rank.
-  - Fill any QS/THE ranking if you know it.
-  - Add any state/national rankings you know about.
-STEP 3 — NOT APPLICABLE: 
-  - "nirf_2025", "nirf_2024" → "not_applicable" for non-Indian colleges.
-  - QS/THE → "not_applicable" if this is a small private college with no global presence.
-
-FIELD RULES:
-- rankings: {"nirf_2025": "", "nirf_2024": "", "qs_asia_2025": "", "qs_world": "", "the_world_2024": "", "national_rank": "", "state_rank": "", "india_today_rank": "", "outlook_rank": "", "week_rank": ""}
-- Add any ranking body you know (India Today, Outlook, The Week, Education World, etc.).
-- rankings_history: [{"year": "2024", "ranking_body": "NIRF", "rank": "105", "category": "Engineering"}]
-- global_ranking: {"qs_world": "", "the_world": "", "us_news_global": "", "webometrics": ""}
-- Use "not_available" only when truly unknown even from your knowledge.
-- Use "not_applicable" when the ranking body does not cover this college type/country.
-
-RETURN JSON with keys: rankings, rankings_history, global_ranking. No markdown fences."""
+RULES:
+- FIX any wrong ranking from context.
+- Fill rankings you can CONFIRM from your training knowledge for THIS specific institution.
+- "nirf_2025", "nirf_2024": → "not_applicable" for all non-Indian colleges.
+- "qs_asia_2025": → "not_applicable" for non-Asian colleges.
+- For small/regional colleges not in major global rankings → "not_applicable" (NOT "not_available").
+- "national_rank": Use country-specific ranking bodies. Only fill if confirmed.
+- rankings_history: Only include confirmed ranking entries.
+""" + _ANTI_CONTAMINATION_RULES + """
+RETURN JSON: {"rankings": {...}, "rankings_history": [...], "global_ranking": {...}}. No markdown fences."""
     },
     "faculty_students": {
         "keys": ["faculty_staff", "student_statistics", "student_gender_ratio",
@@ -1141,31 +1131,17 @@ RETURN JSON with keys: rankings, rankings_history, global_ranking. No markdown f
         "audit_sections": ["Faculty_Staff", "Student_Statistics", "Student_Gender_Ratio", "International_Students"],
         "prompt": """You are an expert college statistics validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
 
-STEP 1 — FIX from context: Use EXACT numbers from context (e.g. "205 Members" → 205).
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE to fill missing stats for this college.
-STEP 3 — NOT APPLICABLE: e.g. "nri_students" for non-Indian colleges → "not_applicable".
-
-FIELD RULES:
-- faculty_staff: {
-    "total_faculty": int,
-    "phd_faculty_count": int,
-    "phd_faculty_percent": float,   ← compute if both known
-    "student_faculty_ratio": "X:1",  ← recompute if both known
-    "professors": int, "associate_professors": int, "assistant_professors": int,
-    "visiting_faculty": int,
-    "research_staff": int
-  }
-- student_statistics: {
-    "total_enrollment": int, "ug_students": int, "pg_students": int,
-    "phd_students": int, "annual_intake": int, "lateral_entry_students": int
-  }
-- student_gender_ratio: {"total_male": int, "total_female": int, "male_percent": float, "female_percent": float}
-- student_count_comparison_last_3_years: [{"year": "2023", "total_enrolled": int, "ug": int, "pg": int, "phd": int}] for 2023, 2024, 2025
-- international_students: {"total_count": int, "countries_represented": int, "nri_students": int}
-- faculty_achievements: brief text on notable awards, patents, publications if known.
-- notable_faculty: [{"name": "", "designation": "", "specialization": ""}] — top 3-5 if known.
-
-SANITY: Private engineering college faculty 150-400, PhD students 20-80, total enrollment 2000-8000.
+RULES:
+- FIX any wrong statistics using context (use EXACT numbers, e.g. "23 faculty" → 23).
+- ENRICH from training knowledge ONLY for THIS specific institution.
+- If total_faculty is known, distribute into ranks (Professors 20%, Assoc 30%, Asst 40%, Visiting 10%) marked as approximate.
+- If total_enrollment is known, split UG/PG proportionally (65/35 for general; adjust for specialist colleges).
+- student_gender_ratio: estimate based on known field composition ONLY if you can confirm the trend for this college.
+- international_students: only if confirmed in context or training data.
+- annual_intake: estimate ~25-30% of total enrollment only if total enrollment is known.
+- notable_faculty: ONLY names you are certain about from training knowledge.
+- "nri_students": → "not_applicable" for non-Indian colleges.
+""" + _ANTI_CONTAMINATION_RULES + """
 RETURN JSON with all keys. No markdown fences."""
     },
     "placements": {
@@ -1174,102 +1150,56 @@ RETURN JSON with all keys. No markdown fences."""
                  "top_recruiters", "placement_highlights"],
         "audit_sections": ["Placements_General", "Placement_Yearly_Counts",
                            "Placement_Gender_Stats", "Sector_Wise_Placements"],
-        "prompt": """You are an expert placement data validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
+        "prompt": """You are an expert employment/placement data validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
 
-STEP 1 — FIX from context: Use EXACT figures from context (e.g. "Average Package 3.52 LPA" → 3.52).
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE about this specific college's placements:
-  - Fill average/highest package if you know them.
-  - Fill top recruiters list if you know them.
-  - Fill placement rate if known.
-STEP 3 — NOT APPLICABLE: 
-  - "package_currency" = "LPA" for Indian colleges, actual currency code for others.
-  - For colleges you have no placement knowledge about, set fields to "not_available".
+CRITICAL — COUNTRY-AWARE PLACEMENT FORMAT:
+- INDIA only: Use "placement_rate_percent", "highest_package", "average_package", "median_package", "total_students_placed", "total_companies_visited", "package_currency" = "LPA". Fill from context only.
+- NON-INDIA (Europe, USA, Australia, etc.): The Indian B-school campus-drive placement format does NOT apply. Set "highest_package", "average_package", "median_package", "total_students_placed", "total_companies_visited", "placement_comparison_last_3_years", "gender_based_placement_last_3_years" → ALL to "not_applicable".
+  - Instead, look for "graduate_employment_rate" or "employment_within_X_months" in context. Put that in "placement_highlights" if found.
+  - "top_recruiters": Only include if context explicitly names companies that hire from THIS college. Do NOT invent a list.
+  - "sector_wise_placement_last_3_years": ONLY if context explicitly has this breakdown. Otherwise "not_applicable".
 
-FIELD RULES:
-- placements: {
-    "year": "2025", "highest_package": float, "average_package": float, "median_package": float,
-    "package_currency": "LPA", "placement_rate_percent": float,
-    "total_students_placed": int, "total_companies_visited": int,
-    "on_campus_placed": int, "off_campus_placed": int
-  }
-- placement_comparison_last_3_years: yearly data for 2023, 2024, 2025.
-- gender_based_placement_last_3_years: yearly gender split.
-- sector_wise_placement_last_3_years: [{"year": "2025", "sector": "IT/Software", "companies": ["TCS", "Infosys"], "percent": 45.0}]
-- top_recruiters: [{"company": "TCS", "sector": "IT", "students_hired": int, "package_lpa": float}] — list known recruiters.
-- placement_highlights: key achievements text (e.g. "100% placement for 5 consecutive years").
-- Do NOT inflate: typical private engineering avg 3-6 LPA, highest 10-25 LPA.
-
+RULES for INDIA:
+- Use EXACT figures from context. Do NOT inflate: typical private college avg 3-6 LPA.
+- If context says "100% Placement Rate" → placement_rate_percent = 100.
+- If data for a year is missing, set all fields for that year to null — do NOT estimate year-on-year fabrications.
+""" + _ANTI_CONTAMINATION_RULES + """
 RETURN JSON with all keys. No markdown fences."""
     },
     "fees_schol_infra": {
         "keys": ["fees", "fees_by_year", "scholarships", "infrastructure",
                  "hostel_details", "transport_details", "library_details"],
         "audit_sections": ["Fees", "Scholarships", "Infrastructure"],
-        "prompt": """You are an expert college facilities data validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
+        "prompt": """You are an expert college facilities and fees validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
 
-STEP 1 — FIX from context: Use exact figures from context. All amounts as plain numbers.
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE about this specific college to:
-  - Fill fee amounts if you know them (plain numbers, no symbols/commas).
-  - Fill scholarships this college is known to offer.
-  - Fill infrastructure details (labs, library, hostels, sports) if you know them.
-STEP 3 — NOT APPLICABLE: e.g. "pg_hostel" for a college with no PG → "not_applicable".
-
-FIELD RULES:
-- fees: {"UG": {"per_year": int, "total_course": int, "currency": "INR"}, "PG": {...}, "hostel_per_year": int}
-- fees_by_year: [{"year": "2024-25", "program_type": "UG", "per_year_local": int, "total_course_local": int, "hostel_per_year_local": int, "currency": "INR"}] for 2023-24, 2024-25, 2025-26.
-- scholarships: [{"name": "", "amount": "", "eligibility": "", "provider": "college/govt/private", "renewable": true/false}]
-  Include: AICTE scholarships, NAAC, govt schemes, college merit scholarships, sports quota, etc.
-- infrastructure: [{"facility": "", "details": "", "count": null, "area": ""}] — EVERY facility with exact details.
-  Include: classrooms, labs, library (books count, journals, e-resources), hostels (capacity, AC/non-AC),
-  cafeteria, sports (courts, ground, gym), auditorium (capacity), hospital/medical, transport buses,
-  WiFi/internet, computing labs (systems count), workshops, incubation center, placement cell.
-- hostel_details: {"boys_hostels": int, "girls_hostels": int, "boys_capacity": int, "girls_capacity": int, "ac_rooms": bool, "amenities": []}
-- transport_details: {"buses": int, "routes": int, "areas_covered": []}
-- library_details: {"total_books": int, "journals": int, "e_journals": int, "e_books": int, "area_sqft": int, "digital_library": bool}
-
+RULES:
+- FEES: Use EXACT figures from context. If context or training knowledge indicates the college is tuition-free / government-funded, set per_year=0 and add a note. Do NOT invent fee amounts.
+- FEES BY YEAR: Only fill years where you have actual data. Do NOT extrapolate fabricated year-on-year figures.
+- SCHOLARSHIPS: ONLY include scholarships you can CONFIRM are available to students of THIS specific institution. Do NOT paste a generic list of global scholarships. Erasmus+ is valid for European partner institutions. TNAA/GATE/AICTE scholarships are valid for Indian colleges only.
+- INFRASTRUCTURE: Use context values. If context confirms specific facilities (gym, sauna, preschool, distance learning), list them. Do NOT invent capacity numbers.
+- LIBRARY: Use context numbers if available. If not, set to "not_available" — do NOT estimate.
+- HOSTEL: Use context numbers. If context confirms residential campus, note it. Do NOT invent capacity counts.
+""" + _ANTI_CONTAMINATION_RULES + """
 RETURN JSON with all keys. No markdown fences."""
     },
     "additional_info": {
         "keys": ["research_and_development", "industry_collaborations", "achievements_awards",
                  "student_clubs_activities", "alumni_info", "admission_process"],
         "audit_sections": ["About", "Identity"],
-        "prompt": """You are enriching college data with additional important information. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
+        "prompt": """You are validating additional college information. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
 
-STEP 1 — EXTRACT from context: Any research, collaborations, achievements, or activities mentioned.
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE about this college to fill in:
-  - Research centers, funded projects, publications, patents.
-  - Industry MoUs and tie-ups.
-  - Awards and recognitions.
-  - Student clubs, fests, activities.
-  - Notable alumni.
-  - Admission process (entrance exams accepted, cutoff ranks).
-STEP 3 — NOT APPLICABLE: If a field truly doesn't apply, use "not_applicable".
-
-FIELD RULES:
-- research_and_development: {
-    "research_centers": [{"name": "", "focus_area": ""}],
-    "funded_projects": int,
-    "publications_per_year": int,
-    "patents_filed": int,
-    "patents_granted": int,
-    "research_funding_inr": ""
-  }
-- industry_collaborations: [{"company": "", "type": "MoU/internship/research", "benefit": ""}]
-- achievements_awards: [{"award": "", "year": "", "body": ""}]
-- student_clubs_activities: [{"name": "", "type": "technical/cultural/sports", "description": ""}]
-- alumni_info: {
-    "notable_alumni": [{"name": "", "designation": "", "company": ""}],
-    "alumni_association": bool,
-    "total_alumni": int
-  }
-- admission_process: {
-    "ug_entrance_exams": ["TNEA", "JEE Main"],
-    "pg_entrance_exams": ["TANCET", "GATE"],
-    "management_quota_percent": float,
-    "cutoff_rank_general": "",
-    "application_mode": "online/offline/both"
-  }
-
+RULES:
+- EXTRACT from context: Research centers, achievements, student activities, notable alumni mentioned.
+- ENRICH from training knowledge ONLY for THIS specific institution with confirmed facts.
+- research_and_development: Only fill fields for confirmed research activity. Use null for unknown counts.
+- industry_collaborations: Only confirmed MoUs/tie-ups for THIS college.
+- achievements_awards: Only confirmed awards with year and awarding body.
+- student_clubs_activities: Only confirmed clubs/events for THIS college.
+- alumni_info.notable_alumni: ONLY names you are CERTAIN attended THIS college.
+- admission_process: For INDIAN colleges, list entrance exams (TNEA, JEE, TANCET, GATE, CAT, MAT). For NON-INDIAN colleges, describe the actual admission process (application form, transcripts, etc.) — Indian exam names are "not_applicable".
+- "management_quota_percent" and "cutoff_rank_general": "not_applicable" for non-Indian colleges.
+- "research_funding_inr": rename to "research_funding" and use local currency for non-Indian colleges.
+""" + _ANTI_CONTAMINATION_RULES + """
 RETURN JSON with all keys. No markdown fences."""
     },
 }
@@ -1386,11 +1316,11 @@ def validate_with_gemini(structured_json: dict, audit_sections: list, college_na
     # Merge corrections into validated JSON
     corrections_applied = 0
     for sec_name, result in results.items():
-        if result is None:
+        if result is None or not isinstance(result, dict):
             continue
         for key, value in result.items():
-            if key in structured_json:
-                old_val = structured_json.get(key)
+            if key in validated:
+                old_val = validated.get(key)
                 if value != old_val:
                     validated[key] = value
                     corrections_applied += 1

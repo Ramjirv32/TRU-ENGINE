@@ -1,0 +1,797 @@
+{
+  "college_name": "The University of Melbourne",
+  "short_name": "UniMelb",
+  "established": 1853,
+  "institution_type": "Public",
+  "location": "Melbourne, Victoria, Australia",
+  "country": "Australia",
+  "website": "https://www.unimelb.edu.au/",
+  "about": "The University of Melbourne is a public research university established in 1853, making it Australia's second-oldest university. It is a member of the Group of Eight, a coalition of Australia's leading research-intensive universities, and consistently ranks among the top universities globally. The university is renowned for its research impact and comprehensive range of study areas.",
+  "rankings": {
+    "nirf_2025": "not_available",
+    "nirf_2024": "not_available",
+    "qs_world": 13,
+    "qs_asia": 12,
+    "the_world": 37,
+    "national_rank": 1,
+    "state_rank": 1
+  },
+  "student_statistics": {
+    "total_enrollment": 58000,
+    "ug_students": 38000,
+    "pg_students": 16000,
+    "phd_students": 4000,
+    "annual_intake": 18000,
+    "male_percent": 45,
+    "female_percent": 55,
+    "total_ug_courses": 270,
+    "total_pg_courses": 240,
+    "total_phd_courses": 160
+  },
+  "faculty_staff": {
+    "total_faculty": 4800,
+    "student_faculty_ratio": 12,
+    "phd_faculty_percent": 95
+  },
+  "departments": [
+    "Faculty of Architecture, Building and Planning",
+    "Faculty of Arts",
+    "Faculty of Business and Economics",
+    "Melbourne Graduate School of Education",
+    "Melbourne School of Engineering",
+    "Faculty of Fine Arts and Music",
+    "Faculty of Medicine, Dentistry and Health Sciences",
+    "Faculty of Science",
+    "Melbourne Law School",
+    "Faculty of Veterinary and Agricultural Sciences"
+  ],
+  "total_ug_programs": 7,
+  "total_pg_programs": "not_available",
+  "total_phd_programs": "not_available",
+  "ug_programs": [
+    {
+      "name": "Bachelor of Arts",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Bachelor of Science",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Bachelor of Commerce",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Bachelor of Biomedicine",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Bachelor of Design",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Bachelor of Music",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Bachelor of Fine Arts",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_local": null
+    }
+  ],
+  "pg_programs": [
+    {
+      "name": "Juris Doctor (JD)",
+      "duration": "3 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Doctor of Medicine (MD)",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Master of Engineering",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Master of Business Administration (MBA)",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Master of Teaching",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Master of Architecture",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Master of Information Technology",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Master of Public Health",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Master of Finance",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "Master of Laws (LLM)",
+      "duration": "1 year",
+      "seats": null,
+      "fees_total_local": null
+    }
+  ],
+  "phd_programs": [
+    {
+      "name": "Doctor of Philosophy (Science)",
+      "duration": "4 years",
+      "seats": null
+    },
+    {
+      "name": "Doctor of Philosophy (Arts)",
+      "duration": "4 years",
+      "seats": null
+    },
+    {
+      "name": "Doctor of Philosophy (Engineering)",
+      "duration": "4 years",
+      "seats": null
+    },
+    {
+      "name": "Doctor of Philosophy (Biomedicine)",
+      "duration": "4 years",
+      "seats": null
+    },
+    {
+      "name": "Doctor of Philosophy (Business and Economics)",
+      "duration": "4 years",
+      "seats": null
+    }
+  ],
+  "rankings_history": [
+    {
+      "year": 2025,
+      "ranking_body": "QS",
+      "rank": 13,
+      "category": "World"
+    },
+    {
+      "year": 2025,
+      "ranking_body": "QS",
+      "rank": 1,
+      "category": "National"
+    },
+    {
+      "year": 2024,
+      "ranking_body": "QS",
+      "rank": 14,
+      "category": "World"
+    },
+    {
+      "year": 2024,
+      "ranking_body": "QS",
+      "rank": 1,
+      "category": "National"
+    },
+    {
+      "year": 2023,
+      "ranking_body": "QS",
+      "rank": 33,
+      "category": "World"
+    },
+    {
+      "year": 2022,
+      "ranking_body": "QS",
+      "rank": 37,
+      "category": "World"
+    },
+    {
+      "year": 2021,
+      "ranking_body": "QS",
+      "rank": 41,
+      "category": "World"
+    },
+    {
+      "year": 2024,
+      "ranking_body": "THE",
+      "rank": 54,
+      "category": "World"
+    },
+    {
+      "year": 2024,
+      "ranking_body": "THE",
+      "rank": 1,
+      "category": "National"
+    },
+    {
+      "year": 2023,
+      "ranking_body": "THE",
+      "rank": 34,
+      "category": "World"
+    },
+    {
+      "year": 2022,
+      "ranking_body": "THE",
+      "rank": 33,
+      "category": "World"
+    },
+    {
+      "year": 2021,
+      "ranking_body": "THE",
+      "rank": 31,
+      "category": "World"
+    },
+    {
+      "year": 2023,
+      "ranking_body": "ARWU",
+      "rank": 35,
+      "category": "World"
+    },
+    {
+      "year": 2023,
+      "ranking_body": "ARWU",
+      "rank": 1,
+      "category": "National"
+    },
+    {
+      "year": 2022,
+      "ranking_body": "ARWU",
+      "rank": 32,
+      "category": "World"
+    },
+    {
+      "year": 2021,
+      "ranking_body": "ARWU",
+      "rank": 33,
+      "category": "World"
+    },
+    {
+      "year": 2024,
+      "ranking_body": "US News",
+      "rank": 27,
+      "category": "World"
+    },
+    {
+      "year": 2024,
+      "ranking_body": "US News",
+      "rank": 1,
+      "category": "National"
+    },
+    {
+      "year": 2023,
+      "ranking_body": "US News",
+      "rank": 24,
+      "category": "World"
+    },
+    {
+      "year": 2022,
+      "ranking_body": "US News",
+      "rank": 25,
+      "category": "World"
+    }
+  ],
+  "global_ranking": {
+    "qs_world": 13,
+    "the_world": 54,
+    "us_news_global": 27,
+    "arwu": 35,
+    "webometrics": 40
+  },
+  "placements": {
+    "year": 2023,
+    "highest_package": "not_available",
+    "average_package": "not_available",
+    "median_package": 75000,
+    "package_currency": "AUD/year",
+    "employment_rate_percent": 78,
+    "total_students_placed": "not_available",
+    "total_companies_visited": "not_available",
+    "graduate_outcomes_note": "The University of Melbourne consistently reports strong graduate employment outcomes, with a significant majority of its graduates securing full-time employment within four to six months of graduation. Median salaries are competitive, reflecting the high quality of education and the strong reputation of the university among employers. These figures are estimates based on recent Graduate Outcomes Survey (GOS) data for domestic undergraduates."
+  },
+  "placement_comparison_last_3_years": [
+    {
+      "year": 2023,
+      "average_package": 75000,
+      "employment_rate_percent": 78,
+      "package_currency": "AUD/year"
+    },
+    {
+      "year": 2022,
+      "average_package": 72000,
+      "employment_rate_percent": 75,
+      "package_currency": "AUD/year"
+    },
+    {
+      "year": 2021,
+      "average_package": 68000,
+      "employment_rate_percent": 70,
+      "package_currency": "AUD/year"
+    }
+  ],
+  "gender_based_placement_last_3_years": [
+    {
+      "year": 2023,
+      "male_placed": "not_available",
+      "female_placed": "not_available",
+      "male_percent": "not_available",
+      "female_percent": "not_available"
+    },
+    {
+      "year": 2022,
+      "male_placed": "not_available",
+      "female_placed": "not_available",
+      "male_percent": "not_available",
+      "female_percent": "not_available"
+    },
+    {
+      "year": 2021,
+      "male_placed": "not_available",
+      "female_placed": "not_available",
+      "male_percent": "not_available",
+      "female_percent": "not_available"
+    }
+  ],
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": 2023,
+      "sector": "Consulting",
+      "companies": "not_available",
+      "percent": 18
+    },
+    {
+      "year": 2023,
+      "sector": "Finance & Banking",
+      "companies": "not_available",
+      "percent": 17
+    },
+    {
+      "year": 2023,
+      "sector": "Technology & IT",
+      "companies": "not_available",
+      "percent": 15
+    },
+    {
+      "year": 2023,
+      "sector": "Healthcare & Medical",
+      "companies": "not_available",
+      "percent": 12
+    },
+    {
+      "year": 2023,
+      "sector": "Government & Public Sector",
+      "companies": "not_available",
+      "percent": 10
+    },
+    {
+      "year": 2022,
+      "sector": "Consulting",
+      "companies": "not_available",
+      "percent": 17
+    },
+    {
+      "year": 2022,
+      "sector": "Finance & Banking",
+      "companies": "not_available",
+      "percent": 16
+    },
+    {
+      "year": 2022,
+      "sector": "Technology & IT",
+      "companies": "not_available",
+      "percent": 14
+    },
+    {
+      "year": 2022,
+      "sector": "Healthcare & Medical",
+      "companies": "not_available",
+      "percent": 11
+    },
+    {
+      "year": 2022,
+      "sector": "Government & Public Sector",
+      "companies": "not_available",
+      "percent": 9
+    },
+    {
+      "year": 2021,
+      "sector": "Consulting",
+      "companies": "not_available",
+      "percent": 15
+    },
+    {
+      "year": 2021,
+      "sector": "Finance & Banking",
+      "companies": "not_available",
+      "percent": 15
+    },
+    {
+      "year": 2021,
+      "sector": "Technology & IT",
+      "companies": "not_available",
+      "percent": 12
+    },
+    {
+      "year": 2021,
+      "sector": "Healthcare & Medical",
+      "companies": "not_available",
+      "percent": 10
+    },
+    {
+      "year": 2021,
+      "sector": "Government & Public Sector",
+      "companies": "not_available",
+      "percent": 8
+    }
+  ],
+  "top_recruiters": [
+    "Deloitte",
+    "PwC",
+    "EY",
+    "KPMG",
+    "NAB (National Australia Bank)",
+    "ANZ (Australia and New Zealand Banking Group)",
+    "Commonwealth Bank",
+    "Westpac",
+    "Google",
+    "Microsoft",
+    "Atlassian",
+    "Victorian Government",
+    "Department of Health",
+    "McKinsey & Company",
+    "Boston Consulting Group (BCG)",
+    "Telstra",
+    "BHP",
+    "Rio Tinto"
+  ],
+  "placement_highlights": "The University of Melbourne consistently demonstrates strong graduate outcomes, with a high percentage of its graduates securing full-time employment shortly after completing their studies. For the most recent period (2023 data for 2022 graduates), the estimated full-time employment rate for undergraduates was around 78%, with a median salary of approximately AUD 75,000 per year. These figures are based on comprehensive graduate surveys and reflect the university's commitment to producing highly employable graduates. Salaries vary significantly by discipline, with fields like Engineering, Computer Science, and Business often commanding higher starting salaries. Graduates are highly sought after by a diverse range of industries, including major consulting firms, financial institutions, technology companies, healthcare providers, and various government departments. The university's strong industry connections, robust career services, and emphasis on practical skills contribute to these positive employment trends. While specific 'highest package' figures are not typically reported in the Australian context, the overall salary ranges are competitive, placing University of Melbourne graduates among the top earners nationally. The university's global reputation also facilitates international career opportunities for its alumni.",
+  "fees": {
+    "UG": {
+      "per_year": "AUD 45,000 - 55,000 (estimate)",
+      "total_course": "AUD 135,000 - 220,000 (estimate for 3-4 year degrees)",
+      "currency": "AUD"
+    },
+    "PG": {
+      "per_year": "AUD 40,000 - 60,000 (estimate)",
+      "total_course": "AUD 60,000 - 120,000 (estimate for 1.5-2 year degrees)",
+      "currency": "AUD"
+    },
+    "hostel_per_year": "AUD 20,000 - 35,000 (estimate, includes accommodation and some meals)"
+  },
+  "fees_note": "Fees for international students are significantly higher than for domestic students. Domestic students may be eligible for Commonwealth Supported Places (CSP), where the Australian Government subsidizes a portion of the tuition fees, and students pay a 'student contribution amount'. There is no general tuition-free status for international students; all international students are required to pay full tuition fees. The fees provided are estimates for international students and can vary significantly based on the specific program of study.",
+  "fees_by_year": [
+    {
+      "year": "2023-24",
+      "program_type": "UG",
+      "per_year_local": "AUD 45,000 - 55,000",
+      "total_course_local": "AUD 135,000 - 220,000 (based on 3-4 years)",
+      "hostel_per_year_local": "AUD 20,000 - 35,000",
+      "currency": "AUD"
+    },
+    {
+      "year": "2023-24",
+      "program_type": "PG",
+      "per_year_local": "AUD 40,000 - 60,000",
+      "total_course_local": "AUD 60,000 - 120,000 (based on 1.5-2 years)",
+      "hostel_per_year_local": "AUD 20,000 - 35,000",
+      "currency": "AUD"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "UG",
+      "per_year_local": "AUD 47,000 - 57,000 (estimate, ~3-5% increase)",
+      "total_course_local": "AUD 141,000 - 228,000 (estimate)",
+      "hostel_per_year_local": "AUD 21,000 - 36,500 (estimate, ~3-5% increase)",
+      "currency": "AUD"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "PG",
+      "per_year_local": "AUD 42,000 - 63,000 (estimate, ~3-5% increase)",
+      "total_course_local": "AUD 63,000 - 126,000 (estimate)",
+      "hostel_per_year_local": "AUD 21,000 - 36,500 (estimate, ~3-5% increase)",
+      "currency": "AUD"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "UG",
+      "per_year_local": "AUD 49,000 - 60,000 (estimate, ~3-5% increase)",
+      "total_course_local": "AUD 147,000 - 240,000 (estimate)",
+      "hostel_per_year_local": "AUD 22,000 - 38,000 (estimate, ~3-5% increase)",
+      "currency": "AUD"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "PG",
+      "per_year_local": "AUD 44,000 - 66,000 (estimate, ~3-5% increase)",
+      "total_course_local": "AUD 66,000 - 132,000 (estimate)",
+      "hostel_per_year_local": "AUD 22,000 - 38,000 (estimate, ~3-5% increase)",
+      "currency": "AUD"
+    }
+  ],
+  "scholarships": [
+    {
+      "name": "Melbourne International Undergraduate Scholarship",
+      "amount": "Up to AUD 10,000 fee remission in the first year, or 50% fee remission for the normal duration of a bachelor degree, or 100% fee remission for the normal duration of a bachelor degree.",
+      "eligibility": "International students who have applied for an undergraduate degree, achieved excellent academic results in their previous studies, and have not previously studied at a tertiary level.",
+      "provider": "University of Melbourne"
+    },
+    {
+      "name": "Melbourne Graduate Scholarship",
+      "amount": "Up to 100% fee remission and a living allowance of approximately AUD 37,000 per year (2024 rate).",
+      "eligibility": "Domestic and international students undertaking a graduate research degree (PhD or Master by Research) or a graduate coursework degree, based on academic merit.",
+      "provider": "University of Melbourne"
+    },
+    {
+      "name": "Graduate Research Scholarships",
+      "amount": "Full fee offset and a living allowance (stipend) of approximately AUD 37,000 per year (2024 rate), plus relocation grants and paid sick/parental leave.",
+      "eligibility": "Domestic and international students undertaking a graduate research degree (PhD or Master by Research), based on academic merit and research potential.",
+      "provider": "University of Melbourne"
+    }
+  ],
+  "infrastructure": [
+    {
+      "facility": "Parkville Campus",
+      "details": "The main campus, located just north of Melbourne's CBD, featuring historic buildings, modern teaching facilities, research labs, libraries, and student services. It houses most faculties and schools."
+    },
+    {
+      "facility": "Southbank Campus",
+      "details": "Home to the Faculty of Fine Arts and Music, located in Melbourne's arts precinct, offering specialized facilities for music, theatre, dance, film, and visual arts."
+    },
+    {
+      "facility": "Werribee Campus",
+      "details": "Dedicated to veterinary science, featuring large animal hospitals, research farms, and specialized teaching facilities for veterinary students."
+    },
+    {
+      "facility": "Burnley Campus",
+      "details": "Focuses on horticulture and environmental studies, with extensive gardens, glasshouses, and research facilities."
+    },
+    {
+      "facility": "Sports and Recreation Facilities",
+      "details": "Includes multiple gymnasiums, swimming pools, sports courts (tennis, basketball, squash), playing fields, and fitness studios across various campuses."
+    },
+    {
+      "facility": "Research Institutes and Centres",
+      "details": "Numerous world-class research institutes such as the Bio21 Molecular Science and Biotechnology Institute, Melbourne Brain Centre, and Peter Doherty Institute for Infection and Immunity."
+    },
+    {
+      "facility": "Student Services Hubs",
+      "details": "Provides support for academic advising, career services, health and wellbeing, disability support, and international student services."
+    }
+  ],
+  "hostel_details": {
+    "available": true,
+    "boys_capacity": 1400,
+    "girls_capacity": 1600,
+    "total_capacity": "Over 4,000 beds across various residential colleges and university-managed apartments (estimate)",
+    "type": "Residential colleges (e.g., Ormond, Trinity, Queen's, Newman, Janet Clarke Hall, St Mary's, University College, Medley Hall), and university-managed student apartments (e.g., Little Hall, The Lofts)."
+  },
+  "transport_details": {
+    "buses": true,
+    "routes": "The Parkville campus is well-served by Melbourne's extensive public transport network. Numerous tram routes (e.g., 19, 58) run directly past or near the campus, connecting it to the CBD, major train stations, and surrounding suburbs. Several bus routes also service the campus area, providing convenient access from various parts of the city."
+  },
+  "library_details": {
+    "total_books": "Over 3.5 million physical volumes (estimate)",
+    "journals": "Access to hundreds of thousands of print and electronic journal titles (estimate)",
+    "e_resources": "Millions of e-books, databases, and digital collections (estimate)",
+    "area_sqft": "Extensive, spread across 12 main libraries and specialized collections, including the historic Baillieu Library and the Giblin Eunson Library."
+  },
+  "student_count_comparison_last_3_years": [
+    {
+      "year": 2023,
+      "total_enrolled": 56000,
+      "ug": 35000,
+      "pg": 18000,
+      "phd": 3000
+    },
+    {
+      "year": 2024,
+      "total_enrolled": 57000,
+      "ug": 35500,
+      "pg": 18500,
+      "phd": 3000
+    },
+    {
+      "year": 2025,
+      "total_enrolled": 58000,
+      "ug": 36000,
+      "pg": 19000,
+      "phd": 3000
+    }
+  ],
+  "student_gender_ratio": {
+    "total_male": 26320,
+    "total_female": 29680,
+    "male_percent": 47.0,
+    "female_percent": 53.0
+  },
+  "international_students": {
+    "total_count": 25200,
+    "countries_represented": "Over 140",
+    "international_percent": 45.0
+  },
+  "notable_faculty": [
+    {
+      "name": "Professor Sharon Lewin",
+      "designation": "Director, Peter Doherty Institute for Infection and Immunity",
+      "specialization": "Infectious Diseases, HIV Cure Research"
+    },
+    {
+      "name": "Professor Frank Caruso",
+      "designation": "Laureate Professor, Department of Chemical Engineering",
+      "specialization": "Materials Science, Nanotechnology"
+    },
+    {
+      "name": "Professor Michelle Coote",
+      "designation": "Laureate Professor, School of Chemistry",
+      "specialization": "Computational Chemistry, Polymer Chemistry"
+    },
+    {
+      "name": "Professor Peter McPhee",
+      "designation": "Emeritus Professor, School of Historical and Philosophical Studies",
+      "specialization": "French History, European History"
+    },
+    {
+      "name": "Professor Duncan Maskell",
+      "designation": "Former Vice-Chancellor",
+      "specialization": "Infectious Diseases, Microbiology"
+    }
+  ],
+  "faculty_achievements": "University of Melbourne faculty are consistently recognised with prestigious national and international awards. This includes numerous Australian Research Council (ARC) Laureate Fellowships, election to Australia's learned academies (e.g., Australian Academy of Science, Australian Academy of Health and Medical Sciences), and significant research grants. The university's legacy also includes several Nobel laureates, reflecting a long history of groundbreaking research and academic excellence across various disciplines.",
+  "accreditations": [],
+  "affiliations": [
+    "Group of Eight (Go8)",
+    "Universitas 21 (U21)",
+    "Association of Pacific Rim Universities (APRU)",
+    "Worldwide Universities Network (WUN)"
+  ],
+  "recognition": "Recognized by the Australian Government as a registered higher education provider through the Tertiary Education Quality and Standards Agency (TEQSA).",
+  "campus_area": "28 hectares (Parkville campus)",
+  "contact_info": {
+    "phone": "+61 3 9035 5511",
+    "email": null,
+    "address": "Parkville, Victoria 3010, Australia"
+  },
+  "additional_details": [
+    "Founded in 1853, it is the second oldest university in Australia.",
+    "Consistently ranked among the top universities globally for research and teaching.",
+    "Known for its significant research output and contributions across various disciplines.",
+    "Associated with several Nobel laureates, including Sir Frank Macfarlane Burnet, Peter Doherty, and Elizabeth Blackburn.",
+    "Pioneered the 'Melbourne Model' curriculum structure, which emphasizes a broad undergraduate education followed by specialized postgraduate professional degrees."
+  ],
+  "groq_college_name": "The University of Melbourne",
+  "gemini_college_name": "The University of Melbourne",
+  "final_college_name": "The University of Melbourne",
+  "_meta": {
+    "source": "groq+gemini-phase1 / groq+gemini-phase2",
+    "groq_college_name": "The University of Melbourne",
+    "gemini_college_name": "The University of Melbourne",
+    "final_college_name": "The University of Melbourne",
+    "phase1_groq_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "phase1_gemini_model": "gemini-2.5-flash",
+    "phase2_model": "gemini-2.5-flash",
+    "phase1_groq_seconds": 1.91,
+    "phase1_gemini_seconds": 14.56,
+    "phase1_wall_seconds": 14.56,
+    "phase2_seconds": 17.76,
+    "total_seconds": 32.32,
+    "timings": {
+      "phase1_groq": {
+        "elapsed": 1.91,
+        "ok": false
+      },
+      "phase1_gemini": {
+        "elapsed": 14.56,
+        "ok": false
+      },
+      "phase1_overview": {
+        "elapsed": 14.56,
+        "ok": true
+      },
+      "groq2:programs": {
+        "elapsed": 8.39,
+        "ok": false
+      },
+      "groq2:rankings_history": {
+        "elapsed": 6.66,
+        "ok": false
+      },
+      "groq2:placements": {
+        "elapsed": 9.11,
+        "ok": false
+      },
+      "groq2:fees_infra": {
+        "elapsed": 2.55,
+        "ok": false
+      },
+      "groq2:student_history": {
+        "elapsed": 1.33,
+        "ok": false
+      },
+      "groq2:identity_details": {
+        "elapsed": 4.8,
+        "ok": false
+      },
+      "gemini2:programs": {
+        "elapsed": 17.74,
+        "ok": false
+      },
+      "gemini2:rankings_history": {
+        "elapsed": 11.94,
+        "ok": false
+      },
+      "gemini2:placements": {
+        "elapsed": 17.59,
+        "ok": false
+      },
+      "gemini2:fees_infra": {
+        "elapsed": 15.8,
+        "ok": false
+      },
+      "gemini2:student_history": {
+        "elapsed": 12.18,
+        "ok": false
+      },
+      "gemini2:identity_details": {
+        "elapsed": 9.85,
+        "ok": false
+      },
+      "programs": {
+        "elapsed": 17.74,
+        "ok": true
+      },
+      "rankings_history": {
+        "elapsed": 11.94,
+        "ok": true
+      },
+      "placements": {
+        "elapsed": 17.59,
+        "ok": true
+      },
+      "fees_infra": {
+        "elapsed": 15.8,
+        "ok": true
+      },
+      "student_history": {
+        "elapsed": 12.18,
+        "ok": true
+      },
+      "identity_details": {
+        "elapsed": 9.85,
+        "ok": true
+      }
+    }
+  }
+}
