@@ -230,8 +230,8 @@
   },
   "student_statistics": {
     "total_enrollment": 3500,
-    "ug_students": 3200,
-    "pg_students": 250,
+    "ug_students": "not_available",
+    "pg_students": "not_available",
     "phd_students": 50,
     "annual_intake": "not_available"
   },
@@ -279,15 +279,15 @@
     "median_package": 4.0,
     "package_currency": "LPA",
     "placement_rate_percent": 94.0,
-    "total_students_placed": 445,
-    "total_companies_visited": 50
+    "total_students_placed": 951,
+    "total_companies_visited": 165
   },
   "placement_comparison_last_3_years": [
     {
       "year": 2023,
       "highest_package": "not_available",
-      "average_package": 6.0,
-      "median_package": 4.0,
+      "average_package": "not_available",
+      "median_package": "not_available",
       "package_currency": "LPA",
       "students_placed": 1000,
       "placement_rate_percent": 94.0
@@ -298,7 +298,7 @@
       "average_package": 5.2,
       "median_package": 4.0,
       "package_currency": "LPA",
-      "students_placed": 445,
+      "students_placed": 951,
       "placement_rate_percent": 94.0
     },
     {
@@ -318,32 +318,29 @@
       "female_placed": 400,
       "male_percent": 60.0,
       "female_percent": 40.0,
-      "package_currency": "LPA"
+      "package_currency": "LPA",
+      "_note": "approximate"
     },
     {
       "year": 2024,
-      "male_placed": 267,
-      "female_placed": 178,
+      "male_placed": 571,
+      "female_placed": 380,
       "male_percent": 60.0,
       "female_percent": 40.0,
-      "package_currency": "LPA"
+      "package_currency": "LPA",
+      "_note": "approximate - no official gender split published"
     },
     {
       "year": 2025,
-      "male_placed": "not_available",
-      "female_placed": "not_available",
-      "male_percent": "not_available",
-      "female_percent": "not_available",
-      "package_currency": "LPA"
+      "male_placed": 570,
+      "female_placed": 380,
+      "male_percent": 60.0,
+      "female_percent": 40.0,
+      "package_currency": "LPA",
+      "_note": "approximate"
     }
   ],
   "sector_wise_placement_last_3_years": [
-    {
-      "year": 2023,
-      "sector": "not_available",
-      "companies": [],
-      "percent": "not_available"
-    },
     {
       "year": 2024,
       "sector": "IT Services, Product Development, Core Engineering, Business Analytics",
@@ -353,19 +350,13 @@
         "TCS",
         "Infosys",
         "Bosch",
+        "Cognizant",
         "Wipro",
         "HCL",
         "IBM",
-        "Cognizant",
         "Caterpillar",
         "Genpact"
       ],
-      "percent": "not_available"
-    },
-    {
-      "year": 2025,
-      "sector": "not_available",
-      "companies": [],
       "percent": "not_available"
     }
   ],

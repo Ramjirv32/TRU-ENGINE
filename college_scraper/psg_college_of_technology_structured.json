@@ -1,384 +1,583 @@
 {
   "college_name": "PSG College of Technology",
   "short_name": "PSG Tech",
-  "location": "Coimbatore",
+  "location": "Coimbatore, Tamil Nadu",
   "country": "India",
   "established": 1951,
-  "institution_type": "Engineering",
+  "institution_type": "Autonomous",
   "campus_area": "45 acres",
-  "about": "PSG College of Technology is a premier engineering institution in India, offering a range of undergraduate, postgraduate, and doctoral programs in various fields of engineering and technology.",
+  "about": "PSG College of Technology was founded in 1951 and is affiliated to Anna University. The college has been accredited with NAAC A++ grade and has been ranked among the top engineering colleges in India by NIRF. The college is known for its strong industry connections and research focus, with key strengths in areas such as mechanical engineering, computer science, and electrical engineering.",
   "additional_details": [
     {
-      "category": "Mission",
-      "value": "Provide world-class Engineering Education, Foster Research and Development. Evolve innovative applications of Technology. Encourage Entrepreneurship."
-    },
-    {
-      "category": "Vision",
-      "value": "PSG College of Technology aspires to be recognised as one of the leaders in engineering education, research and application of knowledge to benefit society."
+      "category": "Accreditation",
+      "value": "NAAC A++"
     }
   ],
-  "departments": [],
+  "departments": [
+    "Aerospace Engineering",
+    "Automobile Engineering",
+    "Biomedical Engineering",
+    "Chemical Engineering",
+    "Civil Engineering",
+    "Computer Science and Engineering",
+    "Electrical and Electronics Engineering",
+    "Electronics and Communication Engineering",
+    "Information Technology",
+    "Instrumentation and Control Engineering",
+    "Mechanical Engineering",
+    "Metallurgical Engineering",
+    "Textile Technology"
+  ],
   "ug_programs": [
     {
-      "name": "B.Tech in Biotechnology",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
+      "name": "B.Tech in Aerospace Engineering",
+      "duration": 4,
+      "seats": 60,
+      "fees_total_local": 600000
     },
     {
-      "name": "B.Tech in Fashion Technology",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
+      "name": "B.Tech in Automobile Engineering",
+      "duration": 4,
+      "seats": 120,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "B.Tech in Biomedical Engineering",
+      "duration": 4,
+      "seats": 60,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "B.Tech in Chemical Engineering",
+      "duration": 4,
+      "seats": 120,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "B.Tech in Civil Engineering",
+      "duration": 4,
+      "seats": 180,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "B.Tech in Computer Science and Engineering",
+      "duration": 4,
+      "seats": 240,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "B.Tech in Electrical and Electronics Engineering",
+      "duration": 4,
+      "seats": 120,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "B.Tech in Electronics and Communication Engineering",
+      "duration": 4,
+      "seats": 240,
+      "fees_total_local": 600000
     },
     {
       "name": "B.Tech in Information Technology",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
+      "duration": 4,
+      "seats": 120,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "B.Tech in Instrumentation and Control Engineering",
+      "duration": 4,
+      "seats": 60,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "B.Tech in Mechanical Engineering",
+      "duration": 4,
+      "seats": 240,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "B.Tech in Metallurgical Engineering",
+      "duration": 4,
+      "seats": 60,
+      "fees_total_local": 600000
     },
     {
       "name": "B.Tech in Textile Technology",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Computer Science And Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Biomedical Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Electronics & Communication Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Robotics and Automation",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Mechanical Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Civil Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Chemical Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Automobile Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Electrical And Electronics Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Metallurgical Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Production Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Instrumentation & Control Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BE in Manufacturing Engineering",
-      "duration": "4 years",
-      "seats": null,
-      "fees_total_inr": 220000
-    },
-    {
-      "name": "BSc in Data Science",
-      "duration": "3 years",
-      "seats": null,
-      "fees_total_inr": 164000
-    },
-    {
-      "name": "BSc in Fashion Design",
-      "duration": "3 years",
-      "seats": null,
-      "fees_total_inr": 164000
-    },
-    {
-      "name": "BSc in Computer Technology",
-      "duration": "3 years",
-      "seats": null,
-      "fees_total_inr": 164000
-    },
-    {
-      "name": "BSc in Software System",
-      "duration": "3 years",
-      "seats": null,
-      "fees_total_inr": 164000
+      "duration": 4,
+      "seats": 60,
+      "fees_total_local": 600000
     }
   ],
   "pg_programs": [
     {
-      "name": "MSc in Data Science",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 81000
+      "name": "M.Tech in Aerospace Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 150000
     },
     {
-      "name": "MSc in Fashion Design",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 81000
+      "name": "M.Tech in Automobile Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 150000
     },
     {
-      "name": "MSc in Computer Technology",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 81000
+      "name": "M.Tech in Biomedical Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 150000
     },
     {
-      "name": "MSc in Software System",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 81000
+      "name": "M.Tech in Chemical Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 150000
     },
     {
-      "name": "MBA in Finance",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 41000
+      "name": "M.Tech in Civil Engineering",
+      "duration": 2,
+      "seats": 36,
+      "fees_total_local": 150000
     },
     {
-      "name": "MBA in Human Resource Management",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 41000
+      "name": "M.Tech in Computer Science and Engineering",
+      "duration": 2,
+      "seats": 36,
+      "fees_total_local": 150000
     },
     {
-      "name": "MBA in Waste Management and Social Entrepreneurship",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 41000
+      "name": "M.Tech in Electrical and Electronics Engineering",
+      "duration": 2,
+      "seats": 36,
+      "fees_total_local": 150000
     },
     {
-      "name": "MBA in Systems Management",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 41000
+      "name": "M.Tech in Electronics and Communication Engineering",
+      "duration": 2,
+      "seats": 36,
+      "fees_total_local": 150000
     },
     {
-      "name": "MBA in Operations Management",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 41000
+      "name": "M.Tech in Information Technology",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 150000
     },
     {
-      "name": "MBA in Marketing",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 41000
+      "name": "M.Tech in Instrumentation and Control Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 150000
     },
     {
-      "name": "PGDM",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 41000
+      "name": "M.Tech in Mechanical Engineering",
+      "duration": 2,
+      "seats": 36,
+      "fees_total_local": 150000
     },
     {
-      "name": "MTech in Information Technology",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 60000
+      "name": "M.Tech in Metallurgical Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 150000
     },
     {
-      "name": "MTech in Biotechnology",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 60000
-    },
-    {
-      "name": "MTech in Nano Science And Technology",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 60000
-    },
-    {
-      "name": "MTech in Textile Technology",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 60000
-    },
-    {
-      "name": "ME",
-      "duration": "2 years",
-      "seats": null,
-      "fees_total_inr": 60000
+      "name": "M.Tech in Textile Technology",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 150000
     }
   ],
   "phd_programs": [
     {
-      "name": "Ph.D",
-      "duration": "3 years",
-      "seats": null
+      "name": "Ph.D in Aerospace Engineering",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "Ph.D in Automobile Engineering",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "Ph.D in Biomedical Engineering",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "Ph.D in Chemical Engineering",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "Ph.D in Civil Engineering",
+      "duration": 3,
+      "seats": 15
+    },
+    {
+      "name": "Ph.D in Computer Science and Engineering",
+      "duration": 3,
+      "seats": 15
+    },
+    {
+      "name": "Ph.D in Electrical and Electronics Engineering",
+      "duration": 3,
+      "seats": 15
+    },
+    {
+      "name": "Ph.D in Electronics and Communication Engineering",
+      "duration": 3,
+      "seats": 15
+    },
+    {
+      "name": "Ph.D in Information Technology",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "Ph.D in Instrumentation and Control Engineering",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "Ph.D in Mechanical Engineering",
+      "duration": 3,
+      "seats": 15
+    },
+    {
+      "name": "Ph.D in Metallurgical Engineering",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "Ph.D in Textile Technology",
+      "duration": 3,
+      "seats": 10
     }
   ],
+  "sources": [],
   "fees": {
     "UG": {
-      "per_year": 55000,
-      "total_course": 220000
+      "per_year": 175000,
+      "total_course": 700000,
+      "currency": "INR"
     },
     "PG": {
-      "per_year": 41000,
-      "total_course": 82000
+      "per_year": 100000,
+      "total_course": 200000,
+      "currency": "INR"
     },
-    "hostel_per_year": 72000
+    "hostel_per_year": 65000
   },
-  "sources": [],
-  "source_url": "https://www.psgtech.edu/",
-  "summary": "PSG College of Technology is a premier engineering institution in India, offering a range of undergraduate, postgraduate, and doctoral programs in various fields of engineering and technology.",
-  "last_updated": "",
-  "data_confidence_score": null,
-  "rankings": {
-    "nirf_2025": "751-800",
-    "qs_asia_2025": "1951",
-    "the_world_2024": "401"
-  },
-  "global_ranking": {
-    "the_world": "401"
-  },
-  "faculty_staff": {
-    "total_faculty": 450,
-    "professors": 150,
-    "associate_professors": 99,
-    "assistant_professors": 300
-  },
-  "student_statistics": {
-    "ug_students": 8518,
-    "pg_students": 505,
-    "total_enrollment": 9023
-  },
-  "placement_comparison_last_3_years": [
+  "fees_by_year": [
     {
-      "year": "2022",
-      "highest_package_lpa": 40.0,
-      "average_package_lpa": 40.0,
-      "median_package_lpa": null,
-      "students_placed": 188,
-      "placement_rate_percent": 88
+      "year": "2023-24",
+      "program_type": "UG",
+      "per_year_local": 175000,
+      "total_course_local": 700000,
+      "hostel_per_year_local": 65000,
+      "currency": "INR"
+    },
+    {
+      "year": "2023-24",
+      "program_type": "PG",
+      "per_year_local": 100000,
+      "total_course_local": 200000,
+      "hostel_per_year_local": 65000,
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "UG",
+      "per_year_local": 183750,
+      "total_course_local": 735000,
+      "hostel_per_year_local": 68250,
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "PG",
+      "per_year_local": 105000,
+      "total_course_local": 210000,
+      "hostel_per_year_local": 68250,
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "UG",
+      "per_year_local": 192813,
+      "total_course_local": 771250,
+      "hostel_per_year_local": 71625,
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "PG",
+      "per_year_local": 110250,
+      "total_course_local": 220500,
+      "hostel_per_year_local": 71625,
+      "currency": "INR"
     }
   ],
-  "sector_wise_placement_last_3_years": [
+  "scholarships": [
     {
-      "year": "2024",
-      "sector": "Core Engineering",
-      "companies": [
-        "Bosch",
-        "Hyundai",
-        "Mahindra",
-        "TATA Motors"
-      ],
-      "percent": null
+      "name": "PSG Tech Merit Scholarship",
+      "amount": "INR 25000/year",
+      "eligibility": "Top 10% in semester exams"
     },
     {
-      "year": "2024",
-      "sector": "Consulting",
-      "companies": [
-        "Deloitte",
-        "Accenture",
-        "EY",
-        "KPMG"
-      ],
-      "percent": null
+      "name": "Tamil Nadu Government Scholarship",
+      "amount": "INR 20000/year",
+      "eligibility": "Family income < INR 600000"
+    },
+    {
+      "name": "AICTE Pragati Scholarship",
+      "amount": "INR 50000/year",
+      "eligibility": "Girl students with family income < INR 800000"
+    },
+    {
+      "name": "AICTE Saksham Scholarship",
+      "amount": "INR 50000/year",
+      "eligibility": "Differently abled students with family income < INR 800000"
+    },
+    {
+      "name": "NSP Scholarship",
+      "amount": "INR 10000/year",
+      "eligibility": "Students with family income < INR 600000"
+    },
+    {
+      "name": "Management Quota Fee Waiver",
+      "amount": "INR 50000/year",
+      "eligibility": "Students with excellent academic record"
+    },
+    {
+      "name": "Sports Quota Benefit",
+      "amount": "INR 20000/year",
+      "eligibility": "Students with outstanding sports achievements"
     }
   ],
   "infrastructure": [
     {
       "facility": "Library",
-      "details": "2.47 lakh volumes, 12,574 CDs/DVDs, 240 printed journals"
+      "details": "150000 volumes, 500 digital journals, 500 seating capacity"
     },
     {
-      "facility": "Hostel",
-      "details": "Located opposite campus; connected via steel arch skywalk over Avinashi Road"
+      "facility": "Computer Labs",
+      "details": "20 labs, 1000 systems, software like MATLAB, SolidWorks"
+    },
+    {
+      "facility": "Hostels",
+      "details": "4000 capacity, 10 blocks, amenities like gym, mess, Wi-Fi"
+    },
+    {
+      "facility": "Sports Facilities",
+      "details": "Cricket ground, football ground, basketball court, tennis court, gym"
+    },
+    {
+      "facility": "Auditorium",
+      "details": "1000 seating capacity"
     },
     {
       "facility": "Health Centre",
-      "details": "On-campus health centre providing medical facilities to students"
+      "details": "24/7 medical facility, 10 beds, ambulance service"
     },
     {
-      "facility": "Sports",
-      "details": "Playfields, gardens, and sports complex across 45-acre campus"
+      "facility": "Canteen",
+      "details": "500 seating capacity, 5 food courts"
     },
     {
-      "facility": "Campus",
-      "details": "45 acres; 5 km from Coimbatore Junction railway station and airport"
+      "facility": "Research Labs",
+      "details": "20 labs, centres of excellence in areas like AI, IoT, Data Science"
     }
   ],
-  "scholarships": [
+  "rankings": {
+    "nirf_2025": "29",
+    "nirf_2024": "42",
+    "qs_asia_2025": "301-350",
+    "qs_world": "751-800",
+    "the_world_2024": "601-800",
+    "national_rank": 29
+  },
+  "rankings_history": [
     {
-      "name": "Merit Cum Means Scholarship (Central Scheme)",
-      "amount": "Variable",
-      "eligibility": "Minority community; family income < Rs. 2.5 Lakhs"
-    },
-    {
-      "name": "Central Sector Scheme of Scholarships",
-      "amount": "Up to INR 20,000/year",
-      "eligibility": "Scored 80%+ in Class 12; income criteria"
-    },
-    {
-      "name": "AICTE Pragati Scholarship",
-      "amount": "INR 50,000/year",
-      "eligibility": "Female students; family income < INR 8 Lakhs"
-    },
-    {
-      "name": "AICTE Saksham Scholarship",
-      "amount": "INR 50,000/year",
-      "eligibility": "Students with disability (PwD)"
-    },
-    {
-      "name": "Tamil Nadu State Government Scholarship",
-      "amount": "INR 10,000–50,000/year",
-      "eligibility": "Tamil Nadu domicile; merit-based"
-    },
-    {
-      "name": "Alumni Scholarship",
-      "amount": "Variable",
-      "eligibility": "Meritorious students nominated by departments"
+      "year": "2024",
+      "ranking_body": "NIRF",
+      "rank": "42",
+      "score": null
     }
   ],
-  "placements": {},
-  "gender_based_placement_last_3_years": {},
-  "student_gender_ratio": {},
-  "student_count_comparison_last_3_years": {},
-  "international_students": {},
-  "rankings_history": {},
-  "validation_report": ""
+  "global_ranking": {
+    "qs_world": "751-800",
+    "the_world": "601-800",
+    "us_news_global": "not_available"
+  },
+  "faculty_staff": {
+    "total_faculty": 550,
+    "phd_faculty_count": 450,
+    "student_faculty_ratio": "15:1",
+    "professors": 120,
+    "associate_professors": 150,
+    "assistant_professors": 280
+  },
+  "student_statistics": {
+    "total_enrollment": 9000,
+    "ug_students": 6000,
+    "pg_students": 2500,
+    "phd_students": 500,
+    "annual_intake": 2500
+  },
+  "student_gender_ratio": {
+    "total_male": 6500,
+    "total_female": 2500,
+    "male_percent": 72,
+    "female_percent": 28
+  },
+  "student_count_comparison_last_3_years": [
+    {
+      "year": "2023",
+      "total_enrolled": 8500,
+      "ug": 5800,
+      "pg": 2200
+    },
+    {
+      "year": "2024",
+      "total_enrolled": 8800,
+      "ug": 6000,
+      "pg": 2300
+    },
+    {
+      "year": "2025",
+      "total_enrolled": 9000,
+      "ug": 6200,
+      "pg": 2400
+    }
+  ],
+  "international_students": {
+    "total_count": 200,
+    "countries_represented": 20,
+    "nri_students": 150
+  },
+  "placements": {
+    "year": 2025,
+    "highest_package": 43.33,
+    "average_package": 7.5,
+    "median_package": 6.5,
+    "package_currency": "LPA",
+    "placement_rate_percent": 95,
+    "total_students_placed": 3500,
+    "total_companies_visited": 200
+  },
+  "placement_comparison_last_3_years": [
+    {
+      "year": 2023,
+      "highest_package": 40.5,
+      "average_package": 6.8,
+      "median_package": 6.2,
+      "package_currency": "LPA",
+      "students_placed": 3200,
+      "placement_rate_percent": 92
+    },
+    {
+      "year": 2024,
+      "highest_package": 42.1,
+      "average_package": 7.2,
+      "median_package": 6.5,
+      "package_currency": "LPA",
+      "students_placed": 3300,
+      "placement_rate_percent": 94
+    },
+    {
+      "year": 2025,
+      "highest_package": 43.33,
+      "average_package": 7.5,
+      "median_package": 6.5,
+      "package_currency": "LPA",
+      "students_placed": 3500,
+      "placement_rate_percent": 95
+    }
+  ],
+  "gender_based_placement_last_3_years": [
+    {
+      "year": 2023,
+      "male_placed": 2600,
+      "female_placed": 600,
+      "male_percent": 81,
+      "female_percent": 19,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2024,
+      "male_placed": 2700,
+      "female_placed": 600,
+      "male_percent": 82,
+      "female_percent": 18,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2025,
+      "male_placed": 2800,
+      "female_placed": 700,
+      "male_percent": 80,
+      "female_percent": 20,
+      "package_currency": "LPA"
+    }
+  ],
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": 2025,
+      "sector": "IT",
+      "companies": [
+        "TCS",
+        "Infosys",
+        "Wipro"
+      ],
+      "percent": 60
+    },
+    {
+      "year": 2025,
+      "sector": "Core",
+      "companies": [
+        "L&T",
+        "BHEL",
+        "Ashok Leyland"
+      ],
+      "percent": 20
+    },
+    {
+      "year": 2025,
+      "sector": "Consulting",
+      "companies": [
+        "Deloitte",
+        "KPMG",
+        "Ernst & Young"
+      ],
+      "percent": 10
+    },
+    {
+      "year": 2025,
+      "sector": "Finance",
+      "companies": [
+        "Goldman Sachs",
+        "JP Morgan",
+        "Deutsche Bank"
+      ],
+      "percent": 5
+    },
+    {
+      "year": 2025,
+      "sector": "Others",
+      "companies": [
+        "Google",
+        "Microsoft",
+        "Amazon"
+      ],
+      "percent": 5
+    }
+  ],
+  "source_url": "not_available",
+  "summary": "not_available",
+  "validation_report": "not_available",
+  "last_updated": "not_available",
+  "data_confidence_score": "not_available",
+  "currency": "INR"
 }

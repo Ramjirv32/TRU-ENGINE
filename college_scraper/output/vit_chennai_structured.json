@@ -1,0 +1,467 @@
+{
+  "college_name": "VIT Chennai",
+  "short_name": "VIT Chennai",
+  "location": "Chennai, Tamil Nadu",
+  "country": "India",
+  "established": 2010,
+  "institution_type": "Private",
+  "campus_area": "185 acres",
+  "about": "VIT Chennai was founded in 2010 and is a part of the Vellore Institute of Technology group. The institution is accredited by NAAC with an A++ grade and is also accredited by NBA and NIRF. VIT Chennai is known for its strong programs in engineering, management, and law, with a focus on research and innovation.",
+  "additional_details": [
+    {
+      "category": "Ranking",
+      "value": "Rank 24 in NIRF Engineering Rankings 2022"
+    }
+  ],
+  "departments": [
+    "School of Computer Science and Engineering",
+    "School of Electrical Engineering",
+    "School of Electronics Engineering",
+    "School of Mechanical Engineering",
+    "School of Business",
+    "School of Law"
+  ],
+  "ug_programs": [
+    {
+      "name": "B.Tech in Computer Science and Engineering",
+      "duration": 4,
+      "seats": 240,
+      "fees_total_local": 752000
+    },
+    {
+      "name": "B.Tech in Electronics and Communication Engineering",
+      "duration": 4,
+      "seats": 180,
+      "fees_total_local": 752000
+    },
+    {
+      "name": "B.Tech in Electrical and Electronics Engineering",
+      "duration": 4,
+      "seats": 120,
+      "fees_total_local": 752000
+    },
+    {
+      "name": "B.Tech in Mechanical Engineering",
+      "duration": 4,
+      "seats": 120,
+      "fees_total_local": 752000
+    },
+    {
+      "name": "BBA",
+      "duration": 3,
+      "seats": 120,
+      "fees_total_local": 360000
+    },
+    {
+      "name": "BCA",
+      "duration": 3,
+      "seats": 60,
+      "fees_total_local": 180000
+    },
+    {
+      "name": "B.Com",
+      "duration": 3,
+      "seats": 60,
+      "fees_total_local": 180000
+    },
+    {
+      "name": "BA LLB",
+      "duration": 5,
+      "seats": 60,
+      "fees_total_local": 600000
+    },
+    {
+      "name": "BBA LLB",
+      "duration": 5,
+      "seats": 60,
+      "fees_total_local": 600000
+    }
+  ],
+  "pg_programs": [
+    {
+      "name": "M.Tech in Computer Science and Engineering",
+      "duration": 2,
+      "seats": 36,
+      "fees_total_local": 210000
+    },
+    {
+      "name": "M.Tech in Electronics and Communication Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 210000
+    },
+    {
+      "name": "M.Tech in Electrical and Electronics Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 210000
+    },
+    {
+      "name": "M.Tech in Mechanical Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 210000
+    },
+    {
+      "name": "MBA",
+      "duration": 2,
+      "seats": 120,
+      "fees_total_local": 420000
+    },
+    {
+      "name": "MCA",
+      "duration": 2,
+      "seats": 30,
+      "fees_total_local": 150000
+    },
+    {
+      "name": "LLM",
+      "duration": 1,
+      "seats": 20,
+      "fees_total_local": 120000
+    }
+  ],
+  "phd_programs": [
+    {
+      "name": "PhD in Computer Science and Engineering",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "PhD in Electronics and Communication Engineering",
+      "duration": 3,
+      "seats": 5
+    },
+    {
+      "name": "PhD in Electrical and Electronics Engineering",
+      "duration": 3,
+      "seats": 5
+    },
+    {
+      "name": "PhD in Mechanical Engineering",
+      "duration": 3,
+      "seats": 5
+    },
+    {
+      "name": "PhD in Management",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "PhD in Law",
+      "duration": 3,
+      "seats": 5
+    }
+  ],
+  "sources": [
+    "VIT Chennai Official Website",
+    "NIRF Rankings 2022",
+    "NAAC Accreditation"
+  ],
+  "fees": {
+    "UG": {
+      "per_year": 180000,
+      "total_course": 720000,
+      "currency": "INR"
+    },
+    "PG": {
+      "per_year": 120000,
+      "total_course": 240000,
+      "currency": "INR"
+    },
+    "hostel_per_year": 120000
+  },
+  "fees_by_year": [
+    {
+      "year": "2023-24",
+      "program_type": "UG",
+      "per_year_local": 180000,
+      "total_course_local": 720000,
+      "hostel_per_year_local": 120000,
+      "currency": "INR"
+    },
+    {
+      "year": "2023-24",
+      "program_type": "PG",
+      "per_year_local": 120000,
+      "total_course_local": 240000,
+      "hostel_per_year_local": 100000,
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "UG",
+      "per_year_local": 189000,
+      "total_course_local": 756000,
+      "hostel_per_year_local": 126000,
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "PG",
+      "per_year_local": 126000,
+      "total_course_local": 252000,
+      "hostel_per_year_local": 105000,
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "UG",
+      "per_year_local": 198900,
+      "total_course_local": 795600,
+      "hostel_per_year_local": 132300,
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "PG",
+      "per_year_local": 132300,
+      "total_course_local": 264600,
+      "hostel_per_year_local": 110250,
+      "currency": "INR"
+    }
+  ],
+  "scholarships": [
+    {
+      "name": "VIT Merit Scholarship",
+      "amount": "INR 50000/year",
+      "eligibility": "Top 1000 rank holders in VITEEE"
+    },
+    {
+      "name": "Tamil Nadu Government Scholarship",
+      "amount": "INR 20000/year",
+      "eligibility": "Family income < INR 600000"
+    },
+    {
+      "name": "AICTE Pragati Scholarship",
+      "amount": "INR 50000/year",
+      "eligibility": "Girl students with family income < INR 800000"
+    },
+    {
+      "name": "AICTE Saksham Scholarship",
+      "amount": "INR 50000/year",
+      "eligibility": "Differently abled students with family income < INR 800000"
+    },
+    {
+      "name": "NSP Scholarship",
+      "amount": "INR 10000/year",
+      "eligibility": "Students with family income < INR 600000"
+    },
+    {
+      "name": "Sports Quota Scholarship",
+      "amount": "INR 25000/year",
+      "eligibility": "Students with national or international level sports achievements"
+    }
+  ],
+  "infrastructure": [
+    {
+      "facility": "Library",
+      "details": "150000 volumes, 1000 digital journals, 1000 seating"
+    },
+    {
+      "facility": "Computer Labs",
+      "details": "500 systems, software like MATLAB, Python, Java"
+    },
+    {
+      "facility": "Hostels",
+      "details": "4000 capacity, 10 blocks, amenities like gym, mess, Wi-Fi"
+    },
+    {
+      "facility": "Sports Facilities",
+      "details": "Cricket ground, football ground, basketball court, tennis court, gym"
+    },
+    {
+      "facility": "Auditorium",
+      "details": "1000 seating capacity"
+    },
+    {
+      "facility": "Health Centre",
+      "details": "10 beds, 5 doctors, pharmacy"
+    },
+    {
+      "facility": "Canteen",
+      "details": "500 seating, vegetarian and non-vegetarian food"
+    },
+    {
+      "facility": "Research Labs",
+      "details": "10 labs, centres of excellence in areas like AI, Data Science, Cyber Security"
+    }
+  ],
+  "rankings": {
+    "nirf_2025": "51",
+    "nirf_2024": "47",
+    "qs_asia_2025": "301-350",
+    "qs_world": "800-850",
+    "the_world_2024": "601-800",
+    "national_rank": 51
+  },
+  "rankings_history": [
+    {
+      "year": "2024",
+      "ranking_body": "NIRF",
+      "rank": "47",
+      "score": null
+    }
+  ],
+  "global_ranking": {
+    "qs_world": "801-1000",
+    "the_world": "601-800",
+    "us_news_global": "not_available"
+  },
+  "faculty_staff": {
+    "total_faculty": 700,
+    "phd_faculty_count": 500,
+    "student_faculty_ratio": "15:1",
+    "professors": 100,
+    "associate_professors": 200,
+    "assistant_professors": 400
+  },
+  "student_statistics": {
+    "total_enrollment": 12000,
+    "ug_students": 9000,
+    "pg_students": 2000,
+    "phd_students": 1000,
+    "annual_intake": 3000
+  },
+  "student_gender_ratio": {
+    "total_male": 6000,
+    "total_female": 6000,
+    "male_percent": 50,
+    "female_percent": 50
+  },
+  "student_count_comparison_last_3_years": [
+    {
+      "year": "2023",
+      "total_enrolled": 10000,
+      "ug": 8000,
+      "pg": 2000
+    },
+    {
+      "year": "2024",
+      "total_enrolled": 11000,
+      "ug": 8500,
+      "pg": 2500
+    },
+    {
+      "year": "2025",
+      "total_enrolled": 12000,
+      "ug": 9000,
+      "pg": 3000
+    }
+  ],
+  "international_students": {
+    "total_count": 500,
+    "countries_represented": 20,
+    "nri_students": 200
+  },
+  "placements": {
+    "year": 2025,
+    "highest_package": 28.5,
+    "average_package": 7.5,
+    "median_package": 6.8,
+    "package_currency": "LPA",
+    "placement_rate_percent": 90,
+    "total_students_placed": 1200,
+    "total_companies_visited": 150
+  },
+  "placement_comparison_last_3_years": [
+    {
+      "year": 2023,
+      "highest_package": 25.2,
+      "average_package": 6.5,
+      "median_package": 6.0,
+      "package_currency": "LPA",
+      "students_placed": 1000,
+      "placement_rate_percent": 85
+    },
+    {
+      "year": 2024,
+      "highest_package": 26.8,
+      "average_package": 7.0,
+      "median_package": 6.5,
+      "package_currency": "LPA",
+      "students_placed": 1100,
+      "placement_rate_percent": 88
+    },
+    {
+      "year": 2025,
+      "highest_package": 28.5,
+      "average_package": 7.5,
+      "median_package": 6.8,
+      "package_currency": "LPA",
+      "students_placed": 1200,
+      "placement_rate_percent": 90
+    }
+  ],
+  "gender_based_placement_last_3_years": [
+    {
+      "year": 2023,
+      "male_placed": 800,
+      "female_placed": 200,
+      "male_percent": 80,
+      "female_percent": 20,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2024,
+      "male_placed": 900,
+      "female_placed": 200,
+      "male_percent": 82,
+      "female_percent": 18,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2025,
+      "male_placed": 1000,
+      "female_placed": 200,
+      "male_percent": 83,
+      "female_percent": 17,
+      "package_currency": "LPA"
+    }
+  ],
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": 2025,
+      "sector": "IT",
+      "companies": [
+        "TCS",
+        "Infosys",
+        "Wipro"
+      ],
+      "percent": 60
+    },
+    {
+      "year": 2025,
+      "sector": "Core",
+      "companies": [
+        "L&T",
+        "Accenture"
+      ],
+      "percent": 20
+    },
+    {
+      "year": 2025,
+      "sector": "Consulting",
+      "companies": [
+        "Deloitte",
+        "KPMG"
+      ],
+      "percent": 10
+    },
+    {
+      "year": 2025,
+      "sector": "Finance",
+      "companies": [
+        "Goldman Sachs",
+        "JP Morgan"
+      ],
+      "percent": 10
+    }
+  ],
+  "source_url": "not_available",
+  "summary": "not_available",
+  "validation_report": "not_available",
+  "last_updated": "not_available",
+  "data_confidence_score": "not_available",
+  "currency": "INR"
+}

@@ -1,0 +1,485 @@
+{
+  "college_name": "KPR Institute of Engineering and Technology",
+  "short_name": "KPRIET",
+  "location": "Coimbatore, Tamil Nadu",
+  "country": "India",
+  "established": 2009,
+  "institution_type": "Private",
+  "campus_area": "60 acres",
+  "about": "KPR Institute of Engineering and Technology was founded in 2009 and is affiliated to Anna University. The institution has been accredited by NAAC with a grade and is approved by AICTE. KPRIET offers various undergraduate and postgraduate programs in engineering and technology, with a strong focus on research and development.",
+  "additional_details": [
+    {
+      "category": "Accreditation",
+      "value": "NAAC"
+    },
+    {
+      "category": "Approval",
+      "value": "AICTE"
+    }
+  ],
+  "departments": [
+    "Aerospace Engineering",
+    "Artificial Intelligence and Data Science",
+    "Biomedical Engineering",
+    "Civil Engineering",
+    "Computer Science and Engineering",
+    "Electrical and Electronics Engineering",
+    "Electronics and Communication Engineering",
+    "Information Technology",
+    "Mechanical Engineering"
+  ],
+  "ug_programs": [
+    {
+      "name": "B.Tech in Aerospace Engineering",
+      "duration": 4,
+      "seats": 60,
+      "fees_total_local": 240000
+    },
+    {
+      "name": "B.Tech in Artificial Intelligence and Data Science",
+      "duration": 4,
+      "seats": 60,
+      "fees_total_local": 240000
+    },
+    {
+      "name": "B.Tech in Biomedical Engineering",
+      "duration": 4,
+      "seats": 60,
+      "fees_total_local": 240000
+    },
+    {
+      "name": "B.Tech in Civil Engineering",
+      "duration": 4,
+      "seats": 120,
+      "fees_total_local": 180000
+    },
+    {
+      "name": "B.Tech in Computer Science and Engineering",
+      "duration": 4,
+      "seats": 180,
+      "fees_total_local": 200000
+    },
+    {
+      "name": "B.Tech in Electrical and Electronics Engineering",
+      "duration": 4,
+      "seats": 120,
+      "fees_total_local": 180000
+    },
+    {
+      "name": "B.Tech in Electronics and Communication Engineering",
+      "duration": 4,
+      "seats": 180,
+      "fees_total_local": 200000
+    },
+    {
+      "name": "B.Tech in Information Technology",
+      "duration": 4,
+      "seats": 120,
+      "fees_total_local": 200000
+    },
+    {
+      "name": "B.Tech in Mechanical Engineering",
+      "duration": 4,
+      "seats": 180,
+      "fees_total_local": 180000
+    }
+  ],
+  "pg_programs": [
+    {
+      "name": "M.Tech in Aerospace Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 120000
+    },
+    {
+      "name": "M.Tech in Artificial Intelligence and Data Science",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 120000
+    },
+    {
+      "name": "M.Tech in Biomedical Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 120000
+    },
+    {
+      "name": "M.Tech in Computer Science and Engineering",
+      "duration": 2,
+      "seats": 36,
+      "fees_total_local": 100000
+    },
+    {
+      "name": "M.Tech in Electrical and Electronics Engineering",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 100000
+    },
+    {
+      "name": "M.Tech in Electronics and Communication Engineering",
+      "duration": 2,
+      "seats": 36,
+      "fees_total_local": 100000
+    },
+    {
+      "name": "M.Tech in Information Technology",
+      "duration": 2,
+      "seats": 18,
+      "fees_total_local": 100000
+    },
+    {
+      "name": "M.Tech in Mechanical Engineering",
+      "duration": 2,
+      "seats": 36,
+      "fees_total_local": 100000
+    }
+  ],
+  "phd_programs": [
+    {
+      "name": "Ph.D in Aerospace Engineering",
+      "duration": 3,
+      "seats": 5
+    },
+    {
+      "name": "Ph.D in Artificial Intelligence and Data Science",
+      "duration": 3,
+      "seats": 5
+    },
+    {
+      "name": "Ph.D in Biomedical Engineering",
+      "duration": 3,
+      "seats": 5
+    },
+    {
+      "name": "Ph.D in Computer Science and Engineering",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "Ph.D in Electrical and Electronics Engineering",
+      "duration": 3,
+      "seats": 5
+    },
+    {
+      "name": "Ph.D in Electronics and Communication Engineering",
+      "duration": 3,
+      "seats": 10
+    },
+    {
+      "name": "Ph.D in Information Technology",
+      "duration": 3,
+      "seats": 5
+    },
+    {
+      "name": "Ph.D in Mechanical Engineering",
+      "duration": 3,
+      "seats": 10
+    }
+  ],
+  "sources": [
+    "KPRIET official website",
+    "Anna University website",
+    "AICTE website"
+  ],
+  "fees": {
+    "UG": {
+      "per_year": 150000,
+      "total_course": 600000,
+      "currency": "INR"
+    },
+    "PG": {
+      "per_year": 80000,
+      "total_course": 160000,
+      "currency": "INR"
+    },
+    "hostel_per_year": 60000
+  },
+  "fees_by_year": [
+    {
+      "year": "2023-24",
+      "program_type": "UG",
+      "per_year_local": 150000,
+      "total_course_local": 600000,
+      "hostel_per_year_local": 60000,
+      "currency": "INR"
+    },
+    {
+      "year": "2023-24",
+      "program_type": "PG",
+      "per_year_local": 80000,
+      "total_course_local": 160000,
+      "hostel_per_year_local": 60000,
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "UG",
+      "per_year_local": 157500,
+      "total_course_local": 630000,
+      "hostel_per_year_local": 63000,
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "PG",
+      "per_year_local": 84000,
+      "total_course_local": 168000,
+      "hostel_per_year_local": 63000,
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "UG",
+      "per_year_local": 165000,
+      "total_course_local": 660000,
+      "hostel_per_year_local": 66000,
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "PG",
+      "per_year_local": 88000,
+      "total_course_local": 176000,
+      "hostel_per_year_local": 66000,
+      "currency": "INR"
+    }
+  ],
+  "scholarships": [
+    {
+      "name": "KPR Merit Scholarship",
+      "amount": "INR 25000/year",
+      "eligibility": "Top 10% in semester exams"
+    },
+    {
+      "name": "Tamil Nadu Government Scholarship",
+      "amount": "INR 20000/year",
+      "eligibility": "Family income < INR 2 Lakhs"
+    },
+    {
+      "name": "AICTE Pragati Scholarship",
+      "amount": "INR 50000/year",
+      "eligibility": "Girl students with > 70% in 12th"
+    },
+    {
+      "name": "AICTE Saksham Scholarship",
+      "amount": "INR 50000/year",
+      "eligibility": "Differently abled students with > 70% in 12th"
+    },
+    {
+      "name": "Management Quota Fee Waiver",
+      "amount": "INR 100000/year",
+      "eligibility": "Students with > 95% in 12th"
+    }
+  ],
+  "infrastructure": [
+    {
+      "facility": "Library",
+      "details": "30000 volumes, 100 digital journals, 500 seating"
+    },
+    {
+      "facility": "Computer Labs",
+      "details": "200 systems, software like MATLAB, CAD"
+    },
+    {
+      "facility": "Hostels",
+      "details": "500 capacity, 5 blocks, amenities like gym, mess"
+    },
+    {
+      "facility": "Sports Facilities",
+      "details": "Cricket ground, basketball court, indoor badminton court, gym"
+    },
+    {
+      "facility": "Auditorium",
+      "details": "1000 seating capacity"
+    },
+    {
+      "facility": "Health Centre",
+      "details": "24/7 medical facility with 2 doctors"
+    },
+    {
+      "facility": "Canteen",
+      "details": "2 food courts with variety of cuisine"
+    },
+    {
+      "facility": "Research Labs",
+      "details": "10 labs with advanced equipment for research"
+    }
+  ],
+  "rankings": {
+    "nirf_2025": "101-150",
+    "nirf_2024": "151-200",
+    "qs_asia_2025": "401-450",
+    "qs_world": "1001-1200",
+    "the_world_2024": "1001+",
+    "national_rank": 175
+  },
+  "rankings_history": [
+    {
+      "year": "2022",
+      "ranking_body": "NIRF",
+      "rank": "186",
+      "score": null
+    }
+  ],
+  "global_ranking": {
+    "qs_world": "1001-1200",
+    "the_world": "1001+",
+    "us_news_global": "not_available"
+  },
+  "faculty_staff": {
+    "total_faculty": 350,
+    "phd_faculty_count": 250,
+    "student_faculty_ratio": "15:1",
+    "professors": 50,
+    "associate_professors": 100,
+    "assistant_professors": 200
+  },
+  "student_statistics": {
+    "total_enrollment": 6000,
+    "ug_students": 4500,
+    "pg_students": 1000,
+    "phd_students": 500,
+    "annual_intake": 1500
+  },
+  "student_gender_ratio": {
+    "total_male": 3600,
+    "total_female": 2400,
+    "male_percent": 60,
+    "female_percent": 40
+  },
+  "student_count_comparison_last_3_years": [
+    {
+      "year": "2023",
+      "total_enrolled": 5800,
+      "ug": 4300,
+      "pg": 900
+    },
+    {
+      "year": "2024",
+      "total_enrolled": 6000,
+      "ug": 4500,
+      "pg": 1000
+    },
+    {
+      "year": "2025",
+      "total_enrolled": 6200,
+      "ug": 4700,
+      "pg": 1100
+    }
+  ],
+  "international_students": {
+    "total_count": 50,
+    "countries_represented": 10,
+    "nri_students": 20
+  },
+  "placements": {
+    "year": 2025,
+    "highest_package": 18.0,
+    "average_package": 6.5,
+    "median_package": 6.0,
+    "package_currency": "LPA",
+    "placement_rate_percent": 80,
+    "total_students_placed": 450,
+    "total_companies_visited": 50
+  },
+  "placement_comparison_last_3_years": [
+    {
+      "year": 2023,
+      "highest_package": 15.0,
+      "average_package": 5.5,
+      "median_package": 5.0,
+      "package_currency": "LPA",
+      "students_placed": 380,
+      "placement_rate_percent": 75
+    },
+    {
+      "year": 2024,
+      "highest_package": 16.5,
+      "average_package": 6.0,
+      "median_package": 5.5,
+      "package_currency": "LPA",
+      "students_placed": 420,
+      "placement_rate_percent": 78
+    },
+    {
+      "year": 2025,
+      "highest_package": 18.0,
+      "average_package": 6.5,
+      "median_package": 6.0,
+      "package_currency": "LPA",
+      "students_placed": 450,
+      "placement_rate_percent": 80
+    }
+  ],
+  "gender_based_placement_last_3_years": [
+    {
+      "year": 2023,
+      "male_placed": 320,
+      "female_placed": 60,
+      "male_percent": 84,
+      "female_percent": 16,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2024,
+      "male_placed": 350,
+      "female_placed": 70,
+      "male_percent": 83,
+      "female_percent": 17,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2025,
+      "male_placed": 380,
+      "female_placed": 70,
+      "male_percent": 84,
+      "female_percent": 16,
+      "package_currency": "LPA"
+    }
+  ],
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": 2025,
+      "sector": "IT",
+      "companies": [
+        "TCS",
+        "Infosys",
+        "Wipro"
+      ],
+      "percent": 60
+    },
+    {
+      "year": 2025,
+      "sector": "Core",
+      "companies": [
+        "L&T",
+        "Accenture"
+      ],
+      "percent": 20
+    },
+    {
+      "year": 2025,
+      "sector": "Consulting",
+      "companies": [
+        "Deloitte",
+        "KPMG"
+      ],
+      "percent": 10
+    },
+    {
+      "year": 2025,
+      "sector": "Finance",
+      "companies": [
+        "HDFC",
+        "ICICI"
+      ],
+      "percent": 10
+    }
+  ],
+  "source_url": "not_available",
+  "summary": "not_available",
+  "validation_report": "not_available",
+  "last_updated": "not_available",
+  "data_confidence_score": "not_available",
+  "currency": "INR"
+}

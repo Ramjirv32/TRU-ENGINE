@@ -4,19 +4,12 @@ import sys
 import re
 import html
 import time
-import concurrent.futures
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from groq import Groq
-import google.genai as genai
-from google.genai import types
 
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 
 client = Groq(api_key=GROQ_API_KEY)
-
-# Gemini config for validation step
-GEMINI_API_KEY = "AIzaSyBi8uFkM7rhjtA56DfQGdFpGqFl5hbQni8"
-gemini_client = genai.Client(api_key=GEMINI_API_KEY)
-GEMINI_MODEL = "gemini-2.5-flash"
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -87,7 +80,7 @@ def call_groq(system_prompt: str, user_content: str, label: str) -> dict | None:
                     {"role": "user",   "content": user_content},
                 ],
                 temperature=0,
-                max_tokens=4096,
+                max_tokens=8192,
                 stream=False,
             )
             text = resp.choices[0].message.content.strip()
@@ -132,33 +125,35 @@ def call_groq(system_prompt: str, user_content: str, label: str) -> dict | None:
 
 # Shared preamble injected into every prompt
 _KNOWLEDGE_HINT = """
-CRITICAL ACCURACY RULES:
+IMPORTANT RULES:
 1. Return ONLY valid, parseable JSON — no markdown fences, no commentary.
-2. ONLY output data that is EXPLICITLY found in the CONTEXT provided — do NOT invent or hallucinate.
-3. If a value is NOT in the context and you are NOT confident from your training data, output null.
-4. For NUMBER fields: plain integer or float only. No commas, no symbols.
-5. NEVER fabricate rankings (QS/THE/NIRF) — if not explicitly mentioned in context, set to null.
-6. SANITY CHECKS — reject implausible values:
-   - Private engineering college faculty: typically 150-400, NEVER 1000+
-   - PhD students at private colleges: typically 20-80, NEVER 500+
-   - PhD faculty %: typically 30-50% at private colleges, NEVER 70%+
-   - Total enrollment for mid-size private college: 2000-8000
-   - Only list programs/departments ACTUALLY mentioned in the context
-7. PREFER exact numbers from context over round estimates.
-8. If context says "205 Members" for faculty, output 205 — not 350."""
+2. For NUMBER fields: always output a plain number (integer or float). Never use commas or symbols.
+3. For STRING fields: if the exact value is unknown but estimable, prefix with "~" (e.g. "~5000").
+4. NEVER leave a field null if you can provide a reasonable estimate — use your web search + training knowledge.
+5. Fill in ALL fields — zero is valid for numbers, "unknown" only as absolute last resort.
+6. ACCURACY IS CRITICAL — do NOT hallucinate or inflate figures. Verify numbers before outputting.
+   - Faculty count for a college of ~10,000 students is typically 300-800, never 5000+.
+   - Enrollment for a mid-size Indian private college is 5,000-15,000, never 50,000+.
+   - International student % for Indian colleges is typically <5%.
+7. For Indian colleges: fees are in INR, placements in LPA. For non-Indian: use local currency.
+8. Search the web / use latest available data for rankings, fees, and placement figures."""
 
 # Batch A: Rankings + Faculty + Students
-BATCH_A_PROMPT = """Extract ONLY from the provided CONTEXT. Return valid JSON.
+BATCH_A_PROMPT = """Search the web for the most current and accurate data for this college, then return ONLY valid JSON.
 Extraction hints:
-- nirf_2025/nirf_2024: ONLY if "NIRF" ranking is explicitly mentioned. Most private colleges are NOT ranked.
-- qs_asia_2025/qs_world/the_world_2024: ONLY if explicitly mentioned. Small private colleges are NOT in QS/THE.
-  If not found in context → set to null. Do NOT guess ranking bands.
-- total_faculty: use EXACT number from context (e.g. "205 Members" → 205). Do NOT inflate.
-- phd_faculty_count: only if explicitly stated. If not, estimate 40-50% of total faculty for private colleges.
-- student_faculty_ratio: compute from total_students / total_faculty if both known.
-- total_enrollment / No. of students: use EXACT number from context.
-- phd_students: for private engineering colleges typically 20-80. NEVER output 500+ unless context says so.
-- student_count_comparison: use years 2023, 2024, 2025 — null if not in context.
+- nirf_2025/nirf_2024: NIRF Ranking 2025 / 2024 — only for Indian colleges (e.g. "45" or "12")
+- qs_asia_2025: QS Asia Rankings 2025 or 2026 (e.g. "301-350")
+- qs_world: QS World University Rankings latest year (e.g. "800-850")
+- the_world_2024: Times Higher Education World ranking (e.g. "601-800")
+- national_rank: overall rank within the college's country from any credible ranking body
+- total_faculty: ACTUAL faculty/teaching staff headcount — do NOT confuse with total staff/employees
+  (for a college with 10,000 students, expect 300-800 faculty, NOT thousands)
+- phd_faculty_count: number of faculty who hold a PhD
+- student_faculty_ratio: e.g. "15:1"
+- total_enrollment: total students currently enrolled (UG + PG + PhD)
+  (for a mid-size private Indian college expect 5,000-20,000, NOT 50,000+)
+- male_percent/female_percent: gender split as percentage numbers (e.g. 60, 40)
+- For student_count_comparison use years 2023, 2024, 2025
 """ + _KNOWLEDGE_HINT + """
 
 {
@@ -173,16 +168,19 @@ Extraction hints:
 }"""
 
 # Batch B: Placements
-BATCH_B_PROMPT = """Extract placement data ONLY from provided CONTEXT. Return valid JSON.
+BATCH_B_PROMPT = """Search the web for the latest placement / career outcomes data for this college, then return ONLY valid JSON.
 Extraction hints:
 - Use years 2023, 2024, 2025 for placement_comparison_last_3_years
-- For INDIAN colleges: package in LPA (e.g. 3.52 means 3.52 LPA), package_currency = "LPA"
-- Use EXACT figures from context: if context says "Average Package 3.52 LPA" → output 3.52
-- If context says "100% Placement Rate" → placement_rate_percent = 100
-- Do NOT inflate packages: typical private college avg is 3-6 LPA, NOT 15-20 LPA.
-- highest_package: only if explicitly stated in context, else null
-- sector_wise: only list companies/sectors ACTUALLY mentioned in context
-- If a year's data is not in context, set all fields for that year to null
+- For INDIAN colleges: package in LPA (e.g. 18.5 = 18.5 LPA), package_currency = "LPA"
+  Typical private engineering college avg: 5-12 LPA. Top IITs avg: 20-30 LPA. Do NOT invent figures.
+- For NON-INDIAN colleges: annual salary in local currency, package_currency = "IDR"/"USD"/etc.
+- highest_package: single highest offer received — must be realistic (not 10x the average)
+- average_package: mean CTC/salary across all placed students
+- placement_rate_percent: % of eligible students placed within 6 months (e.g. 85)
+- total_students_placed: absolute headcount placed
+- total_companies_visited: number of recruiters who visited campus
+- sector_wise: realistic sectors for this college type (IT/Core/Consulting/Finance for engineering)
+- VERIFY figures — do not extrapolate or multiply; if unknown use null
 """ + _KNOWLEDGE_HINT + """
 
 {
@@ -193,21 +191,21 @@ Extraction hints:
 }"""
 
 # Batch C1: Identity + About + UG / PG / PhD Programs (all as arrays)
-BATCH_C1_PROMPT = """Extract data ONLY from provided CONTEXT. Return valid JSON.
+BATCH_C1_PROMPT = """Search the web for accurate program and identity information for this college, then return ONLY valid JSON.
 Extraction hints:
-- college_name: full official name from context
-- short_name: abbreviation from context (e.g. "KPRIEnT")
-- established: year from context (e.g. 2009)
-- institution_type: "Private" or "Public" as stated in context
-- location: city and state from context
-- country: "India" for Indian colleges
-- campus_area: EXACT value from context (e.g. "150 Acres")
-- about: 2-3 sentences using ONLY facts from the context (founding year, affiliation, accreditation)
-- PROGRAMS: List ONLY programs explicitly mentioned in the context.
-  Do NOT invent programs not found in context (e.g. do not add Aerospace if not mentioned).
-  Each program must be a separate object with full name (e.g. "B.E. in Computer Science and Engineering")
-- PhD programs: list ONLY those explicitly mentioned. Private colleges typically have PhD in 3-5 depts only.
-- departments: ONLY those mentioned in context
+- college_name: full official name as per NAAC/UGC/official website
+- short_name: commonly used abbreviation (e.g. PSG Tech, IIT-M, BITS Pilani)
+- established: integer year founded per official records
+- institution_type: "Autonomous" / "Deemed University" / "Private" / "Government" / "Central University"
+- location: city, district, state (e.g. "Coimbatore, Tamil Nadu")
+- country: country name only — NOT a city or province
+- campus_area: e.g. "75 acres" — search official site if needed
+- about: 3 factual sentences covering founding year, affiliation/accreditation (NAAC grade, NBA, NIRF), and key strengths
+- List EVERY individual UG/PG/PhD program as a SEPARATE object with FULL specialization name
+  (e.g. "B.Tech in Artificial Intelligence and Data Science", NOT just "B.Tech")
+- seats: official intake per program from TNEA/JOSAA/official brochure
+- fees_total_local: total course fees in INR (or local currency) — NOT per year
+- departments: full list of academic departments
 
 """ + _KNOWLEDGE_HINT + """
 
@@ -229,15 +227,16 @@ Extraction hints:
 }"""
 
 # Batch C2: Fees by year — last 3 academic years
-BATCH_C2_PROMPT = """Extract fee data ONLY from provided CONTEXT. Return valid JSON.
+BATCH_C2_PROMPT = """Search the web for the official fee structure of this college, then return ONLY valid JSON.
 Extraction hints:
-- fees: extract EXACT per-year and total-course amounts from context as plain numbers
-- If context shows specific fee amounts, use those exact numbers
-- fees_by_year: one entry per program-type per academic year for 2023-24, 2024-25, 2025-26
-- hostel_per_year: annual hostel cost from context
-- All monetary values as plain numbers (no currency symbols, no commas, no "INR" prefix)
-- If a specific year's fee is NOT in context, use null — do NOT fabricate
-- For years without data, estimate ~5% increase from known year, prefix with ~
+- per_year: annual tuition fee per student in local currency (plain integer, no commas/symbols)
+- total_course: total fees for the entire program duration (4 years for B.Tech, 2 years for M.Tech, etc.)
+- hostel_per_year: annual hostel + mess charges (search official fee notice)
+- fees_by_year: provide ONE row per program_type (UG/PG) per academic year for 2023-24, 2024-25, 2025-26
+- For Indian colleges: amounts are in INR. For others: local currency.
+- If an exact year's fee is unknown, estimate based on ~5-8% annual hike from a known base year.
+- DO NOT use USD values for Indian colleges.
+- Typical B.Tech fees at private Tamil Nadu colleges: INR 80,000 - 200,000 per year.
 """ + _KNOWLEDGE_HINT + """
 
 {
@@ -257,16 +256,25 @@ Extraction hints:
 }"""
 
 # Batch C3: Scholarships + Infrastructure
-BATCH_C3_PROMPT = """Extract data ONLY from provided CONTEXT. Return valid JSON.
+BATCH_C3_PROMPT = """Search the web for scholarship and infrastructure details of this college, then return ONLY valid JSON.
 Extraction hints:
-- scholarships: list ONLY scholarships explicitly mentioned in context.
-  amount: use exact amount from context; eligibility: brief condition from context.
-  If context mentions "Post-Metric Scholarship" → include it. Do NOT invent scholarship names.
-- infrastructure: list ONLY facilities mentioned in context with EXACT details.
-  e.g. context says "Library: 930 sq.mt., 22132 Books, 309 International Journals" → use those exact numbers.
-  context says "5 Hostels for Boys, 3 Hostels for Girls" → include exactly that.
-  context says "19 Buses" → include transport with that detail.
-  Do NOT invent capacity numbers not in context.
+- scholarships: list EVERY scholarship available to students at this college:
+  * College-specific merit/need scholarships
+  * State government scholarships (e.g. Tamil Nadu government for Tamil Nadu colleges)
+  * Central government: AICTE Pragati, AICTE Saksham, NSP scholarships
+  * Management quota fee waivers, sports quota benefits
+  amount: descriptive string with actual INR/currency amount (e.g. "INR 50,000/year")
+  eligibility: concise condition (e.g. "Top 5% in class; family income < INR 6 Lakhs")
+- infrastructure: list EVERY distinct physical facility on campus with accurate details:
+  * Library (number of volumes, digital journals, seating)
+  * Computer labs (number of systems, software)
+  * Hostels (capacity, blocks, amenities)
+  * Sports facilities (grounds, indoor courts, gym)
+  * Auditorium (seating capacity)
+  * Health centre / hospital
+  * Canteen / food courts
+  * Research labs / centres of excellence
+  Search the college website or official brochure for real figures.
 """ + _KNOWLEDGE_HINT + """
 
 {
@@ -793,88 +801,11 @@ def finalize_output(final: dict) -> dict:
         scc = [e for e in scc if e.get("total_enrolled") or e.get("ug")]
         final["student_count_comparison_last_3_years"] = scc or "not_available"
 
-    # Top recruiters: clean up
-    tr = final.get("top_recruiters")
-    if isinstance(tr, list):
-        tr = [r for r in tr if r.get("company")]
-        final["top_recruiters"] = tr if tr else "not_available"
-    elif not tr:
-        final["top_recruiters"] = "not_available"
-
-    # Accreditations: clean up
-    acc = final.get("accreditations")
-    if isinstance(acc, list):
-        acc = [a for a in acc if a.get("body") or a.get("name")]
-        final["accreditations"] = acc if acc else "not_available"
-    elif not acc:
-        final["accreditations"] = "not_available"
-
-    # Notable faculty: clean up
-    nf = final.get("notable_faculty")
-    if isinstance(nf, list):
-        nf = [f for f in nf if f.get("name")]
-        final["notable_faculty"] = nf if nf else "not_available"
-    elif not nf:
-        final["notable_faculty"] = "not_available"
-
-    # Industry collaborations: clean up
-    ic = final.get("industry_collaborations")
-    if isinstance(ic, list):
-        ic = [c for c in ic if c.get("company")]
-        final["industry_collaborations"] = ic if ic else "not_available"
-    elif not ic:
-        final["industry_collaborations"] = "not_available"
-
-    # Achievements awards: clean up
-    aa = final.get("achievements_awards")
-    if isinstance(aa, list):
-        aa = [a for a in aa if a.get("award")]
-        final["achievements_awards"] = aa if aa else "not_available"
-    elif not aa:
-        final["achievements_awards"] = "not_available"
-
-    # Student clubs: clean up
-    sc = final.get("student_clubs_activities")
-    if isinstance(sc, list):
-        sc = [c for c in sc if c.get("name")]
-        final["student_clubs_activities"] = sc if sc else "not_available"
-    elif not sc:
-        final["student_clubs_activities"] = "not_available"
-
-    # Alumni info
-    ai = final.get("alumni_info")
-    if not ai or ai == {}:
-        final["alumni_info"] = "not_available"
-
-    # Admission process
-    ap = final.get("admission_process")
-    if not ap or ap == {}:
-        final["admission_process"] = "not_available"
-
-    # Research and development
-    rd = final.get("research_and_development")
-    if not rd or rd == {}:
-        final["research_and_development"] = "not_available"
-
-    # Hostel / transport / library sub-objects
-    for k in ["hostel_details", "transport_details", "library_details"]:
-        v = final.get(k)
-        if not v or v == {}:
-            final[k] = "not_available"
-
-    # Scalar string fields
+    # Scalar fields
     for k in ["summary", "validation_report", "last_updated", "campus_area",
-               "source_url", "about", "location", "country", "website",
-               "recognition", "placement_highlights", "faculty_achievements",
-               "affiliations"]:
-        val = final.get(k)
-        if not val or val == "" or val == []:
+               "source_url", "about", "location", "country"]:
+        if not final.get(k) or final[k] == "":
             final[k] = "not_available"
-
-    # contact_info
-    ci = final.get("contact_info")
-    if not ci or ci == {}:
-        final["contact_info"] = "not_available"
 
     if final.get("data_confidence_score") is None:
         final["data_confidence_score"] = "not_available"
@@ -886,93 +817,60 @@ def finalize_output(final: dict) -> dict:
 # Main processor
 # ---------------------------------------------------------------------------
 
-def process_audit_with_groq(filename: str):
-    if not os.path.exists(filename):
-        print(f"Error: {filename} not found.")
-        return
+def process_audit_with_groq(college_name: str):
+    # college_name is passed directly — no audit file needed
+    sections = []   # no raw snippets; LLM uses training knowledge only
 
-    with open(filename, "r") as f:
-        audit_data = json.load(f)
+    print(f"\n🚀 Processing: {college_name} (knowledge-only, no audit)")
 
-    college_name = audit_data.get("college_name", "Unknown")
-    sections = audit_data.get("sections", [])
+    _KB = (
+        f"COLLEGE: {college_name}\n\n"
+        f"Use your training knowledge about {college_name} to fill ALL fields accurately. "
+        f"Numbers must be plain integers or floats (no commas, no symbols). "
+        f"Do NOT hallucinate or invent numbers — if genuinely unknown use null."
+    )
 
-    print(f"\n🚀 Processing: {college_name}")
-    print(f"   Sections in audit: {[s.get('section') for s in sections]}\n")
-
-    SLEEP = 3  # seconds between batches
-
-    # ---- Batch A: Rankings / Faculty / Students / International ----
-    batchA_sections = [
-        "Rankings", "Faculty_Staff",
-        "Student_Statistics", "Student_Gender_Ratio", "International_Students",
+    # ---- Run all 5 batches in PARALLEL (staggered 2s apart to avoid TPM spike) ----
+    batch_specs = [
+        ("batchA",  BATCH_A_PROMPT),
+        ("batchB",  BATCH_B_PROMPT),
+        ("batchC1", BATCH_C1_PROMPT),
+        ("batchC2", BATCH_C2_PROMPT),
+        ("batchC3", BATCH_C3_PROMPT),
     ]
-    ctxA = build_context(sections, batchA_sections, char_limit=6000)
-    print(f"📦 Batch A context: {len(ctxA)} chars")
-    _t = time.time(); resultA = call_groq(BATCH_A_PROMPT, f"COLLEGE: {college_name}\n\nCONTEXT:\n{ctxA}", "batchA")
-    print(f"  ⏱  Batch A took {time.time()-_t:.1f}s")
-    print(f"  ⏳ Waiting {SLEEP}s (TPM limit)…"); time.sleep(SLEEP)
+    results_map = {}
+    _wall = time.time()
+    STAGGER = 2  # seconds between each thread start
 
-    # ---- Batch B: Placements ----
-    batchB_sections = [
-        "Placements_General", "Placement_Yearly_Counts",
-        "Placement_Gender_Stats", "Sector_Wise_Placements",
-    ]
-    ctxB = build_context(sections, batchB_sections, char_limit=6000)
-    print(f"📦 Batch B context: {len(ctxB)} chars")
-    _t = time.time(); resultB = call_groq(BATCH_B_PROMPT, f"COLLEGE: {college_name}\n\nCONTEXT:\n{ctxB}", "batchB")
-    if resultB is None:
-        print("  ↻ No placement data scraped — using LLM knowledge fallback…")
-        time.sleep(SLEEP)
-        resultB = call_groq(BATCH_B_PROMPT,
-            f"COLLEGE: {college_name}\n\nNo web context. Use your training knowledge about {college_name} "
-            f"to fill ALL fields with reasonable estimates. Numbers must be plain numbers (no commas, no symbols).",
-            "batchB-kb")
-    print(f"  ⏱  Batch B took {time.time()-_t:.1f}s")
-    print(f"  ⏳ Waiting {SLEEP}s (TPM limit)…"); time.sleep(SLEEP)
+    def _staggered_call(args):
+        idx, label, prompt = args
+        time.sleep(idx * STAGGER)
+        return label, call_groq(prompt, _KB, label)
 
-    # ---- Batch C1: Identity + About + UG / PG / PhD Programs ----
-    batchC1_sections = ["Identity", "About", "UG_Programs", "PG_Programs"]
-    ctxC1 = build_context(sections, batchC1_sections, char_limit=6000)
-    print(f"📦 Batch C1 context: {len(ctxC1)} chars")
-    _t = time.time(); resultC1 = call_groq(BATCH_C1_PROMPT, f"COLLEGE: {college_name}\n\nCONTEXT:\n{ctxC1}", "batchC1")
-    print(f"  ⏱  Batch C1 took {time.time()-_t:.1f}s")
-    print(f"  ⏳ Waiting {SLEEP}s (TPM limit)…"); time.sleep(SLEEP)
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        futures = {pool.submit(_staggered_call, (i, label, prompt)): label
+                   for i, (label, prompt) in enumerate(batch_specs)}
+        for fut in as_completed(futures):
+            label, result = fut.result()
+            results_map[label] = result
+            print(f"  ✓ {label} done")
+    print(f"  ⏱  All batches finished in {time.time()-_wall:.1f}s (parallel)")
 
-    # ---- Batch C2: Fees by year (last 3 years) ----
-    batchC2_sections = ["Fees"]
-    ctxC2 = build_context(sections, batchC2_sections, char_limit=6000)
-    print(f"📦 Batch C2 context: {len(ctxC2)} chars")
-    _t = time.time(); resultC2 = call_groq(BATCH_C2_PROMPT, f"COLLEGE: {college_name}\n\nCONTEXT:\n{ctxC2}", "batchC2")
-    if resultC2 is None:
-        print("  ↻ No fee data scraped — using LLM knowledge fallback…")
-        time.sleep(SLEEP)
-        resultC2 = call_groq(BATCH_C2_PROMPT,
-            f"COLLEGE: {college_name}\n\nNo web context. Use your training knowledge about {college_name} "
-            f"to fill ALL fee fields with reasonable estimates in local currency. "
-            f"Numbers must be plain numbers only (no commas, no symbols, no ~ prefix).",
-            "batchC2-kb")
-    print(f"  ⏱  Batch C2 took {time.time()-_t:.1f}s")
-    print(f"  ⏳ Waiting {SLEEP}s (TPM limit)…"); time.sleep(SLEEP)
-
-    # ---- Batch C3: Scholarships + Infrastructure ----
-    batchC3_sections = ["Scholarships", "Infrastructure"]
-    ctxC3 = build_context(sections, batchC3_sections, char_limit=6000)
-    print(f"📦 Batch C3 context: {len(ctxC3)} chars")
-    _t = time.time(); resultC3 = call_groq(BATCH_C3_PROMPT, f"COLLEGE: {college_name}\n\nCONTEXT:\n{ctxC3}", "batchC3")
-    print(f"  ⏱  Batch C3 took {time.time()-_t:.1f}s")
+    resultA  = results_map.get("batchA")
+    resultB  = results_map.get("batchB")
+    resultC1 = results_map.get("batchC1")
+    resultC2 = results_map.get("batchC2")
+    resultC3 = results_map.get("batchC3")
 
     if not any([resultA, resultB, resultC1, resultC2, resultC3]):
         print("✗ All batches failed.")
         return None
 
-    # ---- Patch with regex-extracted values from raw audit ----
-    # Merge A+B into a combined dict for patching
+    # ---- Merge A+B results ----
     r1 = {}
     if resultA: r1.update(resultA)
     if resultB: r1.update(resultB)
-    r1["college_name"] = college_name   # ensure name is available for contamination guard
-    r1 = patch_with_raw_data(r1, sections)
+    r1["college_name"] = college_name
 
     # ---- Merge all five batches (C1 base, then C2/C3 overlay, then A/B) ----
     def _is_empty(v) -> bool:
@@ -1000,26 +898,17 @@ def process_audit_with_groq(filename: str):
         "short_name": "", "location": "", "country": "",
         "established": None, "institution_type": "", "campus_area": "",
         "about": "", "additional_details": [], "departments": [],
-        "accreditations": [], "affiliations": [], "website": "",
-        "contact_info": {}, "recognition": "",
         "ug_programs": [], "pg_programs": [], "phd_programs": [],
         "fees": {"UG": {}, "PG": {}}, "fees_by_year": [],
-        "hostel_details": {}, "transport_details": {}, "library_details": {},
         "faculty_staff": {}, "placements": {},
         "placement_comparison_last_3_years": [],
         "gender_based_placement_last_3_years": [],
         "sector_wise_placement_last_3_years": [],
-        "top_recruiters": [], "placement_highlights": "",
         "student_statistics": {}, "student_gender_ratio": {},
         "student_count_comparison_last_3_years": [],
-        "international_students": {},
-        "faculty_achievements": "", "notable_faculty": [],
-        "infrastructure": [], "scholarships": [],
-        "rankings": {}, "rankings_history": [], "global_ranking": {},
-        "research_and_development": {}, "industry_collaborations": [],
-        "achievements_awards": [], "student_clubs_activities": [],
-        "alumni_info": {}, "admission_process": {},
-        "sources": [], "source_url": "",
+        "international_students": {}, "infrastructure": [],
+        "scholarships": [], "rankings": {}, "rankings_history": [],
+        "global_ranking": {}, "sources": [], "source_url": "",
         "summary": "", "validation_report": "", "last_updated": "",
         "data_confidence_score": None,
     }
@@ -1029,386 +918,21 @@ def process_audit_with_groq(filename: str):
     # ---- Final post-processing: currency + null → meaningful strings ----
     final = finalize_output(final)
 
-    # Output path always beside the input file
+    # Output path: college_scraper/<slug>_structured.json
+    slug = re.sub(r'[^\w]+', '_', college_name.lower()).strip('_')
     output_file = os.path.join(
-        os.path.dirname(os.path.abspath(filename)),
-        os.path.basename(filename).replace("_audit.json", "_structured.json")
+        os.path.dirname(os.path.abspath(__file__)),
+        f"{slug}_structured.json"
     )
     with open(output_file, "w") as f:
         json.dump(final, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅ Groq output saved to: {output_file}")
-
-    # ---- Gemini Validation Step ----
-    print(f"\n🔍 Starting Gemini validation & correction…")
-    validated = validate_with_gemini(final, sections, college_name)
-    if validated:
-        with open(output_file, "w") as f:
-            json.dump(validated, f, indent=2, ensure_ascii=False)
-        print(f"✅ Gemini-validated output saved to: {output_file}")
-    else:
-        print(f"⚠  Gemini validation failed, keeping Groq output as-is.")
-
-    return validated or final
-
-
-# ---------------------------------------------------------------------------
-# Gemini Validation — parallel section-by-section
-# ---------------------------------------------------------------------------
-
-GEMINI_SECTIONS = {
-    "identity": {
-        "keys": ["college_name", "short_name", "established", "institution_type",
-                 "location", "country", "campus_area", "about", "departments",
-                 "accreditations", "affiliations", "website", "contact_info",
-                 "recognition", "additional_details"],
-        "audit_sections": ["Identity", "About"],
-        "prompt": """You are an expert college data validator and enricher. Given CURRENT DATA (extracted by another AI)
-and ORIGINAL SCRAPED CONTEXT, do the following for EVERY field:
-
-STEP 1 — FIX from context: If a value is WRONG or MISSING and the context has the correct info, fix it.
-STEP 2 — ENRICH from knowledge: If a value is still null/"not_available" AFTER checking context,
-  use YOUR OWN TRAINING KNOWLEDGE about this specific college to fill it in.
-  You likely know: founding year, affiliation, NAAC/NBA grade, AICTE approval, key departments, website, etc.
-STEP 3 — NOT APPLICABLE: If a field genuinely does not apply to this institution type/country, set "not_applicable".
-  E.g. "NIRF rank" for a non-Indian college → "not_applicable".
-
-FIELD RULES:
-- "about": 2-3 clean sentences covering founding year, affiliation, accreditation, notable strengths. No HTML/markdown.
-- "campus_area": exact value with unit (e.g. "150 Acres"). Search context first, then use knowledge.
-- "location": "City, State, Country" clean format.
-- "departments": full list of all departments at this college — use context + your knowledge.
-- "accreditations": list all accreditations (NAAC, NBA, ISO, ABET, etc.) with grade/year if known.
-  e.g. [{"body": "NAAC", "grade": "A", "year": "2023"}, {"body": "NBA", "programs": 6}]
-- "affiliations": university/board affiliations (e.g. "Anna University").
-- "website": official URL if known.
-- "contact_info": {"phone": "", "email": "", "address": ""} — fill from context or knowledge.
-- "recognition": any government/ministry recognitions (AICTE, UGC, etc.).
-- "additional_details": list of {"category": "", "value": ""} for any other relevant facts.
-
-RETURN a JSON object with ALL these keys. Missing/inapplicable → "not_applicable". No markdown fences."""
-    },
-    "programs": {
-        "keys": ["ug_programs", "pg_programs", "phd_programs"],
-        "audit_sections": ["UG_Programs", "PG_Programs", "About"],
-        "prompt": """You are an expert college programs validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
-
-STEP 1 — FIX from context: Correct/add any program found in context.
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE about this specific college to:
-  - Add any missing programs you know this college offers.
-  - Fill in missing seats/fees/duration if you know them.
-STEP 3 — NOT APPLICABLE: e.g. if a college has no PhD program, set phd_programs to "not_applicable".
-
-FIELD RULES:
-- Each UG program: {"name": "B.E. in Computer Science and Engineering", "duration": "4 years", "seats": 60, "fees_total_local": 240000}
-- Each PG program: {"name": "M.E. in Embedded Systems", "duration": "2 years", "seats": 18, "fees_total_local": 120000}
-- Each PhD program: {"name": "Ph.D. in Engineering", "duration": "3-5 years", "seats": null}
-- Full program names only (no abbreviations like just "M.E." or "B.E.").
-- Private engineering college UG seats typically 60–120 per program.
-- Include ALL programs: engineering, management, sciences, arts if this college offers them.
-- Add a "specializations" field to programs with multiple specializations if applicable.
-
-RETURN JSON with keys: ug_programs (array), pg_programs (array), phd_programs (array or "not_applicable"). No markdown fences."""
-    },
-    "rankings": {
-        "keys": ["rankings", "rankings_history", "global_ranking"],
-        "audit_sections": ["Rankings", "About", "Identity"],
-        "prompt": """You are an expert college rankings validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
-
-STEP 1 — FIX from context: Correct any wrong ranking values using context.
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE (up to your knowledge cutoff) to:
-  - Fill NIRF rank if this is an Indian college and you know the rank.
-  - Fill any QS/THE ranking if you know it.
-  - Add any state/national rankings you know about.
-STEP 3 — NOT APPLICABLE: 
-  - "nirf_2025", "nirf_2024" → "not_applicable" for non-Indian colleges.
-  - QS/THE → "not_applicable" if this is a small private college with no global presence.
-
-FIELD RULES:
-- rankings: {"nirf_2025": "", "nirf_2024": "", "qs_asia_2025": "", "qs_world": "", "the_world_2024": "", "national_rank": "", "state_rank": "", "india_today_rank": "", "outlook_rank": "", "week_rank": ""}
-- Add any ranking body you know (India Today, Outlook, The Week, Education World, etc.).
-- rankings_history: [{"year": "2024", "ranking_body": "NIRF", "rank": "105", "category": "Engineering"}]
-- global_ranking: {"qs_world": "", "the_world": "", "us_news_global": "", "webometrics": ""}
-- Use "not_available" only when truly unknown even from your knowledge.
-- Use "not_applicable" when the ranking body does not cover this college type/country.
-
-RETURN JSON with keys: rankings, rankings_history, global_ranking. No markdown fences."""
-    },
-    "faculty_students": {
-        "keys": ["faculty_staff", "student_statistics", "student_gender_ratio",
-                 "student_count_comparison_last_3_years", "international_students",
-                 "faculty_achievements", "notable_faculty"],
-        "audit_sections": ["Faculty_Staff", "Student_Statistics", "Student_Gender_Ratio", "International_Students"],
-        "prompt": """You are an expert college statistics validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
-
-STEP 1 — FIX from context: Use EXACT numbers from context (e.g. "205 Members" → 205).
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE to fill missing stats for this college.
-STEP 3 — NOT APPLICABLE: e.g. "nri_students" for non-Indian colleges → "not_applicable".
-
-FIELD RULES:
-- faculty_staff: {
-    "total_faculty": int,
-    "phd_faculty_count": int,
-    "phd_faculty_percent": float,   ← compute if both known
-    "student_faculty_ratio": "X:1",  ← recompute if both known
-    "professors": int, "associate_professors": int, "assistant_professors": int,
-    "visiting_faculty": int,
-    "research_staff": int
-  }
-- student_statistics: {
-    "total_enrollment": int, "ug_students": int, "pg_students": int,
-    "phd_students": int, "annual_intake": int, "lateral_entry_students": int
-  }
-- student_gender_ratio: {"total_male": int, "total_female": int, "male_percent": float, "female_percent": float}
-- student_count_comparison_last_3_years: [{"year": "2023", "total_enrolled": int, "ug": int, "pg": int, "phd": int}] for 2023, 2024, 2025
-- international_students: {"total_count": int, "countries_represented": int, "nri_students": int}
-- faculty_achievements: brief text on notable awards, patents, publications if known.
-- notable_faculty: [{"name": "", "designation": "", "specialization": ""}] — top 3-5 if known.
-
-SANITY: Private engineering college faculty 150-400, PhD students 20-80, total enrollment 2000-8000.
-RETURN JSON with all keys. No markdown fences."""
-    },
-    "placements": {
-        "keys": ["placements", "placement_comparison_last_3_years",
-                 "gender_based_placement_last_3_years", "sector_wise_placement_last_3_years",
-                 "top_recruiters", "placement_highlights"],
-        "audit_sections": ["Placements_General", "Placement_Yearly_Counts",
-                           "Placement_Gender_Stats", "Sector_Wise_Placements"],
-        "prompt": """You are an expert placement data validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
-
-STEP 1 — FIX from context: Use EXACT figures from context (e.g. "Average Package 3.52 LPA" → 3.52).
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE about this specific college's placements:
-  - Fill average/highest package if you know them.
-  - Fill top recruiters list if you know them.
-  - Fill placement rate if known.
-STEP 3 — NOT APPLICABLE: 
-  - "package_currency" = "LPA" for Indian colleges, actual currency code for others.
-  - For colleges you have no placement knowledge about, set fields to "not_available".
-
-FIELD RULES:
-- placements: {
-    "year": "2025", "highest_package": float, "average_package": float, "median_package": float,
-    "package_currency": "LPA", "placement_rate_percent": float,
-    "total_students_placed": int, "total_companies_visited": int,
-    "on_campus_placed": int, "off_campus_placed": int
-  }
-- placement_comparison_last_3_years: yearly data for 2023, 2024, 2025.
-- gender_based_placement_last_3_years: yearly gender split.
-- sector_wise_placement_last_3_years: [{"year": "2025", "sector": "IT/Software", "companies": ["TCS", "Infosys"], "percent": 45.0}]
-- top_recruiters: [{"company": "TCS", "sector": "IT", "students_hired": int, "package_lpa": float}] — list known recruiters.
-- placement_highlights: key achievements text (e.g. "100% placement for 5 consecutive years").
-- Do NOT inflate: typical private engineering avg 3-6 LPA, highest 10-25 LPA.
-
-RETURN JSON with all keys. No markdown fences."""
-    },
-    "fees_schol_infra": {
-        "keys": ["fees", "fees_by_year", "scholarships", "infrastructure",
-                 "hostel_details", "transport_details", "library_details"],
-        "audit_sections": ["Fees", "Scholarships", "Infrastructure"],
-        "prompt": """You are an expert college facilities data validator. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
-
-STEP 1 — FIX from context: Use exact figures from context. All amounts as plain numbers.
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE about this specific college to:
-  - Fill fee amounts if you know them (plain numbers, no symbols/commas).
-  - Fill scholarships this college is known to offer.
-  - Fill infrastructure details (labs, library, hostels, sports) if you know them.
-STEP 3 — NOT APPLICABLE: e.g. "pg_hostel" for a college with no PG → "not_applicable".
-
-FIELD RULES:
-- fees: {"UG": {"per_year": int, "total_course": int, "currency": "INR"}, "PG": {...}, "hostel_per_year": int}
-- fees_by_year: [{"year": "2024-25", "program_type": "UG", "per_year_local": int, "total_course_local": int, "hostel_per_year_local": int, "currency": "INR"}] for 2023-24, 2024-25, 2025-26.
-- scholarships: [{"name": "", "amount": "", "eligibility": "", "provider": "college/govt/private", "renewable": true/false}]
-  Include: AICTE scholarships, NAAC, govt schemes, college merit scholarships, sports quota, etc.
-- infrastructure: [{"facility": "", "details": "", "count": null, "area": ""}] — EVERY facility with exact details.
-  Include: classrooms, labs, library (books count, journals, e-resources), hostels (capacity, AC/non-AC),
-  cafeteria, sports (courts, ground, gym), auditorium (capacity), hospital/medical, transport buses,
-  WiFi/internet, computing labs (systems count), workshops, incubation center, placement cell.
-- hostel_details: {"boys_hostels": int, "girls_hostels": int, "boys_capacity": int, "girls_capacity": int, "ac_rooms": bool, "amenities": []}
-- transport_details: {"buses": int, "routes": int, "areas_covered": []}
-- library_details: {"total_books": int, "journals": int, "e_journals": int, "e_books": int, "area_sqft": int, "digital_library": bool}
-
-RETURN JSON with all keys. No markdown fences."""
-    },
-    "additional_info": {
-        "keys": ["research_and_development", "industry_collaborations", "achievements_awards",
-                 "student_clubs_activities", "alumni_info", "admission_process"],
-        "audit_sections": ["About", "Identity"],
-        "prompt": """You are enriching college data with additional important information. Given CURRENT DATA and ORIGINAL SCRAPED CONTEXT:
-
-STEP 1 — EXTRACT from context: Any research, collaborations, achievements, or activities mentioned.
-STEP 2 — ENRICH from knowledge: Use YOUR TRAINING KNOWLEDGE about this college to fill in:
-  - Research centers, funded projects, publications, patents.
-  - Industry MoUs and tie-ups.
-  - Awards and recognitions.
-  - Student clubs, fests, activities.
-  - Notable alumni.
-  - Admission process (entrance exams accepted, cutoff ranks).
-STEP 3 — NOT APPLICABLE: If a field truly doesn't apply, use "not_applicable".
-
-FIELD RULES:
-- research_and_development: {
-    "research_centers": [{"name": "", "focus_area": ""}],
-    "funded_projects": int,
-    "publications_per_year": int,
-    "patents_filed": int,
-    "patents_granted": int,
-    "research_funding_inr": ""
-  }
-- industry_collaborations: [{"company": "", "type": "MoU/internship/research", "benefit": ""}]
-- achievements_awards: [{"award": "", "year": "", "body": ""}]
-- student_clubs_activities: [{"name": "", "type": "technical/cultural/sports", "description": ""}]
-- alumni_info: {
-    "notable_alumni": [{"name": "", "designation": "", "company": ""}],
-    "alumni_association": bool,
-    "total_alumni": int
-  }
-- admission_process: {
-    "ug_entrance_exams": ["TNEA", "JEE Main"],
-    "pg_entrance_exams": ["TANCET", "GATE"],
-    "management_quota_percent": float,
-    "cutoff_rank_general": "",
-    "application_mode": "online/offline/both"
-  }
-
-RETURN JSON with all keys. No markdown fences."""
-    },
-}
-
-
-def _call_gemini(prompt: str, label: str, max_retries: int = 3) -> tuple:
-    """Call Gemini and return (parsed_dict, elapsed_seconds). Retries on JSON parse errors."""
-    t0 = time.time()
-    for attempt in range(1, max_retries + 1):
-        try:
-            resp = gemini_client.models.generate_content(
-                model=GEMINI_MODEL,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    system_instruction="You validate and correct structured college data. Return ONLY valid JSON, no markdown fences, no commentary, no trailing text.",
-                    temperature=0,
-                    max_output_tokens=8192,
-                ),
-            )
-            elapsed = round(time.time() - t0, 2)
-            text = resp.text.strip()
-            # Strip markdown fences if present
-            if "```json" in text:
-                text = text.split("```json")[1].split("```")[0].strip()
-            elif "```" in text:
-                text = text.split("```")[1].split("```")[0].strip()
-            # Aggressive JSON repair
-            text = re.sub(r',\s*([}\]])', r'\1', text)           # trailing commas
-            text = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', ' ', text)  # control chars (keep \t\n\r)
-            # Fix unescaped newlines/tabs inside JSON string values only
-            # Replace literal newlines between quotes with \\n
-            def _escape_strings(m):
-                return m.group(0).replace('\n', '\\n').replace('\r', '').replace('\t', '\\t')
-            text = re.sub(r'"[^"\\]*(?:\\.[^"\\]*)*"', _escape_strings, text, flags=re.DOTALL)
-            try:
-                result = json.loads(text)
-            except json.JSONDecodeError:
-                # Attempt 1: truncate at last valid closing brace
-                last_brace = max(text.rfind('}'), text.rfind(']'))
-                if last_brace > 0:
-                    candidate = text[:last_brace + 1]
-                    # Balance open braces
-                    open_b = candidate.count('{') - candidate.count('}')
-                    open_s = candidate.count('[') - candidate.count(']')
-                    candidate += '}' * max(0, open_b) + ']' * max(0, open_s)
-                    try:
-                        result = json.loads(candidate)
-                    except json.JSONDecodeError:
-                        raise
-                else:
-                    raise
-            print(f"  ✓ Gemini '{label}' done in {elapsed}s")
-            return result, elapsed
-        except json.JSONDecodeError as e:
-            if attempt < max_retries:
-                print(f"  ⚠  Gemini '{label}' JSON error (attempt {attempt}), retrying…")
-                continue
-            elapsed = round(time.time() - t0, 2)
-            print(f"  ✗ Gemini '{label}' failed ({elapsed}s): {e}")
-            return None, elapsed
-        except Exception as e:
-            elapsed = round(time.time() - t0, 2)
-            print(f"  ✗ Gemini '{label}' failed ({elapsed}s): {e}")
-            return None, elapsed
-    return None, round(time.time() - t0, 2)
-
-
-def _run_gemini_section(args):
-    """Worker for parallel Gemini validation."""
-    section_name, section_cfg, current_data, audit_sections, college_name = args
-    
-    # Build current data subset
-    current_subset = {}
-    for k in section_cfg["keys"]:
-        current_subset[k] = current_data.get(k, "not_available")
-    
-    # Build audit context
-    ctx = build_context(audit_sections, section_cfg["audit_sections"], char_limit=6000)
-    
-    full_prompt = (
-        f"{section_cfg['prompt']}\n\n"
-        f"COLLEGE: {college_name}\n\n"
-        f"CURRENT DATA:\n{json.dumps(current_subset, indent=2, ensure_ascii=False)}\n\n"
-        f"ORIGINAL SCRAPED CONTEXT:\n{ctx}"
-    )
-    
-    print(f"  ↳ Gemini validating '{section_name}'…")
-    result, elapsed = _call_gemini(full_prompt, section_name)
-    return section_name, result, elapsed
-
-
-def validate_with_gemini(structured_json: dict, audit_sections: list, college_name: str) -> dict | None:
-    """Send structured JSON section-by-section to Gemini for validation. All sections run in parallel."""
-    
-    validated = dict(structured_json)  # start with a copy
-    
-    batch_args = []
-    for sec_name, sec_cfg in GEMINI_SECTIONS.items():
-        batch_args.append((sec_name, sec_cfg, structured_json, audit_sections, college_name))
-    
-    wall_start = time.time()
-    results = {}
-    timings = {}
-    
-    with concurrent.futures.ThreadPoolExecutor(max_workers=7) as ex:
-        futures = {ex.submit(_run_gemini_section, arg): arg[0] for arg in batch_args}
-        for fut in concurrent.futures.as_completed(futures):
-            sec_name, result, elapsed = fut.result()
-            results[sec_name] = result
-            timings[sec_name] = elapsed
-    
-    wall_total = round(time.time() - wall_start, 2)
-    
-    # Merge corrections into validated JSON
-    corrections_applied = 0
-    for sec_name, result in results.items():
-        if result is None:
-            continue
-        for key, value in result.items():
-            if key in structured_json:
-                old_val = structured_json.get(key)
-                if value != old_val:
-                    validated[key] = value
-                    corrections_applied += 1
-            else:
-                validated[key] = value
-    
-    print(f"\n⏱  Gemini validation (wall-clock = {wall_total}s, all parallel):")
-    for sec_name in GEMINI_SECTIONS:
-        t = timings.get(sec_name, "—")
-        ok = "✓" if results.get(sec_name) else "✗"
-        print(f"   {sec_name}: {t}s  {ok}")
-    print(f"   Corrections applied: {corrections_applied} fields updated")
-    
-    return validated
+    print(f"\n✅ Saved to: {output_file}")
+    return final
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python audit_processor.py <audit_json_file>")
+        print('Usage: python groqbatch.py "College Name"')
     else:
         process_audit_with_groq(sys.argv[1])

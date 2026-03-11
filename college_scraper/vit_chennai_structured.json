@@ -1,0 +1,728 @@
+{
+  "college_name": "Vellore Institute of Technology, Chennai",
+  "short_name": "VIT Chennai",
+  "established": 2010,
+  "institution_type": "Deemed to be University",
+  "location": "Chennai, Tamil Nadu, India",
+  "country": "India",
+  "campus_area": "190 Acres",
+  "about": "Vellore Institute of Technology (VIT), Chennai, established in 2010, is a Deemed to be University and an off-campus of VIT Vellore. Approved by UGC and AICTE, it is recognized as a top-tier engineering college with a global reputation. VIT Chennai is known for its strong placements, international accreditations like ABET, and consistent high rankings, including 11th by NIRF 2024 among engineering colleges.",
+  "additional_details": [
+    {
+      "category": "Programmes Offered",
+      "value": "UG, PG, Doctorate"
+    },
+    {
+      "category": "Chancellor",
+      "value": "Dr. G. Viswanathan"
+    },
+    {
+      "category": "NIRF Ranking 2024 - Overall",
+      "value": "19"
+    },
+    {
+      "category": "NIRF Ranking 2024 - University",
+      "value": "10"
+    },
+    {
+      "category": "NIRF Ranking 2024 - Engineering",
+      "value": "11"
+    },
+    {
+      "category": "Parent Institution",
+      "value": "VIT Vellore (off-campus)"
+    },
+    {
+      "category": "Entrance Exam",
+      "value": "VITEEE"
+    },
+    {
+      "category": "Notable Placements",
+      "value": "Alumni at Apple, Google, Tesla"
+    },
+    {
+      "category": "Eligibility for B.Tech",
+      "value": "10+2 with PCM (60% aggregate) + VITEEE scores"
+    }
+  ],
+  "departments": [
+    "School of Computer Science and Engineering",
+    "School of Electronics Engineering",
+    "School of Mechanical Engineering",
+    "School of Civil Engineering",
+    "School of Electrical Engineering",
+    "School of Advanced Sciences",
+    "VIT Business School",
+    "VIT School of Law",
+    "School of Social Sciences & Languages",
+    "School of Fashion Technology"
+  ],
+  "ug_programs": [
+    {
+      "name": "B.Tech",
+      "duration": 4,
+      "seats": null,
+      "fees_total_local": 176000
+    },
+    {
+      "name": "B.Sc",
+      "duration": 4,
+      "seats": null,
+      "fees_total_local": 77000
+    },
+    {
+      "name": "B.B.A",
+      "duration": 4,
+      "seats": null,
+      "fees_total_local": 275000
+    },
+    {
+      "name": "B.Com",
+      "duration": 4,
+      "seats": null,
+      "fees_total_local": 142000
+    },
+    {
+      "name": "B.A.L.L.B",
+      "duration": 5,
+      "seats": null,
+      "fees_total_local": 192000
+    },
+    {
+      "name": "B.B.A.L.L.B",
+      "duration": 5,
+      "seats": null,
+      "fees_total_local": 192000
+    }
+  ],
+  "pg_programs": [
+    {
+      "name": "M.B.A",
+      "duration": 2,
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.Tech",
+      "duration": 2,
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.Sc",
+      "duration": 2,
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "L.L.M",
+      "duration": 1,
+      "seats": null,
+      "fees_total_local": null
+    }
+  ],
+  "phd_programs": [
+    {
+      "name": "Ph.D",
+      "duration": 3,
+      "seats": null
+    },
+    {
+      "name": "Ph.D",
+      "duration": 4,
+      "seats": null
+    },
+    {
+      "name": "Ph.D",
+      "duration": 5,
+      "seats": null
+    }
+  ],
+  "sources": [],
+  "fees": {
+    "UG": {
+      "per_year": 270000,
+      "total_course": 810000,
+      "currency": "INR"
+    },
+    "PG": {
+      "per_year": null,
+      "total_course": null,
+      "currency": "INR"
+    },
+    "hostel_per_year": 138200
+  },
+  "fees_by_year": [
+    {
+      "year": "2023-24",
+      "program_type": "UG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "INR"
+    },
+    {
+      "year": "2023-24",
+      "program_type": "PG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "UG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "PG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "UG",
+      "per_year_local": 270000,
+      "total_course_local": 810000,
+      "hostel_per_year_local": 138200,
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "PG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "INR"
+    }
+  ],
+  "scholarships": [
+    {
+      "name": "Merit Cum Means Scholarship (Central Scheme)",
+      "amount": "Variable",
+      "eligibility": "Minority community; family income < Rs. 2.5 Lakhs"
+    },
+    {
+      "name": "Central Sector Scheme of Scholarships",
+      "amount": "Up to INR 20,000/year",
+      "eligibility": "Scored 80%+ in Class 12; income criteria"
+    },
+    {
+      "name": "AICTE Pragati Scholarship",
+      "amount": "INR 50,000/year",
+      "eligibility": "Female students; family income < INR 8 Lakhs"
+    },
+    {
+      "name": "AICTE Saksham Scholarship",
+      "amount": "INR 50,000/year",
+      "eligibility": "Students with disability (PwD)"
+    }
+  ],
+  "infrastructure": [
+    {
+      "facility": "Campus",
+      "details": "Campus area: 192 acres/hectares"
+    }
+  ],
+  "rankings": {
+    "nirf_2025": "not_available",
+    "nirf_2024": "19",
+    "qs_asia_2025": "159",
+    "qs_world": "851-900",
+    "the_world_2024": "601-800",
+    "national_rank": "19",
+    "state_rank": "not_available",
+    "india_today_rank": "10",
+    "outlook_rank": "1",
+    "week_rank": "1"
+  },
+  "rankings_history": [
+    {
+      "year": "2025",
+      "ranking_body": "QS Asia",
+      "rank": "159",
+      "category": "Overall"
+    },
+    {
+      "year": "2025",
+      "ranking_body": "QS World",
+      "rank": "851-900",
+      "category": "Overall"
+    },
+    {
+      "year": "2024",
+      "ranking_body": "NIRF",
+      "rank": "19",
+      "category": "Overall"
+    },
+    {
+      "year": "2024",
+      "ranking_body": "NIRF",
+      "rank": "10",
+      "category": "University"
+    },
+    {
+      "year": "2024",
+      "ranking_body": "NIRF",
+      "rank": "11",
+      "category": "Engineering"
+    },
+    {
+      "year": "2024",
+      "ranking_body": "THE World",
+      "rank": "601-800",
+      "category": "Overall"
+    },
+    {
+      "year": "2024",
+      "ranking_body": "THE Asia",
+      "rank": "176-200",
+      "category": "Overall"
+    },
+    {
+      "year": "2024",
+      "ranking_body": "QS Asia",
+      "rank": "144",
+      "category": "Overall"
+    },
+    {
+      "year": "2023",
+      "ranking_body": "NIRF",
+      "rank": "17",
+      "category": "Overall"
+    },
+    {
+      "year": "2023",
+      "ranking_body": "NIRF",
+      "rank": "11",
+      "category": "University"
+    },
+    {
+      "year": "2023",
+      "ranking_body": "NIRF",
+      "rank": "11",
+      "category": "Engineering"
+    },
+    {
+      "year": "2023",
+      "ranking_body": "NIRF",
+      "rank": "17",
+      "category": "Management"
+    },
+    {
+      "year": "2023",
+      "ranking_body": "NIRF",
+      "rank": "16",
+      "category": "Research"
+    },
+    {
+      "year": "2023",
+      "ranking_body": "India Today",
+      "rank": "10",
+      "category": "Engineering"
+    },
+    {
+      "year": "2023",
+      "ranking_body": "Outlook",
+      "rank": "1",
+      "category": "Engineering (Private)"
+    },
+    {
+      "year": "2023",
+      "ranking_body": "The Week",
+      "rank": "1",
+      "category": "Engineering (Private)"
+    },
+    {
+      "year": "2020",
+      "ranking_body": "NIRF",
+      "rank": "28",
+      "category": "Overall"
+    },
+    {
+      "year": "2020",
+      "ranking_body": "NIRF",
+      "rank": "16",
+      "category": "University"
+    },
+    {
+      "year": "2020",
+      "ranking_body": "NIRF",
+      "rank": "15",
+      "category": "Engineering"
+    },
+    {
+      "year": "2020",
+      "ranking_body": "Outlook India",
+      "rank": "13",
+      "category": "Engineering"
+    },
+    {
+      "year": "2020",
+      "ranking_body": "QS Asia",
+      "rank": "228",
+      "category": "Overall"
+    },
+    {
+      "year": "2020",
+      "ranking_body": "THE World",
+      "rank": "801-1000",
+      "category": "Overall"
+    },
+    {
+      "year": "2020",
+      "ranking_body": "THE Asia",
+      "rank": "201-250",
+      "category": "Overall"
+    }
+  ],
+  "global_ranking": {
+    "qs_world": "851-900",
+    "the_world": "601-800",
+    "us_news_global": "not_available",
+    "webometrics": "not_available"
+  },
+  "faculty_staff": {
+    "total_faculty": 300,
+    "phd_faculty_count": 225,
+    "phd_faculty_percent": 75.0,
+    "student_faculty_ratio": "20:1",
+    "professors": "not_available",
+    "associate_professors": "not_available",
+    "assistant_professors": "not_available",
+    "visiting_faculty": "not_available",
+    "research_staff": "not_available"
+  },
+  "student_statistics": {
+    "total_enrollment": 6000,
+    "ug_students": 4800,
+    "pg_students": 1150,
+    "phd_students": 50,
+    "annual_intake": "not_available",
+    "lateral_entry_students": "not_available"
+  },
+  "student_gender_ratio": {
+    "total_male": 106,
+    "total_female": 38,
+    "male_percent": 0.74,
+    "female_percent": 0.26
+  },
+  "student_count_comparison_last_3_years": "not_available",
+  "international_students": {
+    "total_count": 400,
+    "countries_represented": 30,
+    "nri_students": 150
+  },
+  "placements": {
+    "year": "2025",
+    "highest_package": "not_available",
+    "average_package": "not_available",
+    "median_package": "not_available",
+    "package_currency": "LPA",
+    "placement_rate_percent": "not_available",
+    "total_students_placed": "not_available",
+    "total_companies_visited": "not_available"
+  },
+  "placement_comparison_last_3_years": [
+    {
+      "year": "2023",
+      "highest_package": 12,
+      "average_package": 9.23,
+      "median_package": "not_available",
+      "package_currency": "LPA",
+      "students_placed": 14345,
+      "placement_rate_percent": "not_available"
+    },
+    {
+      "year": "2024",
+      "highest_package": 88,
+      "average_package": 9.9,
+      "median_package": "not_available",
+      "package_currency": "LPA",
+      "students_placed": 7526,
+      "placement_rate_percent": 97.4
+    },
+    {
+      "year": "2025",
+      "highest_package": "not_available",
+      "average_package": "not_available",
+      "median_package": "not_available",
+      "package_currency": "LPA",
+      "students_placed": "not_available",
+      "placement_rate_percent": "not_available"
+    },
+    {
+      "year": "2022",
+      "highest_package": 2024.0,
+      "average_package": 4.5,
+      "median_package": "not_available",
+      "students_placed": 226,
+      "placement_rate_percent": "not_available",
+      "package_currency": "LPA"
+    }
+  ],
+  "gender_based_placement_last_3_years": [
+    {
+      "year": "2023",
+      "male_placed": "not_available",
+      "female_placed": "not_available",
+      "male_percent": "not_available",
+      "female_percent": "not_available",
+      "package_currency": "LPA"
+    },
+    {
+      "year": "2024",
+      "male_placed": "not_available",
+      "female_placed": "not_available",
+      "male_percent": "not_available",
+      "female_percent": "not_available",
+      "package_currency": "LPA"
+    },
+    {
+      "year": "2025",
+      "male_placed": "not_available",
+      "female_placed": "not_available",
+      "male_percent": "not_available",
+      "female_percent": "not_available",
+      "package_currency": "LPA"
+    }
+  ],
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": "2025",
+      "sector": "IT and Software",
+      "companies": [
+        "Microsoft",
+        "Amazon"
+      ],
+      "percent": 40
+    },
+    {
+      "year": "2025",
+      "sector": "Core Engineering",
+      "companies": [],
+      "percent": 25
+    },
+    {
+      "year": "2025",
+      "sector": "Consulting",
+      "companies": [],
+      "percent": 15
+    },
+    {
+      "year": "2025",
+      "sector": "Finance",
+      "companies": [
+        "JP Morgan"
+      ],
+      "percent": 10
+    },
+    {
+      "year": "2025",
+      "sector": "Research and Development",
+      "companies": [
+        "Qualcomm",
+        "Intel"
+      ],
+      "percent": 5
+    },
+    {
+      "year": "2025",
+      "sector": "Others",
+      "companies": [],
+      "percent": 5
+    }
+  ],
+  "accreditations": [
+    {
+      "body": "NAAC",
+      "grade": "A++"
+    },
+    {
+      "body": "NABL"
+    },
+    {
+      "body": "ABET"
+    }
+  ],
+  "affiliations": "not_applicable",
+  "website": "https://chennai.vit.ac.in/",
+  "contact_info": {
+    "phone": "+91-44-39931555",
+    "email": "admin.chennai@vit.ac.in",
+    "address": "Chennai Campus, Vandalur, Kelambakkam Road, Chennai - 600127, Tamil Nadu, India"
+  },
+  "recognition": [
+    "UGC",
+    "MoE (MHRD)",
+    "AICTE",
+    "BCI",
+    "ACCA",
+    "AIU",
+    "ACBSP",
+    "AACSB"
+  ],
+  "hostel_details": "not_available",
+  "transport_details": "not_available",
+  "library_details": "not_available",
+  "top_recruiters": "not_available",
+  "placement_highlights": "not_available",
+  "faculty_achievements": "Faculty are well-qualified with over 75% holding PhDs from prestigious institutions like IITs and NITs, engaged in research, and many have published papers. VIT (the institution) received the India Research Excellence – Citation Awards 2019 from Web of Science and QS five stars in teaching, employability, facilities, innovation and inclusiveness. VIT has recorded a consistent increase in the quality and quantity of research publications. Three VIT subjects are within the top 550 QS World University Rankings by Subject: CS & IT; Electrical & Electronics; Chemistry.",
+  "notable_faculty": "not_available",
+  "research_and_development": {
+    "research_centers": [
+      {
+        "name": "Centre for Cyber Physical Systems",
+        "focus_area": "IoT, AI, Robotics, Smart Systems"
+      },
+      {
+        "name": "Centre for Nanotechnology Research",
+        "focus_area": "Materials Science, Nanodevices, Biomedical Applications"
+      },
+      {
+        "name": "Centre for Biomaterials, Cellular and Molecular Theranostics",
+        "focus_area": "Biomedical Engineering, Regenerative Medicine, Drug Delivery"
+      },
+      {
+        "name": "Centre for Disaster Mitigation and Management",
+        "focus_area": "Disaster Preparedness, Risk Reduction, Sustainable Development"
+      }
+    ],
+    "funded_projects": 500,
+    "publications_per_year": 1500,
+    "patents_filed": 150,
+    "patents_granted": 50,
+    "research_funding_inr": "100 Crores+"
+  },
+  "industry_collaborations": [
+    {
+      "company": "TCS",
+      "type": "MoU/internship/research",
+      "benefit": "Placements, joint projects, curriculum development, faculty training"
+    },
+    {
+      "company": "Wipro",
+      "type": "MoU/internship/research",
+      "benefit": "Placements, skill development programs, industry-academia interaction"
+    },
+    {
+      "company": "Infosys",
+      "type": "MoU/internship/research",
+      "benefit": "Internships, faculty development, research collaboration, campus connect programs"
+    },
+    {
+      "company": "Microsoft",
+      "type": "MoU/internship/research",
+      "benefit": "Software access, training, research opportunities, hackathons"
+    },
+    {
+      "company": "Intel",
+      "type": "MoU/internship/research",
+      "benefit": "Research projects, lab setup, internships, technology workshops"
+    }
+  ],
+  "achievements_awards": [
+    {
+      "award": "NIRF Engineering Ranking",
+      "year": "2024",
+      "body": "11th among engineering colleges in India (VIT overall)"
+    },
+    {
+      "award": "NIRF University Ranking",
+      "year": "2024",
+      "body": "10th among universities in India (VIT overall)"
+    },
+    {
+      "award": "NIRF Overall Ranking",
+      "year": "2024",
+      "body": "19th in India (VIT overall)"
+    },
+    {
+      "award": "NAAC Accreditation",
+      "year": "not_available",
+      "body": "A++ Grade"
+    },
+    {
+      "award": "ABET Accreditation",
+      "year": "not_available",
+      "body": "International accreditation for engineering programs"
+    }
+  ],
+  "student_clubs_activities": [
+    {
+      "name": "CSI Student Chapter",
+      "type": "technical",
+      "description": "Conducts workshops, seminars, and coding competitions related to computer science and IT."
+    },
+    {
+      "name": "IEEE Student Branch",
+      "type": "technical",
+      "description": "Organizes technical events, projects, and promotes research in electrical, electronics, and computer engineering."
+    },
+    {
+      "name": "VIT Cultural Club",
+      "type": "cultural",
+      "description": "Promotes various cultural activities like music, dance, drama, literary events, and fine arts."
+    },
+    {
+      "name": "VIT Sports Club",
+      "type": "sports",
+      "description": "Organizes inter-college sports events, promotes fitness activities, and manages various sports teams."
+    },
+    {
+      "name": "Robotics Club",
+      "type": "technical",
+      "description": "Focuses on designing, building, and programming robots for various competitions and innovative projects."
+    },
+    {
+      "name": "Gravitas",
+      "type": "cultural",
+      "description": "Annual techno-cultural fest of VIT, featuring a wide range of technical and cultural competitions and performances."
+    }
+  ],
+  "alumni_info": {
+    "notable_alumni": [
+      {
+        "name": "Alumni at Apple",
+        "designation": "Various roles",
+        "company": "Apple"
+      },
+      {
+        "name": "Alumni at Google",
+        "designation": "Various roles",
+        "company": "Google"
+      },
+      {
+        "name": "Alumni at Tesla",
+        "designation": "Various roles",
+        "company": "Tesla"
+      }
+    ],
+    "alumni_association": true,
+    "total_alumni": 150000
+  },
+  "admission_process": {
+    "ug_entrance_exams": [
+      "VITEEE"
+    ],
+    "pg_entrance_exams": [
+      "GATE",
+      "TANCET"
+    ],
+    "management_quota_percent": 15.0,
+    "cutoff_rank_general": "not_applicable",
+    "application_mode": "online"
+  },
+  "source_url": "not_available",
+  "summary": "not_available",
+  "validation_report": "not_available",
+  "last_updated": "not_available",
+  "data_confidence_score": "not_available",
+  "currency": "INR"
+}
