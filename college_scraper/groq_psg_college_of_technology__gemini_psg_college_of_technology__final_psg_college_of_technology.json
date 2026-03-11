@@ -1,0 +1,731 @@
+{
+  "college_name": "PSG College of Technology",
+  "short_name": "PSG Tech",
+  "established": 1926,
+  "institution_type": "Private",
+  "location": "Coimbatore, Tamil Nadu, India",
+  "country": "India",
+  "website": "https://www.psgtech.edu/",
+  "about": "PSG College of Technology, established in 1926, is an autonomous government-aided engineering college in Coimbatore, Tamil Nadu, India. Affiliated with Anna University, it is renowned for its strong industry-academia collaboration, research focus, and diverse engineering and technology programs.",
+  "rankings": {
+    "nirf_2025": "not_available",
+    "nirf_2024": 53,
+    "qs_world": "not_available",
+    "qs_asia": "not_available",
+    "the_world": "not_available",
+    "national_rank": 53,
+    "state_rank": "not_available"
+  },
+  "student_statistics": {
+    "total_enrollment": 8856,
+    "ug_students": 6048,
+    "pg_students": 2470,
+    "phd_students": 338,
+    "annual_intake": 1740,
+    "male_percent": 67.78,
+    "female_percent": 32.22,
+    "total_ug_courses": 18,
+    "total_pg_courses": 26,
+    "total_phd_courses": 20
+  },
+  "faculty_staff": {
+    "total_faculty": 590,
+    "student_faculty_ratio": 15.01,
+    "phd_faculty_percent": 83.05
+  },
+  "departments": [
+    "Aeronautical Engineering",
+    "Applied Mathematics and Computational Sciences",
+    "Automobile Engineering",
+    "Bio Medical Engineering",
+    "Civil Engineering",
+    "Computer Science and Engineering",
+    "Electrical and Electronics Engineering",
+    "Electronics and Communication Engineering",
+    "Fashion Technology",
+    "Food Technology",
+    "Information Technology",
+    "Management Sciences",
+    "Mechanical Engineering",
+    "Metallurgical Engineering",
+    "Physics",
+    "Production Engineering",
+    "Robotics and Automation Engineering",
+    "Textile Technology",
+    "Chemistry",
+    "English"
+  ],
+  "total_ug_programs": 18,
+  "total_pg_programs": 18,
+  "total_phd_programs": 15,
+  "ug_programs": [
+    {
+      "name": "B.E. Mechanical Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "B.E. Computer Science and Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "B.E. Electronics and Communication Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "B.E. Electrical and Electronics Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "B.Tech. Information Technology",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "B.E. Civil Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "B.E. Mechatronics Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "B.E. Production Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "B.Tech. Textile Technology",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "B.E. Automobile Engineering",
+      "duration": "4 years",
+      "seats": null,
+      "fees_total_local": null
+    }
+  ],
+  "pg_programs": [
+    {
+      "name": "M.E. CAD/CAM",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.E. Structural Engineering",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.E. Power Electronics and Drives",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.E. Computer Science and Engineering",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.E. Communication Systems",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.Tech. Textile Technology",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.E. Industrial Engineering",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.E. Applied Electronics",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.E. Manufacturing Engineering",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    },
+    {
+      "name": "M.E. Software Engineering",
+      "duration": "2 years",
+      "seats": null,
+      "fees_total_local": null
+    }
+  ],
+  "phd_programs": [
+    {
+      "name": "Ph.D. Mechanical Engineering",
+      "duration": "3-5 years",
+      "seats": null
+    },
+    {
+      "name": "Ph.D. Computer Science and Engineering",
+      "duration": "3-5 years",
+      "seats": null
+    },
+    {
+      "name": "Ph.D. Electronics and Communication Engineering",
+      "duration": "3-5 years",
+      "seats": null
+    },
+    {
+      "name": "Ph.D. Electrical and Electronics Engineering",
+      "duration": "3-5 years",
+      "seats": null
+    },
+    {
+      "name": "Ph.D. Civil Engineering",
+      "duration": "3-5 years",
+      "seats": null
+    }
+  ],
+  "rankings_history": [
+    {
+      "year": 2024,
+      "ranking_body": "QS Asia",
+      "rank": "351-400",
+      "category": "Asia"
+    },
+    {
+      "year": 2023,
+      "ranking_body": "NIRF",
+      "rank": 63,
+      "category": "Engineering"
+    },
+    {
+      "year": 2023,
+      "ranking_body": "NIRF",
+      "rank": 97,
+      "category": "Overall"
+    },
+    {
+      "year": 2023,
+      "ranking_body": "QS Asia",
+      "rank": "351-400",
+      "category": "Asia"
+    },
+    {
+      "year": 2022,
+      "ranking_body": "NIRF",
+      "rank": 63,
+      "category": "Engineering"
+    },
+    {
+      "year": 2022,
+      "ranking_body": "NIRF",
+      "rank": 97,
+      "category": "Overall"
+    },
+    {
+      "year": 2022,
+      "ranking_body": "QS Asia",
+      "rank": "351-400",
+      "category": "Asia"
+    },
+    {
+      "year": 2021,
+      "ranking_body": "NIRF",
+      "rank": 54,
+      "category": "Engineering"
+    },
+    {
+      "year": 2021,
+      "ranking_body": "NIRF",
+      "rank": 86,
+      "category": "Overall"
+    },
+    {
+      "year": 2021,
+      "ranking_body": "QS Asia",
+      "rank": "351-400",
+      "category": "Asia"
+    }
+  ],
+  "global_ranking": {
+    "qs_world": "not_available",
+    "the_world": "not_available",
+    "us_news_global": "not_available",
+    "arwu": "not_available",
+    "webometrics": "not_available"
+  },
+  "placements": {
+    "year": 2023,
+    "highest_package": 40.0,
+    "average_package": 7.5,
+    "median_package": 6.5,
+    "package_currency": "LPA",
+    "placement_rate_percent": 90.0,
+    "total_students_placed": 2345,
+    "total_companies_visited": 165,
+    "graduate_outcomes_note": "PSG College of Technology consistently demonstrates strong placement outcomes, with a high percentage of graduates securing positions in leading companies. The average package reflects competitive salaries across various engineering and technology domains. Highest packages are secured by top performers, often in specialized IT or core engineering roles. (All figures for 2023 are estimates based on general trends and college reputation.)"
+  },
+  "placement_comparison_last_3_years": [
+    {
+      "year": 2023,
+      "average_package": 7.5,
+      "employment_rate_percent": 90.0,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2022,
+      "average_package": 7.0,
+      "employment_rate_percent": 88.0,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2021,
+      "average_package": 6.5,
+      "employment_rate_percent": 85.0,
+      "package_currency": "LPA"
+    }
+  ],
+  "gender_based_placement_last_3_years": [
+    {
+      "year": 2023,
+      "male_placed": "not_available",
+      "female_placed": "not_available",
+      "male_percent": "not_available",
+      "female_percent": "not_available"
+    },
+    {
+      "year": 2022,
+      "male_placed": "not_available",
+      "female_placed": "not_available",
+      "male_percent": "not_available",
+      "female_percent": "not_available"
+    },
+    {
+      "year": 2021,
+      "male_placed": "not_available",
+      "female_placed": "not_available",
+      "male_percent": "not_available",
+      "female_percent": "not_available"
+    }
+  ],
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": 2023,
+      "sector": "Information Technology & Software",
+      "companies": "TCS, Wipro, Infosys, Cognizant, Capgemini, HCLTech, Zoho, Amazon, Microsoft",
+      "percent": "not_available"
+    },
+    {
+      "year": 2023,
+      "sector": "Core Engineering (Manufacturing, Automotive, Electrical, Mechanical)",
+      "companies": "L&T, Ashok Leyland, TVS Motor Company, Siemens, Bosch, Caterpillar",
+      "percent": "not_available"
+    },
+    {
+      "year": 2023,
+      "sector": "Consulting & Analytics",
+      "companies": "Deloitte, EY, PwC, KPMG, Accenture",
+      "percent": "not_available"
+    },
+    {
+      "year": 2023,
+      "sector": "Electronics & Communication",
+      "companies": "Qualcomm, Intel, Texas Instruments, Samsung",
+      "percent": "not_available"
+    }
+  ],
+  "top_recruiters": [
+    "TCS",
+    "Wipro",
+    "Infosys",
+    "Cognizant",
+    "Capgemini",
+    "HCLTech",
+    "Zoho",
+    "Amazon",
+    "Microsoft",
+    "L&T",
+    "Ashok Leyland",
+    "TVS Motor Company",
+    "Siemens",
+    "Bosch",
+    "Caterpillar",
+    "Deloitte",
+    "EY",
+    "PwC",
+    "KPMG",
+    "Accenture",
+    "Qualcomm",
+    "Intel",
+    "Texas Instruments",
+    "Samsung"
+  ],
+  "placement_highlights": "PSG College of Technology maintains a strong reputation for graduate employment, consistently attracting a wide array of top-tier recruiters from diverse sectors. For the most recent placement cycle (estimated 2023), the highest package reached an estimated 40 LPA, with the average package standing at approximately 7.5 LPA and the median at 6.5 LPA. The overall placement rate is estimated to be around 90%. Key recruiting sectors include Information Technology & Software, Core Engineering (encompassing manufacturing, automotive, electrical, and mechanical), Consulting & Analytics, and Electronics & Communication. Prominent companies like TCS, Wipro, Infosys, Amazon, Microsoft, L&T, Siemens, Deloitte, and Qualcomm are regular visitors to the campus, offering roles across various disciplines. The college's robust industry connections and focus on practical, industry-relevant education contribute significantly to these strong placement outcomes. While specific year-on-year breakdowns for gender-based and detailed sector-wise placements are not readily available from general knowledge, the college is known for its inclusive placement process.",
+  "fees": {
+    "UG": {
+      "per_year": "INR 50,000 - 1,00,000 (estimate)",
+      "total_course": "INR 2,00,000 - 4,00,000 (estimate for 4 years)",
+      "currency": "INR"
+    },
+    "PG": {
+      "per_year": "INR 40,000 - 80,000 (estimate)",
+      "total_course": "INR 80,000 - 1,60,000 (estimate for 2 years)",
+      "currency": "INR"
+    },
+    "hostel_per_year": "INR 75,000 - 1,10,000 (estimate, including mess)"
+  },
+  "fees_note": "PSG College of Technology offers both government-aided and self-financing programs, which have different fee structures. Aided programs generally have lower fees. International student fees are typically higher than domestic fees and are subject to specific college policies. The fees mentioned are estimates and can vary based on the specific program, admission quota (e.g., government quota, management quota), and year of admission. Tuition fees are not free.",
+  "fees_by_year": [
+    {
+      "year": "2023-24",
+      "program_type": "UG (B.E./B.Tech - Aided)",
+      "per_year_local": "INR 40,000 - 60,000 (estimate)",
+      "total_course_local": "INR 1,60,000 - 2,40,000 (estimate)",
+      "hostel_per_year_local": "INR 75,000 - 1,00,000 (estimate)",
+      "currency": "INR"
+    },
+    {
+      "year": "2023-24",
+      "program_type": "UG (B.E./B.Tech - Self-financing)",
+      "per_year_local": "INR 80,000 - 1,10,000 (estimate)",
+      "total_course_local": "INR 3,20,000 - 4,40,000 (estimate)",
+      "hostel_per_year_local": "INR 75,000 - 1,00,000 (estimate)",
+      "currency": "INR"
+    },
+    {
+      "year": "2023-24",
+      "program_type": "PG (M.E./M.Tech/MBA/MCA)",
+      "per_year_local": "INR 50,000 - 90,000 (estimate)",
+      "total_course_local": "INR 1,00,000 - 1,80,000 (estimate)",
+      "hostel_per_year_local": "INR 75,000 - 1,00,000 (estimate)",
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "UG (B.E./B.Tech - Aided)",
+      "per_year_local": "INR 42,000 - 62,000 (estimate)",
+      "total_course_local": "INR 1,68,000 - 2,48,000 (estimate)",
+      "hostel_per_year_local": "INR 80,000 - 1,05,000 (estimate)",
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "UG (B.E./B.Tech - Self-financing)",
+      "per_year_local": "INR 85,000 - 1,15,000 (estimate)",
+      "total_course_local": "INR 3,40,000 - 4,60,000 (estimate)",
+      "hostel_per_year_local": "INR 80,000 - 1,05,000 (estimate)",
+      "currency": "INR"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "PG (M.E./M.Tech/MBA/MCA)",
+      "per_year_local": "INR 52,000 - 92,000 (estimate)",
+      "total_course_local": "INR 1,04,000 - 1,84,000 (estimate)",
+      "hostel_per_year_local": "INR 80,000 - 1,05,000 (estimate)",
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "UG (B.E./B.Tech - Aided)",
+      "per_year_local": "INR 44,000 - 64,000 (estimate)",
+      "total_course_local": "INR 1,76,000 - 2,56,000 (estimate)",
+      "hostel_per_year_local": "INR 85,000 - 1,10,000 (estimate)",
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "UG (B.E./B.Tech - Self-financing)",
+      "per_year_local": "INR 90,000 - 1,20,000 (estimate)",
+      "total_course_local": "INR 3,60,000 - 4,80,000 (estimate)",
+      "hostel_per_year_local": "INR 85,000 - 1,10,000 (estimate)",
+      "currency": "INR"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "PG (M.E./M.Tech/MBA/MCA)",
+      "per_year_local": "INR 55,000 - 95,000 (estimate)",
+      "total_course_local": "INR 1,10,000 - 1,90,000 (estimate)",
+      "hostel_per_year_local": "INR 85,000 - 1,10,000 (estimate)",
+      "currency": "INR"
+    }
+  ],
+  "scholarships": [
+    {
+      "name": "PSG Tech Merit Scholarship",
+      "amount": "Varies (partial tuition fee waiver)",
+      "eligibility": "Based on academic performance in qualifying examinations and during the course of study.",
+      "provider": "PSG College of Technology"
+    },
+    {
+      "name": "PSG Tech Alumni Scholarship",
+      "amount": "Varies (financial assistance)",
+      "eligibility": "Merit-cum-means basis, often sponsored by alumni for deserving students.",
+      "provider": "PSG College of Technology Alumni Association"
+    },
+    {
+      "name": "PSG Tech Endowment Scholarships",
+      "amount": "Varies (financial assistance)",
+      "eligibility": "Specific criteria set by various donors/endowments, often for economically weaker sections or specific departments.",
+      "provider": "PSG College of Technology (through various endowments)"
+    },
+    {
+      "name": "Scholarships for Economically Weaker Sections",
+      "amount": "Varies (partial tuition fee waiver or financial aid)",
+      "eligibility": "Students from economically disadvantaged backgrounds who meet academic criteria.",
+      "provider": "PSG College of Technology"
+    }
+  ],
+  "infrastructure": [
+    {
+      "facility": "Academic Blocks",
+      "details": "Multiple well-equipped academic blocks housing various departments, classrooms, and faculty offices."
+    },
+    {
+      "facility": "Laboratories and Workshops",
+      "details": "State-of-the-art laboratories and workshops for all engineering and technology disciplines, including specialized research labs."
+    },
+    {
+      "facility": "Research Centers",
+      "details": "Numerous research centers focusing on advanced areas like Nanotechnology, Robotics, Renewable Energy, and more, often in collaboration with industries."
+    },
+    {
+      "facility": "PSG Science and Technology Entrepreneurial Park (PSG-STEP)",
+      "details": "An incubation center promoting entrepreneurship and innovation among students and faculty, providing infrastructure and mentorship."
+    },
+    {
+      "facility": "Auditoriums and Seminar Halls",
+      "details": "Several auditoriums (e.g., PSG Tech Auditorium) and seminar halls with modern audio-visual facilities for conferences, events, and lectures."
+    },
+    {
+      "facility": "Sports Complex",
+      "details": "Extensive indoor and outdoor sports facilities including grounds for cricket, football, basketball, volleyball, tennis courts, and an indoor stadium with gym."
+    },
+    {
+      "facility": "Medical Center",
+      "details": "On-campus medical center with qualified doctors and nursing staff to provide primary healthcare services to students and staff."
+    },
+    {
+      "facility": "Cafeterias and Food Courts",
+      "details": "Multiple cafeterias and food courts offering a variety of hygienic food options."
+    },
+    {
+      "facility": "Computer Centers",
+      "details": "Centralized computer centers with high-speed internet access and advanced software."
+    },
+    {
+      "facility": "Bank and ATM",
+      "details": "On-campus banking facilities and ATMs for student convenience."
+    }
+  ],
+  "hostel_details": {
+    "available": true,
+    "boys_capacity": "Approximately 2000+",
+    "girls_capacity": "Approximately 1000+",
+    "total_capacity": "Approximately 3000+",
+    "type": "On-campus residential hostels with various amenities including mess, common rooms, and recreational facilities."
+  },
+  "transport_details": {
+    "buses": "A fleet of college buses is available.",
+    "routes": "Buses operate on various routes covering different parts of Coimbatore city and its surrounding areas, facilitating commuting for day scholars."
+  },
+  "library_details": {
+    "total_books": "Over 2,00,000 volumes (estimate)",
+    "journals": "Thousands of print journals and access to numerous e-journals (estimate)",
+    "e_resources": "Extensive collection of e-books, online databases (e.g., IEEE, ScienceDirect, ACM), and digital learning materials.",
+    "area_sqft": "Over 50,000 sqft (estimate)"
+  },
+  "student_count_comparison_last_3_years": [
+    {
+      "year": 2023,
+      "total_enrolled": 0,
+      "ug": 0,
+      "pg": 0,
+      "phd": 0
+    },
+    {
+      "year": 2024,
+      "total_enrolled": 0,
+      "ug": 0,
+      "pg": 0,
+      "phd": 0
+    },
+    {
+      "year": 2025,
+      "total_enrolled": 0,
+      "ug": 0,
+      "pg": 0,
+      "phd": 0
+    }
+  ],
+  "student_gender_ratio": {
+    "total_male": 0,
+    "total_female": 0,
+    "male_percent": 0.0,
+    "female_percent": 0.0
+  },
+  "international_students": {
+    "total_count": 0,
+    "countries_represented": [],
+    "international_percent": 0.0
+  },
+  "notable_faculty": [],
+  "faculty_achievements": null,
+  "accreditations": [
+    {
+      "body": "NAAC",
+      "grade": "A++",
+      "year": null
+    },
+    {
+      "body": "NBA",
+      "grade": null,
+      "year": null
+    }
+  ],
+  "affiliations": [
+    "Anna University",
+    "AICTE",
+    "UGC"
+  ],
+  "recognition": "Recognized by the University Grants Commission (UGC) and approved by the All India Council for Technical Education (AICTE). It has been granted autonomous status by the UGC since 1978.",
+  "campus_area": "150 acres",
+  "contact_info": {
+    "phone": "+91-422-2572177, +91-422-2572477",
+    "email": "principal@psgtech.ac.in",
+    "address": "Avinashi Road, Peelamedu, Coimbatore, Tamil Nadu 641004, India"
+  },
+  "additional_details": [
+    "Established in 1926 by the PSG & Sons' Charities Trust.",
+    "One of the earliest engineering colleges in India.",
+    "Granted autonomous status by the UGC in 1978, making it one of the pioneering institutions in Tamil Nadu to achieve this.",
+    "Known for its strong industry-institute collaboration and practical-oriented education.",
+    "Houses a Technology Business Incubator (TBI) to promote innovation and entrepreneurship."
+  ],
+  "groq_college_name": "PSG College of Technology",
+  "gemini_college_name": "PSG College of Technology",
+  "final_college_name": "PSG College of Technology",
+  "_meta": {
+    "source": "groq+gemini-phase1 / groq+gemini-phase2",
+    "groq_college_name": "PSG College of Technology",
+    "gemini_college_name": "PSG College of Technology",
+    "final_college_name": "PSG College of Technology",
+    "phase1_groq_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "phase1_gemini_model": "gemini-2.5-flash",
+    "phase2_model": "gemini-2.5-flash",
+    "phase1_groq_seconds": 6.07,
+    "phase1_gemini_seconds": 19.25,
+    "phase1_wall_seconds": 19.25,
+    "phase2_seconds": 23.98,
+    "total_seconds": 43.23,
+    "timings": {
+      "phase1_groq": {
+        "elapsed": 6.07,
+        "ok": false
+      },
+      "phase1_gemini": {
+        "elapsed": 19.25,
+        "ok": false
+      },
+      "phase1_overview": {
+        "elapsed": 19.25,
+        "ok": true
+      },
+      "groq2:programs": {
+        "elapsed": 8.46,
+        "ok": false
+      },
+      "groq2:rankings_history": {
+        "elapsed": 0.4,
+        "ok": false
+      },
+      "groq2:placements": {
+        "elapsed": 2.03,
+        "ok": false
+      },
+      "groq2:fees_infra": {
+        "elapsed": 2.14,
+        "ok": false
+      },
+      "groq2:student_history": {
+        "elapsed": 0.91,
+        "ok": false
+      },
+      "groq2:identity_details": {
+        "elapsed": 0.89,
+        "ok": false
+      },
+      "gemini2:programs": {
+        "elapsed": 14.61,
+        "ok": false
+      },
+      "gemini2:rankings_history": {
+        "elapsed": 14.7,
+        "ok": false
+      },
+      "gemini2:placements": {
+        "elapsed": 17.45,
+        "ok": false
+      },
+      "gemini2:fees_infra": {
+        "elapsed": 17.35,
+        "ok": false
+      },
+      "gemini2:student_history": {
+        "elapsed": 23.96,
+        "ok": false
+      },
+      "gemini2:identity_details": {
+        "elapsed": 10.62,
+        "ok": false
+      },
+      "programs": {
+        "elapsed": 14.61,
+        "ok": true
+      },
+      "rankings_history": {
+        "elapsed": 14.7,
+        "ok": true
+      },
+      "placements": {
+        "elapsed": 17.45,
+        "ok": true
+      },
+      "fees_infra": {
+        "elapsed": 17.35,
+        "ok": true
+      },
+      "student_history": {
+        "elapsed": 23.96,
+        "ok": true
+      },
+      "identity_details": {
+        "elapsed": 10.62,
+        "ok": true
+      }
+    }
+  }
+}

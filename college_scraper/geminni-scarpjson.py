@@ -30,55 +30,59 @@ GROQ_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"  # has live web search 
 # Returns the "above the fold" snapshot
 # ---------------------------------------------------------------------------
 
-PHASE1_PROMPT = """You are a university data expert. Using ONLY your verified training knowledge about "{name}", return a single JSON object with these keys:
+PHASE1_PROMPT = """You are a precise university data extractor. Extract data for "{name}".
+
+EXACTNESS RULES — READ CAREFULLY:
+- NEVER round numbers. If enrollment is 85,018 → write 85018. If it is 12,347 → write 12347. NOT 85000 or 12000.
+- NEVER approximate. Use the exact figure you know. If the real number is 4,978 write 4978, NOT 5000.
+- If you do NOT know the exact figure → use "not_available". Do NOT guess or round.
+- Rankings: exact integers only. No ranges like "601-650". If you know it exactly, write it. Else "not_available".
+- Percentages: exact decimals if known (e.g. 42.3 not 42). Else "not_available".
+- phd_students: ONLY doctoral/PhD research candidates. NOT all postgrad. Typically 500–4,000 for large universities.
+- pg_students: taught/coursework masters ONLY. Do NOT include PhD here.
+- total_enrollment = ug_students + pg_students + phd_students (must add up).
+- NIRF rankings: Indian colleges only. Set "not_available" for all non-Indian colleges.
+- NEVER use "not_applicable". Only "not_available" if genuinely unknown.
+- No markdown fences. Return valid JSON only.
+
+Return a single JSON object with these exact keys:
 
 college_name: full official name
 short_name: abbreviation or common name
 established: founding year (integer)
-institution_type: "Public" or "Private"
+institution_type: "Public" or "Private" or "Deemed" etc
 location: "City, State/Region, Country"
 country: country name
 website: official URL
-about: 2-3 factual sentences about founding, affiliations, global standing, notable strengths
+about: 2-3 factual sentences — founding, affiliations, global standing, notable strengths
 
 rankings: object with keys:
-  nirf_2025 (integer or "not_available" — only for Indian colleges),
-  nirf_2024 (integer or "not_available" — only for Indian colleges),
-  qs_world (integer — fill if known, else "not_available"),
-  qs_asia (integer — fill if known, else "not_available"),
-  the_world (integer — fill if known, else "not_available"),
-  national_rank (integer — rank within the country, fill if known),
-  state_rank (integer — rank within the state/region, fill if known)
+  nirf_2025 (exact integer or "not_available"),
+  nirf_2024 (exact integer or "not_available"),
+  qs_world (exact integer or "not_available"),
+  qs_asia (exact integer or "not_available"),
+  the_world (exact integer or "not_available"),
+  national_rank (exact integer or "not_available"),
+  state_rank (exact integer or "not_available")
 
 student_statistics: object with keys:
-  total_enrollment (total headcount all students currently enrolled, integer),
-  ug_students (undergraduate only — DO NOT include postgrad or research students),
-  pg_students (taught postgraduate/coursework masters — DO NOT include PhD/research students here),
-  phd_students (ONLY doctoral/PhD research candidates — typically a much smaller number than pg_students, e.g. 1,000–3,000 for large universities, NOT 6,000+),
-  annual_intake (new students admitted per year),
-  male_percent (percentage male — note: many modern universities have more female than male students, e.g. 40–45% male is common),
-  female_percent (percentage female),
-  total_ug_courses (SEARCH: total number of distinct UG degree programs/courses currently offered by this college — search the official website or course catalog),
-  total_pg_courses (SEARCH: total number of distinct PG/masters degree programs currently offered),
-  total_phd_courses (SEARCH: total number of distinct PhD/doctoral programs currently offered)
+  total_enrollment (exact integer — total all students),
+  ug_students (exact integer — UG only),
+  pg_students (exact integer — taught masters only, NOT PhD),
+  phd_students (exact integer — doctoral candidates only),
+  annual_intake (exact integer — new admissions per year),
+  male_percent (exact float — e.g. 42.3),
+  female_percent (exact float — e.g. 57.7),
+  total_ug_courses (exact integer — distinct UG programs offered),
+  total_pg_courses (exact integer — distinct PG/masters programs offered),
+  total_phd_courses (exact integer — distinct PhD programs offered)
 
 faculty_staff: object with keys:
-  total_faculty (current, best estimate),
-  student_faculty_ratio,
-  phd_faculty_percent
+  total_faculty (exact integer),
+  student_faculty_ratio (exact float e.g. 13.5),
+  phd_faculty_percent (exact float — % of faculty with PhD)
 
-departments: array of faculty/department names this college has
-
-CRITICAL RULES FOR STUDENT STATISTICS:
-- phd_students = ONLY research doctoral candidates, NOT all postgraduate students. For most universities this is 1,000–4,000, almost never above 10% of total enrollment.
-- pg_students = coursework/taught masters students only. Do NOT double-count PhD students here.
-- total_enrollment = ug_students + pg_students + phd_students (these three should add up roughly).
-- Gender: at most modern universities females outnumber males (55–60% female is common). Do not default to near-50/50 unless you are certain.
-- If you are not certain of exact numbers, give your best estimate — do NOT invent false precision.
-- For total_ug_courses / total_pg_courses / total_phd_courses: SEARCH the web for "[college name] total courses offered" or "[college name] course catalog" to get the actual count. These are course/program counts, NOT student counts.
-- NEVER use "not_applicable". Use "not_available" only if you genuinely cannot find the data.
-- NIRF rankings apply to Indian colleges only; set "not_available" for all others.
-- No markdown fences. Return valid JSON only."""
+departments: array of faculty/school/department names"""
 
 
 # ---------------------------------------------------------------------------
@@ -202,7 +206,15 @@ def _call_groq(label: str, prompt: str, max_tokens: int = 4096) -> tuple:
                 raise ValueError("Empty content after strip")
             text = re.sub(r'^```(?:json)?\s*', '', text, flags=re.IGNORECASE)
             text = re.sub(r'\s*```$', '', text)
+            # extract {…} block — handles prose before/after JSON
+            s, e = text.find('{'), text.rfind('}')
+            if s != -1 and e != -1 and e > s:
+                text = text[s:e+1]
+            elif s == -1:
+                raise ValueError("No JSON object in response")
             text = re.sub(r',\s*([}\]])', r'\1', text)
+            # repair common Groq quirks: control chars, unescaped newlines in strings
+            text = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', ' ', text)
 
             result = json.loads(text)
             elapsed = round(time.time() - t0, 2)
@@ -215,6 +227,7 @@ def _call_groq(label: str, prompt: str, max_tokens: int = 4096) -> tuple:
         except json.JSONDecodeError as e:
             if attempt < 3:
                 print(f"  ⚠  [groq:{label}] JSON error attempt {attempt}, retrying…")
+                print(f"     near: {text[max(0,e.pos-40):e.pos+40]!r}")
                 time.sleep(0.5)
                 continue
             elapsed = round(time.time() - t0, 2)
