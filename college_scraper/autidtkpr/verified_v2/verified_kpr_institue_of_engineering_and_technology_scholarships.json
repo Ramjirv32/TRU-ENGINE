@@ -1,0 +1,44 @@
+{
+  "scholarships_detail": [
+    {
+      "Scholarship Name": "KPRIET Merit Scholarship",
+      "Amount": "100% tuition fee waiver",
+      "Eligibility": "Students with 190+ cutoff in 12th or high JEE scores"
+    },
+    {
+      "Scholarship Name": "Post-Matric Scholarship",
+      "Amount": "Tuition fee waiver + 7500",
+      "Eligibility": "SC/ST students with family income below 2.5 Lakhs"
+    },
+    {
+      "Scholarship Name": "Tamil Nadu Higher Education Scholarship",
+      "Amount": "10000",
+      "Eligibility": "General category students with 80%+ in 12th"
+    },
+    {
+      "Scholarship Name": "Academic Scholarship",
+      "Amount": "",
+      "Eligibility": "Based on JEE qualifying score"
+    },
+    {
+      "Scholarship Name": "Sports Scholarship",
+      "Amount": "",
+      "Eligibility": "International/National/State/District/Divisional Level players"
+    },
+    {
+      "Scholarship Name": "Merit Scholarship",
+      "Amount": "25000",
+      "Eligibility": "Students with 90%+ in Class 12"
+    },
+    {
+      "Scholarship Name": "Sports Scholarship",
+      "Amount": "15000",
+      "Eligibility": "State/National-level players"
+    },
+    {
+      "Scholarship Name": "Need-based Scholarship",
+      "Amount": "Variable",
+      "Eligibility": "Low-income backgrounds"
+    }
+  ]
+}

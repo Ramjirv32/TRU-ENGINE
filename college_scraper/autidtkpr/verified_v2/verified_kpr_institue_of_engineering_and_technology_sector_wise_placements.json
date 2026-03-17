@@ -1,0 +1,50 @@
+{
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": 2024,
+      "sector": "IT & Product Dev",
+      "companies": "Amazon, Zoho, Freshworks",
+      "percent": 44
+    },
+    {
+      "year": 2024,
+      "sector": "Core Engineering",
+      "companies": "Bosch, L&T, TVS, Ashok Leyland",
+      "percent": 29
+    },
+    {
+      "year": 2024,
+      "sector": "Business Analytics",
+      "companies": "HCL, Hexaware, Accenture, Capgemini",
+      "percent": 15
+    },
+    {
+      "year": 2024,
+      "sector": "Others",
+      "companies": "",
+      "percent": 12
+    }
+  ],
+  "top_recruiters": [
+    "Amazon",
+    "Zoho",
+    "Infosys",
+    "TCS",
+    "Wipro",
+    "Cognizant",
+    "Bosch",
+    "L&T",
+    "TVS",
+    "Ashok Leyland",
+    "HCL",
+    "Hexaware",
+    "Accenture",
+    "Capgemini",
+    "HP",
+    "IBM",
+    "Genpact",
+    "Tata Consultancy Services",
+    "Caterpillar",
+    "Mallow"
+  ]
+}

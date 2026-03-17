@@ -1,0 +1,154 @@
+{
+  "total_start_time": 1773769019.8296874,
+  "colleges": {
+    "RVS College of Engineering and Technology": {
+      "queries": {
+        "placements": {
+          "parsed_json": {
+            "guessed_data": false,
+            "data_year": "2023-2024",
+            "sources": [
+              "https://rvscet.ac.in/placements-records/",
+              "https://www.careers360.com/colleges/rvs-college-of-engineering-and-technology-coimbatore/placement",
+              "https://www.shiksha.com/college/rvs-college-of-engineering-and-technology-coimbatore-21021/placement"
+            ],
+            "placements": {
+              "overall_placement_rate": "Above 60%",
+              "highest_package": "4.2 LPA",
+              "lowest_package": "1.2 LPA",
+              "average_package": "1.8 LPA",
+              "median_salary": "1.8 LPA"
+            },
+            "placement_comparison_last_3_years": [
+              {"academic_year": "2023-2024", "students_placed": 89, "placement_percentage": "74%", "median_salary": "1.8 LPA"},
+              {"academic_year": "2022-2023", "students_placed": 36, "placement_percentage": "78%", "median_salary": "1.5 LPA"},
+              {"academic_year": "2021-2022", "students_placed": 90, "placement_percentage": "56%", "median_salary": "1.75 LPA"}
+            ],
+            "top_recruiters": ["TCS", "Infosys", "Wipro", "Aspire Systems", "QSpider Software", "HCL", "Just Dial", "AEGIS"],
+            "placement_highlights": {
+              "branch_wise_performance_2023_24": {
+                "BE_Computer_Science": "65.91%",
+                "BE_Electronics_and_Communication": "100%",
+                "BE_Electrical_and_Electronics": "100%",
+                "BE_Mechanical": "100%",
+                "BE_Petrochemical": "93.33%"
+              },
+              "training_focus": "Extensive pre-placement training including soft skills, technical workshops, and mock interviews.",
+              "internship_rate": "Approximately 40% of students secured internships."
+            }
+          },
+          "time_taken_seconds": 0.08
+        },
+        "infrastructure": {
+          "parsed_json": {
+            "guessed_data": false,
+            "sources_verified": [
+              "https://rvscet.ac.in/",
+              "https://rvscollege.ac.in/the-campus/",
+              "https://www.careers360.com/colleges/rvs-college-of-engineering-and-technology-coimbatore/facilities",
+              "https://www.shiksha.com/college/rvs-college-of-engineering-and-technology-coimbatore-21021/infrastructure"
+            ],
+            "infrastructure": {
+              "campus_area": "30+ acres",
+              "general_facilities": [
+                "Wi-Fi enabled campus with high-speed internet",
+                "Smart classrooms with LCD projectors and audio-video systems",
+                "Department-specific laboratories (e.g., Lathe lab, Fluid Mechanics, Thermal Engineering)",
+                "Seminar halls and conference rooms for workshops",
+                "Indoor gymnasium and outdoor sports facilities (Cricket, Football, Volleyball, Badminton)",
+                "24/7 Uninterrupted power supply with standby generator",
+                "Reverse Osmosis (RO) plant for pure drinking water",
+                "ICICI Bank ATM within the campus premises",
+                "Medical dispensary with a 24/7 doctor on call",
+                "Cafeteria and food court serving diverse refreshments"
+              ]
+            },
+            "hostel_details": {
+              "boys_hostel": "6 blocks adjacent to the college buildings with a capacity for 822 students",
+              "girls_hostel": "2 separate blocks with a capacity for 438 students, featuring 24-hour security and CCTV",
+              "room_types": "Sharing basis (typically 3 to 6 persons per room); rooms include bed, table, chair, and wardrobe",
+              "amenities": [
+                "Mess facility providing vegetarian and non-vegetarian (twice weekly) meals",
+                "Attached bathrooms available for 3rd-year students onwards",
+                "Common rooms with TV, outdoor gym, and indoor games",
+                "Seamless Wi-Fi and 24/7 water/electricity",
+                "Yoga trainer and television lounge"
+              ]
+            },
+            "library_details": {
+              "name": "Central Library (Established 2007)",
+              "area": "11,000 sq. ft. spanning across two floors",
+              "capacity": "Seating for 300 students",
+              "collection": "Nearly 16,000 volumes of books, 35 national/international journals, and digital library access (DELNET membership)",
+              "hours": "8:00 AM to 7:00 PM on working days; 9:30 AM to 5:00 PM on Sundays/Holidays",
+              "borrowing_limit": "4 books for both UG and PG students for a 15-day period"
+            },
+            "transport_details": {
+              "fleet_size": "20 buses dedicated to the engineering college (part of a larger 100-bus fleet for RVS Group)",
+              "coverage": "Serves locations within a 70-km radius, including Coimbatore, Sulur, Tirupur, Palakkad, Palladam, Thudiyalur, and Saravanampatti",
+              "capacity": "Transports approximately 800 students daily",
+              "safety": "Equipped with fire extinguishers and first-aid kits",
+              "fees": "Optional service with charges ranging from approximately \u20b95,000 to \u20b915,000 per year"
+            }
+          },
+          "time_taken_seconds": 0.08
+        },
+        "fees": {
+          "parsed_json": null,
+          "time_taken_seconds": 0.09
+        },
+        "programs": {
+          "parsed_json": {
+            "ug_programs": [
+              "B.E. Computer Science and Engineering",
+              "B.E. Electronics and Communication Engineering",
+              "B.E. Electrical and Electronics Engineering",
+              "B.E. Mechanical Engineering",
+              "B.E. Biomedical Engineering",
+              "B.E. Mechanical & Automation Engineering",
+              "B.Tech. Information Technology",
+              "B.Tech. Artificial Intelligence and Data Science",
+              "B.Tech. Petrochemical Technology"
+            ],
+            "pg_programs": [
+              "M.E. Computer Science & Engineering",
+              "M.E. Applied Electronics",
+              "M.E. Communication System",
+              "M.E. Embedded System Technologies",
+              "M.E. Thermal Engineering",
+              "M.E. Industrial Safety Engineering",
+              "M.E. Computer Science & Engineering (Artificial Intelligence & Machine Learning)",
+              "M.C.A. Master of Computer Applications"
+            ],
+            "phd_programs": [
+              "Ph.D. Computer Science and Engineering",
+              "Ph.D. Mechanical Engineering"
+            ],
+            "departments": [
+              "Department of Computer Science and Engineering",
+              "Department of Electronics and Communication Engineering",
+              "Department of Electrical and Electronics Engineering",
+              "Department of Mechanical Engineering",
+              "Department of Information Technology",
+              "Department of Petrochemical Technology",
+              "Department of Science and Humanities"
+            ],
+            "sources_verified": [
+              "https://rvscet.ac.in/",
+              "https://rvscet.ac.in/about-us/",
+              "https://www.rvstcc.ac.in/departments/mechanical-engineering-phd/",
+              "https://m.facebook.com/rvscetcoimbatore/photos/admission-open-for-the-academic-year-2024-2025join-a-community-that-values-innov/934738361994683/"
+            ]
+          },
+          "time_taken_seconds": 0.09
+        },
+        "basic_info": {
+          "parsed_json": null,
+          "time_taken_seconds": 0.1
+        }
+      },
+      "total_time": 0.4395115375518799
+    }
+  },
+  "total_time_taken_seconds": 0.1
+}

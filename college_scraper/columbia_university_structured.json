@@ -1,0 +1,372 @@
+{
+  "college_name": "Columbia University in the City of New York",
+  "short_name": "CU",
+  "location": "Upper Manhattan, New York City, New York, United States",
+  "country": "United States",
+  "established": 1754,
+  "institution_type": "Private, Ivy League, Research University",
+  "campus_area": "32 acres",
+  "about": "Columbia University, originally King's College, was established in 1754 with a mission to instruct youth in learned languages and liberal arts and sciences. This mandate continues today, with Columbia recognized as one of the world's foremost research universities. Its undergraduate curriculum combines broad general education with deep disciplinary mastery.",
+  "additional_details": [
+    "One of nine colonial colleges founded before the Declaration of Independence.",
+    "Oldest college in New York State.",
+    "Fifth chartered institution of higher learning in the United States.",
+    "First school in the United States to grant the M.D. degree.",
+    "Annually administers the Pulitzer Prize.",
+    "Approximately 100 Nobel laureates have been affiliated with Columbia as students, faculty, or staff, second only to Harvard.",
+    "Notable alumni include five Founding Fathers of the United States, nine Justices of the United States Supreme Court, 20 living billionaires, 29 Academy Award winners, and 29 heads of state (including three United States Presidents).",
+    "Has global research outposts in Amman, Beijing, Istanbul, Paris, Mumbai, Rio de Janeiro, Santiago, Asunción, and Nairobi."
+  ],
+  "departments": [
+    "Columbia College",
+    "School of Engineering and Applied Science",
+    "School of General Studies"
+  ],
+  "ug_programs": [
+    {
+      "name": "Computer Science",
+      "duration": "",
+      "seats": 62
+    },
+    {
+      "name": "Bioengineering and Biomedical Engineering",
+      "duration": "",
+      "seats": 30
+    },
+    {
+      "name": "Chemical Engineering",
+      "duration": "",
+      "seats": 37
+    },
+    {
+      "name": "Civil Engineering",
+      "duration": "",
+      "seats": 30
+    },
+    {
+      "name": "Computer Engineering",
+      "duration": "",
+      "seats": 5
+    },
+    {
+      "name": "Electrical and Electronics Engineering",
+      "duration": "",
+      "seats": 26
+    },
+    {
+      "name": "Engineering Physics/Applied Physics",
+      "duration": "",
+      "seats": 8
+    },
+    {
+      "name": "Environmental/Environmental Health Engineering",
+      "duration": "",
+      "seats": 17
+    },
+    {
+      "name": "Mechanical Engineering",
+      "duration": "",
+      "seats": 40
+    },
+    {
+      "name": "Industrial Engineering",
+      "duration": "",
+      "seats": 6
+    },
+    {
+      "name": "Operations Research",
+      "duration": "",
+      "seats": 74
+    },
+    {
+      "name": "English Language and Literature",
+      "duration": "",
+      "seats": 121
+    },
+    {
+      "name": "Biology/Biological Sciences",
+      "duration": "",
+      "seats": 47
+    },
+    {
+      "name": "Biochemistry",
+      "duration": "",
+      "seats": 22
+    },
+    {
+      "name": "Biophysics",
+      "duration": "",
+      "seats": 5
+    }
+  ],
+  "pg_programs": [
+    {
+      "name": "MBA",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "Executive MBA",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MS in Accounting and Fundamental Analysis (MSAFA)",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MS in Financial Economics (MSFE)",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MS in Marketing Science (MSM)",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MS Investigative Specialization",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MS Data Journalism",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MS Documentary Specialization",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MA Arts & Culture",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MA Business & Economics Concentration",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MA Politics Concentration",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "MA Science Concentration",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "Master of Public Health",
+      "duration": "",
+      "seats": null
+    }
+  ],
+  "phd_programs": [
+    {
+      "name": "PhD in Communications",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "PhD: Accounting, Decision, Risk, & Operations (DRO)",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "PhD: Finance",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "PhD: Management",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "PhD: Marketing",
+      "duration": "",
+      "seats": null
+    },
+    {
+      "name": "J.S.D.",
+      "duration": "",
+      "seats": null
+    }
+  ],
+  "sources": [],
+  "fees": "not_available",
+  "fees_by_year": [
+    {
+      "year": "2023-24",
+      "program_type": "UG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "USD"
+    },
+    {
+      "year": "2023-24",
+      "program_type": "PG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "USD"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "UG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "USD"
+    },
+    {
+      "year": "2024-25",
+      "program_type": "PG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "USD"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "UG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "USD"
+    },
+    {
+      "year": "2025-26",
+      "program_type": "PG",
+      "per_year_local": null,
+      "total_course_local": null,
+      "hostel_per_year_local": null,
+      "currency": "USD"
+    }
+  ],
+  "scholarships": "not_available",
+  "infrastructure": [
+    {
+      "facility": "Manhattanville Campus Site",
+      "details": "17 acres (6.9 ha)"
+    }
+  ],
+  "rankings": {
+    "nirf_2025": "not_applicable",
+    "nirf_2024": "not_applicable",
+    "qs_asia_2025": "not_applicable",
+    "qs_world": 34,
+    "the_world_2024": 18,
+    "national_rank": 13
+  },
+  "faculty_staff": {
+    "total_faculty": "not_available",
+    "phd_faculty_count": "not_available",
+    "student_faculty_ratio": "not_available",
+    "professors": "not_available",
+    "associate_professors": "not_available",
+    "assistant_professors": "not_available"
+  },
+  "student_statistics": {
+    "total_enrollment": 35279,
+    "ug_students": 9111,
+    "pg_students": 26168,
+    "phd_students": "not_available",
+    "annual_intake": "approx. 8820 - 10584"
+  },
+  "student_gender_ratio": {
+    "total_male": 16128,
+    "total_female": 19151,
+    "male_percent": 45.72,
+    "female_percent": 54.28
+  },
+  "student_count_comparison_last_3_years": "not_available",
+  "international_students": {
+    "total_count": 13745,
+    "countries_represented": 149,
+    "nri_students": "not_applicable"
+  },
+  "placements": {
+    "year": "2024",
+    "highest_package": "not_applicable",
+    "average_package": "not_applicable",
+    "median_package": "not_applicable",
+    "package_currency": "not_applicable",
+    "placement_rate_percent": "not_applicable",
+    "total_students_placed": "not_applicable",
+    "total_companies_visited": "not_applicable"
+  },
+  "placement_comparison_last_3_years": "not_applicable",
+  "gender_based_placement_last_3_years": "not_applicable",
+  "global_ranking": {
+    "the_world": 18,
+    "qs_world": 34
+  },
+  "accreditations": "not_available",
+  "affiliations": [
+    "Association of American Universities",
+    "Teachers College",
+    "Barnard College",
+    "Union Theological Seminary",
+    "Jewish Theological Seminary of America",
+    "Sciences Po Paris",
+    "Juilliard School"
+  ],
+  "website": "https://www.columbia.edu",
+  "contact_info": "not_available",
+  "recognition": "not_available",
+  "hostel_details": "not_available",
+  "transport_details": "not_available",
+  "library_details": "not_available",
+  "sector_wise_placement_last_3_years": "not_applicable",
+  "top_recruiters": "not_applicable",
+  "placement_highlights": "not_available",
+  "faculty_achievements": "not_available",
+  "notable_faculty": "not_available",
+  "rankings_history": "not_available",
+  "research_and_development": {
+    "research_centers": [
+      "Amman outpost",
+      "Beijing outpost",
+      "Istanbul outpost",
+      "Paris outpost",
+      "Mumbai outpost",
+      "Rio de Janeiro outpost",
+      "Santiago outpost",
+      "Asunción outpost",
+      "Nairobi outpost"
+    ],
+    "research_projects_count": null,
+    "patents_filed_count": null,
+    "research_funding": null
+  },
+  "industry_collaborations": "not_available",
+  "achievements_awards": "not_available",
+  "student_clubs_activities": "not_available",
+  "alumni_info": {
+    "notable_alumni": [],
+    "alumni_achievements": "Notable alumni and former students include five Founding Fathers of the United States; nine Justices of the United States Supreme Court; 20 living billionaires; 29 Academy Award winners; and 29 heads of state, including three United States Presidents. Approximately 100 Nobel laureates have been affiliated with Columbia as students, faculty, or staff, ranking second globally only to Harvard."
+  },
+  "admission_process": "not_available",
+  "source_url": "not_available",
+  "summary": "not_available",
+  "validation_report": "not_available",
+  "last_updated": "not_available",
+  "data_confidence_score": "not_available",
+  "currency": "USD",
+  "placement_rate_percent": "not_applicable",
+  "highest_package": "not_applicable",
+  "average_package": "not_applicable",
+  "median_package": "not_applicable",
+  "total_students_placed": "not_applicable",
+  "total_companies_visited": "not_applicable",
+  "employment_rate_percent": "not_available",
+  "management_quota_percent": "not_applicable",
+  "cutoff_rank_general": "not_applicable"
+}

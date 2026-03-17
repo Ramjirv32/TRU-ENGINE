@@ -1,0 +1,22 @@
+{
+  "placement_comparison_last_3_years": [
+    {
+      "year": 2021,
+      "average_package": 6,
+      "employment_rate_percent": 73.7,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2022,
+      "average_package": null,
+      "employment_rate_percent": 90,
+      "package_currency": "LPA"
+    },
+    {
+      "year": 2023,
+      "average_package": 5,
+      "employment_rate_percent": 94,
+      "package_currency": "LPA"
+    }
+  ]
+}
