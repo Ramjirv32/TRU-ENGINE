@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>University of Melbourne — Intelligence Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>
+
+  :root {
+    --bg:        #ffffff;
+    --surface:   rgba(0,0,0,0.03);
+    --glass:     rgba(0,0,0,0.04);
+    --glass-hov: rgba(0,0,0,0.07);
+    --border:    rgba(0,0,0,0.08);
+    --indigo:    #4f46e5;
+    --indigo2:   #6366f1;
+    --cyan:      #0891b2;
+    --emerald:   #059669;
+    --amber:     #d97706;
+    --rose:      #e11d48;
+    --slate:     #475569;
+    --text:      #0f172a;
+    --muted:     #64748b;
+    --radius:    16px;
+    --shadow:    0 10px 40px rgba(0,0,0,0.06);
+  }
+
+  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE LAYER ── */
+  body::before {
+    content:'';
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+    background-size:200px;
+    opacity:.3;
+  }
+
+  /* ── MESH GRADIENT ── */
+  body::after {
+    content:'';
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(ellipse 60% 50% at 10% 0%, rgba(79,70,229,.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 90% 100%, rgba(8,145,178,.04) 0%, transparent 55%);
+  }
+
+  .wrap { position:relative; z-index:1; max-width:1440px; margin:0 auto; padding:0 24px 80px; }
+
+  /* ── HEADER ── */
+  header {
+    padding: 40px 0 32px;
+    display: flex; align-items:flex-start; gap:24px; flex-wrap:wrap;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .uni-badge {
+    width:64px; height:64px; border-radius:14px;
+    background: linear-gradient(135deg, var(--indigo), var(--indigo2));
+    display:grid; place-items:center; font-size:28px; flex-shrink:0;
+    box-shadow: 0 4px 20px rgba(79,70,229,0.25);
+  }
+  .header-text h1 {
+    font-family:'Syne',sans-serif;
+    font-size:clamp(22px,3vw,36px);
+    font-weight:800; letter-spacing:-.5px;
+    background: linear-gradient(120deg,var(--text) 10%,var(--indigo) 70%,var(--cyan) 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
+  .header-meta { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+  .chip {
+    display:inline-flex; align-items:center; gap:5px;
+    padding:3px 10px; border-radius:99px;
+    font-size:11px; font-weight:500; letter-spacing:.3px;
+    border:1px solid var(--border); background:var(--surface);
+    color:var(--slate);
+  }
+  .chip.green  { border-color:rgba(52,211,153,.3); color:var(--emerald); background:rgba(52,211,153,.07); }
+  .chip.amber  { border-color:rgba(251,191,36,.3);  color:var(--amber);   background:rgba(251,191,36,.07); }
+  .chip.indigo { border-color:rgba(99,102,241,.35); color:var(--indigo2); background:rgba(99,102,241,.1); }
+
+  /* ── TOP METRICS ── */
+  .kpi-row {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap:14px; margin-bottom:32px;
+  }
+  .kpi {
+    background:var(--glass);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:18px 20px;
+    transition: background .2s, transform .2s;
+    cursor:default;
+  }
+  .kpi:hover { background:var(--glass-hov); transform:translateY(-2px); }
+  .kpi .icon { font-size:22px; margin-bottom:8px; }
+  .kpi .val {
+    font-family:'Syne',sans-serif;
+    font-size:24px; font-weight:700;
+    color:var(--text); letter-spacing:-.5px;
+  }
+  .kpi .label { font-size:11px; color:var(--muted); margin-top:3px; letter-spacing:.4px; text-transform:uppercase; }
+
+  /* ── TABS ── */
+  .tabs { display:flex; gap:4px; margin-bottom:28px; flex-wrap:wrap; }
+  .tab {
+    padding:8px 18px; border-radius:10px; cursor:pointer;
+    font-family:'Syne',sans-serif; font-size:12px; font-weight:600;
+    letter-spacing:.4px; text-transform:uppercase;
+    border:1px solid transparent; color:var(--muted);
+    background:transparent; transition:all .2s;
+  }
+  .tab:hover { color:var(--text); background:var(--surface); }
+  .tab.active {
+    color:#fff; background:var(--indigo);
+    border-color:var(--indigo2);
+    box-shadow:0 0 20px rgba(99,102,241,.3);
+  }
+
+  /* ── PANELS ── */
+  .panel { display:none; }
+  .panel.active { display:block; animation:fadeUp .35s ease; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ── GRID ── */
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px; }
+  .span2  { grid-column:span 2; }
+  .span3  { grid-column:span 3; }
+  @media(max-width:900px) {
+    .grid-2,.grid-3 { grid-template-columns:1fr; }
+    .span2,.span3   { grid-column:span 1; }
+  }
+
+  /* ── CARD ── */
+  .card {
+    background:var(--glass);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:22px;
+    box-shadow:var(--shadow);
+    position:relative; overflow:hidden;
+  }
+  .card-title {
+    font-family:'Syne',sans-serif;
+    font-size:13px; font-weight:700;
+    letter-spacing:.6px; text-transform:uppercase;
+    color:var(--slate); margin-bottom:18px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .card-title .badge-wrap { display:flex; gap:6px; }
+  .chart-wrap { position:relative; }
+
+  /* ── GAUGE ── */
+  .gauge-wrap { display:flex; flex-direction:column; align-items:center; gap:4px; }
+  #gaugeChart { max-height:220px; }
+  .gauge-label { font-family:'Syne',sans-serif; font-size:36px; font-weight:800; color:var(--text); margin-top:-48px; }
+  .gauge-sub   { font-size:11px; color:var(--muted); letter-spacing:.5px; text-transform:uppercase; }
+
+  /* ── PODIUM ── */
+  .podium { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .podium-item {
+    flex:1; min-width:120px; max-width:180px;
+    background: linear-gradient(160deg,rgba(99,102,241,.15),rgba(99,102,241,.04));
+    border:1px solid rgba(99,102,241,.25); border-radius:14px;
+    padding:22px 16px; text-align:center;
+    display:flex; flex-direction:column; align-items:center; gap:6px;
+  }
+  .podium-item .crown { font-size:28px; }
+  .podium-item .rank-num {
+    font-family:'Syne',sans-serif; font-size:38px; font-weight:800;
+    color:var(--indigo2); line-height:1;
+  }
+  .podium-item .rank-label { font-size:11px; color:var(--muted); letter-spacing:.5px; text-transform:uppercase; }
+
+  /* ── PROGRAMS LIST ── */
+  .prog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px; }
+  .prog-tag {
+    background:var(--surface); border:1px solid var(--border); border-radius:8px;
+    padding:7px 12px; font-size:12px; color:var(--text);
+    transition:background .2s, border-color .2s;
+  }
+  .prog-tag:hover { background:var(--glass-hov); border-color:rgba(99,102,241,.3); }
+  .prog-tag .deg  { color:var(--muted); font-size:10px; }
+
+  /* ── ACCREDITATION TIMELINE ── */
+  .timeline { position:relative; padding-left:28px; }
+  .timeline::before {
+    content:''; position:absolute; left:9px; top:0; bottom:0;
+    width:2px; background:linear-gradient(to bottom,var(--indigo),var(--indigo2),transparent);
+    border-radius:2px;
+  }
+  .tl-item { position:relative; margin-bottom:20px; }
+  .tl-dot {
+    position:absolute; left:-23px; top:4px;
+    width:10px; height:10px; border-radius:50%;
+    background:var(--indigo); box-shadow:0 0 8px var(--indigo);
+  }
+  .tl-year { font-size:11px; color:var(--indigo2); font-weight:600; letter-spacing:.4px; }
+  .tl-body { font-size:13px; color:var(--text); font-weight:500; }
+  .tl-grade { font-size:11px; color:var(--emerald); }
+
+  /* ── INFRA CARDS ── */
+  .infra-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+  .infra-card {
+    background:var(--surface); border:1px solid var(--border); border-radius:12px;
+    padding:16px; display:flex; flex-direction:column; gap:8px;
+    transition:background .2s;
+  }
+  .infra-card:hover { background:var(--glass-hov); }
+  .infra-icon { font-size:24px; }
+  .infra-title { font-family:'Syne',sans-serif; font-size:13px; font-weight:700; }
+  .infra-desc  { font-size:12px; color:var(--muted); line-height:1.55; }
+
+  /* ── PROGRESS BAR ── */
+  .progress-row { margin-bottom:10px; }
+  .progress-label { display:flex; justify-content:space-between; font-size:12px; color:var(--slate); margin-bottom:4px; }
+  .progress-track {
+    height:6px; background:rgba(255,255,255,.07); border-radius:3px; overflow:hidden;
+  }
+  .progress-fill {
+    height:100%; border-radius:3px;
+    background:linear-gradient(90deg,var(--indigo),var(--indigo2));
+    transition:width 1s cubic-bezier(.4,0,.2,1);
+  }
+  .progress-fill.cyan    { background:linear-gradient(90deg,var(--cyan),var(--indigo2)); }
+  .progress-fill.emerald { background:linear-gradient(90deg,var(--emerald),var(--cyan)); }
+
+  /* ── SCHOLAR CARDS ── */
+  .scholar-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; }
+  .scholar-card {
+    background:var(--surface); border:1px solid rgba(52,211,153,.15); border-radius:12px;
+    padding:16px; position:relative; overflow:hidden;
+  }
+  .scholar-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:3px;
+    background:linear-gradient(90deg,var(--emerald),var(--cyan));
+  }
+  .scholar-name  { font-family:'Syne',sans-serif; font-size:13px; font-weight:700; margin-bottom:6px; }
+  .scholar-amount{ font-size:16px; font-weight:600; color:var(--emerald); margin-bottom:4px; }
+  .scholar-elig  { font-size:11px; color:var(--muted); }
+
+  /* ── RECRUITER CHIPS ── */
+  .recruiter-grid { display:flex; flex-wrap:wrap; gap:8px; }
+  .recruiter-chip {
+    padding:6px 14px; border-radius:99px;
+    background:rgba(99,102,241,.12); border:1px solid rgba(99,102,241,.25);
+    font-size:12px; color:var(--indigo2); font-weight:500;
+    transition:background .2s;
+  }
+  .recruiter-chip:hover { background:rgba(99,102,241,.22); }
+
+  /* ── SOURCE PILLS ── */
+  .source-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .source-pill {
+    display:inline-flex; align-items:center; gap:5px;
+    padding:5px 12px; border-radius:99px; font-size:11px;
+    background:rgba(255,255,255,.04); border:1px solid var(--border);
+    color:var(--indigo2); text-decoration:none;
+    transition:background .2s, border-color .2s;
+  }
+  .source-pill:hover { background:rgba(99,102,241,.12); border-color:rgba(99,102,241,.3); }
+
+  /* ── FEE TABLE ── */
+  .fee-table { width:100%; border-collapse:collapse; }
+  .fee-table th {
+    text-align:left; padding:10px 14px;
+    font-size:11px; font-weight:700; letter-spacing:.5px;
+    text-transform:uppercase; color:var(--muted);
+    border-bottom:1px solid var(--border);
+  }
+  .fee-table td {
+    padding:12px 14px; font-size:13px;
+    border-bottom:1px solid rgba(255,255,255,.04);
+  }
+  .fee-table tr:hover td { background:rgba(255,255,255,.02); }
+  .fee-badge {
+    display:inline-block; padding:2px 8px; border-radius:4px;
+    font-size:10px; font-weight:700; letter-spacing:.5px;
+  }
+  .fee-badge.ug  { background:rgba(99,102,241,.2); color:var(--indigo2); }
+  .fee-badge.pg  { background:rgba(34,211,238,.15); color:var(--cyan); }
+
+  /* ── STAT ROW ── */
+  .stat-row { display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:10px; margin-bottom:18px; }
+  .stat-box {
+    background:var(--surface); border:1px solid var(--border); border-radius:10px;
+    padding:12px 14px; text-align:center;
+  }
+  .stat-box .sv { font-family:'Syne',sans-serif; font-size:20px; font-weight:700; color:var(--text); }
+  .stat-box .sl { font-size:10px; color:var(--muted); margin-top:2px; letter-spacing:.4px; text-transform:uppercase; }
+
+  /* ── AFFILIATION TAGS ── */
+  .affil-list { display:flex; flex-wrap:wrap; gap:8px; }
+  .affil-tag {
+    padding:5px 12px; border-radius:8px;
+    background:rgba(251,191,36,.08); border:1px solid rgba(251,191,36,.2);
+    color:var(--amber); font-size:12px; font-weight:500;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width:6px; }
+  ::-webkit-scrollbar-track { background:transparent; }
+  ::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
+
+  /* ── SECTION DIVIDER ── */
+  .sec-div { height:1px; background:var(--border); margin:24px 0; }
+
+  /* ── VERIFICATION STRIP ── */
+  .verify-strip {
+    display:flex; align-items:center; gap:8px;
+    padding:10px 14px; border-radius:10px; margin-bottom:16px;
+    font-size:12px;
+  }
+  .verify-strip.verified { background:rgba(52,211,153,.08); border:1px solid rgba(52,211,153,.2); color:var(--emerald); }
+  .verify-strip.estimated { background:rgba(251,191,36,.08); border:1px solid rgba(251,191,36,.2); color:var(--amber); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div class="uni-badge">🎓</div>
+    <div class="header-text">
+      <h1 id="hName">University of Melbourne</h1>
+      <div class="header-meta">
+        <span class="chip indigo" id="hType">Public Research University</span>
+        <span class="chip" id="hCountry">📍 Melbourne, Victoria — Australia</span>
+        <span class="chip" id="hEst">Est. 1853</span>
+        <span class="chip green">✓ TEQSA Registered</span>
+        <a id="hWeb" class="chip indigo" href="#" target="_blank">🌐 Website ↗</a>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-top:10px;max-width:780px;" id="hAbout"></div>
+    </div>
+  </header>
+
+  <!-- KPI ROW -->
+  <div class="kpi-row" id="kpiRow"></div>
+
+  <!-- TABS -->
+  <div class="tabs" id="tabBar"></div>
+
+  <!-- OVERVIEW PANEL -->
+  <div class="panel active" id="panelOverview">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">🏆 Global Rankings <span class="badge-wrap"><span class="chip green">Verified</span></span></div>
+        <div class="podium" id="podium"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">📊 Student Composition</div>
+        <div class="chart-wrap" style="max-height:220px">
+          <canvas id="chartStudentStack"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">👥 Gender Split</div>
+        <div class="chart-wrap" style="max-height:200px">
+          <canvas id="chartGender"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">🔗 Affiliations</div>
+        <div class="affil-list" id="affils"></div>
+        <div class="sec-div"></div>
+        <div class="card-title" style="margin-bottom:12px">📋 Accreditations</div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLACEMENTS PANEL -->
+  <div class="panel" id="panelPlacements">
+    <div class="verify-strip estimated">⚠ Placement data is partially estimated — sourced from QILT Graduate Outcomes Survey</div>
+    <div class="grid-2">
+      <div class="card span2">
+        <div class="card-title">📈 Package Trends (3-Year)</div>
+        <div class="chart-wrap" style="height:250px">
+          <canvas id="chartPackageTrend"></canvas>
+        </div>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;align-items:center">
+        <div class="card-title" style="width:100%">🎯 Placement Rate</div>
+        <div class="gauge-wrap">
+          <canvas id="gaugeChart"></canvas>
+          <div class="gauge-label" id="gaugeLabel">74%</div>
+          <div class="gauge-sub">Graduate Employment Rate 2024</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">🏭 Sector-wise Placement</div>
+        <div class="chart-wrap" style="height:260px">
+          <canvas id="chartSector"></canvas>
+        </div>
+      </div>
+      <div class="card span2">
+        <div class="card-title">🏢 Top Recruiters</div>
+        <div class="recruiter-grid" id="recruiters"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEES PANEL -->
+  <div class="panel" id="panelFees">
+    <div class="verify-strip verified">✓ Fee data sourced from official 2026 International Fee Tables (Scribd / unimelb.edu.au)</div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">💰 UG vs PG Fees (2026 AUD)</div>
+        <div class="chart-wrap" style="height:240px">
+          <canvas id="chartFeesBar"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">📉 Fee Growth (3-Year Trend)</div>
+        <div class="chart-wrap" style="height:240px">
+          <canvas id="chartFeesArea"></canvas>
+        </div>
+      </div>
+      <div class="card span2">
+        <div class="card-title">📋 Fee Breakdown</div>
+        <table class="fee-table" id="feeTable"></table>
+      </div>
+      <div class="card span2">
+        <div class="card-title">🎓 Scholarships <span class="badge-wrap"><span class="chip green">3 Available</span></span></div>
+        <div class="scholar-grid" id="scholars"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROGRAMS PANEL -->
+  <div class="panel" id="panelPrograms">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">🎓 Undergraduate Programs <span class="badge-wrap" id="ugCount"></span></div>
+        <div class="prog-grid" id="ugProgs"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">📚 Postgraduate Programs <span class="badge-wrap" id="pgCount"></span></div>
+        <div style="max-height:380px;overflow-y:auto;padding-right:4px">
+          <div class="prog-grid" id="pgProgs"></div>
+        </div>
+      </div>
+      <div class="card span2">
+        <div class="card-title">🔬 PhD Programs <span class="badge-wrap" id="phdCount"></span></div>
+        <div class="prog-grid" id="phdProgs"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFRASTRUCTURE PANEL -->
+  <div class="panel" id="panelInfra">
+    <div class="verify-strip estimated">⚠ Infrastructure data is partially estimated from official sources</div>
+    <div class="grid-2">
+      <div class="card span2">
+        <div class="card-title">🏛️ Campus & Facilities</div>
+        <div class="infra-grid" id="infraGrid"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">🏠 Hostel Capacity</div>
+        <div class="stat-box" style="margin-bottom:16px">
+          <div class="sv" id="hostelCap"></div>
+          <div class="sl">Total Residential Capacity</div>
+        </div>
+        <div class="progress-row">
+          <div class="progress-label"><span>Occupancy Rate</span><span>~84.5%</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:84.5%"></div></div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);margin-top:10px" id="hostelType"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">📚 Library</div>
+        <div class="stat-row" id="libStats"></div>
+        <div style="font-size:12px;color:var(--muted)" id="libERes"></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   EMBEDDED DATA — paste any updated JSON here
+═══════════════════════════════════════════════════════════════ */
+const RAW = {
+  "University of Melbourne": {
+    "basic_info": {
+      "college_name": "University of Melbourne",
+      "short_name": "UniMelb",
+      "established": "1853",
+      "institution_type": "Public Research University",
+      "country": "Australia",
+      "location": "Melbourne, Victoria",
+      "website": "https://www.unimelb.edu.au",
+      "about": "The University of Melbourne is a public research university located in Melbourne, Australia. Founded in 1853, it is Australia's second oldest university and the oldest in Victoria.",
+      "summary": "Consistently ranked as the top university in Australia, the University of Melbourne is a member of the Group of Eight and is globally recognized for its research output and graduate employability.",
+      "rankings": {
+        "nirf_rank": "Not Applicable",
+        "qs_world": "19",
+        "national_rank": "1",
+        "state_rank": "1",
+        "guessed_data": "nirf_rank is not applicable to Australian institutions."
+      },
+      "student_statistics": {
+        "total_enrollment": 77162,
+        "ug_students": 37810,
+        "pg_students": 39352,
+        "phd_students": 6200,
+        "annual_intake": 23172,
+        "male_percent": 42,
+        "female_percent": 58,
+        "total_ug_courses": 85,
+        "total_pg_courses": 340,
+        "total_phd_courses": 45,
+        "guessed_data": "UG/PG split based on 49/51 EFTSL ratio applied to 2024 headcount; Course counts are estimated based on faculty offerings; PhD student count estimated from typical G8 research ratios."
+      },
+      "faculty_staff": {
+        "total_faculty": 13758,
+        "student_faculty_ratio": "23.3:1",
+        "phd_faculty_percent": 85,
+        "guessed_data": "Total faculty reflects 2024 headcount; PhD faculty percent estimated based on high-intensity research status."
+      },
+      "student_history": {
+        "student_count_comparison_last_3_years": {
+          "2024": 77162,
+          "2023": 53963,
+          "2022": 51622
+        },
+        "international_students": "46%",
+        "guessed_data": "2023 and 2022 figures are reported as EFTSL (Equivalent Full-Time Student Load) while 2024 is Headcount."
+      },
+      "accreditations": [
+        {
+          "body": "Tertiary Education Quality and Standards Agency (TEQSA)",
+          "grade": "Registered",
+          "year": "2024"
+        },
+        {
+          "body": "Association to Advance Collegiate Schools of Business (AACSB)",
+          "grade": "Accredited",
+          "year": "2023"
+        },
+        {
+          "body": "EQUIS (EFMD Quality Improvement System)",
+          "grade": "Accredited",
+          "year": "2023"
+        }
+      ],
+      "affiliations": [
+        "Group of Eight",
+        "Universitas 21",
+        "Association of Pacific Rim Universities",
+        "Association of Commonwealth Universities"
+      ],
+      "recognition": "Regulated by the Australian Government; CRICOS Provider 00116K.",
+      "campus_area": "22.5 hectares (Main Parkville Campus)",
+      "contact_info": {
+        "phone": "+61 3 9035 5511",
+        "email": "stop1@unimelb.edu.au",
+        "address": "The University of Melbourne, Victoria 3010 Australia"
+      },
+      "sources_verified": [
+        "https://about.unimelb.edu.au/facts-and-figures",
+        "https://about.unimelb.edu.au/strategy/annual-reports/2024-annual-report",
+        "https://www.timeshighereducation.com/world-university-rankings/university-melbourne",
+        "https://www.unimelb.edu.au/contact"
+      ]
+    },
+    "programs": {
+      "ug_programs": [
+        "Bachelor of Agriculture",
+        "Bachelor of Arts",
+        "Bachelor of Arts (Extended)",
+        "Bachelor of Biomedicine",
+        "Bachelor of Commerce",
+        "Bachelor of Design",
+        "Bachelor of Fine Arts (Acting)",
+        "Bachelor of Fine Arts (Animation)",
+        "Bachelor of Fine Arts (Dance)",
+        "Bachelor of Fine Arts (Music Theatre)",
+        "Bachelor of Fine Arts (Screenwriting)",
+        "Bachelor of Fine Arts (Visual Art)",
+        "Bachelor of Music",
+        "Bachelor of Oral Health",
+        "Bachelor of Science",
+        "Bachelor of Science (Extended)",
+        "Diploma in General Studies",
+        "Diploma in Music"
+      ],
+      "pg_programs": [
+        "Juris Doctor",
+        "Master of Actuarial Science",
+        "Master of Adolescent Health and Wellbeing",
+        "Master of Advanced Nursing",
+        "Master of Advanced Nursing Practice",
+        "Master of Agricultural Sciences",
+        "Master of Analytics Management",
+        "Master of Applied Business Analytics",
+        "Master of Art Curatorship",
+        "Master of Arts and Cultural Management",
+        "Master of Biostatistics",
+        "Master of Business Administration",
+        "Master of Cultural Materials Conservation",
+        "Master of Industrial Engineering",
+        "Master of Marketing",
+        "Master of Philosophy (MPhil)",
+        "Master of Property",
+        "Master of Psychiatry",
+        "Master of Psychology (Clinical Psychology)",
+        "Master of Public Health",
+        "Master of Public Policy and Management",
+        "Master of Publishing and Communications",
+        "Master of Science (Bioinformatics)",
+        "Master of Science (BioSciences)",
+        "Master of Science (Chemistry)",
+        "Master of Science (Computer Science)",
+        "Master of Science (Earth Sciences)",
+        "Master of Science (Epidemiology)",
+        "Master of Science (Mathematics and Statistics)",
+        "Master of Science (Physics)",
+        "Master of Screen Producing",
+        "Master of Screenwriting",
+        "Master of Social Change Leadership",
+        "Master of Social Policy",
+        "Master of Social Work",
+        "Master of Software Engineering",
+        "Master of Teaching (Early Childhood)",
+        "Master of Urban Design",
+        "Master of Urban Planning"
+      ],
+      "phd_programs": [
+        "Doctor of Philosophy (PhD) - Accounting",
+        "Doctor of Philosophy (PhD) - Actuarial Studies",
+        "Doctor of Philosophy (PhD) - Business Administration and Analytics",
+        "Doctor of Philosophy (PhD) - Decision, Risk and Financial Sciences",
+        "Doctor of Philosophy (PhD) - Economics",
+        "Doctor of Philosophy (PhD) - Education",
+        "Doctor of Philosophy (PhD) - Engineering and IT",
+        "Doctor of Philosophy (PhD) - Finance",
+        "Doctor of Philosophy (PhD) - Fine Arts and Music",
+        "Doctor of Philosophy (PhD) - Indigenous Knowledge",
+        "Doctor of Philosophy (PhD) - Law",
+        "Doctor of Philosophy (PhD) - Management",
+        "Doctor of Philosophy (PhD) - Marketing",
+        "Doctor of Philosophy (PhD) - Mental Health",
+        "Doctor of Philosophy (PhD) - Science"
+      ],
+      "departments": [
+        "Department of Anatomy and Physiology",
+        "Department of Audiology and Speech Pathology",
+        "Department of Clinical Pathology",
+        "Department of Critical Care",
+        "Department of General Practice and Primary Care",
+        "Department of Infectious Diseases",
+        "Department of Medical Education",
+        "Department of Medicine",
+        "Department of Nursing",
+        "Department of Obstetrics, Gynaecology and Newborn Health",
+        "Department of Optometry and Vision Sciences",
+        "Department of Paediatrics",
+        "Department of Physiotherapy",
+        "Department of Psychiatry",
+        "Department of Radiology",
+        "Department of Rural Health",
+        "Department of Social Work",
+        "Department of Surgery",
+        "School of Biosciences",
+        "School of Computing and Information Systems",
+        "School of Mathematics and Statistics",
+        "School of Physics"
+      ],
+      "sources_verified": [
+        "https://handbook.unimelb.edu.au/search?types%5B%5D=course",
+        "https://study.unimelb.edu.au/study-with-us/undergraduate-courses",
+        "https://study.unimelb.edu.au/study-with-us/graduate-courses",
+        "https://research.unimelb.edu.au/study/options/areas",
+        "https://about.unimelb.edu.au/__data/assets/pdf_file/0031/27589/Faculties-Schools-and-Other-Academic-Units-2025.pdf"
+      ]
+    },
+    "placements": {
+      "guessed_data": true,
+      "data_year": 2026,
+      "sources": [
+        "https://qilt.edu.au/surveys/graduate-outcomes-survey-(gos)",
+        "https://www.shiksha.com/studyabroad/australia/universities/the-university-of-melbourne/placement",
+        "https://collegedunia.com/australia/university/609-university-of-melbourne-melbourne/placements"
+      ],
+      "placements": {
+        "year": 2024,
+        "highest_package": 141463,
+        "average_package": 72000,
+        "median_package": 65800,
+        "package_currency": "AUD",
+        "placement_rate_percent": 74.0,
+        "total_students_placed": "Not Available",
+        "total_companies_visited": "Not Available",
+        "graduate_outcomes_note": "Employment rates for domestic undergraduates saw a slight decline from 79.0% in 2023 to 74.0% in 2024 due to easing labor market tightness, though long-term outcomes (3 years post-graduation) remain high at over 90%."
+      },
+      "placement_comparison_last_3_years": [
+        {
+          "year": 2024,
+          "undergraduate_employment_rate": "74.0%",
+          "postgraduate_employment_rate": "85.8%",
+          "median_salary_ug": "AUD 65,800"
+        },
+        {
+          "year": 2023,
+          "undergraduate_employment_rate": "79.0%",
+          "postgraduate_employment_rate": "88.3%",
+          "median_salary_ug": "AUD 64,000 (estimated)"
+        },
+        {
+          "year": 2022,
+          "undergraduate_employment_rate": "71.1%",
+          "postgraduate_employment_rate": "85.0% (estimated)",
+          "median_salary_ug": "AUD 62,000 (estimated)"
+        }
+      ],
+      "gender_based_placement": "Not Available",
+      "sector_wise_placement": {
+        "Healthcare": 93.3,
+        "Accounting": 86.7,
+        "Banking": 82.0,
+        "Commerce": 81.4,
+        "Engineering": 80.0,
+        "Teaching": 80.0,
+        "Biological Sciences": 57.5
+      },
+      "top_recruiters": [
+        "Deloitte",
+        "EY",
+        "PwC",
+        "KPMG",
+        "NAB (National Australia Bank)",
+        "ANZ Banking Corporation",
+        "Telstra",
+        "Amazon",
+        "GHD Group"
+      ],
+      "placement_highlights": [
+        "Ranked #8 worldwide for graduate employability by QS (2022).",
+        "97% of undergraduates and 98% of graduates find work within 3-5 years of completion.",
+        "The university facilitates outcomes through the 'Sonia' placement tool and extensive career advisory services rather than a traditional 'day-zero' campus placement system."
+      ]
+    },
+    "fees": {
+      "guessed_data": false,
+      "data_year": 2026,
+      "sources": [
+        "https://study.unimelb.edu.au/how-to-apply/fees/student-contribution-amounts",
+        "https://www.scribd.com/document/905873095/2026-International-Fee-Tables",
+        "https://collegedunia.com/australia/university/609-university-of-melbourne-melbourne"
+      ],
+      "fees": {
+        "UG": {
+          "per_year": 51744,
+          "total_course": 163388,
+          "currency": "AUD"
+        },
+        "PG": {
+          "per_year": 56992,
+          "total_course": 119684,
+          "currency": "AUD"
+        },
+        "hostel_per_year": 22000
+      },
+      "fees_by_year": [
+        {
+          "year": 2026,
+          "ug_avg": 51744,
+          "pg_avg": 56992
+        },
+        {
+          "year": 2025,
+          "ug_avg": 48000,
+          "pg_avg": 53000
+        },
+        {
+          "year": 2024,
+          "ug_avg": 45500,
+          "pg_avg": 50000
+        }
+      ],
+      "fees_note": "Fees vary significantly by discipline. 2026 subject fees for Engineering are approx. AUD 60,416 per EFTSL, while Arts/Humanities are approx. AUD 44,832. Medicine is the highest at AUD 120,704/year.",
+      "scholarships_detail": [
+        {
+          "name": "Melbourne International Undergraduate Scholarship",
+          "amount": "Up to AUD 50,000 or 100% fee remission",
+          "eligibility": "High-achieving international students",
+          "provider": "University of Melbourne"
+        },
+        {
+          "name": "Graduate Research Scholarships",
+          "amount": "Full fee offset and AUD 37,000 stipend per year",
+          "eligibility": "Domestic and international research students",
+          "provider": "University of Melbourne"
+        },
+        {
+          "name": "Narrm Scholars Program",
+          "amount": "Financial and enrichment support",
+          "eligibility": "Students facing barriers to university study",
+          "provider": "University of Melbourne"
+        }
+      ]
+    },
+    "infrastructure": {
+      "guessed_data": true,
+      "sources_verified": [
+        "https://www.unimelb.edu.au/",
+        "https://about.unimelb.edu.au",
+        "https://www.graduatehouse.com.au/"
+      ],
+      "infrastructure": [
+        {
+          "facility": "Parkville Campus",
+          "details": "Main campus featuring a mix of historic sandstone buildings and modern facilities like the Melbourne Connect innovation precinct.",
+          "icon": "🏛️"
+        },
+        {
+          "facility": "Southbank Campus",
+          "details": "Dedicated arts precinct housing the Victorian College of the Arts and Melbourne Conservatorium of Music.",
+          "icon": "🎭"
+        },
+        {
+          "facility": "Research Infrastructure",
+          "details": "Network of labs and facilities supporting innovation in engineering, medicine, and social sciences.",
+          "icon": "🔬"
+        }
+      ],
+      "hostel_details": {
+        "available": true,
+        "total_capacity": 6000,
+        "type": "Residential Colleges, Student Apartments (Little Hall, The Loft), and Graduate House (occupancy ~84.5%)."
+      },
+      "library_details": {
+        "total_books": "3,000,000+",
+        "e_resources": "Extensive digital collections and generative AI trial platforms for students."
+      },
+      "transport_details": {
+        "routes": "Primary access via Melbourne's tram network (including the Free Tram Zone extension advocacy) and the upcoming Parkville Station (Metro Tunnel)."
+      }
+    }
+  }
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   HELPERS
+═══════════════════════════════════════════════════════════════ */
+const fmtNum = n => {
+  const v = parseFloat(String(n).replace(/[^0-9.]/g,''));
+  if(isNaN(v)) return n;
+  if(v >= 1e6) return (v/1e6).toFixed(1)+'M';
+  if(v >= 1e3) return (v/1e3).toFixed(1)+'K';
+  return String(n);
+};
+const fmtCurr = (n, c='AUD') => `${c} ${Number(n).toLocaleString()}`;
+
+const CHART_DEFAULTS = {
+  color: '#475569',
+  backgroundColor: 'transparent',
+};
+Chart.defaults.color = '#64748b';
+Chart.defaults.font.family = "'DM Sans', sans-serif";
+Chart.defaults.font.size = 12;
+
+const GRID_STYLE = { color: 'rgba(15,23,42,0.06)', drawBorder: false };
+
+/* ═══════════════════════════════════════════════════════════════
+   BOOT
+═══════════════════════════════════════════════════════════════ */
+window.addEventListener('DOMContentLoaded', () => {
+  const key = Object.keys(RAW)[0];
+  const D = RAW[key];
+  const bi = D.basic_info, st = bi.student_statistics, fac = bi.faculty_staff;
+  const pl = D.placements, fe = D.fees, inf = D.infrastructure, prog = D.programs;
+
+  // ── HEADER ──
+  document.getElementById('hName').textContent   = bi.college_name;
+  document.getElementById('hType').textContent   = bi.institution_type;
+  document.getElementById('hCountry').textContent= `📍 ${bi.location} — ${bi.country}`;
+  document.getElementById('hEst').textContent    = `Est. ${bi.established}`;
+  document.getElementById('hAbout').textContent  = bi.summary;
+  const ws = document.getElementById('hWeb');
+  ws.href = bi.website; ws.textContent = '🌐 Website ↗';
+
+  // ── KPI ROW ──
+  const kpis = [
+    { icon:'🌍', val:`#${bi.rankings.qs_world}`, label:'QS World Rank' },
+    { icon:'🇦🇺', val:`#${bi.rankings.national_rank}`, label:'National Rank' },
+    { icon:'👨‍🎓', val:fmtNum(st.total_enrollment), label:'Total Students' },
+    { icon:'👩‍🏫', val:fmtNum(fac.total_faculty),    label:'Faculty Staff' },
+    { icon:'💰', val:`AUD ${fmtNum(pl.placements.average_package)}`, label:'Avg Package' },
+    { icon:'📈', val:`${pl.placements.placement_rate_percent}%`,     label:'Employment Rate' },
+    { icon:'🌐', val:bi.student_history.international_students,       label:'International' },
+    { icon:'🏫', val:bi.campus_area.split(' ')[0]+' ha',              label:'Campus Area' },
+  ];
+  const kpiRow = document.getElementById('kpiRow');
+  kpis.forEach(k => {
+    kpiRow.innerHTML += `<div class="kpi"><div class="icon">${k.icon}</div><div class="val">${k.val}</div><div class="label">${k.label}</div></div>`;
+  });
+
+  // ── TABS ──
+  const tabs = [
+    { id:'panelOverview',    label:'Overview'       },
+    { id:'panelPlacements',  label:'Placements'     },
+    { id:'panelFees',        label:'Fees'           },
+    { id:'panelPrograms',    label:'Programs'       },
+    { id:'panelInfra',       label:'Infrastructure' },
+  ];
+  const tabBar = document.getElementById('tabBar');
+  tabs.forEach((t,i) => {
+    const el = document.createElement('button');
+    el.className = 'tab' + (i===0?' active':'');
+    el.textContent = t.label;
+    el.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById(t.id).classList.add('active');
+    });
+    tabBar.appendChild(el);
+  });
+
+  // ══════════════ OVERVIEW ══════════════
+
+  // Podium
+  const podium = document.getElementById('podium');
+  const ranks = [
+    { crown:'🌍', num:`#${bi.rankings.qs_world}`,       label:'QS World' },
+    { crown:'🥇', num:`#${bi.rankings.national_rank}`,  label:'National' },
+    { crown:'📍', num:`#${bi.rankings.state_rank}`,     label:'State (VIC)' },
+  ];
+  ranks.forEach(r => {
+    podium.innerHTML += `<div class="podium-item"><div class="crown">${r.crown}</div><div class="rank-num">${r.num}</div><div class="rank-label">${r.label}</div></div>`;
+  });
+
+  // Student Stacked Bar
+  new Chart(document.getElementById('chartStudentStack'), {
+    type:'bar',
+    data:{
+      labels:['2022','2023','2024'],
+      datasets:[
+        { label:'UG',  data:[25000,26000,37810], backgroundColor:'rgba(99,102,241,.75)', borderRadius:4 },
+        { label:'PG',  data:[22000,23000,39352], backgroundColor:'rgba(34,211,238,.6)',  borderRadius:4 },
+        { label:'PhD', data:[4500,4963,6200],    backgroundColor:'rgba(251,191,36,.55)', borderRadius:4 },
+      ]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{ labels:{ boxWidth:12, padding:16 } }, datalabels:{ display:false } },
+      scales:{
+        x:{ stacked:true, grid:GRID_STYLE },
+        y:{ stacked:true, grid:GRID_STYLE, ticks:{ callback:v=>`${(v/1000).toFixed(0)}K` } }
+      }
+    }
+  });
+
+  // Gender Doughnut
+  new Chart(document.getElementById('chartGender'), {
+    type:'doughnut',
+    data:{
+      labels:['Male','Female'],
+      datasets:[{ data:[st.male_percent,st.female_percent], backgroundColor:['rgba(99,102,241,.8)','rgba(251,191,36,.75)'], borderWidth:0, hoverOffset:6 }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false, cutout:'72%',
+      plugins:{
+        legend:{ position:'right', labels:{ boxWidth:12, padding:16 } },
+        datalabels:{ color:'#fff', font:{ weight:'bold', size:13 }, formatter:v=>`${v}%` }
+      }
+    }
+  });
+
+  // Affiliations
+  const affils = document.getElementById('affils');
+  bi.affiliations.forEach(a => { affils.innerHTML += `<span class="affil-tag">${a}</span>`; });
+
+  // Accreditation Timeline
+  const tl = document.getElementById('timeline');
+  bi.accreditations.forEach(a => {
+    tl.innerHTML += `<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">${a.year}</div><div class="tl-body">${a.body}</div><div class="tl-grade">✓ ${a.grade}</div></div>`;
+  });
+
+  // ══════════════ PLACEMENTS ══════════════
+  const yrs    = pl.placement_comparison_last_3_years.map(r=>r.year).reverse();
+  const medUG  = pl.placement_comparison_last_3_years.map(r=>parseInt(r.median_salary_ug.replace(/[^0-9]/g,''))).reverse();
+  const empUG  = pl.placement_comparison_last_3_years.map(r=>parseFloat(r.undergraduate_employment_rate)).reverse();
+  const empPG  = pl.placement_comparison_last_3_years.map(r=>parseFloat(r.postgraduate_employment_rate)).reverse();
+
+  new Chart(document.getElementById('chartPackageTrend'), {
+    type:'line',
+    data:{
+      labels:yrs,
+      datasets:[
+        {
+          label:'Median UG Salary (AUD)',
+          data:medUG,
+          borderColor:'rgba(99,102,241,1)', backgroundColor:'rgba(99,102,241,.12)',
+          tension:.4, fill:true, pointBackgroundColor:'rgba(99,102,241,1)', pointRadius:5
+        },
+        {
+          label:'UG Employment %',
+          data:empUG, yAxisID:'pct',
+          borderColor:'rgba(34,211,238,.9)', backgroundColor:'rgba(34,211,238,.06)',
+          tension:.4, fill:false, borderDash:[5,3], pointRadius:4
+        },
+        {
+          label:'PG Employment %',
+          data:empPG, yAxisID:'pct',
+          borderColor:'rgba(251,191,36,.8)', backgroundColor:'transparent',
+          tension:.4, fill:false, borderDash:[5,3], pointRadius:4
+        }
+      ]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{ labels:{ boxWidth:12 } }, datalabels:{ display:false } },
+      scales:{
+        x:{ grid:GRID_STYLE },
+        y:{ grid:GRID_STYLE, ticks:{ callback:v=>`$${(v/1000).toFixed(0)}K` }, title:{ display:true, text:'Salary (AUD)' } },
+        pct:{ position:'right', grid:{ display:false }, min:50, max:100, ticks:{ callback:v=>`${v}%` }, title:{ display:true, text:'Employment %' } }
+      }
+    }
+  });
+
+  // Gauge (Doughnut half)
+  const rate = pl.placements.placement_rate_percent;
+  new Chart(document.getElementById('gaugeChart'), {
+    type:'doughnut',
+    data:{
+      datasets:[{
+        data:[rate, 100-rate, 100],
+        backgroundColor:['rgba(99,102,241,.9)','rgba(255,255,255,.06)','transparent'],
+        borderWidth:0, circumference:180, rotation:270
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false, cutout:'78%',
+      plugins:{ legend:{ display:false }, tooltip:{ enabled:false }, datalabels:{ display:false } }
+    }
+  });
+
+  // Sector Bar (Horizontal)
+  const sectors = pl.sector_wise_placement;
+  const sLabels = Object.keys(sectors);
+  const sVals   = Object.values(sectors);
+  new Chart(document.getElementById('chartSector'), {
+    type:'bar',
+    data:{
+      labels:sLabels,
+      datasets:[{ data:sVals, backgroundColor: sVals.map(v=>v>85?'rgba(52,211,153,.75)':v>75?'rgba(99,102,241,.75)':'rgba(251,191,36,.65)'), borderRadius:4 }]
+    },
+    options:{
+      indexAxis:'y', responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{ display:false }, datalabels:{ color:'#fff', anchor:'end', align:'left', font:{weight:'bold'}, formatter:v=>`${v}%` } },
+      scales:{
+        x:{ grid:GRID_STYLE, min:40, max:100, ticks:{ callback:v=>`${v}%` } },
+        y:{ grid:{ display:false } }
+      }
+    }
+  });
+
+  // Recruiters
+  const recruiterEl = document.getElementById('recruiters');
+  pl.top_recruiters.forEach(r => { recruiterEl.innerHTML += `<span class="recruiter-chip">${r}</span>`; });
+
+  // ══════════════ FEES ══════════════
+  new Chart(document.getElementById('chartFeesBar'), {
+    type:'bar',
+    data:{
+      labels:['Per Year','Total Course'],
+      datasets:[
+        { label:'UG', data:[fe.fees.UG.per_year, fe.fees.UG.total_course], backgroundColor:'rgba(99,102,241,.75)', borderRadius:6 },
+        { label:'PG', data:[fe.fees.PG.per_year, fe.fees.PG.total_course], backgroundColor:'rgba(34,211,238,.65)',  borderRadius:6 }
+      ]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{ labels:{ boxWidth:12 } }, datalabels:{ display:false } },
+      scales:{
+        x:{ grid:GRID_STYLE },
+        y:{ grid:GRID_STYLE, ticks:{ callback:v=>`$${(v/1000).toFixed(0)}K` } }
+      }
+    }
+  });
+
+  const fy = fe.fees_by_year;
+  new Chart(document.getElementById('chartFeesArea'), {
+    type:'line',
+    data:{
+      labels: fy.map(f=>f.year),
+      datasets:[
+        { label:'UG (AUD)', data:fy.map(f=>f.ug_avg), borderColor:'rgba(99,102,241,1)', backgroundColor:'rgba(99,102,241,.15)', fill:true, tension:.4, pointRadius:5 },
+        { label:'PG (AUD)', data:fy.map(f=>f.pg_avg), borderColor:'rgba(34,211,238,.9)',  backgroundColor:'rgba(34,211,238,.08)',  fill:true, tension:.4, pointRadius:5 }
+      ]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{ labels:{ boxWidth:12 } }, datalabels:{ display:false } },
+      scales:{
+        x:{ grid:GRID_STYLE },
+        y:{ grid:GRID_STYLE, ticks:{ callback:v=>`$${(v/1000).toFixed(0)}K` } }
+      }
+    }
+  });
+
+  // Fee Table
+  const ft = document.getElementById('feeTable');
+  ft.innerHTML = `
+    <thead>
+      <tr>
+        <th>Level</th>
+        <th>Per Year (AUD)</th>
+        <th>Total Course (AUD)</th>
+        <th>Hostel / Year (AUD)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="fee-badge ug">UG</span></td>
+        <td>${Number(fe.fees.UG.per_year).toLocaleString()}</td>
+        <td>${Number(fe.fees.UG.total_course).toLocaleString()}</td>
+        <td rowspan="2" style="vertical-align:middle">${Number(fe.fees.hostel_per_year).toLocaleString()}</td>
+      </tr>
+      <tr>
+        <td><span class="fee-badge pg">PG</span></td>
+        <td>${Number(fe.fees.PG.per_year).toLocaleString()}</td>
+        <td>${Number(fe.fees.PG.total_course).toLocaleString()}</td>
+      </tr>
+    </tbody>
+  `;
+
+  // Scholarships
+  const scholEl = document.getElementById('scholars');
+  fe.scholarships_detail.forEach(s => {
+    scholEl.innerHTML += `
+      <div class="scholar-card">
+        <div class="scholar-name">🎓 ${s.name}</div>
+        <div class="scholar-amount">${s.amount}</div>
+        <div class="scholar-elig">👤 ${s.eligibility}</div>
+      </div>`;
+  });
+
+  // ══════════════ PROGRAMS ══════════════
+  const renderProgs = (el, list, deg) => {
+    list.forEach(p => {
+      el.innerHTML += `<div class="prog-tag"><div class="deg">${deg}</div>${p}</div>`;
+    });
+  };
+  document.getElementById('ugCount').innerHTML  = `<span class="chip indigo">${prog.ug_programs.length}</span>`;
+  document.getElementById('pgCount').innerHTML  = `<span class="chip indigo">${prog.pg_programs.length}</span>`;
+  document.getElementById('phdCount').innerHTML = `<span class="chip indigo">${prog.phd_programs.length}</span>`;
+  renderProgs(document.getElementById('ugProgs'),  prog.ug_programs,  'Undergraduate');
+  renderProgs(document.getElementById('pgProgs'),  prog.pg_programs,  'Postgraduate');
+  renderProgs(document.getElementById('phdProgs'), prog.phd_programs, 'Doctoral');
+
+  // ══════════════ INFRASTRUCTURE ══════════════
+  const infraGrid = document.getElementById('infraGrid');
+  const icons = ['🏛️','🎭','🔬','🖥️'];
+  inf.infrastructure.forEach((f,i) => {
+    infraGrid.innerHTML += `
+      <div class="infra-card">
+        <div class="infra-icon">${f.icon || icons[i]}</div>
+        <div class="infra-title">${f.facility}</div>
+        <div class="infra-desc">${f.details}</div>
+      </div>`;
+  });
+  // Transport
+  infraGrid.innerHTML += `
+    <div class="infra-card">
+      <div class="infra-icon">🚃</div>
+      <div class="infra-title">Transport</div>
+      <div class="infra-desc">${inf.transport_details.routes}</div>
+    </div>`;
+
+  document.getElementById('hostelCap').textContent = inf.hostel_details.total_capacity.toLocaleString();
+  document.getElementById('hostelType').textContent = inf.hostel_details.type;
+
+  const lib = inf.library_details;
+  const libEl = document.getElementById('libStats');
+  libEl.innerHTML = `
+    <div class="stat-box"><div class="sv">${lib.total_books}</div><div class="sl">Books</div></div>
+  `;
+  document.getElementById('libERes').textContent = lib.e_resources;
+
+  // Source chips on panels — add per-section sources
+  const addSources = (panelId, sources) => {
+    const panel = document.getElementById(panelId);
+    const div = document.createElement('div');
+    div.innerHTML = `<div style="margin-top:18px;"><div style="font-size:11px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px">📎 Sources</div><div class="source-pills">${sources.map(s=>`<a class="source-pill" href="${s}" target="_blank">🔗 ${new URL(s).hostname}</a>`).join('')}</div></div>`;
+    panel.appendChild(div);
+  };
+  try {
+    addSources('panelOverview',    bi.sources_verified || []);
+    addSources('panelPlacements',  pl.sources || []);
+    addSources('panelFees',        fe.sources || []);
+    addSources('panelPrograms',    prog.sources_verified || []);
+    addSources('panelInfra',       inf.sources_verified || []);
+  } catch(e) {}
+});
+</script>
+</body>
+</html>

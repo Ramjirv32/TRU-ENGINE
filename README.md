@@ -1,120 +1,321 @@
-# College Scraper
+# 📚 College Intelligence Platform
 
-Scrapes college data from the web and extracts structured information using an LLM (Groq).
+A modern, interactive college information platform with Material-UI based frontend and Python/Serper API backend.
 
-## How It Works
+## 🎯 Features
 
-```
-parallel_audit.py  →  <college>_audit.json  →  audit_processor.py  →  <college>_structured.json
-   (Brave API)              (raw data)               (Groq LLM)           (clean JSON)
-```
+### Frontend (index.html)
+- **Modern White Theme** - Clean Material-UI design with gradient accents
+- **College Search** - Search by college name  
+- **Interactive Dashboards** - Six comprehensive tabs:
+  - 📊 Overview - College summary and accreditations
+  - 💼 Placements - Placement statistics, top recruiters
+  - 💰 Fees - Fee structure and scholarships
+  - 🎯 Programs - All UG, PG, PhD programs & departments
+  - 🏗️ Infrastructure - Hostels, library, facilities
+  - 🏆 Rankings - NIRF, QS, National, and State rankings
 
-### Step 1 — Scrape (parallel_audit.py)
-- Queries the **Brave Search LLM Context API** in parallel for 16 sections
-- Sections: Identity, About, UG/PG Programs, Fees, Placements (General / Yearly / Gender / Sector), Rankings, Infrastructure, Faculty, Scholarships, Student Statistics, Gender Ratio, International Students
-- Saves raw data as `<college_name>_audit.json`
-- Typical scrape time: **~2 seconds** (all 16 sections fetched in parallel)
+- **Key Metrics** - Animated stat cards with:
+  - Student enrollment & demographics
+  - Gender ratio tracking
+  - Faculty statistics
+  - Program counts
 
-### Step 2 — Process (audit_processor.py)
-- Sends audit data to **Groq (llama-3.3-70b-versatile)** in 3 focused batches:
-  - **Batch A** — Rankings, Faculty, Students, Gender Ratio, International Students
-  - **Batch B** — Placements (general, yearly, gender, sector-wise)
-  - **Batch C** — Identity, Programs, Fees, Scholarships, Infrastructure
-- Regex patcher fills any values Groq misses
-- Saves structured output as `<college_name>_structured.json`
-- Typical LLM time: **~6 seconds** (Groq API) + 30s sleep (free tier TPM limit)
+- **Responsive Design** - Works on desktop, tablet, and mobile
+- **Data Caching** - Results cached in Redis for fast retrieval
 
-## Timing Summary
+### Backend (serper_redis.py)
+- **Serper API Integration** - Fetch college data from Google AI Mode
+- **Redis Caching** - Store and retrieve cached data
+- **Parallel Processing** - Concurrent data fetching (5 async workers)
+- **Flask API Server** - RESTful API endpoints
+- **Auto JSON Extraction** - Intelligent markdown to JSON conversion
 
-| Step | Time |
-|------|------|
-| Scrape (Brave API, 16 sections parallel) | ~2s |
-| LLM Batch A | ~2s |
-| Sleep (TPM rate limit) | 15s |
-| LLM Batch B | ~2s |
-| Sleep (TPM rate limit) | 15s |
-| LLM Batch C | ~2s |
-| **Total** | **~38s** |
+## 🛠️ Installation
 
-> Note: The 30s of sleep is only required on Groq's **free tier** (12k tokens/minute limit).  
-> On a paid plan with higher limits, total time drops to **~8 seconds**.
+### Prerequisites
+- Python 3.8+
+- Redis Server (running)
+- pip
 
-## Usage
-
+### Step 1: Install Dependencies
 ```bash
-# 1. Activate virtual environment
-source .venv/bin/activate
-
-# 2. Scrape a college
-python college_scraper/parallel_audit.py "IIT Madras"
-
-# 3. Move audit file to college_scraper/
-mv iit_madras_audit.json college_scraper/
-
-# 4. Process through LLM
-python college_scraper/audit_processor.py college_scraper/iit_madras_audit.json
+cd /home/ramji/Videos/scap
+pip install -r requirements.txt
 ```
 
-Output will be saved as `college_scraper/iit_madras_structured.json`.
+### Step 2: Start Redis Server
+```bash
+# On Linux/Mac
+redis-server
 
-## Structured Output Schema
+# On Windows
+redis-server.exe
 
+# Or if using Docker
+docker run -d -p 6379:6379 redis:latest
+```
+
+### Step 3: Verify Redis Connection
+```bash
+redis-cli ping
+# Should return: PONG
+```
+
+## 🚀 Running the Application
+
+### Option 1: Run as Web Server (Recommended)
+```bash
+cd /home/ramji/Videos/scap/college_scraper
+python serper_redis.py server
+```
+
+Then open in browser:
+```
+http://localhost:5000
+```
+
+### Option 2: Run as CLI (Batch Processing)
+```bash
+cd /home/ramji/Videos/scap/college_scraper
+python serper_redis.py
+```
+
+This fetches data for all colleges in COLLEGES list and saves to `serper_results.json`
+
+### Option 3: Serve HTML Locally
+```bash
+cd /home/ramji/Videos/scap
+python -m http.server 8000
+```
+
+Then visit:
+```
+http://localhost:8000/index.html
+```
+
+Note: Requires backend API running separately on port 5000
+
+## 📡 API Endpoints
+
+### Health Check
+```
+GET /api/health
+```
+Response:
 ```json
 {
-  "college_name": "",
-  "short_name": "",
-  "location": "",
-  "established": 1959,
-  "institution_type": "",
-  "campus_area": "",
-  "about": "",
-  "ug_programs": [{"name": "", "duration": "", "seats": null, "fees_total_inr": null}],
-  "pg_programs": [{"name": "", "duration": "", "seats": null, "fees_total_inr": null}],
-  "phd_programs": [{"name": "", "duration": "", "seats": null}],
-  "fees": {"UG": {"per_year": null, "total_course": null}, "PG": {}, "hostel_per_year": null},
-  "rankings": {"nirf_2025": "", "qs_world": "", "the_world_2024": ""},
-  "faculty_staff": {"total_faculty": null, "professors": null, "associate_professors": null},
-  "student_statistics": {"total_enrollment": null, "ug_students": null, "pg_students": null},
-  "student_gender_ratio": {"male_percent": null, "female_percent": null},
-  "placements": {"highest_package_lpa": null, "average_package_lpa": null},
-  "placement_comparison_last_3_years": [],
-  "sector_wise_placement_last_3_years": [],
-  "scholarships": [{"name": "", "amount": "", "eligibility": ""}],
-  "infrastructure": [{"facility": "", "details": ""}],
-  "international_students": {"total_count": null}
+  "status": "healthy",
+  "message": "College Intelligence API is running"
 }
 ```
 
-## APIs Used
-
-| API | Purpose | Free Tier |
-|-----|---------|-----------|
-| [Brave Search LLM Context](https://api.search.brave.com) | Web scraping | 2000 req/month |
-| [Groq](https://console.groq.com) | LLM extraction | 100k tokens/day, 12k tokens/min |
-
-## Requirements
-
+### Search College
 ```
-httpx
-groq
+POST /api/college
+Content-Type: application/json
+
+{
+  "college_name": "Udayana University"
+}
 ```
 
-Install with:
+Response:
+```json
+{
+  "basic_info": { ... },
+  "placements": { ... },
+  "fees": { ... },
+  "programs": { ... },
+  "infrastructure": { ... },
+  "_metadata": {
+    "total_time": 45.32,
+    "errors": {},
+    "source": "fresh" | "cache"
+  }
+}
+```
+
+### Get Available Colleges
+```
+GET /api/colleges-list
+```
+
+## 📊 Data Structure
+
+### Basic Info
+```json
+{
+  "college_name": "string",
+  "established": "year",
+  "institution_type": "string",
+  "country": "string",
+  "location": "string",
+  "website": "url",
+  "rankings": {
+    "nirf_rank": "number or -1",
+    "qs_world": "number",  
+    "national_rank": "number",
+    "state_rank": "number"
+  },
+  "student_statistics": {
+    "total_enrollment": "number",
+    "ug_students": "number",
+    "pg_students": "number",
+    "female_percent": "number",
+    "total_faculty": "number",
+    "student_faculty_ratio": "number"
+  }
+}
+```
+
+### Placements
+```json
+{
+  "placements": {
+    "highest_package": "number",
+    "average_package": "number",
+    "placement_rate_percent": "number",
+    "total_students_placed": "number",
+    "total_companies_visited": "number"
+  },
+  "top_recruiters": ["company1", "company2", ...],
+  "sector_wise_placement_last_3_years": [...]
+}
+```
+
+### Fees
+```json
+{
+  "fees": {
+    "UG": {
+      "per_year": "number",
+      "total_course": "number",
+      "currency": "INR"
+    },
+    "PG": { ... }
+  },
+  "scholarships_detail": [
+    {
+      "name": "string",
+      "amount": "number",
+      "eligibility": "string"
+    }
+  ]
+}
+```
+
+## 🔧 Configuration
+
+Edit `/home/ramji/Videos/scap/college_scraper/serper_redis.py`:
+
+```python
+# Change API Key
+API_KEY = "your-serper-api-key"
+
+# Add more colleges to track
+COLLEGES = [
+    {"name": "College Name", "country": "Country", "location": "City"},
+]
+
+# Adjust parallel workers
+ThreadPoolExecutor(max_workers=5)  # Change 5 to desired number
+
+# Change Redis connection
+redis.Redis(host='localhost', port=6379, db=0)
+```
+
+## 🎨 Customization
+
+### Color Scheme (in index.html)
+- Primary Blue: `#1976d2`
+- Success Green: `#388e3c`
+- Warning Orange: `#f57c00`
+- Error Red: `#d32f2f`
+- Purple: `#7b1fa2`
+
+Edit colors in `<style>` section
+
+### Add Custom Metrics
+Modify `renderStatsSection()` in the JavaScript to add new stat cards
+
+### Customize Tab Data
+Edit `renderTabContent()` and tab-specific render methods
+
+## 🐛 Troubleshooting
+
+### Redis Connection Error
+```
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379
+```
+**Solution:** Start Redis server
 ```bash
-pip install httpx groq
+redis-server
 ```
 
-## Files
+### Flask Not Found
+```
+ModuleNotFoundError: No module named 'flask'
+```
+**Solution:** Install requirements
+```bash
+pip install -r requirements.txt
+```
 
+### Port Already in Use
 ```
-college_scraper/
-├── parallel_audit.py              # Step 1: Brave API scraper
-├── audit_processor.py             # Step 2: Groq LLM processor
-├── iit_madras_audit.json          # Raw scraped data (example)
-├── iit_madras_structured.json     # Final structured output (example)
-├── psg_college_of_technology_audit.json
-├── psg_college_of_technology_structured.json
-├── kpr_institute_of_engineering_and_technology_audit.json
-└── kpr_institute_of_engineering_and_technology_structured.json
+OSError: [Errno 48] Address already in use
 ```
-# TRU-ENGINE
+**Solution:** Change port in serper_redis.py
+```python
+app.run(host='0.0.0.0', port=8080)  # Use 8080 instead
+```
+
+### Serper API Rate Limit
+**Solution:** Reduce number of parallel workers or add delay
+```python
+# In serper_redis.py
+ThreadPoolExecutor(max_workers=2)  # Reduce from 5 to 2
+time.sleep(1)  # Add delay between requests
+```
+
+## 📈 Performance Tips
+
+1. **Caching** - First search takes ~45 seconds, cached results return instantly
+2. **Parallel Processing** - Data fetched concurrently (5 workers by default)
+3. **Compression** - Results compressed in Redis for faster retrieval
+4. **Lazy Loading** - Tab content rendered on-demand
+
+## 🔒 Security
+
+- CORS enabled for cross-origin requests
+- No sensitive data in client-side code
+- Redis should be on secure network
+- Use environment variables for API keys (optional enhancement)
+
+## 📝 Future Enhancements
+
+- [ ] University comparison (multiple colleges)
+- [ ] Historical data tracking
+- [ ] User favorites/bookmarks
+- [ ] Advanced filtering (fees range, location, etc.)
+- [ ] PDF export functionality
+- [ ] Dark mode theme
+- [ ] Mobile app version
+- [ ] Email notifications for updates
+
+## 📞 Support
+
+For issues or questions:
+1. Check Redis is running: `redis-cli ping`
+2. Verify API key is valid
+3. Check network connectivity to serper.dev
+4. Review logs in terminal
+
+## 📄 License
+
+MIT License - Feel free to use and modify
+
+---
+
+Built with ❤️ using Material-UI, Recharts, and Flask
