@@ -1,29 +1,8 @@
-import subprocess
 import json
-import time
 import os
 import re
-import concurrent.futures
-from typing import Dict, Any, List, Optional, Union
+from typing import Dict, Any, List
 from datetime import datetime
-
-# ============================================================================
-# CONFIGURATION
-# ============================================================================
-
-API_KEY = "33115710653096606c6bef7b3e4221d0509fa024d616153e064891a2bbe63b7e"
-
-COLLEGES = [
-    {"name": "Psg College of Technology", "country": "India", "location": "Coimbatore"},
-]
-
-QUERIES = {
-    "basic_info": "For the college named '%COLLEGE_NAME%', located in %COUNTRY% (%LOCATION%), provide the latest verified institutional data for the current academic year or the latest available year if the current is not published. Return only valid JSON with the exact fields: college_name, short_name, established, institution_type, country, location, website, about, summary, rankings (nirf_latest, nirf_previous, qs_world, national_rank, state_rank, guessed_data), student_statistics (total_enrollment, ug_students, pg_students, phd_students, annual_intake, male_percent, female_percent, total_ug_courses, total_pg_courses, total_phd_courses, guessed_data), faculty_staff (total_faculty, student_faculty_ratio, phd_faculty_percent, guessed_data), student_history (student_count_comparison_last_3_years with latest_year, previous_year, year_before_previous, international_students, guessed_data, categorywise_student_comparison_last_3_years: [{\"year\": \"latest_year\", \"ug_students\": integer, \"pg_students\": integer, \"phd_students\": integer, \"international_students\": integer, \"domestic_students\": integer, \"male_students\": integer, \"female_students\": integer}, {\"year\": \"previous_year\", \"ug_students\": integer, \"pg_students\": integer, \"phd_students\": integer, \"international_students\": integer, \"domestic_students\": integer, \"male_students\": integer, \"female_students\": integer}, {\"year\": \"year_before_previous\", \"ug_students\": integer, \"pg_students\": integer, \"phd_students\": integer, \"international_students\": integer, \"domestic_students\": integer, \"male_students\": integer, \"female_students\": integer}]), accreditations (body, grade, year), affiliations, recognition, campus_area, contact_info (phone, email, address), and sources_verified (array of URLs or document names). If a number is not known, use -1; if a string is not known, use N/A. Do not add any extra text, only JSON.",
-    "programs": "For the college named '%COLLEGE_NAME%', located in %COUNTRY% (%LOCATION%), provide a COMPREHENSIVE list of ALL officially offered UG, PG, and PhD programs and departments as of the current academic year. Use only official college website, latest NIRF, AICTE, or UGC‑recognized sources. Do not invent any program. Return only valid JSON with keys: ug_programs (complete list of ALL undergraduate programs with specializations), pg_programs (complete list of ALL postgraduate programs with specializations), phd_programs (complete list of ALL doctoral programs with specializations), departments (complete list of ALL academic departments). If a level has no programs, use an empty array []. Include a \"sources_verified\" array with URLs or document names. IMPORTANT: List EVERY single program offered, including all branches, specializations, and interdisciplinary programs. Do not group or summarize programs - list each one individually.",
-    "placements": "For the college named '%COLLEGE_NAME%', located in %COUNTRY% (%LOCATION%), find the latest verified placement data for the past three years if available. Use only official placement reports, latest NIRF submissions, AICTE disclosures, or verified education portals. Return only valid JSON with: {\"guessed_data\": false, \"data_year\": \"latest_year\", \"sources\": [\"source URL or document name\"], \"placements\": {\"year\": \"latest_year\", \"highest_package\": real_number, \"average_package\": real_number, \"median_package\": real_number, \"package_currency\": \"LPA\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges, \"placement_rate_percent\": real_percent, \"total_students_placed\": integer, \"total_companies_visited\": integer, \"graduate_outcomes_note\": \"factual note\"}, \"placement_comparison_last_3_years\": [{\"year\":\"latest_year\", \"average_package\": real_number, \"employment_rate_percent\": real_percent, \"package_currency\": string}, {\"year\":\"previous_year\", \"average_package\": real_number, \"employment_rate_percent\": real_percent, \"package_currency\": string}, {\"year\":\"year_before_previous\", \"average_package\": real_number, \"employment_rate_percent\": real_percent, \"package_currency\": string}], \"gender_based_placement_last_3_years\": [{\"year\":\"latest_year\", \"male_placed\": integer, \"female_placed\": integer, \"male_percent\": real_percent, \"female_percent\": real_percent}], \"sector_wise_placement_last_3_years\": [{\"year\":\"latest_year\", \"sector\": \"sector name\", \"companies\": [\"company names\"], \"percent\": real_percent}], \"top_recruiters\": [\"company names\"], \"placement_highlights\": \"2-3 sentence factual summary\"}. IMPORTANT: Always include currency_type field for all monetary values. If exact numbers are unavailable, use conservative estimates and set \"guessed_data\": true. Do not inflate numbers; for Indian Tier‑2 private engineering colleges, average package is usually 5–8 LPA. Do not return any extra text, only JSON.",
-    "fees": "For the college named '%COLLEGE_NAME%', located in %COUNTRY% (%LOCATION%), provide the latest verified fee structure for the current academic year. Use only official college website, latest NIRF submissions, AICTE disclosures, or verified education portals. Return only valid JSON with: {\"guessed_data\": false, \"data_year\": \"latest_year\", \"sources\": [\"source URL or document name\"], \"fees\": {\"UG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"hostel_per_year\": real_number}, \"fees_by_year\": [{\"year\": \"latest_year\", \"UG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"hostel_per_year\": real_number}], \"fees_note\": \"2-3 sentence factual summary\", \"scholarships_detail\": [{\"name\": \"scholarship name\", \"amount\": real_number, \"currency_type\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges, \"eligibility\": \"eligibility criteria\", \"provider\": \"provider name\"}]}. IMPORTANT: Always include currency_type field for all monetary values. If exact numbers are unavailable, use conservative estimates and set \"guessed_data\": true. Do not inflate numbers. Do not return any extra text, only JSON.",
-    "infrastructure": "For the college named '%COLLEGE_NAME%', located in %COUNTRY% (%LOCATION%), provide the latest verified infrastructure details and available scholarships. Use only official college website, latest NIRF submissions, AICTE disclosures, or verified education portals. Return only valid JSON with: {\"guessed_data\": false, \"sources_verified\": [\"source URL or document name\"], \"infrastructure\": [{\"facility\": \"facility name\", \"details\": \"facility details\"}], \"hostel_details\": {\"available\": boolean, \"total_capacity\": integer, \"type\": \"hostel type\"}, \"library_details\": {\"total_books\": integer, \"journals\": integer, \"e_resources\": integer, \"area_sqft\": real_number}, \"transport_details\": {\"buses\": integer, \"routes\": integer}, \"scholarships\": [{\"name\": \"scholarship name\", \"amount\": real_number_or_NA, \"currency_type\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges, \"eligibility\": \"eligibility criteria\", \"provider\": \"provider name\", \"type\": \"merit/need/specific\", \"application_deadline\": \"date_or_NA\"}]}. IMPORTANT: Always include currency_type field for all monetary amounts. List ALL available scholarships including merit-based, need-based, government, private, and international student scholarships. Do not return any extra text, only JSON."
-}
 
 # ============================================================================
 # MONGODB SCHEMA - SINGLE SOURCE OF TRUTH
@@ -204,23 +183,47 @@ def get_default_schema() -> Dict[str, Any]:
 # ============================================================================
 
 def to_int(value: Any, default: int = -1) -> int:
-    if value is None or value == "" or value == "N/A":
+    if value is None:
         return default
     if isinstance(value, bool):
         return int(value)
+    
+    value_str = str(value).strip()
+    
+    # Handle explicit "N/A" values
+    if value_str.upper() in ("N/A", "NA", "NULL", "NONE", "UNDEFINED", "-1"):
+        return default
+    
+    # Special handling for ranking values with "+", ">", etc.
+    if "+" in value_str or ">" in value_str:
+        # For rankings like "1401+" or ">1000", extract the number part
+        import re
+        match = re.search(r'(\d+)', value_str)
+        if match:
+            return int(match.group(1))
+        else:
+            return default
+    
     try:
-        return int(float(str(value)))
+        return int(float(value_str))
     except (ValueError, TypeError):
         return default
 
 
 def to_float(value: Any, default: float = -1.0) -> float:
-    if value is None or value == "" or value == "N/A":
+    if value is None:
         return default
     if isinstance(value, bool):
         return float(value)
+    
+    value_str = str(value).strip()
+    
+    # Handle explicit "N/A" values
+    if value_str.upper() in ("N/A", "NA", "NULL", "NONE", "UNDEFINED", "-1"):
+        return default
+    
     try:
-        return round(float(str(value)), 2)
+        return round(float(value_str), 2)
     except (ValueError, TypeError):
         return default
 
@@ -640,26 +643,11 @@ def normalize_college(college_raw: Dict) -> Dict:
     return normalized
 
 # ============================================================================
-# CURL & EXTRACTION FUNCTIONS
+# JSON EXTRACTION FUNCTIONS
 # ============================================================================
 
-def build_curl_command(query, college):
-    q = query.replace("%COLLEGE_NAME%", college["name"]).replace("%COUNTRY%", college["country"]).replace("%LOCATION%", college["location"])
-    cmd = [
-        "curl", "--get", "https://serpapi.com/search",
-        "--data-urlencode", "engine=google_ai_mode",
-        "--data-urlencode", f"q={q}",
-        "--data-urlencode", f"api_key={API_KEY}"
-    ]
-    return cmd
-
-def run_curl(cmd):
-    start = time.time()
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    elapsed = time.time() - start
-    return result.stdout, elapsed
-
 def extract_structured_json(md_text):
+    """Extract JSON from markdown/text response"""
     if not md_text:
         return {}
     
@@ -694,125 +682,68 @@ def extract_structured_json(md_text):
                 "extracted_content": json_str
             }
 
-def extract_reconstructed_markdown(response_text):
-    try:
-        data = json.loads(response_text)
-        if "reconstructed_markdown" in data:
-            return data["reconstructed_markdown"], None
-        else:
-            return None, "No reconstructed_markdown key in response"
-    except json.JSONDecodeError as e:
-        # Log raw response for debugging
-        print(f"RAW RESPONSE: {response_text[:500]}...")
-        return None, f"JSON decode error: {str(e)}"
-
 # ============================================================================
 # MAIN SCRAPER
 # ============================================================================
 
-def main():
+def normalize_existing_scraped_files():
+    """Normalize existing scraped JSON files from serper.py"""
+    input_dir = "/home/ramji/Videos/scap/college_scraper"
     output_dir = "/home/ramji/Videos/scap/college_scraper"
     os.makedirs(output_dir, exist_ok=True)
     
-    total_start_time = time.time()
-    
-    # Prepare all tasks
-    all_tasks = []
-    for college in COLLEGES:
-        for query_type, query in QUERIES.items():
-            cmd = build_curl_command(query, college)
-            all_tasks.append({
-                "college": college["name"],
-                "country": college["country"],
-                "query_type": query_type,
-                "cmd": cmd
-            })
-    
-    print(f"🚀 Running {len(all_tasks)} parallel curl requests...")
+    print(f"🔧 NORMALIZING EXISTING SCRAPED FILES...")
     print(f"{'='*70}")
     
-    # Store results by college
-    colleges_data = {}
+    # Find all JSON files (excluding _normalized ones)
+    json_files = [f for f in os.listdir(input_dir) if f.endswith('.json') and not f.endswith('_normalized.json')]
     
-    # Execute in parallel
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        futures = {}
-        for task in all_tasks:
-            future = executor.submit(run_curl, task["cmd"])
-            futures[future] = task
+    for filename in json_files:
+        filepath = os.path.join(input_dir, filename)
+        college_name = filename.replace('.json', '')
         
-        for future in concurrent.futures.as_completed(futures):
-            task = futures[future]
-            college_name = task["college"]
-            query_type = task["query_type"]
+        print(f"\n📄 Processing: {filename}")
+        
+        try:
+            # Load scraped data
+            with open(filepath, 'r') as f:
+                raw_data = json.load(f)
             
-            try:
-                stdout, elapsed = future.result()
-                markdown, error = extract_reconstructed_markdown(stdout)
-                
-                # Parse LLM output
-                raw_data = extract_structured_json(markdown) if markdown else {"error": error}
-                
-                # Store raw data for later normalization
-                if college_name not in colleges_data:
-                    colleges_data[college_name] = {"_metadata": {"total_time": 0, "errors": {}, "college_name": college_name, "country": task["country"]}}
-                
-                colleges_data[college_name][query_type] = raw_data
-                
-                # Update metadata
-                colleges_data[college_name]["_metadata"]["total_time"] += elapsed
-                if error or "error" in raw_data:
-                    colleges_data[college_name]["_metadata"]["errors"][query_type] = error or raw_data.get("error")
-                
-                print(f"✓ {college_name} - {query_type}: {elapsed:.2f}s")
-                
-            except Exception as e:
-                print(f"✗ {college_name} - {query_type}: Error - {str(e)}")
-                if college_name not in colleges_data:
-                    colleges_data[college_name] = get_default_schema()
-                colleges_data[college_name]["_metadata"]["errors"][query_type] = str(e)
-    
-    total_end_time = time.time()
-    total_time_taken = round(total_end_time - total_start_time, 2)
-    
-    # ========================================================================
-    # SAVE INDIVIDUAL FILES (MONGODB READY)
-    # ========================================================================
+            # Handle both single college and multi-college formats
+            if college_name in raw_data:
+                # Multi-college format (like serper_results.json)
+                college_data = raw_data[college_name]
+            else:
+                # Single college format (like College_Name.json)
+                college_data = raw_data
+            
+            # Normalize the college data
+            normalized_data = normalize_college(college_data)
+            
+            # Save normalized version
+            safe_name = re.sub(r'[^\w\s-]', '', college_name).strip().replace(' ', '_')
+            output_file = os.path.join(output_dir, f"{safe_name}_normalized.json")
+            
+            with open(output_file, "w") as f:
+                json.dump(normalized_data, f, indent=2, ensure_ascii=False)
+            
+            print(f"✅ {college_name}")
+            print(f"   └─ Input: {filepath}")
+            print(f"   └─ Output: {output_file}")
+            print(f"   └─ Errors: {len(normalized_data['_metadata']['errors'])}")
+            print(f"   └─ Warnings: {len(normalized_data['_metadata']['validation_warnings'])}")
+            
+        except Exception as e:
+            print(f"✗ Error processing {filename}: {str(e)}")
     
     print(f"\n{'='*70}")
-    print("💾 SAVING NORMALIZED JSON FILES...")
+    print(f"✨ NORMALIZATION COMPLETE!")
     print(f"{'='*70}\n")
-    
-    for college, raw_data in colleges_data.items():
-        # Normalize the entire college record
-        normalized_data = normalize_college(raw_data)
-        
-        # Sanitize filename
-        safe_name = re.sub(r'[^\w\s-]', '', college).strip().replace(' ', '_')
-        output_file = os.path.join(output_dir, f"{safe_name}_normalized.json")
-        
-        # Save
-        with open(output_file, "w") as f:
-            json.dump(normalized_data, f, indent=2, ensure_ascii=False)
-        
-        print(f"✅ {college}")
-        print(f"   └─ Saved: {output_file}")
-        print(f"   └─ Time: {normalized_data['_metadata']['total_time']:.2f}s")
-        print(f"   └─ Errors: {len(normalized_data['_metadata']['errors'])}")
-        print(f"   └─ Warnings: {len(normalized_data['_metadata']['validation_warnings'])}")
-        print()
-    
-    # ========================================================================
-    # FINAL SUMMARY
-    # ========================================================================
-    
-    print(f"{'='*70}")
-    print(f"✨ COMPLETE! Total time: {total_time_taken}s")
-    print(f"{'='*70}")
-    print(f"📊 Colleges processed: {len(colleges_data)}")
-    print(f"📁 Output directory: {output_dir}")
-    print(f"🗄️  Files are MongoDB-ready with normalized schema")
-    print(f"{'='*70}\n")
+
+
+def main():
+    """Main function - normalize existing scraped files"""
+    normalize_existing_scraped_files()
 
 if __name__ == "__main__":
     main()

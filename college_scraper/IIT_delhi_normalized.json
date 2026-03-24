@@ -1,0 +1,372 @@
+{
+  "basic_info": {
+    "college_name": "Indian Institute of Technology Delhi",
+    "short_name": "IIT Delhi",
+    "established": 1961,
+    "institution_type": "Public Technical University",
+    "country": "India",
+    "location": "Hauz Khas, New Delhi",
+    "website": "https://home.iitd.ac.in",
+    "about": "The Indian Institute of Technology Delhi (IIT Delhi) is a premier public technical and research university located in New Delhi, India. It is one of the oldest Indian Institutes of Technology and has been declared an Institute of Eminence by the Government of India.",
+    "summary": "IIT Delhi consistently ranks among the top engineering and research institutions globally and nationally. It offers a wide range of undergraduate, postgraduate, and doctoral programs with a strong emphasis on scientific and technological research.",
+    "rankings": {
+      "nirf_latest": 4,
+      "nirf_previous": 3,
+      "qs_world": 150,
+      "national_rank": 4,
+      "state_rank": 1,
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 12543,
+      "ug_students": 4971,
+      "pg_students": 3568,
+      "phd_students": 4004,
+      "annual_intake": 1239,
+      "male_percent": 79.0,
+      "female_percent": 21.0,
+      "total_ug_courses": 18,
+      "total_pg_courses": -1,
+      "total_phd_courses": -1,
+      "guessed_data": false
+    },
+    "faculty_staff": {
+      "total_faculty": 826,
+      "student_faculty_ratio": 8.0,
+      "phd_faculty_percent": 97.34,
+      "guessed_data": false
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "latest_year": 12543,
+        "previous_year": 11500,
+        "year_before_previous": 10119
+      },
+      "international_students": 88,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2024-2025",
+          "ug_students": 4971,
+          "pg_students": 3568,
+          "phd_students": 4004,
+          "international_students": 88,
+          "domestic_students": 12455,
+          "male_students": 9909,
+          "female_students": 2634
+        },
+        {
+          "year": "2023-2024",
+          "ug_students": -1,
+          "pg_students": -1,
+          "phd_students": -1,
+          "international_students": -1,
+          "domestic_students": -1,
+          "male_students": -1,
+          "female_students": -1
+        },
+        {
+          "year": "2022-2023",
+          "ug_students": 5059,
+          "pg_students": 5060,
+          "phd_students": -1,
+          "international_students": -1,
+          "domestic_students": 10119,
+          "male_students": -1,
+          "female_students": -1
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "Institute of Eminence (IoE)",
+        "grade": "N/A",
+        "year": 2018
+      }
+    ],
+    "affiliations": "Autonomous",
+    "recognition": "Institute of National Importance",
+    "campus_area": "325 acres",
+    "contact_info": {
+      "phone": "+91-11-2659 1000",
+      "email": "registrar@admin.iitd.ac.in",
+      "address": "IIT Delhi, Hauz Khas, New Delhi - 110016, India"
+    },
+    "sources_verified": [
+      "https://home.iitd.ac.in",
+      "https://en.wikipedia.org/wiki/IIT_Delhi",
+      "https://www.shiksha.com/university/iit-delhi-indian-institute-of-technology-53938/ranking",
+      "https://www.topuniversities.com/universities/indian-institute-technology-delhi-iitd",
+      "https://engineering.collegesuggest.com/university/iitd-delhi/faculty"
+    ]
+  },
+  "programs": {
+    "ug_programs": [],
+    "pg_programs": [],
+    "phd_programs": [],
+    "departments": [],
+    "sources_verified": []
+  },
+  "placements": {
+    "guessed_data": false,
+    "data_year": "2024-25",
+    "sources": [
+      "IIT Delhi Official Placement News 2024-25",
+      "IIT Delhi NIRF Report 2025",
+      "IIT Delhi Engineering NIRF Report 2024",
+      "Department of Management Studies (DMS) IIT Delhi Final Placement Report 2022-24"
+    ],
+    "placements": {
+      "year": "2024-25",
+      "highest_package": 100.0,
+      "average_package": 19.0,
+      "median_package": 19.08,
+      "package_currency": "LPA",
+      "placement_rate_percent": 83.5,
+      "total_students_placed": 1150,
+      "total_companies_visited": 370,
+      "graduate_outcomes_note": "Data for 2024-25 represents Phase 1 results as of December 2024. Median package and placement rate are specifically for the B.Tech program as per NIRF 2025 submissions."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2024-25",
+        "average_package": 19.0,
+        "employment_rate_percent": 83.5,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2023-24",
+        "average_package": 18.5,
+        "employment_rate_percent": 72.81,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2022-23",
+        "average_package": 21.9,
+        "employment_rate_percent": 84.94,
+        "package_currency": "LPA"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2023-24",
+        "male_placed": 511,
+        "female_placed": 200,
+        "male_percent": 71.8,
+        "female_percent": 28.2
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2024-25",
+        "sector": "Core (Technical)",
+        "companies": [
+          "Texas Instruments",
+          "Bajaj Auto",
+          "Qualcomm"
+        ],
+        "percent": 34.0
+      },
+      {
+        "year": "2024-25",
+        "sector": "IT",
+        "companies": [
+          "Microsoft",
+          "Google",
+          "Oracle"
+        ],
+        "percent": 20.0
+      },
+      {
+        "year": "2024-25",
+        "sector": "Consulting",
+        "companies": [
+          "BCG",
+          "Barclays"
+        ],
+        "percent": 14.0
+      }
+    ],
+    "top_recruiters": [
+      "Microsoft",
+      "Goldman Sachs",
+      "Texas Instruments",
+      "Google",
+      "Barclays",
+      "BCG",
+      "American Express",
+      "Bajaj Auto",
+      "Ola Electric"
+    ],
+    "placement_highlights": "IIT Delhi secured over 1,200 job offers in Phase 1 of the 2024-25 season, with more than 50 international offers. The core technical sector remained the top recruiter, accounting for 34% of total placements. While median packages for B.Tech students remained stable around 19-20 LPA, the institute saw a record number of unique undergraduate offers this year."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2025-26",
+    "sources": [
+      "https://home.iitd.ac.in/uploads/ug/25-26/Fee%20Structure_2025-26_UG%20Entry%20Students.pdf",
+      "https://bhm.iitd.ac.in/static/media/HostelCharges_2025-2026.7a42ebde7b9bfaec4305.pdf",
+      "https://collegedunia.com/university/25455-iit-delhi-indian-institute-of-technology-iitd-new-delhi/courses-fees"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 228500.0,
+        "total_course": 914000.0,
+        "currency": "INR"
+      },
+      "PG": {
+        "per_year": 190500.0,
+        "total_course": 381000.0,
+        "currency": "INR"
+      },
+      "hostel_per_year": 110000.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2025-26",
+        "UG": {
+          "per_year": 228500.0,
+          "total_course": 914000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 190500.0,
+          "total_course": 381000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 110000.0
+      }
+    ],
+    "fees_note": "The B.Tech tuition fee is ₹1,00,000 per semester for General/OBC candidates with family income above ₹5 lakh. Post-graduate fees for M.Tech programs are approximately ₹3.81 lakh for the full two-year duration. Hostel charges include mess fees of roughly ₹36,000 and seat rent of ₹8,600-₹23,600 per semester depending on the hostel type.",
+    "scholarships_detail": [
+      {
+        "name": "Merit-cum-Means (MCM) Scholarship",
+        "amount": 100000.0,
+        "currency_type": "INR",
+        "eligibility": "General/OBC/EWS UG students with annual family income up to ₹5 lakh and minimum CGPA requirements",
+        "provider": "IIT Delhi"
+      },
+      {
+        "name": "HTRA Stipend",
+        "amount": 12400.0,
+        "currency_type": "INR",
+        "eligibility": "M.Tech students with valid GATE score (monthly stipend)",
+        "provider": "MoE, Government of India"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://home.iitd.ac.in/uploads/nirf/2025/NIRF%202025_Engineering_Indian%20Institute%20of%20Technology%20Delhi20250118-1.pdf",
+      "https://dms.iitd.ac.in/iit-infrastructure/",
+      "https://bhm.iitd.ac.in/hostel/saptagiri/",
+      "https://alumni.iitd.ac.in/scholarships-awards",
+      "https://endowment.iitd.ac.in/public/frontend/images/awardscholar/IITDEMF%20Scholarships%20and%20Awards%20Brochure.pdf",
+      "https://vidyarthimitra.org/news/IIT-Delhi-Scholarships-2025"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Campus Area",
+        "details": "320-acre fully residential campus located in Hauz Khas, New Delhi."
+      },
+      {
+        "facility": "Lecture Hall Complex",
+        "details": "Equipped with digital boards, speakers, and advanced audiovisual systems."
+      },
+      {
+        "facility": "Sports Complex",
+        "details": "Mittal Sports Complex offering badminton, basketball, cricket, football, swimming, and gym facilities."
+      },
+      {
+        "facility": "IT Infrastructure",
+        "details": "Fiber Optics backbone with 9,000+ network access points and 265 Cisco switches."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 5500,
+      "type": "11 Boys' Hostels, 2 Girls' Hostels, and 1 Co-ed (Saptagiri)"
+    },
+    "library_details": {
+      "total_books": 194471,
+      "journals": 690,
+      "e_resources": 103942,
+      "area_sqft": -1.0
+    },
+    "transport_details": {
+      "buses": -1,
+      "routes": -1
+    },
+    "scholarships": [
+      {
+        "name": "Merit-cum-Means (MCM) Scholarship",
+        "amount": 4000.0,
+        "currency_type": "INR",
+        "eligibility": "UG/PG students with family income up to 8 Lakh per annum and minimum 6.0 CGPA; includes full tuition fee waiver.",
+        "provider": "IIT Delhi",
+        "type": "merit/need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Professor Prasoon Tiwari Memorial Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "1st year UG students; family income between 5-15 Lakh; paying 100% tuition fees.",
+        "provider": "Private Donor/Alumni",
+        "type": "need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "IITDAA Scholarship",
+        "amount": 25000.0,
+        "currency_type": "INR",
+        "eligibility": "2nd year UG students with 7.5 CGPA and family income less than 5 Lakh.",
+        "provider": "IIT Delhi Alumni Association",
+        "type": "merit/need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Endowment Merit Scholarships",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Top girl and boy student in each department with minimum 8.0 CGPA.",
+        "provider": "IIT Delhi Endowment Management Foundation",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Tower Research Capital India Meritorious Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "3rd and 4th year UG students of CSE, EE, and Math with 8.5 CGPA.",
+        "provider": "Tower Research Capital",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "SC/ST/PwD Institute Scholarship",
+        "amount": 1000.0,
+        "currency_type": "INR",
+        "eligibility": "All SC/ST/PwD students; includes full tuition waiver and free basic messing.",
+        "provider": "Government/Institute",
+        "type": "specific",
+        "application_deadline": "N/A"
+      }
+    ]
+  },
+  "_metadata": {
+    "scraped_at": "2026-03-24T09:08:11.808082",
+    "total_time": 41.13179564476013,
+    "errors": {
+      "programs": "No reconstructed_markdown key in response"
+    },
+    "validation_warnings": [
+      "FIX-3 [AUTO]: domestic_students computed as 10119 for year 2022-2023.",
+      "FIX: accreditations was a dict; converted to array."
+    ],
+    "college_name": "N/A",
+    "country": "N/A",
+    "schema_version": "v1.1"
+  }
+}
