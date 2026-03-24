@@ -1,0 +1,666 @@
+{
+  "basic_info": {
+    "college_name": "University of Melbourne",
+    "short_name": "UniMelb",
+    "established": 1853,
+    "institution_type": "Public Research University",
+    "country": "Australia",
+    "location": "Parkville, Victoria",
+    "website": "https://www.unimelb.edu.au",
+    "about": "The University of Melbourne is a public research university located in Melbourne, Australia. Founded in 1853, it is Australia's second oldest university and the oldest in Victoria. Its main campus is located in Parkville, an inner suburb north of Melbourne's central business district, with several other campuses located across Victoria.",
+    "summary": "Consistently ranked as the top university in Australia, the University of Melbourne is a member of the Group of Eight and Universitas 21. It is renowned for its 'Melbourne Model' curriculum and high research impact.",
+    "rankings": {
+      "nirf_latest": -1,
+      "nirf_previous": -1,
+      "qs_world": 13,
+      "national_rank": 1,
+      "state_rank": 1,
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 77162,
+      "ug_students": 37809,
+      "pg_students": 39353,
+      "phd_students": -1,
+      "annual_intake": -1,
+      "male_percent": 42,
+      "female_percent": 58,
+      "total_ug_courses": -1,
+      "total_pg_courses": -1,
+      "total_phd_courses": -1,
+      "guessed_data": false
+    },
+    "faculty_staff": {
+      "total_faculty": 13758,
+      "student_faculty_ratio": 23.3,
+      "phd_faculty_percent": -1,
+      "guessed_data": false
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "latest_year": 77162,
+        "previous_year": 53963,
+        "year_before_previous": 51622
+      },
+      "international_students": 35494,
+      "guessed_data": false,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2024",
+          "ug_students": 37809,
+          "pg_students": 39353,
+          "phd_students": -1,
+          "international_students": 35494,
+          "domestic_students": 41668,
+          "male_students": 32408,
+          "female_students": 44754
+        },
+        {
+          "year": "2023",
+          "ug_students": 27146,
+          "pg_students": 26817,
+          "phd_students": -1,
+          "international_students": 24283,
+          "domestic_students": 29680,
+          "male_students": 22664,
+          "female_students": 31299
+        },
+        {
+          "year": "2022",
+          "ug_students": -1,
+          "pg_students": -1,
+          "phd_students": -1,
+          "international_students": 26327,
+          "domestic_students": 25295,
+          "male_students": 21681,
+          "female_students": 29941
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "TEQSA",
+        "grade": "Registered",
+        "year": 2024
+      },
+      {
+        "body": "AACSB",
+        "grade": "Accredited",
+        "year": 2024
+      },
+      {
+        "body": "EQUIS",
+        "grade": "Accredited",
+        "year": 2024
+      }
+    ],
+    "affiliations": "Group of Eight, Universitas 21, Association of Pacific Rim Universities",
+    "recognition": "Member of the Association of Commonwealth Universities",
+    "campus_area": "22.5 hectares",
+    "contact_info": {
+      "phone": "+61 3 9035 5511",
+      "email": "N/A",
+      "address": "The University of Melbourne, Grattan Street, Parkville, Victoria 3010, Australia"
+    },
+    "sources_verified": [
+      "https://about.unimelb.edu.au/__data/assets/pdf_file/0029/459317/University-of-Melbourne_2024-Annual-Report.pdf",
+      "https://about.unimelb.edu.au/facts-and-figures",
+      "https://www.topuniversities.com/universities/university-melbourne",
+      "https://www.timeshighereducation.com/world-university-rankings/university-melbourne"
+    ]
+  },
+  "programs": {
+    "ug_programs": [
+      "Bachelor of Agriculture (Agricultural Economics)",
+      "Bachelor of Agriculture (Plant and Soil Science)",
+      "Bachelor of Agriculture (Production Animal Science)",
+      "Bachelor of Arts (Ancient World Studies)",
+      "Bachelor of Arts (Anthropology)",
+      "Bachelor of Arts (Arabic Studies)",
+      "Bachelor of Arts (Art History)",
+      "Bachelor of Arts (Asian Studies)",
+      "Bachelor of Arts (Chinese Studies)",
+      "Bachelor of Arts (Classics)",
+      "Bachelor of Arts (Creative Writing)",
+      "Bachelor of Arts (Criminology)",
+      "Bachelor of Arts (English and Theatre Studies)",
+      "Bachelor of Arts (French Studies)",
+      "Bachelor of Arts (Gender Studies)",
+      "Bachelor of Arts (Geography)",
+      "Bachelor of Arts (German Studies)",
+      "Bachelor of Arts (Hebrew and Jewish Studies)",
+      "Bachelor of Arts (History)",
+      "Bachelor of Arts (History and Philosophy of Science)",
+      "Bachelor of Arts (Indigenous Studies)",
+      "Bachelor of Arts (Indonesian Studies)",
+      "Bachelor of Arts (Islamic Studies)",
+      "Bachelor of Arts (Italian Studies)",
+      "Bachelor of Arts (Japanese Studies)",
+      "Bachelor of Arts (Linguistics and Applied Linguistics)",
+      "Bachelor of Arts (Media and Communications)",
+      "Bachelor of Arts (Philosophy)",
+      "Bachelor of Arts (Politics and International Studies)",
+      "Bachelor of Arts (Psychology)",
+      "Bachelor of Arts (Russian Studies)",
+      "Bachelor of Arts (Screen and Cultural Studies)",
+      "Bachelor of Arts (Sociology)",
+      "Bachelor of Arts (Spanish and Latin American Studies)",
+      "Bachelor of Biomedicine (Biochemistry and Molecular Biology)",
+      "Bachelor of Biomedicine (Bioengineering Systems)",
+      "Bachelor of Biomedicine (Biotechnology)",
+      "Bachelor of Biomedicine (Cell and Developmental Biology)",
+      "Bachelor of Biomedicine (Genetics)",
+      "Bachelor of Biomedicine (Human Structure and Function)",
+      "Bachelor of Biomedicine (Immunology)",
+      "Bachelor of Biomedicine (Infection and Immunity)",
+      "Bachelor of Biomedicine (Microbiology)",
+      "Bachelor of Biomedicine (Neuroscience)",
+      "Bachelor of Biomedicine (Pathology)",
+      "Bachelor of Biomedicine (Pharmacology)",
+      "Bachelor of Biomedicine (Physiology)",
+      "Bachelor of Biomedicine (Psychology)",
+      "Bachelor of Commerce (Accounting)",
+      "Bachelor of Commerce (Actuarial Studies)",
+      "Bachelor of Commerce (Business)",
+      "Bachelor of Commerce (Economics)",
+      "Bachelor of Commerce (Finance)",
+      "Bachelor of Commerce (Management)",
+      "Bachelor of Commerce (Marketing)",
+      "Bachelor of Design (Architecture)",
+      "Bachelor of Design (Civil Engineering Systems)",
+      "Bachelor of Design (Computing)",
+      "Bachelor of Design (Construction)",
+      "Bachelor of Design (Digital Technologies)",
+      "Bachelor of Design (Graphic Design)",
+      "Bachelor of Design (Landscape Architecture)",
+      "Bachelor of Design (Mechanical Engineering Systems)",
+      "Bachelor of Design (Performance Design)",
+      "Bachelor of Design (Property)",
+      "Bachelor of Design (Spatial Systems)",
+      "Bachelor of Design (Urban Planning)",
+      "Bachelor of Design (User Experience Design)",
+      "Bachelor of Design (Visual Communication Design)",
+      "Bachelor of Fine Arts (Acting)",
+      "Bachelor of Fine Arts (Animation)",
+      "Bachelor of Fine Arts (Dance)",
+      "Bachelor of Fine Arts (Film and Television)",
+      "Bachelor of Fine Arts (Music Theatre)",
+      "Bachelor of Fine Arts (Production)",
+      "Bachelor of Fine Arts (Screenwriting)",
+      "Bachelor of Fine Arts (Visual Art)",
+      "Bachelor of Music (Composition)",
+      "Bachelor of Music (Interactive Composition)",
+      "Bachelor of Music (Jazz and Improvisation)",
+      "Bachelor of Music (Musicology and Ethnomusicology)",
+      "Bachelor of Music (Music Studies)",
+      "Bachelor of Music (Performance)",
+      "Bachelor of Oral Health",
+      "Bachelor of Science (Agricultural Science)",
+      "Bachelor of Science (Animal Health and Disease)",
+      "Bachelor of Science (Animal Science and Management)",
+      "Bachelor of Science (Applied Mathematics)",
+      "Bachelor of Science (Atmospheric Science)",
+      "Bachelor of Science (Biochemistry and Molecular Biology)",
+      "Bachelor of Science (Bioengineering Systems)",
+      "Bachelor of Science (Biology)",
+      "Bachelor of Science (Biotechnology)",
+      "Bachelor of Science (Cell and Developmental Biology)",
+      "Bachelor of Science (Chemical Systems)",
+      "Bachelor of Science (Chemistry)",
+      "Bachelor of Science (Civil Systems)",
+      "Bachelor of Science (Climate and Weather)",
+      "Bachelor of Science (Computing and Software Systems)",
+      "Bachelor of Science (Data Science)",
+      "Bachelor of Science (Digital Infrastructure Systems)",
+      "Bachelor of Science (Ecology and Evolutionary Biology)",
+      "Bachelor of Science (Electrical Systems)",
+      "Bachelor of Science (Environmental Engineering Systems)",
+      "Bachelor of Science (Environmental Science)",
+      "Bachelor of Science (Food Science)",
+      "Bachelor of Science (Genetics)",
+      "Bachelor of Science (Geography)",
+      "Bachelor of Science (Geology)",
+      "Bachelor of Science (Human Structure and Function)",
+      "Bachelor of Science (Immunology)",
+      "Bachelor of Science (Infection and Immunity)",
+      "Bachelor of Science (Marine Biology)",
+      "Bachelor of Science (Mathematical Physics)",
+      "Bachelor of Science (Mathematics and Statistics)",
+      "Bachelor of Science (Mechanical Systems)",
+      "Bachelor of Science (Mechatronics Systems)",
+      "Bachelor of Science (Microbiology)",
+      "Bachelor of Science (Neuroscience)",
+      "Bachelor of Science (Pathology)",
+      "Bachelor of Science (Pharmacology)",
+      "Bachelor of Science (Physics)",
+      "Bachelor of Science (Physiology)",
+      "Bachelor of Science (Plant Science)",
+      "Bachelor of Science (Psychology)",
+      "Bachelor of Science (Spatial Systems)",
+      "Bachelor of Science (Zoology)",
+      "Bachelor of Science (Extended)",
+      "Diploma in Computing",
+      "Diploma in General Studies",
+      "Diploma in Languages",
+      "Diploma in Mathematical Sciences",
+      "Diploma in Music"
+    ],
+    "pg_programs": [
+      "Master of Actuarial Science",
+      "Master of Actuarial Science (Enhanced)",
+      "Master of Actuarial Science (Extended)",
+      "Master of Applied Business Analytics",
+      "Master of Architectural Engineering",
+      "Master of Architecture",
+      "Master of Arts and Cultural Management",
+      "Master of Biomedical Engineering",
+      "Master of Business Administration (Full-time)",
+      "Master of Business Administration (Part-time)",
+      "Master of Business Administration (Online)",
+      "Master of Chemical Engineering",
+      "Master of Civil Engineering",
+      "Master of Clinical Ultrasound",
+      "Master of Commerce (Management)",
+      "Master of Computer Science",
+      "Master of Creative Writing, Publishing and Editing",
+      "Master of Data Science",
+      "Master of Digital Infrastructure Engineering",
+      "Master of Economics",
+      "Master of Education",
+      "Master of Electrical Engineering",
+      "Master of Engineering",
+      "Master of Entrepreneurship",
+      "Master of Environmental Engineering",
+      "Master of Finance",
+      "Master of Food Science",
+      "Master of Food and Packaging Innovation",
+      "Master of Global Media Communication",
+      "Master of Indigenous Business Leadership",
+      "Master of Information Systems",
+      "Master of Information Technology",
+      "Master of Instructional Leadership",
+      "Master of International Journalism",
+      "Master of International Relations",
+      "Master of Journalism",
+      "Master of Laws (LLM)",
+      "Master of Management",
+      "Master of Marketing",
+      "Master of Marketing Communications",
+      "Master of Mechanical Engineering",
+      "Master of Mechatronics Engineering",
+      "Master of Nursing Science",
+      "Master of Psychology (Educational and Developmental)",
+      "Master of Public Health",
+      "Master of Public and International Law",
+      "Master of Publishing and Communications",
+      "Master of Science (Earth Sciences)",
+      "Master of Software Engineering",
+      "Master of Supply Chain Management",
+      "Master of Teaching (Early Childhood and Primary)",
+      "Master of Teaching (Primary)",
+      "Master of Teaching (Secondary)",
+      "Master of Urban Planning",
+      "Master of Youth Mental Health",
+      "Juris Doctor (JD)",
+      "Graduate Diploma in Arts",
+      "Graduate Diploma in Built Environments (Advanced)",
+      "Graduate Diploma in Data Science",
+      "Graduate Diploma in Food Science",
+      "Graduate Diploma in Global Competition and Consumer Law",
+      "Graduate Diploma in International Law",
+      "Graduate Diploma in Journalism (Advanced)",
+      "Graduate Diploma in Publishing and Communications (Advanced)",
+      "Graduate Certificate in Aboriginal Health in Rural Communities",
+      "Graduate Certificate in Business Administration",
+      "Graduate Certificate in Bushfire Planning and Management",
+      "Graduate Certificate in Clinical Education",
+      "Graduate Certificate in Critical Care Nursing (Emergency)",
+      "Graduate Certificate in Food Science",
+      "Graduate Certificate in Journalism (Advanced)",
+      "Graduate Certificate in Physiotherapy (Pelvic Floor Physiotherapy)",
+      "Graduate Certificate in Publishing and Communications (Advanced)",
+      "Graduate Certificate in Visual Art",
+      "Specialist Certificate in Clinical Leadership",
+      "Specialist Certificate in Empowering Health in Aboriginal Communities",
+      "Specialist Certificate in Public Administration (Advanced)",
+      "Specialist Certificate in Service Navigation",
+      "Professional Certificate in Analytics Management",
+      "Professional Certificate in Digital Transformation of Health",
+      "Professional Certificate in Language Assessment"
+    ],
+    "phd_programs": [
+      "Doctor of Philosophy - Agriculture",
+      "Doctor of Philosophy - Architecture, Building and Planning",
+      "Doctor of Philosophy - Arts",
+      "Doctor of Philosophy - Business and Economics",
+      "Doctor of Philosophy - Education",
+      "Doctor of Philosophy - Engineering and IT",
+      "Doctor of Philosophy - Fine Arts and Music",
+      "Doctor of Philosophy - Law",
+      "Doctor of Philosophy - Medicine, Dentistry and Health Sciences",
+      "Doctor of Philosophy - Science",
+      "Doctor of Philosophy - Veterinary Science",
+      "Doctor of Philosophy - Indigenous Knowledge",
+      "Doctor of Education",
+      "Doctoral Program in Accounting",
+      "Doctoral Program in Decision, Risk and Financial Sciences",
+      "Doctoral Program in Economics",
+      "Doctoral Program in Finance",
+      "Doctoral Program in Management",
+      "Doctoral Program in Marketing",
+      "Child and Adolescent Health PhD Program (Supplementary)",
+      "Comprehensive Cancer PhD Program (Supplementary)",
+      "Infection and Immunity PhD Program (Supplementary)",
+      "Medical Biology PhD Program (Supplementary)",
+      "Melbourne Neuroscience PhD Program (Supplementary)",
+      "Mental Health PhD Program (Supplementary)"
+    ],
+    "departments": [
+      "Faculty of Architecture, Building and Planning",
+      "Faculty of Arts",
+      "Faculty of Business and Economics",
+      "Faculty of Education",
+      "Faculty of Engineering and Information Technology",
+      "Faculty of Fine Arts and Music",
+      "Faculty of Medicine, Dentistry and Health Sciences",
+      "Faculty of Science",
+      "Melbourne Law School",
+      "Melbourne Dental School",
+      "Melbourne Medical School",
+      "Melbourne School of Health Sciences",
+      "School of Agriculture and Food",
+      "School of Biomedical Sciences",
+      "School of Computing and Information Systems",
+      "School of Culture and Communication",
+      "School of Earth Sciences",
+      "School of Ecosystem and Forest Sciences",
+      "School of Geography, Earth and Atmospheric Sciences",
+      "School of Historical and Philosophical Studies",
+      "School of Languages and Linguistics",
+      "School of Mathematics and Statistics",
+      "School of Physics",
+      "School of Psychological Sciences",
+      "School of Social and Political Sciences",
+      "Victorian College of the Arts",
+      "Melbourne Conservatorium of Music",
+      "Baker Department of Cardiometabolic Health",
+      "Department of Clinical Pathology",
+      "Department of Critical Care",
+      "Department of General Practice and Primary Care",
+      "Department of Infectious Diseases",
+      "Department of Medical Education",
+      "Department of Medicine",
+      "Department of Obstetrics, Gynaecology and Newborn Health",
+      "Department of Paediatrics",
+      "Department of Psychiatry",
+      "Department of Radiology",
+      "Department of Rural Health",
+      "Department of Surgery",
+      "Department of Audiology and Speech Pathology",
+      "Department of Nursing",
+      "Department of Optometry and Vision Sciences",
+      "Department of Physiotherapy",
+      "Department of Social Work",
+      "Department of Biomedical Engineering",
+      "Department of Chemical Engineering",
+      "Department of Electrical and Electronic Engineering",
+      "Department of Infrastructure Engineering",
+      "Department of Mechanical Engineering"
+    ],
+    "sources_verified": [
+      "https://study.unimelb.edu.au/study-with-us/undergraduate-courses",
+      "https://study.unimelb.edu.au/study-with-us/graduate-courses",
+      "https://handbook.unimelb.edu.au/",
+      "https://about.unimelb.edu.au/strategy/governance/peak-bodies-structures/university-structures/faculties",
+      "https://research.unimelb.edu.au/study/options/areas",
+      "https://about.unimelb.edu.au/__data/assets/pdf_file/0031/27589/Faculties-Schools-and-Other-Academic-Units-2025.pdf"
+    ]
+  },
+  "placements": {
+    "guessed_data": false,
+    "data_year": "2024",
+    "sources": [
+      "https://qilt.edu.au/surveys/graduate-outcomes-survey-(gos)",
+      "https://about.unimelb.edu.au/strategy/annual-reports/2024-annual-report",
+      "https://www.shiksha.com/studyabroad/australia/universities/the-university-of-melbourne/placement",
+      "https://collegedunia.com/australia/university/609-university-of-melbourne-melbourne/placements"
+    ],
+    "placements": {
+      "year": "2024",
+      "highest_package": 200000,
+      "average_package": 81000,
+      "median_package": 75000,
+      "package_currency": "AUD",
+      "placement_rate_percent": 86.9,
+      "total_students_placed": 18500,
+      "total_companies_visited": 300,
+      "graduate_outcomes_note": "Data reflects domestic undergraduate outcomes from the 2024 Graduate Outcomes Survey (GOS). Full-time employment for undergraduates was 59.6% immediately post-graduation, rising significantly within 3-5 years. Postgraduate median salaries are higher, typically starting at AUD 100,000."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2024",
+        "average_package": 81000,
+        "employment_rate_percent": 86.9,
+        "package_currency": "AUD"
+      },
+      {
+        "year": "2023",
+        "average_package": 77000,
+        "employment_rate_percent": 88.9,
+        "package_currency": "AUD"
+      },
+      {
+        "year": "2022",
+        "average_package": 71000,
+        "employment_rate_percent": 85.0,
+        "package_currency": "AUD"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2024",
+        "male_placed": null,
+        "female_placed": null,
+        "male_percent": 71.0,
+        "female_percent": 52.0
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2024",
+        "sector": "Legal",
+        "companies": [
+          "International and national law firms"
+        ],
+        "percent": 86.0
+      },
+      {
+        "year": "2024",
+        "sector": "Business & Consulting",
+        "companies": [
+          "Deloitte",
+          "EY",
+          "KPMG",
+          "PwC"
+        ],
+        "percent": 25.0
+      }
+    ],
+    "top_recruiters": [
+      "Deloitte",
+      "EY",
+      "PwC",
+      "KPMG",
+      "NAB",
+      "ANZ",
+      "Infosys",
+      "Telstra",
+      "Macquarie Group"
+    ],
+    "placement_highlights": "The University of Melbourne ranks #8 globally for graduate employability according to QS rankings. While immediate full-time undergraduate employment saw a dip in 2024 due to market cooling, over 97% of graduates secure employment within 3-5 years. Top-tier sectors like Law and Dentistry report the highest median starting salaries, often exceeding AUD 100,000."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/fees-and-payments/indicative-course-fees",
+      "https://www.unicol.unimelb.edu.au/student-accommodation/university-college-fees",
+      "https://scholarships.unimelb.edu.au/awards/graduate-research-scholarships"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 51744.0,
+        "total_course": 155232.0,
+        "currency": "AUD"
+      },
+      "PG": {
+        "per_year": 56992.0,
+        "total_course": 113984.0,
+        "currency": "AUD"
+      },
+      "hostel_per_year": 39906.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 51744.0,
+          "total_course": 155232.0,
+          "currency": "AUD"
+        },
+        "PG": {
+          "per_year": 56992.0,
+          "total_course": 113984.0,
+          "currency": "AUD"
+        },
+        "hostel_per_year": 39906.0
+      }
+    ],
+    "fees_note": "Fees for 2026 are indicative and vary significantly by discipline; for instance, undergraduate Arts subjects start around $44,832 while Medicine reaches $120,704 per EFTSL. Residential fees quoted are for University College (undergraduate), covering 36 weeks of residence. Graduate coursework fees for popular programs like Architecture are approximately $56,992 per year.",
+    "scholarships_detail": [
+      {
+        "name": "Graduate Research Scholarship",
+        "amount": 39500.0,
+        "currency_type": "AUD",
+        "eligibility": "High-achieving students applied for a graduate research degree",
+        "provider": "University of Melbourne"
+      },
+      {
+        "name": "Melbourne International Undergraduate Scholarship",
+        "amount": 10000.0,
+        "currency_type": "AUD",
+        "eligibility": "International students with high secondary school results",
+        "provider": "University of Melbourne"
+      },
+      {
+        "name": "Melbourne India Postgraduate Scholarship",
+        "amount": 40000.0,
+        "currency_type": "AUD",
+        "eligibility": "Indian citizens applied for specific postgraduate courses",
+        "provider": "University of Melbourne"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://about.unimelb.edu.au/news-resources/campus-services-and-facilities/transport-and-parking",
+      "https://scholarships.unimelb.edu.au/",
+      "https://study.unimelb.edu.au",
+      "https://library.unimelb.edu.au/collections"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Parkville Campus",
+        "details": "The main campus featuring a mix of historic architecture like the Old Quadrangle and modern research facilities across 10 faculties."
+      },
+      {
+        "facility": "Sports and Fitness",
+        "details": "Includes the Nona Lee Sports Centre (Building 103) on Tin Alley, offering gym facilities and equipment hire."
+      },
+      {
+        "facility": "Student Kitchen",
+        "details": "Located on Level 4 of the Pavilion, available for student clubs and general student use when not booked."
+      },
+      {
+        "facility": "Research Facilities",
+        "details": "World-leading infrastructure including advanced microscopy and large-scale computational capacity."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 1959,
+      "type": "University-owned apartments (Little Hall, Lisa Bellear House, The Lofts) and 10 residential colleges."
+    },
+    "library_details": {
+      "total_books": 3500000,
+      "journals": 7300,
+      "e_resources": 500000,
+      "area_sqft": null
+    },
+    "transport_details": {
+      "buses": 0,
+      "routes": 0
+    },
+    "scholarships": [
+      {
+        "name": "Graduate Research Scholarship",
+        "amount": 38500.0,
+        "currency_type": "AUD",
+        "eligibility": "High-achieving domestic and international research students in Masters or PhD programs.",
+        "provider": "Australian Government and University of Melbourne",
+        "type": "merit",
+        "application_deadline": "2025-10-31"
+      },
+      {
+        "name": "Hansen Scholarship",
+        "amount": 4200.0,
+        "currency_type": "AUD",
+        "eligibility": "Australian Year 12 students starting an undergraduate degree with a 90+ ATAR.",
+        "provider": "University of Melbourne",
+        "type": "merit",
+        "application_deadline": "2026-03-30"
+      },
+      {
+        "name": "Melbourne International Undergraduate Scholarship",
+        "amount": null,
+        "currency_type": "AUD",
+        "eligibility": "International students who have completed secondary school outside Australia with high academic results.",
+        "provider": "University of Melbourne",
+        "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "Melbourne Chancellor's Scholarship",
+        "amount": null,
+        "currency_type": "AUD",
+        "eligibility": "High-achieving school leavers from Australia and overseas.",
+        "provider": "University of Melbourne",
+        "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "Narrm Scholarship",
+        "amount": null,
+        "currency_type": "AUD",
+        "eligibility": "Undergraduate students applying through the Special Entry Access Scheme (SEAS).",
+        "provider": "University of Melbourne",
+        "type": "specific",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "Student Bursary",
+        "amount": null,
+        "currency_type": "AUD",
+        "eligibility": "Enrolled students experiencing financial hardship.",
+        "provider": "University of Melbourne",
+        "type": "need",
+        "application_deadline": "2026-08-02"
+      }
+    ]
+  },
+  "_metadata": {
+    "total_time": 21.772287845611572,
+    "errors": {}
+  }
+}
