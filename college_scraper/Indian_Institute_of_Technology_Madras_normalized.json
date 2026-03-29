@@ -1,0 +1,570 @@
+{
+  "basic_info": {
+    "college_name": "Indian Institute of Technology Madras",
+    "short_name": "IIT Madras",
+    "established": 1959,
+    "institution_type": "Public Technical University",
+    "country": "India",
+    "location": "Chennai, Tamil Nadu",
+    "website": "https://www.iitm.ac.in/",
+    "about": "IIT Madras is one of the premier public technical universities in India, recognized as an Institute of Eminence. It is known for its rigorous academic programs, research excellence, and a thriving startup ecosystem, consistently topping national rankings.",
+    "summary": "Established in 1959 with German assistance, the institute is located in a 617-acre residential campus in Chennai. It offers various undergraduate, postgraduate, and doctoral programs across 16 departments and several research centers.",
+    "rankings": {
+      "nirf_latest": 1,
+      "nirf_previous": 1,
+      "qs_world": 180,
+      "national_rank": 1,
+      "state_rank": 1,
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 12385,
+      "ug_students": 2105,
+      "pg_students": 4858,
+      "phd_students": 2963,
+      "annual_intake": 1450,
+      "male_percent": 76.2,
+      "female_percent": 23.8,
+      "total_ug_courses": 12,
+      "total_pg_courses": 48,
+      "total_phd_courses": 16,
+      "guessed_data": false
+    },
+    "faculty_staff": {
+      "total_faculty": 591,
+      "student_faculty_ratio": 20.3,
+      "phd_faculty_percent": 98.0,
+      "guessed_data": false
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "latest_year": -1,
+        "previous_year": -1,
+        "year_before_previous": -1
+      },
+      "international_students": 158,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 2150,
+          "pg_students": 5000,
+          "phd_students": 3100,
+          "international_students": 170,
+          "domestic_students": 12580,
+          "male_students": 9700,
+          "female_students": 3050
+        },
+        {
+          "year": "2025",
+          "ug_students": 2105,
+          "pg_students": 4858,
+          "phd_students": 2963,
+          "international_students": 158,
+          "domestic_students": 12227,
+          "male_students": 9441,
+          "female_students": 2944
+        },
+        {
+          "year": "2024",
+          "ug_students": 2080,
+          "pg_students": 4600,
+          "phd_students": 2800,
+          "international_students": 120,
+          "domestic_students": 11042,
+          "male_students": 8574,
+          "female_students": 2588
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "NAAC",
+        "grade": "A++",
+        "year": 2023
+      }
+    ],
+    "affiliations": "Autonomous University",
+    "recognition": "Institute of Eminence (IoE), Government of India",
+    "campus_area": "617 acres",
+    "contact_info": {
+      "phone": "+91-44-2257 8101",
+      "email": "registrar@iitm.ac.in",
+      "address": "IIT Madras, Sardar Patel Road, Adyar, Chennai - 600036, Tamil Nadu, India"
+    },
+    "sources_verified": [
+      "https://www.iitm.ac.in/",
+      "https://www.nirfindia.org/Rankings/2025/OverallRanking.html",
+      "https://www.topuniversities.com/universities/indian-institute-technology-madras-iitm",
+      "https://www.iitsystem.ac.in/studentstatistics"
+    ]
+  },
+  "programs": {
+    "ug_programs": [
+      "B.Tech in Aerospace Engineering",
+      "B.Tech in Chemical Engineering",
+      "B.Tech in Civil Engineering",
+      "B.Tech in Computer Science and Engineering",
+      "B.Tech in Electrical Engineering",
+      "B.Tech in Engineering Design",
+      "B.Tech in Engineering Physics",
+      "B.Tech in Mechanical Engineering",
+      "B.Tech in Metallurgical and Materials Engineering",
+      "B.Tech in Naval Architecture and Ocean Engineering",
+      "B.Tech in Applied Mechanics and Biomedical Engineering (Biomedical Engineering)",
+      "B.Tech in Applied Mechanics and Biomedical Engineering (Computational and Experimental Mechanics)",
+      "Dual Degree (B.Tech + M.Tech) in Aerospace Engineering",
+      "Dual Degree (B.Tech + M.Tech) in Chemical Engineering",
+      "Dual Degree (B.Tech + M.Tech) in Civil Engineering",
+      "Dual Degree (B.Tech + M.Tech) in Computer Science and Engineering",
+      "Dual Degree (B.Tech + M.Tech) in Electrical Engineering",
+      "Dual Degree (B.Tech + M.Tech) in Engineering Design (Automotive Engineering)",
+      "Dual Degree (B.Tech + M.Tech) in Engineering Design (Biomedical Design)",
+      "Dual Degree (B.Tech + M.Tech) in Engineering Design (Robotics and Mechatronics)",
+      "Dual Degree (B.Tech + M.Tech) in Mechanical Engineering",
+      "Dual Degree (B.Tech + M.Tech) in Metallurgical and Materials Engineering",
+      "Dual Degree (B.Tech + M.Tech) in Naval Architecture and Ocean Engineering",
+      "B.S. (Bachelor of Science) in Medical Sciences and Engineering",
+      "B.S. (Bachelor of Science) in Chemistry (with upgrade option to M.S.)",
+      "B.S. (Bachelor of Science) in Physics (with upgrade option to M.S.)",
+      "B.S. (Bachelor of Science) in Mathematics (with upgrade option to M.S.)",
+      "B.S. in Data Science and Applications (Non-campus/Online)",
+      "B.S. in Electronic Systems (Non-campus/Online)",
+      "B.S. in Management and Data Science (Non-campus/Online)"
+    ],
+    "pg_programs": [
+      "M.Tech in Aerospace Engineering",
+      "M.Tech in Applied Mechanics and Biomedical Engineering (Biomedical Engineering)",
+      "M.Tech in Applied Mechanics and Biomedical Engineering (Computational and Experimental Mechanics)",
+      "M.Tech in Chemical Engineering",
+      "M.Tech in Civil Engineering (Building Technology and Construction Management)",
+      "M.Tech in Civil Engineering (Environmental Engineering)",
+      "M.Tech in Civil Engineering (Geotechnical Engineering)",
+      "M.Tech in Civil Engineering (Hydraulic and Water Resources Engineering)",
+      "M.Tech in Civil Engineering (Structural Engineering)",
+      "M.Tech in Civil Engineering (Transportation Engineering)",
+      "M.Tech in Computer Science and Engineering",
+      "M.Tech in Electrical Engineering (Communication and Signal Processing)",
+      "M.Tech in Electrical Engineering (Control and Optimization)",
+      "M.Tech in Electrical Engineering (Electronic Systems and Instrumentation)",
+      "M.Tech in Electrical Engineering (Integrated Circuits and Systems)",
+      "M.Tech in Electrical Engineering (Micro Electronics and MEMS)",
+      "M.Tech in Electrical Engineering (Power Systems and Power Electronics)",
+      "M.Tech in Electrical Engineering (RF and Photonics)",
+      "M.Tech in Management Studies",
+      "M.Tech in Mathematics (Industrial Mathematics and Scientific Computing)",
+      "M.Tech in Mechanical Engineering (Thermal Engineering)",
+      "M.Tech in Mechanical Engineering (Mechanical Design)",
+      "M.Tech in Mechanical Engineering (Manufacturing Engineering)",
+      "M.Tech in Metallurgical and Materials Engineering",
+      "M.Tech in Ocean Engineering (Ocean Structures)",
+      "M.Tech in Ocean Engineering (Ocean Technology)",
+      "M.Tech in Physics (Functional Materials and Nanotechnology)",
+      "M.Tech in Electric Vehicles (Interdisciplinary)",
+      "M.Tech in Advanced Materials and Nanotechnology (Interdisciplinary)",
+      "M.Tech in Complex Systems and Dynamics (Interdisciplinary)",
+      "M.Tech in Computational Engineering (Interdisciplinary)",
+      "M.Tech in Cyber Physical Systems (Interdisciplinary)",
+      "M.Tech in Data Science (Interdisciplinary)",
+      "M.Tech in Energy Systems (Interdisciplinary)",
+      "M.Tech in Quantum Science and Technology (Interdisciplinary)",
+      "M.Tech in Robotics (Interdisciplinary)",
+      "Web-Enabled M.Tech in Automotive Technology (For Professionals)",
+      "Web-Enabled M.Tech in Communication Systems Engineering (For Professionals)",
+      "Web-Enabled M.Tech in VLSI (For Professionals)",
+      "Web-Enabled M.Tech in Information Security (For Professionals)",
+      "Web-Enabled M.Tech in Mathematical Methods for Aerospace Engineers (For Professionals)",
+      "Web-Enabled M.Tech in Aero Dynamics & Aircraft Performance (For Professionals)",
+      "Web-Enabled M.Tech in Industrial Metallurgy (For Professionals)",
+      "Web-Enabled M.Tech in E-Mobility (For Professionals)",
+      "M.Sc. in Chemistry",
+      "M.Sc. in Mathematics",
+      "M.Sc. in Physics",
+      "M.A. in Development Studies",
+      "M.A. in Economics",
+      "M.A. in English Studies",
+      "Master of Business Administration (MBA)",
+      "Executive MBA (PEMS)",
+      "MS by Research in Aerospace Engineering",
+      "MS by Research in Applied Mechanics and Biomedical Engineering",
+      "MS by Research in Biotechnology",
+      "MS by Research in Chemical Engineering",
+      "MS by Research in Civil Engineering",
+      "MS by Research in Computer Science and Engineering",
+      "MS by Research in Electrical Engineering",
+      "MS by Research in Engineering Design",
+      "MS by Research in Humanities and Social Sciences",
+      "MS by Research in Management Studies",
+      "MS by Research in Mathematics",
+      "MS by Research in Mechanical Engineering",
+      "MS by Research in Metallurgical and Materials Engineering",
+      "MS by Research in Ocean Engineering",
+      "MS by Research in Physics",
+      "MS by Research in Medical Sciences and Technology"
+    ],
+    "phd_programs": [
+      "PhD in Aerospace Engineering",
+      "PhD in Applied Mechanics and Biomedical Engineering",
+      "PhD in Biotechnology",
+      "PhD in Chemical Engineering",
+      "PhD in Chemistry",
+      "PhD in Civil Engineering (Pavement Engineering, Traffic & Transportation, etc.)",
+      "PhD in Computer Science and Engineering",
+      "PhD in Electrical Engineering (Communications, Power Systems, Microelectronics, etc.)",
+      "PhD in Engineering Design",
+      "PhD in Humanities and Social Sciences (Economics, English, History, Philosophy, etc.)",
+      "PhD in Management Studies",
+      "PhD in Mathematics",
+      "PhD in Mechanical Engineering",
+      "PhD in Metallurgical and Materials Engineering",
+      "PhD in Ocean Engineering",
+      "PhD in Physics",
+      "PhD in Medical Sciences and Technology",
+      "Direct PhD (after B.Tech) in Engineering",
+      "Direct PhD (after B.S.) in Sciences",
+      "Direct PhD in Management",
+      "Direct PhD in Humanities and Social Sciences",
+      "Joint PhD with Sree Chitra Tirunal Institute (Biomedical Devices)",
+      "Joint PhD with CMC Vellore (Biomedical Devices)",
+      "Joint PhD with International Universities (Joint Degree Program)"
+    ],
+    "departments": [
+      "Department of Aerospace Engineering",
+      "Department of Applied Mechanics and Biomedical Engineering",
+      "Department of Biotechnology",
+      "Department of Chemical Engineering",
+      "Department of Chemistry",
+      "Department of Civil Engineering",
+      "Department of Computer Science and Engineering",
+      "Department of Data Science and Artificial Intelligence",
+      "Department of Electrical Engineering",
+      "Department of Engineering Design",
+      "Department of Humanities and Social Sciences",
+      "Department of Management Studies",
+      "Department of Mathematics",
+      "Department of Mechanical Engineering",
+      "Department of Metallurgical and Materials Engineering",
+      "Department of Ocean Engineering",
+      "Department of Physics",
+      "Department of Medical Sciences and Technology",
+      "School of Interdisciplinary Studies (SIDiS)",
+      "School of Sustainability",
+      "School of Innovation and Entrepreneurship"
+    ],
+    "sources_verified": [
+      "https://www.iitm.ac.in/academics/study-at-iitm/undergraduate-programmes",
+      "https://mtechadm.iitm.ac.in/pdfs/Mtech_IB_2026.pdf",
+      "https://research.iitm.ac.in/documents/Admission_Brochure_JUL_2026_V5.pdf",
+      "https://ugadmissions.iitm.ac.in/",
+      "https://code.iitm.ac.in/webmtech",
+      "https://www.iitm.ac.in/happenings/press-releases-and-coverages/iit-madras-launches-multiple-new-programmes-academic-year"
+    ]
+  },
+  "placements": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://www.shiksha.com/college/iit-madras-indian-institute-of-technology-adyar-chennai-3031/placement",
+      "https://www.careers360.com/university/indian-institute-of-technology-madras/placement",
+      "https://doms.iitm.ac.in/index.php/placement-2/placements-reports/",
+      "https://placement.iitm.ac.in/downloads/CPC_REPORT_2023_24.pdf"
+    ],
+    "placements": {
+      "year": "2026",
+      "highest_package": 430.0,
+      "average_package": 22.0,
+      "median_package": 19.6,
+      "package_currency": "LPA",
+      "placement_rate_percent": 80.0,
+      "total_students_placed": 1091,
+      "total_companies_visited": 300,
+      "graduate_outcomes_note": "Placement season 2025-26 is currently ongoing as of March 2026, with over 2,000 students and 300 companies registered."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2026",
+        "average_package": 22.0,
+        "employment_rate_percent": 80.0,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2025",
+        "average_package": 22.0,
+        "employment_rate_percent": 80.0,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2024",
+        "average_package": 21.48,
+        "employment_rate_percent": 85.0,
+        "package_currency": "LPA"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2024",
+        "male_placed": 845,
+        "female_placed": 246,
+        "male_percent": 77.45,
+        "female_percent": 22.55
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2024",
+        "sector": "Core Engineering",
+        "companies": [
+          "Bajaj Auto",
+          "Reliance",
+          "L&T"
+        ],
+        "percent": 43.0
+      },
+      {
+        "year": "2024",
+        "sector": "Software",
+        "companies": [
+          "Google",
+          "Microsoft",
+          "Amazon"
+        ],
+        "percent": 20.0
+      },
+      {
+        "year": "2024",
+        "sector": "Analytics/Finance/Consulting",
+        "companies": [
+          "JP Morgan Chase",
+          "EY India",
+          "Goldman Sachs"
+        ],
+        "percent": 10.0
+      }
+    ],
+    "top_recruiters": [
+      "Jane Street",
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Bajaj Auto Ltd",
+      "EY India",
+      "Reliance",
+      "TCS",
+      "Qualcomm",
+      "Texas Instruments"
+    ],
+    "placement_highlights": "IIT Madras recorded a historic highest package of INR 4.3 Crore PA from Jane Street during the 2024-25 season. The institute maintained a strong 80% placement rate for B.Tech students with an average package of 22 LPA, while the MBA program achieved 100% placement consistently."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://mtechadm.iitm.ac.in/pdfs/adm_fees.pdf",
+      "https://fees.iitm.ac.in/assets/circular/institute_fee_circular_jul_nov_2025.pdf",
+      "https://www.iitm.ac.in/academics/academic-services/fees",
+      "https://www.shiksha.com/college/iit-madras-indian-institute-of-technology-adyar-chennai-3031/fees"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 253417.0,
+        "total_course": 939000.0,
+        "currency": "INR"
+      },
+      "PG": {
+        "per_year": 103417.0,
+        "total_course": 182000.0,
+        "currency": "INR"
+      },
+      "hostel_per_year": 64000.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 253417.0,
+          "total_course": 939000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 103417.0,
+          "total_course": 182000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 64000.0
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 245000.0,
+          "total_course": 905000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 90917.0,
+          "total_course": 182000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 60000.0
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 215000.0,
+          "total_course": 905000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 49200.0,
+          "total_course": 115754.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 61500.0
+      }
+    ],
+    "fees_note": "IIT Madras B.Tech tuition fees are typically ₹1,00,000 per semester for General/OBC candidates, while M.Tech fees are lower at ₹25,000 per semester. SC/ST and PwD students receive a 100% tuition fee waiver. Total costs include one-time admission fees, refundable deposits, and recurring semester charges like establishment and medical fees.",
+    "scholarships_detail": [
+      {
+        "name": "Institute Merit-cum-Means (MCM) Scholarship",
+        "amount": 1000.0,
+        "currency_type": "INR",
+        "eligibility": "67% tuition fee waiver for students with family income between 1-5 Lakhs; full waiver below 1 Lakh",
+        "provider": "IIT Madras"
+      },
+      {
+        "name": "Inspire Scholarship",
+        "amount": 80000.0,
+        "currency_type": "INR",
+        "eligibility": "All students admitted to the BS plus MS programme",
+        "provider": "Department of Science and Technology, Govt of India"
+      },
+      {
+        "name": "Aditya Birla Scholarship",
+        "amount": 60000.0,
+        "currency_type": "INR",
+        "eligibility": "Top 20 students in JEE Advanced rank",
+        "provider": "Aditya Birla Group"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://www.iitm.ac.in/the-institute/about-iit-madras/nirf",
+      "https://acr.iitm.ac.in/unique-scholarships/",
+      "https://www.iitm.ac.in/campus-life/hostel-life",
+      "https://ge.iitm.ac.in/programs/student-inbound/scholarships"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Campus Area",
+        "details": "617-acre lush green residential campus in Chennai."
+      },
+      {
+        "facility": "Research Park",
+        "details": "First university-based research park in India, fostering industry-academia collaboration."
+      },
+      {
+        "facility": "Sports Facilities",
+        "details": "Includes an Olympic-standard swimming pool, cricket stadium, football ground, and multiple indoor courts."
+      },
+      {
+        "facility": "IT Infrastructure",
+        "details": "High-performance computing center with 10 petaflops capacity and 12,000 CPUs."
+      },
+      {
+        "facility": "Medical Services",
+        "details": "Institute hospital with specialists (cardiology, ortho, etc.) and Apollo pharmacy tie-up."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 10000,
+      "type": "Residential (20-22 hostels named after Indian rivers; separate blocks for male and female students)"
+    },
+    "library_details": {
+      "total_books": 200000,
+      "journals": 1000,
+      "e_resources": 500000,
+      "area_sqft": 40000.0
+    },
+    "transport_details": {
+      "buses": 10,
+      "routes": 2
+    },
+    "scholarships": [
+      {
+        "name": "Institute Merit-Cum-Means (MCM) Scholarship",
+        "amount": 133000.0,
+        "currency_type": "INR",
+        "eligibility": "Annual family income ≤ 4.5 Lakhs; top 25% of admitted students; maintain CGPA ≥ 5.0",
+        "provider": "IIT Madras",
+        "type": "merit/need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Saireddy Comprehensive Undergraduate Scholarship",
+        "amount": 300000.0,
+        "currency_type": "INR",
+        "eligibility": "Top rank in JEE Advanced; family income 5-8 Lakhs; B.Tech/Dual Degree",
+        "provider": "Alumni",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Never Settle Scholarship",
+        "amount": 200000.0,
+        "currency_type": "INR",
+        "eligibility": "B.Tech/Dual Degree (CS/EE); income 5-8 Lakhs; based on JEE Advanced rank",
+        "provider": "Private/Alumni",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Sriram Srinivasan Scholarship",
+        "amount": 200000.0,
+        "currency_type": "INR",
+        "eligibility": "JEE Advanced top rank; income 1-5.5 Lakhs; maintain CGPA ≥ 6.5",
+        "provider": "Alumni",
+        "type": "merit/need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Ram Shriram Merit Scholarship",
+        "amount": 150000.0,
+        "currency_type": "INR",
+        "eligibility": "32 fresh students; JEE Advanced rank; income < 8 Lakhs; maintain CGPA ≥ 6.5",
+        "provider": "Alumni",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Institute SC/ST Scholarship",
+        "amount": 3000.0,
+        "currency_type": "INR",
+        "eligibility": "SC/ST students; family income ≤ 4.5 Lakhs; includes free messing and pocket allowance",
+        "provider": "IIT Madras",
+        "type": "specific",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "ICCR Scholarship",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "International students; covers tuition and accommodation",
+        "provider": "Government (ICCR)",
+        "type": "international",
+        "application_deadline": "N/A"
+      }
+    ]
+  },
+  "_metadata": {
+    "scraped_at": "2026-03-29T06:50:28.874601",
+    "total_time": 43.556891679763794,
+    "errors": {},
+    "validation_warnings": [],
+    "college_name": "N/A",
+    "country": "N/A",
+    "schema_version": "v1.1"
+  }
+}

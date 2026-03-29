@@ -153,7 +153,7 @@ def transform_data_for_frontend(data: Dict[str, Any]) -> Dict[str, Any]:
             "summary": basic.get("summary", ""),
             "rankings": basic.get("rankings", {}),
             "accreditations": basic.get("accreditations", []),
-            "affiliations": basic.get("affiliations", ""),
+            "affiliations": basic.get("affiliations", "").split(", ") if basic.get("affiliations") else [],
             "recognition": basic.get("recognition", ""),
             "campus_area": basic.get("campus_area", ""),
             "contact_info": basic.get("contact_info", {}),
@@ -162,7 +162,8 @@ def transform_data_for_frontend(data: Dict[str, Any]) -> Dict[str, Any]:
         # Student statistics detail
         if "student_statistics" in basic:
             student_stats = basic["student_statistics"]
-            transformed["student_statistics_detail"] = [{
+            transformed["student_statistics_detail"] = student_stats
+            transformed["student_statistics"] = [{
                 "category": "Total students",
                 "value": student_stats.get("total_enrollment", 0)
             }, {
@@ -197,7 +198,7 @@ def transform_data_for_frontend(data: Dict[str, Any]) -> Dict[str, Any]:
             # Add faculty staff for pie chart
             if "faculty_staff" in basic:
                 faculty = basic["faculty_staff"]
-                transformed["student_statistics_detail"].extend([
+                transformed["student_statistics"].extend([
                     {
                         "category": "Faculty",
                         "value": faculty.get("total_faculty", 0)
@@ -210,7 +211,7 @@ def transform_data_for_frontend(data: Dict[str, Any]) -> Dict[str, Any]:
             
             # Add international students if available
             if "student_history" in basic and "international_students" in basic["student_history"]:
-                transformed["student_statistics_detail"].append({
+                transformed["student_statistics"].append({
                     "category": "International students",
                     "value": basic["student_history"]["international_students"]
                 })
@@ -220,7 +221,7 @@ def transform_data_for_frontend(data: Dict[str, Any]) -> Dict[str, Any]:
                 placements = data["placements"]
                 if "placements" in placements:
                     placement_data = placements["placements"]
-                    transformed["student_statistics_detail"].extend([
+                    transformed["student_statistics"].extend([
                         {
                             "category": "Total students placed",
                             "value": placement_data.get("total_students_placed", 0)
