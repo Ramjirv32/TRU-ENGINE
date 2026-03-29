@@ -1,0 +1,375 @@
+{
+  "basic_info": {
+    "college_name": "Stanford University",
+    "short_name": "Stanford",
+    "established": 1885,
+    "institution_type": "Private Research University",
+    "country": "United States",
+    "location": "Stanford, California",
+    "website": "https://www.stanford.edu",
+    "about": "Stanford University is a premier private research institution known for its proximity to Silicon Valley and its significant contributions to technology and the arts. It is recognized globally for its academic excellence, selectivity, and innovative research across seven schools.",
+    "summary": "Located in the heart of Northern California's Silicon Valley, Stanford is one of the world's leading teaching and research institutions. Since its opening in 1891, it has been dedicated to finding solutions to big challenges and preparing students for leadership in a complex world.",
+    "rankings": {
+      "nirf_latest": -1,
+      "nirf_previous": -1,
+      "qs_world": 3,
+      "national_rank": 4,
+      "state_rank": 1,
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 17314,
+      "ug_students": 7289,
+      "pg_students": 10025,
+      "phd_students": 4500,
+      "annual_intake": 1704,
+      "male_percent": 49.0,
+      "female_percent": 51.0,
+      "total_ug_courses": 69,
+      "total_pg_courses": 200,
+      "total_phd_courses": 90,
+      "guessed_data": true
+    },
+    "faculty_staff": {
+      "total_faculty": 2402,
+      "student_faculty_ratio": 6.0,
+      "phd_faculty_percent": 99.0,
+      "guessed_data": false
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "latest_year": -1,
+        "previous_year": -1,
+        "year_before_previous": -1
+      },
+      "international_students": 2470,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 7350,
+          "pg_students": 10150,
+          "phd_students": 4550,
+          "international_students": 2500,
+          "domestic_students": 15000,
+          "male_students": 8575,
+          "female_students": 8925
+        },
+        {
+          "year": "2025",
+          "ug_students": 7289,
+          "pg_students": 10025,
+          "phd_students": 4500,
+          "international_students": 2470,
+          "domestic_students": 14844,
+          "male_students": 8484,
+          "female_students": 8830
+        },
+        {
+          "year": "2024",
+          "ug_students": 7904,
+          "pg_students": 10236,
+          "phd_students": 4450,
+          "international_students": 2400,
+          "domestic_students": 15740,
+          "male_students": 8888,
+          "female_students": 9252
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "Western Association of Schools and Colleges (WASC)",
+        "grade": "Accredited",
+        "year": 2023
+      }
+    ],
+    "affiliations": "Association of American Universities (AAU), NCAA Division I FBS (ACC)",
+    "recognition": "Recognized as a 'Very High Research Activity' (R1) institution by the Carnegie Classification.",
+    "campus_area": "8,180 acres",
+    "contact_info": {
+      "phone": "+1 650-723-2300",
+      "email": "admission@stanford.edu",
+      "address": "450 Jane Stanford Way, Stanford, CA 94305, USA"
+    },
+    "sources_verified": [
+      "https://facts.stanford.edu/",
+      "https://irds.stanford.edu/data-findings/enrollment",
+      "https://www.usnews.com/best-colleges/stanford-university-1305",
+      "https://www.topuniversities.com"
+    ]
+  },
+  "programs": {
+    "ug_programs": [],
+    "pg_programs": [],
+    "phd_programs": [],
+    "departments": [],
+    "sources_verified": []
+  },
+  "placements": {
+    "guessed_data": false,
+    "data_year": "2025",
+    "sources": [
+      "https://www.gsb.stanford.edu/programs/mba/career-impact/employment-outcomes",
+      "https://poetsandquants.com/2025/12/16/stanford-mba-jobs-gsbers-total-pay-declines-for-a-2nd-straight-year/",
+      "https://www.clearadmit.com/2025/12/stanford-gsb-employment-report-mba-class-of-2025/"
+    ],
+    "placements": {
+      "year": "2025",
+      "highest_package": 250000.0,
+      "average_package": 190901.0,
+      "median_package": 185000.0,
+      "package_currency": "USD",
+      "placement_rate_percent": 81.0,
+      "total_students_placed": 218,
+      "total_companies_visited": -1,
+      "graduate_outcomes_note": "Placement rate reflects the percentage of job seekers who accepted an offer within three months of graduation. 16% of the class pursued entrepreneurship."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2026",
+        "average_package": 189010.0,
+        "employment_rate_percent": 81.0,
+        "package_currency": "USD"
+      },
+      {
+        "year": "2025",
+        "average_package": 190901.0,
+        "employment_rate_percent": 81.0,
+        "package_currency": "USD"
+      },
+      {
+        "year": "2024",
+        "average_package": 187504.0,
+        "employment_rate_percent": 80.0,
+        "package_currency": "USD"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2025",
+        "male_placed": -1,
+        "female_placed": -1,
+        "male_percent": 56.0,
+        "female_percent": 44.0
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2025",
+        "sector": "Technology",
+        "companies": [
+          "Apple",
+          "Meta",
+          "NVIDIA",
+          "Google"
+        ],
+        "percent": 35.0
+      },
+      {
+        "year": "2025",
+        "sector": "Finance",
+        "companies": [
+          "Goldman Sachs",
+          "Morgan Stanley"
+        ],
+        "percent": 33.0
+      },
+      {
+        "year": "2025",
+        "sector": "Consulting",
+        "companies": [
+          "McKinsey",
+          "BCG",
+          "Bain"
+        ],
+        "percent": 11.0
+      }
+    ],
+    "top_recruiters": [
+      "Google",
+      "Apple",
+      "Meta",
+      "Microsoft",
+      "NVIDIA",
+      "Amazon Web Services",
+      "OpenAI",
+      "Anthropic"
+    ],
+    "placement_highlights": "Stanford GSB's Class of 2025 saw a record median base salary of $185,000, maintaining stability despite a slight dip in total compensation due to lower performance bonuses. Technology reclaimed the top industry spot at 35%, followed closely by Finance at 33%, with a notable surge in AI-related roles."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://studentservices.stanford.edu/tuition-rates/2025-2026-undergraduate-tuition-rates",
+      "https://news.stanford.edu/stories/2025/02/stanford-sets-2025-26-tuition-rates",
+      "https://studentservices.stanford.edu/tuition-rates/2025-2026-graduate-and-professional-tuition-rates",
+      "https://rde.stanford.edu/dining-hospitality/dining-hall-meal-plans"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 67731.0,
+        "total_course": 270924.0,
+        "currency": "USD"
+      },
+      "PG": {
+        "per_year": 63540.0,
+        "total_course": 127080.0,
+        "currency": "USD"
+      },
+      "hostel_per_year": 22167.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 67731.0,
+          "total_course": 270924.0,
+          "currency": "USD"
+        },
+        "PG": {
+          "per_year": 63540.0,
+          "total_course": 127080.0,
+          "currency": "USD"
+        },
+        "hostel_per_year": 22167.0
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 65127.0,
+          "total_course": 260508.0,
+          "currency": "USD"
+        },
+        "PG": {
+          "per_year": 61095.0,
+          "total_course": 122190.0,
+          "currency": "USD"
+        },
+        "hostel_per_year": 21315.0
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 61731.0,
+          "total_course": 246924.0,
+          "currency": "USD"
+        },
+        "PG": {
+          "per_year": 58746.0,
+          "total_course": 117492.0,
+          "currency": "USD"
+        },
+        "hostel_per_year": 19922.0
+      }
+    ],
+    "fees_note": "Fees for 2025-26 reflect a 4% increase set by the Board of Trustees. Undergraduate tuition is a flat rate for 12-20 units, while Graduate fees vary significantly by program; the 'PG' figures represent general graduate studies (11-18 units). Total course costs are estimated based on typical 4-year UG and 2-year PG durations.",
+    "scholarships_detail": [
+      {
+        "name": "Stanford Need-Based Scholarship",
+        "amount": 74310.0,
+        "currency_type": "USD",
+        "eligibility": "Family income under $150,000 for tuition coverage; under $100,000 for tuition plus room and board.",
+        "provider": "Stanford University"
+      },
+      {
+        "name": "Athletic Scholarships",
+        "amount": -1.0,
+        "currency_type": "USD",
+        "eligibility": "Exceptional student-athletes recruited by Stanford coaching staff.",
+        "provider": "Stanford Department of Athletics"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://facts.stanford.edu/campus-life",
+      "https://facts.stanford.edu/research/stanford-libraries-and-resources",
+      "https://financialaid.stanford.edu/undergrad/types/index.html",
+      "https://housinginfo.stanford.edu/by-the-numbers",
+      "https://transportation.stanford.edu/about-us"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Academic Buildings",
+        "details": "The campus comprises approximately 630 buildings across 8,180 acres."
+      },
+      {
+        "facility": "Dining Services",
+        "details": "Residential & Dining Enterprises (R&DE) serves 25,000 meals daily across dining halls, Row houses, and retail locations."
+      },
+      {
+        "facility": "Athletic Facilities",
+        "details": "Extensive facilities including Stanford Stadium and multiple specialized centers for 36 varsity sports."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 14500,
+      "type": "Residential (Undergraduate & Graduate)"
+    },
+    "library_details": {
+      "total_books": 12000000,
+      "journals": 476790,
+      "e_resources": 3000000,
+      "area_sqft": 355000.0
+    },
+    "transport_details": {
+      "buses": 49,
+      "routes": 19
+    },
+    "scholarships": [
+      {
+        "name": "Stanford University Scholarship",
+        "amount": 74310.0,
+        "currency_type": "USD",
+        "eligibility": "Demonstrated financial need based on CSS Profile",
+        "provider": "Stanford University",
+        "type": "need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Knight-Hennessy Scholars",
+        "amount": -1.0,
+        "currency_type": "USD",
+        "eligibility": "Graduate students applying to any of Stanford's graduate programs",
+        "provider": "Knight-Hennessy Scholars Program",
+        "type": "merit",
+        "application_deadline": "October 2026"
+      },
+      {
+        "name": "Athletic Scholarships",
+        "amount": -1.0,
+        "currency_type": "USD",
+        "eligibility": "Outstanding athletic ability in varsity sports",
+        "provider": "Stanford Athletics",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Federal Pell Grant",
+        "amount": 7395.0,
+        "currency_type": "USD",
+        "eligibility": "US Citizens with exceptional financial need",
+        "provider": "Federal Government",
+        "type": "need",
+        "application_deadline": "June 30"
+      }
+    ]
+  },
+  "_metadata": {
+    "scraped_at": "2026-03-29T05:36:36.830700",
+    "total_time": 72.81895565986633,
+    "errors": {
+      "programs": "No reconstructed_markdown key in response"
+    },
+    "validation_warnings": [
+      "FIX: accreditations was a dict; converted to array."
+    ],
+    "college_name": "N/A",
+    "country": "N/A",
+    "schema_version": "v1.1"
+  }
+}

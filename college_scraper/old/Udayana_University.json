@@ -1,0 +1,499 @@
+{
+  "basic_info": {
+    "college_name": "Udayana University",
+    "short_name": "UNUD",
+    "established": 1962,
+    "institution_type": "Public University",
+    "country": "Indonesia",
+    "location": "Bali",
+    "website": "https://www.unud.ac.id",
+    "about": "Udayana University is a prominent public research institution based in Bali, Indonesia. Founded in 1962, it has grown from four initial departments to 16 faculties offering a wide range of undergraduate and postgraduate programs.",
+    "summary": "UNUD is recognized as one of Indonesia's leading universities, particularly noted for its medical sciences and its role as a hub for international students in Southeast Asia.",
+    "rankings": {
+      "nirf_latest": null,
+      "nirf_previous": null,
+      "qs_world": "1401+",
+      "national_rank": 30,
+      "state_rank": 1,
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 31236,
+      "ug_students": 27175,
+      "pg_students": 3374,
+      "phd_students": 687,
+      "annual_intake": 6500,
+      "male_percent": 44,
+      "female_percent": 56,
+      "total_ug_courses": 54,
+      "total_pg_courses": 42,
+      "total_phd_courses": 12,
+      "guessed_data": true
+    },
+    "faculty_staff": {
+      "total_faculty": 1836,
+      "student_faculty_ratio": 17,
+      "phd_faculty_percent": 45,
+      "guessed_data": true
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "2026": 31500,
+        "2025": 31236,
+        "2024": 30715
+      },
+      "international_students": 686,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 27400,
+          "pg_students": 3400,
+          "phd_students": 700,
+          "international_students": 720,
+          "domestic_students": 30780,
+          "male_students": 13860,
+          "female_students": 17640
+        },
+        {
+          "year": "2025",
+          "ug_students": 27175,
+          "pg_students": 3374,
+          "phd_students": 687,
+          "international_students": 686,
+          "domestic_students": 30550,
+          "male_students": 13744,
+          "female_students": 17492
+        },
+        {
+          "year": "2024",
+          "ug_students": 26722,
+          "pg_students": 3317,
+          "phd_students": 676,
+          "international_students": 650,
+          "domestic_students": 30065,
+          "male_students": 13514,
+          "female_students": 17201
+        }
+      ]
+    },
+    "accreditations": {
+      "body": "BAN-PT (National Accreditation Agency for Higher Education)",
+      "grade": "A (Unggul)",
+      "year": 2022
+    },
+    "affiliations": "Ministry of Education, Culture, Research, and Technology (Kemendikbudristek)",
+    "recognition": "Top 50 Promising Indonesian Universities",
+    "campus_area": "157 hectares",
+    "contact_info": {
+      "phone": "+62-361-701954",
+      "email": "info@unud.ac.id",
+      "address": "Jl. Raya Kampus UNUD, Jimbaran, Kec. Kuta Selatan, Kabupaten Badung, Bali 80361"
+    },
+    "sources_verified": [
+      "https://www.unud.ac.id/en/home/",
+      "https://www.topuniversities.com/universities/udayana-university",
+      "https://www.universityguru.com/university/udayana-university-badung",
+      "https://www.unirank.org/id/uni/udayana-university/"
+    ]
+  },
+  "programs": {
+    "ug_programs": [
+      "Accounting (International Undergraduate Program)",
+      "Accounting (Regular)",
+      "Agribusiness",
+      "Agricultural and Biosystem Engineering",
+      "Agricultural Industrial Technology",
+      "Agriculture",
+      "Agrotechnology",
+      "Animal Husbandry",
+      "Architecture (International Undergraduate Program)",
+      "Architecture (Regular)",
+      "Biology",
+      "Civil Engineering (International Undergraduate Program)",
+      "Civil Engineering (Regular)",
+      "Communication Sciences",
+      "Development Economics",
+      "Economics (International Undergraduate Program)",
+      "Economics (Regular)",
+      "Electrical Engineering",
+      "Environmental Engineering",
+      "Food Science and Technology",
+      "Indonesian Literature",
+      "Information Technology",
+      "International Relations",
+      "Landscape Architecture",
+      "Law (International Undergraduate Program)",
+      "Law Science (Regular)",
+      "Management (International Undergraduate Program)",
+      "Management (Regular)",
+      "Marine Science",
+      "Mechanical Engineering",
+      "Nursing Physiotherapy Education",
+      "Pharmacy (International Undergraduate Program)",
+      "Pharmacy (Regular)",
+      "Political Science",
+      "Psychology",
+      "Public Health",
+      "Sociology of Public Administration",
+      "Stomatology (Dentistry)",
+      "Taxation",
+      "Tourism (International Undergraduate Program)",
+      "Tourism Destination",
+      "Tourism Industry",
+      "Travel Industry",
+      "Veterinary Medicine",
+      "Water Resources Management"
+    ],
+    "pg_programs": [
+      "Magister Agribusiness",
+      "Magister Agricultural Biotechnology",
+      "Magister Agrotechnology",
+      "Magister Animal Husbandry",
+      "Magister Applied Chemistry",
+      "Magister Architectural Engineering",
+      "Magister Biology Science",
+      "Magister Biomedical Sciences",
+      "Magister Civil Engineering",
+      "Magister Cultural Studies",
+      "Magister Dryland",
+      "Magister Economics",
+      "Magister Electrical Engineering",
+      "Magister Environmental Science",
+      "Magister Ergonomic of Work Physiology",
+      "Magister Food Technology",
+      "Magister Health Law",
+      "Magister Hospital Administration",
+      "Magister Law Science",
+      "Magister Linguistics",
+      "Magister Management",
+      "Magister Mechanical Engineering",
+      "Magister Notary Science",
+      "Magister Public Health Sciences",
+      "Magister Sports Physiology",
+      "Magister Sustainable Finance and Development",
+      "Magister Tourism Study",
+      "Master Program In Veterinary",
+      "Professional Program in Accountancy",
+      "Professional Program in Architectural Professional",
+      "Professional Program in Engineering",
+      "Professional Program in Pharmacy (Pharmacist)"
+    ],
+    "phd_programs": [
+      "Doctoral Program in Agricultural Science",
+      "Doctoral Program in Animal Husbandry",
+      "Doctoral Program in Biomedical Sciences",
+      "Doctoral Program in Cultural Studies",
+      "Doctoral Program in Economics",
+      "Doctoral Program in Environmental Science",
+      "Doctoral Program in Law Science",
+      "Doctoral Program in Linguistics",
+      "Doctoral Program in Management",
+      "Doctoral Program in Medical Science",
+      "Doctoral Program in Natural Sciences",
+      "Doctoral Program in Tourism",
+      "Doctoral Program in Veterinary Science"
+    ],
+    "departments": [
+      "Faculty of Agricultural Technology",
+      "Faculty of Agriculture",
+      "Faculty of Animal Husbandry",
+      "Faculty of Cultural Science",
+      "Faculty of Economics and Business",
+      "Faculty of Engineering",
+      "Faculty of Law",
+      "Faculty of Marine Science and Fisheries",
+      "Faculty of Mathematics and Natural Sciences",
+      "Faculty of Medicine",
+      "Faculty of Social and Political Sciences",
+      "Faculty of Tourism",
+      "Faculty of Veterinary Medicine",
+      "Postgraduate Program (Interdisciplinary)"
+    ],
+    "sources_verified": [
+      "https://international.unud.ac.id/pages/faculties-and-study-programs",
+      "https://pps.unud.ac.id/pages/study-program-brochure",
+      "https://fk.unud.ac.id/pages/master-program",
+      "https://fmipa.unud.ac.id/posts/information-on-student-admissions-for-professional-masters-and-doctoral-programs-at-unud-even-semester-2025-2026",
+      "https://www.whed.net/institutions/IAU-019285"
+    ]
+  },
+  "placements": {
+    "guessed_data": true,
+    "data_year": "2026",
+    "sources": [
+      "https://cdc.unud.ac.id/",
+      "https://fmipa.unud.ac.id/posts/tracer-study-2025-info",
+      "https://fl.unud.ac.id/pages/tracer-study-for-master-of-law-study-program",
+      "https://www.linkedin.com/pulse/recalibrating-graduate-compensation-indonesia-sheikh-salim-ku3cc"
+    ],
+    "placements": {
+      "year": "2026",
+      "highest_package": 120000000,
+      "average_package": 62400000,
+      "median_package": 52200000,
+      "package_currency": "IDR",
+      "placement_rate_percent": 72.5,
+      "total_students_placed": 4500,
+      "total_companies_visited": 180,
+      "graduate_outcomes_note": "Projected data based on ongoing 2026 Tracer Study activities and historical growth in Bali's service and tourism sectors."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2026",
+        "average_package": 62400000,
+        "employment_rate_percent": 72.5,
+        "package_currency": "IDR"
+      },
+      {
+        "year": "2025",
+        "average_package": 58800000,
+        "employment_rate_percent": 74.2,
+        "package_currency": "IDR"
+      },
+      {
+        "year": "2024",
+        "average_package": 55200000,
+        "employment_rate_percent": 76.8,
+        "package_currency": "IDR"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2026",
+        "male_placed": 2100,
+        "female_placed": 2400,
+        "male_percent": 46.7,
+        "female_percent": 53.3
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2026",
+        "sector": "Tourism & Hospitality",
+        "companies": [
+          "Marriott International",
+          "Ayana Resort",
+          "The Ritz-Carlton Bali"
+        ],
+        "percent": 35.0
+      },
+      {
+        "year": "2026",
+        "sector": "Banking & Finance",
+        "companies": [
+          "Bank Mandiri",
+          "BCA",
+          "BNI"
+        ],
+        "percent": 20.0
+      },
+      {
+        "year": "2026",
+        "sector": "Technology & Services",
+        "companies": [
+          "Gojek",
+          "Traveloka",
+          "Shopee"
+        ],
+        "percent": 15.0
+      }
+    ],
+    "top_recruiters": [
+      "Bank Mandiri",
+      "Bank Central Asia (BCA)",
+      "Marriott International",
+      "Pertamina",
+      "Gojek",
+      "PwC Indonesia"
+    ],
+    "placement_highlights": "Udayana University maintains a strong regional presence with high absorption in the tourism and financial sectors. Recent tracer studies indicate that approximately 77% of graduates experience career improvement within one year of graduation. The university is actively expanding its Career Development Center (CDC) to bridge the gap between academic output and industry needs in Bali's evolving economy."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://www.unud.ac.id/en/cost-of-education/",
+      "https://beyondabroad.com/udayana-university/",
+      "https://www.unipage.net/en/17949/udayana_university",
+      "https://fmipa.unud.ac.id/posts/information-on-payment-of-tuition-fees-academic-leave-for-even-semester-of-academic-year-20252026",
+      "https://www.detik.com/bali/berita/d-7733649/besaran-ukt-di-universitas-udayana-bali-terbaru-lengkap-tiap-prodi"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 5000.0,
+        "total_course": 20000.0,
+        "currency": "USD"
+      },
+      "PG": {
+        "per_year": 5000.0,
+        "total_course": 10000.0,
+        "currency": "USD"
+      },
+      "hostel_per_year": 3800.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 5400.0,
+          "total_course": 21600.0,
+          "currency": "USD"
+        },
+        "PG": {
+          "per_year": 5400.0,
+          "total_course": 10800.0,
+          "currency": "USD"
+        },
+        "hostel_per_year": 3800.0
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 5000.0,
+          "total_course": 20000.0,
+          "currency": "USD"
+        },
+        "PG": {
+          "per_year": 5000.0,
+          "total_course": 10000.0,
+          "currency": "USD"
+        },
+        "hostel_per_year": 3700.0
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 5000.0,
+          "total_course": 20000.0,
+          "currency": "USD"
+        },
+        "PG": {
+          "per_year": 5000.0,
+          "total_course": 10000.0,
+          "currency": "USD"
+        },
+        "hostel_per_year": 3700.0
+      }
+    ],
+    "fees_note": "Udayana University uses the Single Tuition Fee (UKT) system for domestic students, while international students are typically charged a flat annual rate starting around $5,000 USD. For 2026, semester-based international programs are cited at approximately 42,860,348 IDR (~$2,700 USD) per semester. Costs vary by faculty, with medical programs being the most expensive.",
+    "scholarships_detail": [
+      {
+        "name": "KIP Kuliah Scholarship",
+        "amount": 0.0,
+        "currency_type": "IDR",
+        "eligibility": "Indonesian students from low-income families with high academic potential",
+        "provider": "Indonesian Ministry of Education"
+      },
+      {
+        "name": "Darmasiswa Scholarship",
+        "amount": 0.0,
+        "currency_type": "IDR",
+        "eligibility": "International students for non-degree Indonesian language and culture programs",
+        "provider": "Indonesian Government"
+      },
+      {
+        "name": "KNB Scholarship (Kemitraan Negara Berkembang)",
+        "amount": 0.0,
+        "currency_type": "IDR",
+        "eligibility": "Developing country students pursuing Master's or Doctoral degrees",
+        "provider": "Indonesian Ministry of Education"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://www.unud.ac.id/en/home/",
+      "https://s3kedokteran.unud.ac.id/pages/facilities-and-infrastructure",
+      "https://fk.unud.ac.id/pages/supporting-facilities",
+      "\n\n\n\nhttps://smapse.com/udayana-university-udayana-university/\n\n\n\n",
+      "https://www.studiesnetwork.com/en/auslandssemester-bali/udayana-university",
+      "https://international.unud.ac.id/agenda"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Campuses",
+        "details": "Consists of three main locations: Bukit Jimbaran (central campus), Sudirman Campus (Denpasar), and Nias Island Campus (Faculty of Cultural Sciences)."
+      },
+      {
+        "facility": "Lecture Rooms",
+        "details": "Modern tropical campus design equipped with Wi-Fi, air conditioning, and projectors for undergraduate and graduate classes."
+      },
+      {
+        "facility": "Medical Faculty Facilities",
+        "details": "Includes a parking building, green open spaces, disability access pathways, cafeteria, and Computer Based Test (CBT) centers."
+      },
+      {
+        "facility": "Global Development Learning Network (GDLN)",
+        "details": "Located at Sudirman Campus, providing ICT infrastructure for distance learning and international conferences."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 362,
+      "type": "Student Dormitories (Asrama) and Rusunawa"
+    },
+    "library_details": {
+      "total_books": null,
+      "journals": null,
+      "e_resources": null,
+      "area_sqft": null
+    },
+    "transport_details": {
+      "buses": null,
+      "routes": null
+    },
+    "scholarships": [
+      {
+        "name": "KIP Kuliah (Kartu Indonesia Pintar)",
+        "amount": null,
+        "currency_type": "IDR",
+        "eligibility": "Indonesian citizens from low-income families with high academic potential.",
+        "provider": "Indonesian Government",
+        "type": "need",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "Domestic Doctoral Completion Scholarship 2025",
+        "amount": null,
+        "currency_type": "IDR",
+        "eligibility": "Doctoral students in the final stages of their study program.",
+        "provider": "Ministry of Higher Education, Science, and Technology",
+        "type": "merit",
+        "application_deadline": "2025-10-26"
+      },
+      {
+        "name": "Kemitraan Negara Berkembang (KNB) Scholarship",
+        "amount": null,
+        "currency_type": "IDR",
+        "eligibility": "International students from developing countries for Master's and Undergraduate degrees.",
+        "provider": "Indonesian Ministry of Education",
+        "type": "specific",
+        "application_deadline": "2025-03-07"
+      },
+      {
+        "name": "Udayana International Program Scholarships",
+        "amount": null,
+        "currency_type": "IDR",
+        "eligibility": "International students; may cover tuition fees, living expenses, or research funding.",
+        "provider": "Udayana University",
+        "type": "merit/need",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "PSU Pattani Student Mobility Program 2026",
+        "amount": null,
+        "currency_type": "IDR",
+        "eligibility": "Udayana University students for exchange programs to Prince of Songkla University, Thailand.",
+        "provider": "Internal University Selection",
+        "type": "merit",
+        "application_deadline": "2026-03-02"
+      }
+    ]
+  },
+  "_metadata": {
+    "total_time": 54.431498765945435,
+    "errors": {}
+  }
+}
