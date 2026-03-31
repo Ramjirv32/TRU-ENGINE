@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loading {
+  display: none;
+}
+
+.loading.show {
+  display: inline-block;
+}
+
+.results {
+  max-height: 400px;
+  overflow-y: auto;
+}
