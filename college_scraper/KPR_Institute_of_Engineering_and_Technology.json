@@ -1,0 +1,505 @@
+{
+  "basic_info": {
+    "college_name": "KPR Institute of Engineering and Technology",
+    "short_name": "KPRIET",
+    "established": 2009,
+    "institution_type": "Autonomous Engineering College",
+    "country": "India",
+    "location": "Coimbatore, Tamil Nadu",
+    "website": "https://www.kpriet.ac.in",
+    "about": "KPR Institute of Engineering and Technology (KPRIET) is a premier autonomous institution in Coimbatore, established by the KPR Group. It is dedicated to providing quality engineering education and fostering innovation through industry-driven learning and research.",
+    "summary": "KPRIET is an AICTE-approved, NAAC 'A' grade accredited institution affiliated with Anna University. Known for its strong placement record and modern 66-acre campus, it offers diverse UG, PG, and Doctoral programs in engineering and technology.",
+    "rankings": {
+      "nirf_latest": "101-150 (Engineering, 2025)",
+      "nirf_previous": "101-150 (Engineering, 2024)",
+      "qs_world": "Not Ranked",
+      "national_rank": "101-150 (NIRF Engineering 2025)",
+      "state_rank": "14 (Tamil Nadu Engineering, 2025)",
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 3800,
+      "ug_students": 3400,
+      "pg_students": 150,
+      "phd_students": 250,
+      "annual_intake": 912,
+      "male_percent": 65,
+      "female_percent": 35,
+      "total_ug_courses": 12,
+      "total_pg_courses": 4,
+      "total_phd_courses": 10,
+      "guessed_data": true
+    },
+    "faculty_staff": {
+      "total_faculty": 328,
+      "student_faculty_ratio": "1:10",
+      "phd_faculty_percent": 50,
+      "guessed_data": false
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "2026": 3800,
+        "2025": 3650,
+        "2024": 3500
+      },
+      "international_students": 15,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 3400,
+          "pg_students": 150,
+          "phd_students": 250,
+          "international_students": 15,
+          "domestic_students": 3785,
+          "male_students": 2470,
+          "female_students": 1330
+        },
+        {
+          "year": "2025",
+          "ug_students": 3250,
+          "pg_students": 160,
+          "phd_students": 240,
+          "international_students": 12,
+          "domestic_students": 3638,
+          "male_students": 2372,
+          "female_students": 1278
+        },
+        {
+          "year": "2024",
+          "ug_students": 3100,
+          "pg_students": 170,
+          "phd_students": 230,
+          "international_students": 10,
+          "domestic_students": 3490,
+          "male_students": 2275,
+          "female_students": 1225
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "NAAC",
+        "grade": "A",
+        "year": 2025
+      },
+      {
+        "body": "NBA",
+        "grade": "Accredited",
+        "year": 2024
+      }
+    ],
+    "affiliations": "Anna University, Chennai",
+    "recognition": "UGC, AICTE",
+    "campus_area": "66 Acres",
+    "contact_info": {
+      "phone": "+91 422 2635600",
+      "email": "info@kpriet.ac.in",
+      "address": "Arasur, Coimbatore, Tamil Nadu 641407, India"
+    },
+    "sources_verified": [
+      "https://www.kpriet.ac.in/accreditation/nirf",
+      "https://www.shiksha.com/college/kpr-institute-of-engineering-and-technology-coimbatore-49403/ranking",
+      "https://collegedunia.com/college/13939-kpr-institute-of-engineering-and-technology-kpriet-coimbatore/ranking",
+      "https://www.careers360.com/colleges/kpr-institute-of-engineering-and-technology-coimbatore"
+    ]
+  },
+  "programs": {
+    "ug_programs": [
+      "B.E. Artificial Intelligence and Machine Learning",
+      "B.E. Biomedical Engineering",
+      "B.E. Civil Engineering",
+      "B.E. Computer Science and Engineering",
+      "B.E. Computer Science and Engineering (Cyber Security)",
+      "B.E. Electrical and Electronics Engineering",
+      "B.E. Electronics and Communication Engineering",
+      "B.E. Mechanical Engineering",
+      "B.E. Mechatronics Engineering",
+      "B.Tech. Artificial Intelligence and Data Science",
+      "B.Tech. Chemical Engineering",
+      "B.Tech. Computer Science and Business Systems",
+      "B.Tech. Information Technology"
+    ],
+    "pg_programs": [
+      "M.E. CAD / CAM",
+      "M.E. Computer Science and Engineering",
+      "M.E. Structural Engineering",
+      "M.E. VLSI Design",
+      "M.E. Data Sciences",
+      "Master of Business Administration (MBA)"
+    ],
+    "phd_programs": [
+      "Ph.D. Biomedical Engineering",
+      "Ph.D. Chemical Engineering",
+      "Ph.D. Chemistry",
+      "Ph.D. Civil Engineering",
+      "Ph.D. Computer Science and Engineering",
+      "Ph.D. Electrical and Electronics Engineering",
+      "Ph.D. Electronics and Communication Engineering",
+      "Ph.D. Mathematics",
+      "Ph.D. Mechanical Engineering",
+      "Ph.D. Physics"
+    ],
+    "departments": [
+      "Department of Artificial Intelligence and Data Science",
+      "Department of Biomedical Engineering",
+      "Department of Chemical Engineering",
+      "Department of Civil Engineering",
+      "Department of Computer Science and Engineering",
+      "Department of Electrical and Electronics Engineering",
+      "Department of Electronics and Communication Engineering",
+      "Department of Information Technology",
+      "Department of Mechanical Engineering",
+      "Department of Mechatronics Engineering",
+      "Department of Chemistry",
+      "Department of Mathematics",
+      "Department of Physics",
+      "Department of English",
+      "School of Business"
+    ],
+    "sources_verified": [
+      "https://www.kpriet.ac.in/admissions",
+      "https://www.kpriet.ac.in/ug-course",
+      "https://www.kpriet.ac.in/pg-course",
+      "https://www.kpriet.ac.in/study-at-kpriet",
+      "https://www.kpriet.edu.in/asset/frontend/pdf/accreditation/aicte-au-approval/AU-Affiliation%20Order%202025-26.pdf",
+      "https://www.careers360.com/colleges/kpr-institute-of-engineering-and-technology-coimbatore/courses"
+    ]
+  },
+  "placements": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://www.kpriet.ac.in/placement",
+      "https://www.careers360.com/colleges/kpr-institute-of-engineering-and-technology-coimbatore/placement",
+      "https://www.linkedin.com/posts/kprietonline_kpriet-placements-careersuccess-activity-7431980578754842624-kdMC",
+      "https://www.shiksha.com/college/kpr-institute-of-engineering-and-technology-coimbatore-49403/placement"
+    ],
+    "placements": {
+      "year": "2026",
+      "highest_package": 51.0,
+      "average_package": 6.5,
+      "median_package": 6.0,
+      "package_currency": "LPA",
+      "placement_rate_percent": 85.22,
+      "total_students_placed": 854,
+      "total_companies_visited": 105,
+      "graduate_outcomes_note": "Data for 2026 is based on partial reports as of early 2026. The highest package reached 51 LPA by January 2026."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2026",
+        "average_package": 6.5,
+        "employment_rate_percent": 85.22,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2025",
+        "average_package": 5.8,
+        "employment_rate_percent": 90.2,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2024",
+        "average_package": 5.2,
+        "employment_rate_percent": 93.0,
+        "package_currency": "LPA"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2024",
+        "male_placed": 540,
+        "female_placed": 362,
+        "male_percent": 59.87,
+        "female_percent": 40.13
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2024",
+        "sector": "IT & Software",
+        "companies": [
+          "TCS",
+          "Wipro",
+          "Infosys",
+          "Cognizant",
+          "Amazon"
+        ],
+        "percent": 48.7
+      },
+      {
+        "year": "2024",
+        "sector": "Core Engineering & Non-IT",
+        "companies": [
+          "L&T",
+          "Hyundai",
+          "Ashok Leyland",
+          "Titan"
+        ],
+        "percent": 51.3
+      }
+    ],
+    "top_recruiters": [
+      "Amazon",
+      "Zoho",
+      "TCS",
+      "Wipro",
+      "Infosys",
+      "Cognizant",
+      "Tech Mahindra",
+      "HCL Technologies",
+      "Virtusa",
+      "Accenture"
+    ],
+    "placement_highlights": "KPR Institute of Engineering and Technology (KPRIET) has maintained a consistent placement record with over 90% placement rates in 2024 and 2025. The institution saw a significant jump in its highest package to 54 LPA in 2024, with early 2026 reports already showing a peak of 51 LPA. Median salaries have steadily improved from 4 LPA in 2024 to an estimated 6 LPA in the ongoing 2026 drive."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://collegedunia.com/college/13939-kpr-institute-of-engineering-and-technology-kpriet-coimbatore/courses-fees",
+      "https://www.shiksha.com/college/kpr-institute-of-engineering-and-technology-coimbatore-49403/fees",
+      "https://www.careers360.com/colleges/kpr-institute-of-engineering-and-technology-coimbatore/fees"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 97000,
+        "total_course": 388000,
+        "currency": "INR"
+      },
+      "PG": {
+        "per_year": 50000,
+        "total_course": 100000,
+        "currency": "INR"
+      },
+      "PhD": {
+        "per_year": 20000,
+        "total_course": 60000,
+        "currency": "INR"
+      },
+      "hostel_per_year": 70000
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 97000,
+          "total_course": 388000,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 50000,
+          "total_course": 100000,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 20000,
+          "total_course": 60000,
+          "currency": "INR"
+        },
+        "hostel_per_year": 70000
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 96900,
+          "total_course": 387600,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 50000,
+          "total_course": 100000,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 20000,
+          "total_course": 60000,
+          "currency": "INR"
+        },
+        "hostel_per_year": 65000
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 96900,
+          "total_course": 387600,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 50000,
+          "total_course": 100000,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": -1,
+          "total_course": -1,
+          "currency": "INR"
+        },
+        "hostel_per_year": 60000
+      }
+    ],
+    "fees_note": "The tuition fee for UG programs is approximately \u20b996,900\u2013\u20b997,000 per year for general counselling seats, while management quota fees can reach up to \u20b91,60,000 annually. Hostel charges vary by room type, typically ranging from \u20b965,000 to \u20b91,00,000 per year including mess charges.",
+    "scholarships_detail": [
+      {
+        "name": "KPRIET Merit Scholarship",
+        "amount": 100000,
+        "currency_type": "INR",
+        "eligibility": "Cut-off above 195 in Higher Secondary exams",
+        "provider": "KPR Institute of Engineering and Technology"
+      },
+      {
+        "name": "First Graduate Scholarship",
+        "amount": 27500,
+        "currency_type": "INR",
+        "eligibility": "First graduate in the family through TNEA counselling",
+        "provider": "Government of Tamil Nadu"
+      },
+      {
+        "name": "NSP (PM-USP) Yojana",
+        "amount": 82000,
+        "currency_type": "INR",
+        "eligibility": "80% in Class 12 and parental income \u2264 \u20b94.5 Lakhs",
+        "provider": "National Scholarship Portal"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://www.kpriet.ac.in/facility",
+      "https://kpriet.ac.in/facts-and-figures",
+      "https://www.kpriet.ac.in/scholarship",
+      "https://www.shiksha.com/college/kpr-institute-of-engineering-and-technology-coimbatore-49403/scholarships",
+      "https://www.kpriet.ac.in/research/facilities"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Campus Area",
+        "details": "270,009 sq.m total campus area with a built-up area of 83,758 sq.m."
+      },
+      {
+        "facility": "Laboratories",
+        "details": "54 laboratories established with infrastructure for technical skill grooming."
+      },
+      {
+        "facility": "Sports Complex",
+        "details": "Facilities include 4 badminton courts, 2 basketball courts, 2 ball badminton courts, 1 football field, 2 handball courts, 2 kho-kho courts, 2 tennis courts, and 2 volleyball courts."
+      },
+      {
+        "facility": "Research Centers",
+        "details": "Equipped with 3D printers, Electrospinning, X-Ray Diffractometer (XRD), and Atomic Absorption Spectrophotometer."
+      },
+      {
+        "facility": "Sustainability",
+        "details": "16 kV Solar Panels, Sewage Treatment Plant, and 13 Rainwater Harvesting systems."
+      },
+      {
+        "facility": "Incubation Centre",
+        "details": "KPRIET Incubation Centre (KIC) focused on ICT and Manufacturing startups."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 5000,
+      "type": "Separate blocks for Boys (5 hostels, 13,832 sq.m) and Girls (3 hostels, 8,363.2 sq.m)"
+    },
+    "library_details": {
+      "total_books": 24157,
+      "journals": 0,
+      "e_resources": 9300,
+      "area_sqft": 0.0
+    },
+    "transport_details": {
+      "buses": 0,
+      "routes": 0
+    },
+    "scholarships": [
+      {
+        "name": "KPR Merit Scholarship (100% Waiver)",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "Cut-off score between 200-190",
+        "provider": "KPR Institute of Engineering and Technology",
+        "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "KPR Merit Scholarship (75% Waiver)",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "Cut-off score between 189.75-180",
+        "provider": "KPR Institute of Engineering and Technology",
+        "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "KPR Merit Scholarship (50% Waiver)",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "Cut-off score between 179.75-170",
+        "provider": "KPR Institute of Engineering and Technology",
+        "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "KPR Merit Scholarship (25% Waiver)",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "Cut-off score between 169.75-160",
+        "provider": "KPR Institute of Engineering and Technology",
+        "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "JEE Qualifying Scholarship",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "JEE Qualifying Score (100% Tuition Fee Waiver)",
+        "provider": "KPR Institute of Engineering and Technology",
+        "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "Sports Scholarship (International/National)",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "International/National level achievement (100% Tuition, Transport/Hostel)",
+        "provider": "KPR Institute of Engineering and Technology",
+        "type": "specific",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "Sports Scholarship (State Level)",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "State level achievement (100% Tuition Fee Waiver)",
+        "provider": "KPR Institute of Engineering and Technology",
+        "type": "specific",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "AICTE Yashasvi Scholarship",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "As per AICTE guidelines",
+        "provider": "AICTE",
+        "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "PM Vidyalakshmi Scheme",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "Meritorious students seeking education loans",
+        "provider": "Government of India",
+        "type": "need",
+        "application_deadline": "NA"
+      }
+    ]
+  },
+  "_metadata": {
+    "total_time": 0.9083044528961182,
+    "errors": {}
+  }
+}

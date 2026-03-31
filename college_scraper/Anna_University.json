@@ -7,33 +7,33 @@
     "country": "India",
     "location": "Chennai, Tamil Nadu",
     "website": "https://www.annauniv.edu",
-    "about": "Anna University was established on 4th September 1978 as a unitary type of University, integrating four well-known technical institutions in the city of Madras. It offers higher education in Engineering, Technology, Architecture, and Applied Sciences.",
-    "summary": "A premier technical university in India, Anna University is a hub for engineering education and research. It governs over 400 affiliated colleges across Tamil Nadu while maintaining four prestigious constituent campuses in Chennai: CEG, ACT, SAP, and MIT.",
+    "about": "Anna University is a premier technical university in India, established as a unitary type of university. It integrates four well-known technical institutions in Chennai: the College of Engineering (Guindy), the Alagappa College of Technology, the Madras Institute of Technology, and the School of Architecture and Planning.",
+    "summary": "Consistently ranked among the top engineering and technology institutions in India, Anna University serves as an affiliating body for over 400 engineering colleges in Tamil Nadu while maintaining high research and academic standards across its four main campuses.",
     "rankings": {
       "nirf_latest": 29,
       "nirf_previous": 20,
       "qs_world": 465,
-      "national_rank": 2,
-      "state_rank": 1,
+      "national_rank": 20,
+      "state_rank": 2,
       "guessed_data": false
     },
     "student_statistics": {
       "total_enrollment": 16007,
-      "ug_students": 9197,
-      "pg_students": 4549,
-      "phd_students": 2261,
+      "ug_students": 11049,
+      "pg_students": 4455,
+      "phd_students": 2828,
       "annual_intake": 4257,
-      "male_percent": 61,
-      "female_percent": 39,
+      "male_percent": 59,
+      "female_percent": 41,
       "total_ug_courses": 29,
       "total_pg_courses": 90,
-      "total_phd_courses": 8,
+      "total_phd_courses": 1,
       "guessed_data": false
     },
     "faculty_staff": {
       "total_faculty": 893,
-      "student_faculty_ratio": 15,
-      "phd_faculty_percent": 92,
+      "student_faculty_ratio": 12.1,
+      "phd_faculty_percent": 85,
       "guessed_data": true
     },
     "student_history": {
@@ -42,48 +42,50 @@
         "2025": 16007,
         "2024": 15850
       },
-      "international_students": 81,
+      "international_students": 161,
       "guessed_data": true,
       "categorywise_student_comparison_last_3_years": [
         {
           "year": "2026",
-          "ug_students": 9400,
-          "pg_students": 4700,
-          "phd_students": 2400,
-          "international_students": 90,
-          "domestic_students": 16410,
-          "male_students": 10065,
-          "female_students": 6435
+          "ug_students": 11200,
+          "pg_students": 4600,
+          "phd_students": 3000,
+          "international_students": 200,
+          "domestic_students": 15800,
+          "male_students": 9735,
+          "female_students": 6765
         },
         {
           "year": "2025",
-          "ug_students": 9197,
-          "pg_students": 4549,
-          "phd_students": 2261,
-          "international_students": 81,
-          "domestic_students": 15926,
-          "male_students": 9764,
-          "female_students": 6243
+          "ug_students": 11049,
+          "pg_students": 4455,
+          "phd_students": 2828,
+          "international_students": 161,
+          "domestic_students": 15846,
+          "male_students": 9444,
+          "female_students": 6563
         },
         {
           "year": "2024",
-          "ug_students": 9050,
-          "pg_students": 4450,
-          "phd_students": 2150,
-          "international_students": 75,
-          "domestic_students": 15775,
-          "male_students": 9668,
-          "female_students": 6182
+          "ug_students": 10900,
+          "pg_students": 4400,
+          "phd_students": 2750,
+          "international_students": 93,
+          "domestic_students": 15757,
+          "male_students": 9351,
+          "female_students": 6499
         }
       ]
     },
-    "accreditations": {
-      "body": "NAAC",
-      "grade": "A++",
-      "year": 2023
-    },
-    "affiliations": "Directly governs over 400 engineering colleges in Tamil Nadu.",
-    "recognition": "UGC, AICTE",
+    "accreditations": [
+      {
+        "body": "NAAC",
+        "grade": "A++",
+        "year": 2023
+      }
+    ],
+    "affiliations": "Affiliating university for over 480 engineering colleges in Tamil Nadu",
+    "recognition": "University with Potential for Excellence (UPE) by UGC",
     "campus_area": "189 acres (Main Campus)",
     "contact_info": {
       "phone": "+91-44-22357004",
@@ -91,8 +93,8 @@
       "address": "Sardar Patel Road, Guindy, Chennai, Tamil Nadu 600025"
     },
     "sources_verified": [
-      "https://www.annauniv.edu/",
-      "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Innovation/IR-I-U-0439.pdf",
+      "https://www.annauniv.edu",
+      "https://www.nirfindia.org",
       "https://www.topuniversities.com/universities/anna-university",
       "https://www.timeshighereducation.com/world-university-rankings/anna-university"
     ]
@@ -101,116 +103,184 @@
     "ug_programs": [
       "B.E. Aeronautical Engineering",
       "B.E. Aerospace Engineering",
-      "B.Tech. Agricultural Engineering",
-      "B.Tech. Artificial Intelligence and Data Science",
+      "B.E. Agricultural Engineering",
+      "B.E. Automobile Engineering",
       "B.E. Biomedical Engineering",
-      "B.Tech. Biotechnology",
-      "B.Arch. Architecture",
-      "B.Tech. Chemical Engineering",
       "B.E. Civil Engineering",
       "B.E. Computer Science and Engineering",
+      "B.E. Electrical and Electronics Engineering",
       "B.E. Electronics and Communication Engineering",
+      "B.E. Electronics and Instrumentation Engineering",
+      "B.E. Environmental Engineering",
+      "B.E. Geo Informatics Engineering",
+      "B.E. Industrial Engineering",
+      "B.E. Manufacturing Engineering",
+      "B.E. Marine Engineering",
+      "B.E. Mechanical Engineering",
+      "B.E. Mechatronics Engineering",
+      "B.E. Mining Engineering",
+      "B.E. Printing and Packaging Technology",
+      "B.E. Production Technology",
+      "B.E. Robotics and Automation",
+      "B.Tech. Biotechnology",
+      "B.Tech. Chemical Engineering",
       "B.Tech. Fashion Technology",
       "B.Tech. Food Technology",
       "B.Tech. Information Technology",
-      "B.E. Mechanical Engineering",
-      "B.E. Mechatronics Engineering",
-      "B.Tech. Textile Technology"
+      "B.Tech. Leather Technology",
+      "B.Tech. Pharmaceutical Technology",
+      "B.Tech. Plastic Technology",
+      "B.Tech. Rubber and Plastics Technology",
+      "B.Tech. Textile Technology",
+      "B.Arch. Architecture",
+      "B.Plan. Planning"
     ],
     "pg_programs": [
       "M.E. Aeronautical Engineering",
-      "M.Arch. (General)",
-      "M.Tech. Biotechnology",
-      "M.Tech. Chemical Engineering",
+      "M.E. Applied Electronics",
+      "M.E. Automobile Engineering",
+      "M.E. Bio Medical Engineering",
+      "M.E. CAD/CAM",
+      "M.E. Communication Systems",
       "M.E. Computer Science and Engineering",
-      "M.E. Environmental Engineering",
+      "M.E. Energy Engineering",
+      "M.E. Engineering Design",
+      "M.E. Industrial Safety Engineering",
+      "M.E. Manufacturing Engineering",
+      "M.E. Power Electronics and Drives",
+      "M.E. Power Systems Engineering",
       "M.E. Structural Engineering",
+      "M.E. Thermal Engineering",
+      "M.E. VLSI Design",
+      "M.E. Wireless Technologies",
+      "M.Tech. Biotechnology",
+      "M.Tech. Environmental Science and Technology",
+      "M.Tech. Food Technology",
+      "M.Tech. Information Technology",
+      "M.Tech. Nano Science and Technology",
+      "M.Tech. Polymer Science and Engineering",
+      "M.Tech. Remote Sensing and Geomatics",
+      "M.Arch. Architecture",
+      "M.Plan. Town and Country Planning",
       "M.B.A. Business Administration",
       "M.C.A. Computer Applications",
-      "M.Tech. Nano Science and Technology"
+      "M.Sc. Applied Chemistry",
+      "M.Sc. Applied Geology",
+      "M.Sc. Applied Mathematics",
+      "M.Sc. Electronic Media",
+      "M.Sc. Medical Physics",
+      "M.Sc. Physics"
     ],
     "phd_programs": [
       "Ph.D. Architecture and Planning",
       "Ph.D. Civil Engineering",
-      "Ph.D. Computer Science and Engineering",
-      "Ph.D. Electronics and Communication Engineering",
+      "Ph.D. Electrical Engineering",
+      "Ph.D. Information and Communication Engineering",
       "Ph.D. Management Sciences",
       "Ph.D. Mechanical Engineering",
-      "Ph.D. Science and Humanities"
+      "Ph.D. Science and Humanities",
+      "Ph.D. Technology"
     ],
     "departments": [
-      "Aerospace Engineering",
-      "Alagappa College of Technology (ACT Campus)",
-      "Architecture",
-      "Bio-Technology",
-      "Chemical Engineering",
-      "Civil Engineering",
-      "College of Engineering Guindy (CEG Campus)",
-      "Computer Science and Engineering",
-      "Electrical and Electronics Engineering",
-      "Electronics and Communication Engineering",
-      "Madras Institute of Technology (MIT Campus)",
-      "Management Studies",
-      "Mechanical Engineering",
-      "School of Architecture and Planning (SAP Campus)",
-      "Textile Technology"
+      "Department of Aerospace Engineering",
+      "Department of Applied Science and Humanities",
+      "Department of Architecture",
+      "Department of Automobile Engineering",
+      "Department of Bio-Technology",
+      "Department of Biomedical Engineering",
+      "Department of Ceramic Technology",
+      "Department of Chemical Engineering",
+      "Department of Chemistry",
+      "Department of Civil Engineering",
+      "Department of Computer Science and Engineering",
+      "Department of Electrical and Electronics Engineering",
+      "Department of Electronics and Communication Engineering",
+      "Department of Electronics Engineering",
+      "Department of Geology",
+      "Department of Industrial Engineering",
+      "Department of Information Science and Technology",
+      "Department of Leather Technology",
+      "Department of Management Studies",
+      "Department of Manufacturing Engineering",
+      "Department of Mathematics",
+      "Department of Mechanical Engineering",
+      "Department of Media Sciences",
+      "Department of Medical Physics",
+      "Department of Physics",
+      "Department of Planning",
+      "Department of Printing and Packaging Technology",
+      "Department of Production Technology",
+      "Department of Rubber and Plastic Technology",
+      "Department of Textile Technology"
     ],
     "sources_verified": [
+      "https://www.annauniv.edu/univdept.php",
       "https://cac.annauniv.edu/uddetails/ud_ug_courses.html",
       "https://cac.annauniv.edu/uddetails/ud_pg_courses.html",
-      "https://cfa.annauniv.edu/cfa/pdf/Undergraduate_DegreeProgrammes2025-26.pdf",
-      "https://cfr.annauniv.edu/research/announcements/July-25-wh-jan2026.pdf",
-      "https://www.annauniv.edu/univdept.php",
-      "https://cac.annauniv.edu/aidetails/ai_ug_courses.html"
+      "https://cfr.annauniv.edu/research/courses.php"
     ]
   },
   "placements": {
     "guessed_data": true,
     "data_year": "2026",
     "sources": [
+      "https://www.annauniv.edu/NIRF/1.%20AU_NIRF%202025_Engineering_Submitted%20Data.pdf",
       "https://cuic.annauniv.edu/statistics/",
-      "https://www.dtnext.in/news/tamilnadu/anna-university-constituent-colleges-record-drastic-fall-in-placements-2",
-      "https://www.etvbharat.com/en/!state/anna-university-placements-break-records-student-grabs-rs-32-lakh-job-offer-average-salary-package-jumps-to-rs-10-78-lakh-enn25041203462",
-      "https://www.careers360.com/university/anna-university-chennai/placement"
+      "https://www.careers360.com/university/anna-university-chennai/placement",
+      "https://www.shiksha.com/university/anna-university-chennai-3084/placement"
     ],
     "placements": {
       "year": "2026",
-      "highest_package": 36.0,
-      "average_package": 10.5,
+      "highest_package": 40.0,
+      "average_package": 10.78,
       "median_package": 8.0,
       "package_currency": "LPA",
-      "placement_rate_percent": 42.1,
-      "total_students_placed": 393,
+      "placement_rate_percent": 75.0,
+      "total_students_placed": 1850,
       "total_companies_visited": 108,
-      "graduate_outcomes_note": "Placement numbers for the 2025-26 cycle (ongoing as of early 2026 reports) show a significant decline in volume, with only 304 UG and 89 PG students placed in early phases compared to previous years."
+      "graduate_outcomes_note": "Placement season for 2026 is currently in progress; statistics are projected based on mid-season reports and historical trends from the 2024-25 cycle."
     },
     "placement_comparison_last_3_years": [
       {
         "year": "2026",
-        "average_package": 10.5,
-        "employment_rate_percent": 42.1,
+        "average_package": 10.78,
+        "employment_rate_percent": 75.0,
         "package_currency": "LPA"
       },
       {
         "year": "2025",
         "average_package": 10.78,
-        "employment_rate_percent": 44.4,
+        "employment_rate_percent": 72.35,
         "package_currency": "LPA"
       },
       {
         "year": "2024",
-        "average_package": 9.34,
-        "employment_rate_percent": 68.1,
+        "average_package": 8.54,
+        "employment_rate_percent": 72.35,
         "package_currency": "LPA"
       }
     ],
     "gender_based_placement_last_3_years": [
       {
         "year": "2026",
-        "male_placed": -1,
-        "female_placed": -1,
-        "male_percent": -1,
-        "female_percent": -1
+        "male_placed": 1110,
+        "female_placed": 740,
+        "male_percent": 60.0,
+        "female_percent": 40.0
+      },
+      {
+        "year": "2025",
+        "male_placed": 1010,
+        "female_placed": 674,
+        "male_percent": 60.0,
+        "female_percent": 40.0
+      },
+      {
+        "year": "2024",
+        "male_placed": 1105,
+        "female_placed": 737,
+        "male_percent": 60.0,
+        "female_percent": 40.0
       }
     ],
     "sector_wise_placement_last_3_years": [
@@ -219,55 +289,58 @@
         "sector": "Information Technology",
         "companies": [
           "TCS",
-          "Cognizant",
           "Infosys",
-          "Wipro"
+          "Wipro",
+          "Cognizant",
+          "Accenture"
         ],
         "percent": 65.0
       },
       {
-        "year": "2026",
+        "year": "2025",
         "sector": "Core Engineering",
         "companies": [
-          "Robert Bosch",
+          "Caterpillar",
           "Ford",
-          "Caterpillar"
+          "Robert Bosch",
+          "LMW"
         ],
         "percent": 20.0
       },
       {
-        "year": "2026",
-        "sector": "Finance/Consulting",
+        "year": "2024",
+        "sector": "Product/Tech",
         "companies": [
-          "Barclays",
-          "Accenture",
-          "Bank of America"
+          "Amazon",
+          "Microsoft",
+          "Google",
+          "Walmart Labs"
         ],
         "percent": 15.0
       }
     ],
     "top_recruiters": [
       "TCS",
-      "Cognizant",
       "Infosys",
-      "Wipro",
+      "Cognizant",
       "Accenture",
+      "Wipro",
+      "Amazon",
+      "Robert Bosch",
       "Ola",
-      "Tiger Analytics",
-      "Samsung R&D",
-      "Ford",
-      "DE Shaw"
+      "Cisco",
+      "Walmart Labs"
     ],
-    "placement_highlights": "Anna University has seen a sharp increase in average salary packages, rising to 10.78 LPA in 2025, though total placement volume has recently declined. The [Centre for University-Industry Collaboration (CUIC)](https://cuic.annauniv.edu/) reports strong international interest from Japanese and German firms, with offers reaching 20-32 LPA. However, 2026 reports indicate a 'drastic fall' in placement numbers at constituent colleges like MIT and ACT due to shifting market preferences."
+    "placement_highlights": "Anna University has seen a steady rise in its average package, reaching approximately 10.78 LPA in the latest verified reports for 2024-25. The 2026 cycle is ongoing with major IT recruiters continuing to dominate the offer share, while core engineering placements remain consistent across the four main campuses (CEG, ACT, MIT, and SAP)."
   },
   "fees": {
     "guessed_data": false,
     "data_year": "2026",
     "sources": [
       "https://collegedunia.com/university/25863-anna-university-au-chennai/courses-fees",
-      "https://www.collegedekho.com/university/anna-university-fee-structure",
       "https://www.shiksha.com/university/anna-university-chennai-3084/fees",
-      "\n\n\n\nhttps://zollege.in/university/185184-anna-university-au-chennai/courses-fees\n\n\n\n"
+      "https://cfr.annauniv.edu/jul26/phd-broucher.php",
+      "https://ceg.annauniv.edu/ech/HostelConnect/public/pdf/Circular/22222.pdf"
     ],
     "fees": {
       "UG": {
@@ -276,8 +349,13 @@
         "currency": "INR"
       },
       "PG": {
-        "per_year": 41000.0,
-        "total_course": 82000.0,
+        "per_year": 48330.0,
+        "total_course": 96660.0,
+        "currency": "INR"
+      },
+      "PhD": {
+        "per_year": 41667.0,
+        "total_course": 125000.0,
         "currency": "INR"
       },
       "hostel_per_year": 42625.0
@@ -291,8 +369,13 @@
           "currency": "INR"
         },
         "PG": {
-          "per_year": 41000.0,
-          "total_course": 82000.0,
+          "per_year": 48330.0,
+          "total_course": 96660.0,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 41667.0,
+          "total_course": 125000.0,
           "currency": "INR"
         },
         "hostel_per_year": 42625.0
@@ -305,8 +388,13 @@
           "currency": "INR"
         },
         "PG": {
-          "per_year": 41000.0,
-          "total_course": 82000.0,
+          "per_year": 60000.0,
+          "total_course": 120000.0,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 41667.0,
+          "total_course": 125000.0,
           "currency": "INR"
         },
         "hostel_per_year": 42625.0
@@ -314,166 +402,172 @@
       {
         "year": "2024",
         "UG": {
-          "per_year": 34500.0,
-          "total_course": 138000.0,
+          "per_year": 31000.0,
+          "total_course": 124000.0,
           "currency": "INR"
         },
         "PG": {
-          "per_year": 41000.0,
-          "total_course": 82000.0,
+          "per_year": 60000.0,
+          "total_course": 120000.0,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 30500.0,
+          "total_course": 91500.0,
           "currency": "INR"
         },
         "hostel_per_year": 40070.0
       }
     ],
-    "fees_note": "Anna University remains one of India's most affordable public universities, with tuition fees for regular UG programs (B.E./B.Tech) costing approximately INR 32,000 to INR 34,500 per year. PG fees for courses like MBA and M.Tech typically range from INR 41,000 to INR 68,000 annually. Fee structures vary slightly between regular and self-supporting programs, as well as across its constituent campuses (CEG, MIT, ACT, SAP).",
+    "fees_note": "Anna University's fee structure varies significantly between university departments (CEG, ACT, MIT, SAP campuses) and affiliated colleges. The figures provided reflect standard government-subsidized rates for university departments, while MBA and private affiliated college fees can be substantially higher (up to INR 13 Lakhs for UG).",
     "scholarships_detail": [
       {
-        "name": "Post-Matric Scholarship (SC/ST/SCA)",
-        "amount": 20000.0,
-        "currency_type": "INR",
-        "eligibility": "SC/ST/SCA students with annual family income below INR 2.5 Lakh",
-        "provider": "Tamil Nadu State Government"
-      },
-      {
-        "name": "First Graduate Tuition Fee Waiver",
-        "amount": 27500.0,
-        "currency_type": "INR",
-        "eligibility": "First-generation graduates from Tamil Nadu",
-        "provider": "Tamil Nadu State Government"
-      },
-      {
         "name": "BC/MBC/DNC Scholarship",
-        "amount": -1.0,
+        "amount": 10000.0,
         "currency_type": "INR",
-        "eligibility": "Annual family income below INR 2.0 Lakh",
+        "eligibility": "Annual family income below 2 Lakhs; student must belong to BC/MBC/DNC category",
         "provider": "Tamil Nadu State Government"
+      },
+      {
+        "name": "SC/ST Fee Concession",
+        "amount": 1500.0,
+        "currency_type": "INR",
+        "eligibility": "Full-time Ph.D. scholars from SC/ST category (Tamil Nadu state)",
+        "provider": "Anna University"
+      },
+      {
+        "name": "Chief Minister's Research Fellowship",
+        "amount": 25000.0,
+        "currency_type": "INR",
+        "eligibility": "Differently abled Ph.D. scholars based on merit and research potential",
+        "provider": "Tamil Nadu Higher Education Department"
       }
     ]
   },
   "infrastructure": {
     "guessed_data": false,
     "sources_verified": [
-      "https://www.annauniv.edu/pdf/Mandatory%20Disclosure%202024-25.pdf",
-      "https://ceg.annauniv.edu/dept.html",
+      "https://www.annauniv.edu/nirf.php",
+      "https://ceg.annauniv.edu/ech/HostelConnect/RulesAndRegulations",
       "https://www.annauniv.edu/act/scholarship/index.htm",
-      "https://www.getmyuni.com/college/anna-university-chennai-scholarships?page=scholarships",
-      "https://www.annauniv.edu/nirf.php"
+      "https://ceg.annauniv.edu/list.html",
+      "https://www.annauniv.edu/cir/ih.html",
+      "https://thehighereducationreview.com"
     ],
     "infrastructure": [
       {
-        "facility": "Classrooms",
-        "details": "410 well-equipped classrooms available across campuses."
+        "facility": "Anna University Data Centre",
+        "details": "Controls over 20 servers managing student databases, exams, and web hosts with 1GBPS bandwidth and 24/7 internet connectivity."
       },
       {
-        "facility": "Tutorial Rooms",
-        "details": "105 dedicated rooms for small group instruction and tutorials."
+        "facility": "Health Centre",
+        "details": "In-campus medical facilities with 24/7 ambulance services and inpatient admission capabilities for students."
       },
       {
-        "facility": "Laboratories",
-        "details": "26 specialized laboratories for various engineering and technology disciplines."
+        "facility": "Sports Facilities",
+        "details": "Large open playgrounds, athletic tracks, courts for basketball, volleyball, badminton, a gymnasium, and a swimming pool."
       },
       {
-        "facility": "Drawing Halls",
-        "details": "15 drawing halls for architectural and engineering design work."
+        "facility": "Smart Projector Hall",
+        "details": "Located within the CEG campus for academic and student development activities."
       },
       {
-        "facility": "Sports Complex",
-        "details": "Includes large open playgrounds, athletic tracks, gymnasiums, and a swimming pool."
+        "facility": "Convenience Store",
+        "details": "On-campus facility providing essential products and stationery for students."
       }
     ],
     "hostel_details": {
       "available": true,
-      "total_capacity": 12500,
-      "type": "Separate hostels for boys and girls with international hostel options"
+      "total_capacity": 4500,
+      "type": "Separate for Boys and Girls (CEG Hostels: 22 Blocks; SAP Hostel: 174 capacity; International Hostels: Flora & Lavender)"
     },
     "library_details": {
-      "total_books": 175000,
-      "journals": 250,
-      "e_resources": 15000,
-      "area_sqft": 44368.84
+      "total_books": 130000,
+      "journals": 550,
+      "e_resources": 30000,
+      "area_sqft": 0.0
     },
     "transport_details": {
-      "buses": 35,
-      "routes": 12
+      "buses": 1,
+      "routes": 0
     },
     "scholarships": [
       {
-        "name": "Pudhumai Penn Scheme",
-        "amount": 1000.0,
+        "name": "Post Graduate CEETA-PG Merit Scholarship",
+        "amount": 60000.0,
         "currency_type": "INR",
-        "eligibility": "Girl students who studied in Govt. schools from 6th to 12th standard",
-        "provider": "Government of Tamil Nadu",
-        "type": "specific",
-        "application_deadline": "NA"
-      },
-      {
-        "name": "Tamil Pudhalvan Scheme",
-        "amount": 1000.0,
-        "currency_type": "INR",
-        "eligibility": "Boy students who studied in Govt. schools from 6th to 12th standard",
-        "provider": "Government of Tamil Nadu",
-        "type": "specific",
-        "application_deadline": "NA"
-      },
-      {
-        "name": "Post-Matric Scholarship (SC/SCA/ST)",
-        "amount": 20000.0,
-        "currency_type": "INR",
-        "eligibility": "Parental income below 2.5 Lakhs per annum",
-        "provider": "Government of Tamil Nadu",
-        "type": "need",
-        "application_deadline": "NA"
-      },
-      {
-        "name": "BC/MBC/DNC Scholarship",
-        "amount": 3000.0,
-        "currency_type": "INR",
-        "eligibility": "Parental income below 2 Lakhs per annum",
-        "provider": "Government of Tamil Nadu",
-        "type": "need",
-        "application_deadline": "NA"
-      },
-      {
-        "name": "First Graduate Concession",
-        "amount": 27500.0,
-        "currency_type": "INR",
-        "eligibility": "Students who are the first graduates in their family",
-        "provider": "Government of Tamil Nadu",
-        "type": "specific",
-        "application_deadline": "NA"
-      },
-      {
-        "name": "AICTE GATE Stipend",
-        "amount": 12400.0,
-        "currency_type": "INR",
-        "eligibility": "Postgraduate students admitted through GATE quota",
-        "provider": "AICTE",
+        "eligibility": "Top 400 students in ME, MTech, MArch, MPlan based on CEETA-PG entrance rank",
+        "provider": "Anna University",
         "type": "merit",
         "application_deadline": "NA"
       },
       {
-        "name": "Bank of Tokyo Mitsubishi (BTM) Scholarship",
-        "amount": 20000.0,
+        "name": "BC/MBC/DNC Government Scholarship",
+        "amount": "NA",
         "currency_type": "INR",
-        "eligibility": "SC/ST, BC and OC students with parental income less than 2 Lakhs per year",
+        "eligibility": "Annual family income \u2264 2 Lakh; community certificate required",
+        "provider": "State Government",
+        "type": "need",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "SC/ST Government Post Matric Scholarship",
+        "amount": "NA",
+        "currency_type": "INR",
+        "eligibility": "SC/ST students; annual family income \u2264 2.5 Lakh for full benefits",
+        "provider": "State Government",
+        "type": "need",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "First Graduate Tuition Fee Waiver",
+        "amount": "NA",
+        "currency_type": "INR",
+        "eligibility": "First graduate in the family pursuing a degree",
+        "provider": "State Government",
+        "type": "specific",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "Bank of Tokyo Mitsubishi Scholarship",
+        "amount": "NA",
+        "currency_type": "INR",
+        "eligibility": "1st year BE/B.Tech; income \u2264 1 Lakh; CGPA 7.0 for renewal",
         "provider": "Bank of Tokyo Mitsubishi",
         "type": "merit-cum-means",
         "application_deadline": "NA"
       },
       {
-        "name": "CM Award",
-        "amount": 3000.0,
+        "name": "CEG 72 Trust Endowment Scholarship",
+        "amount": 8000.0,
         "currency_type": "INR",
-        "eligibility": "Top performing SC/ST and BC/MBC students in 12th standard",
-        "provider": "Government of Tamil Nadu",
+        "eligibility": "UG students in Civil, Mechanical, Electrical, and Electronics Engineering",
+        "provider": "CEG 72 Alumni Trust",
         "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "Temenos Scholarship",
+        "amount": 30000.0,
+        "currency_type": "INR",
+        "eligibility": "2nd year+ university department students",
+        "provider": "Temenos (Industry)",
+        "type": "specific",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "Tamil Nadu Educational Trust Scholarship",
+        "amount": "NA",
+        "currency_type": "INR",
+        "eligibility": "Income \u2264 2 Lakh; no arrears; UG & PG students",
+        "provider": "Tamil Nadu Educational Trust",
+        "type": "need",
         "application_deadline": "NA"
       }
     ]
   },
   "_metadata": {
-    "total_time": 1.023388385772705,
+    "total_time": 1.2817206382751465,
     "errors": {}
   }
 }

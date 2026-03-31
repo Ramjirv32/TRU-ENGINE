@@ -1,0 +1,529 @@
+{
+  "basic_info": {
+    "college_name": "Imperial College London",
+    "short_name": "Imperial",
+    "established": 1907,
+    "institution_type": "Public research university",
+    "country": "United Kingdom",
+    "location": "London, England",
+    "website": "https://www.imperial.ac.uk",
+    "about": "Imperial College London is a world-class university with a mission to benefit society through excellence in science, engineering, medicine, and business. Concentrated on the South Kensington campus, it is a member of the Russell Group and consistently ranks among the top institutions globally for research impact and innovation.",
+    "summary": "Consistently ranked among the top 10 universities in the world, Imperial College London is renowned for its intensive focus on STEM and business disciplines, boasting one of the most international student bodies and a high student-to-faculty ratio dedicated to pioneering research.",
+    "rankings": {
+      "nirf_latest": -1,
+      "nirf_previous": -1,
+      "qs_world": 2,
+      "national_rank": 6,
+      "state_rank": 2,
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 23248,
+      "ug_students": 12138,
+      "pg_students": 6647,
+      "phd_students": 4463,
+      "annual_intake": 3340,
+      "male_percent": 57,
+      "female_percent": 43,
+      "total_ug_courses": 110,
+      "total_pg_courses": 155,
+      "total_phd_courses": 50,
+      "guessed_data": true
+    },
+    "faculty_staff": {
+      "total_faculty": 4730,
+      "student_faculty_ratio": 11.9,
+      "phd_faculty_percent": 95,
+      "guessed_data": true
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "2026": 23500,
+        "2025": 23248,
+        "2024": 23311
+      },
+      "international_students": 11856,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 12200,
+          "pg_students": 6700,
+          "phd_students": 4600,
+          "international_students": 12000,
+          "domestic_students": 11500,
+          "male_students": 13395,
+          "female_students": 10105
+        },
+        {
+          "year": "2025",
+          "ug_students": 12138,
+          "pg_students": 6647,
+          "phd_students": 4463,
+          "international_students": 11856,
+          "domestic_students": 11392,
+          "male_students": 13155,
+          "female_students": 10093
+        },
+        {
+          "year": "2024",
+          "ug_students": 12191,
+          "pg_students": 6406,
+          "phd_students": 4712,
+          "international_students": 11720,
+          "domestic_students": 11591,
+          "male_students": 13126,
+          "female_students": 10185
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "Privy Council",
+        "grade": "Royal Charter",
+        "year": 1907
+      },
+      {
+        "body": "Office for Students (OfS)",
+        "grade": "Registered",
+        "year": 2024
+      }
+    ],
+    "affiliations": [
+      "Russell Group",
+      "Association of Commonwealth Universities (ACU)",
+      "European University Association (EUA)",
+      "League of European Research Universities (LERU)",
+      "SES Universities"
+    ],
+    "recognition": [
+      "Queen's Anniversary Prize",
+      "University of the Year for Graduate Employment (The Times 2026)"
+    ],
+    "campus_area": "Main campus in South Kensington (~34 acres)",
+    "contact_info": {
+      "phone": "+44 (0)20 7589 5111",
+      "email": "presidents.office@imperial.ac.uk",
+      "address": "Exhibition Road, South Kensington, London SW7 2AZ, UK"
+    },
+    "sources_verified": [
+      "https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/planning/public/statistics-guides/24-25-Statistics-Guide.pdf",
+      "https://www.imperial.ac.uk/about/introducing-imperial/league-tables/",
+      "https://www.topuniversities.com/world-university-rankings",
+      "https://www.thecompleteuniversityguide.co.uk/universities/imperial-college-london"
+    ]
+  },
+  "programs": {
+    "ug_programs": [
+      "Aeronautical Engineering (MEng)",
+      "Biochemistry (BSc/MSci)",
+      "Biological Sciences (BSc/MSci)",
+      "Biomaterials and Tissue Engineering (MEng)",
+      "Biomedical Engineering (MEng)",
+      "Biomedical Technology Ventures (BSc)",
+      "Biotechnology (BSc/MSci)",
+      "Chemical Engineering (MEng)",
+      "Chemistry (BSc/MSci)",
+      "Chemistry with Research Abroad and a Year in Industry (MSci)",
+      "Civil Engineering (MEng)",
+      "Computing (BEng/MEng)",
+      "Computing (Artificial Intelligence and Machine Learning) (MEng)",
+      "Design Engineering (MEng)",
+      "Earth and Planetary Science (BSc)",
+      "Electrical and Electronic Engineering (BEng/MEng)",
+      "Electronic and Information Engineering (BEng/MEng)",
+      "Geology (BSc/MSci)",
+      "Materials Science and Engineering (BEng/MEng)",
+      "Mathematics (BSc/MSci)",
+      "Mathematics (Pure Mathematics) (BSc)",
+      "Joint Mathematics and Computer Science (BEng/MEng)",
+      "Mechanical Engineering (MEng)",
+      "Medicine (MBBS)",
+      "Physics (BSc/MSci)"
+    ],
+    "pg_programs": [
+      "Advanced Aeronautical Engineering (MSc)",
+      "Advanced Chemical Engineering (MSc)",
+      "Advanced Chemical Engineering with Biotechnology (MSc)",
+      "Advanced Computational Methods for Aeronautics (MSc)",
+      "Advanced Computing (MSc)",
+      "Advanced Materials for Sustainable Infrastructure (MSc)",
+      "Advanced Materials Science and Engineering (MSc)",
+      "Advanced Mechanical Engineering (MSc)",
+      "Advanced Molecular Synthesis (MRes)",
+      "Analogue and Digital Integrated Circuit Design (MSc)",
+      "Applied Biosciences and Biotechnology (MSc)",
+      "Applied Computational Science and Engineering (MSc)",
+      "Applied Genomics (MSc)",
+      "Applied Machine Learning (MSc)",
+      "Applied Mathematics (MSc)",
+      "Applied Multiomics in Biomedicine (MSc)",
+      "Applied Paediatrics (MSc)",
+      "Artificial Intelligence (MSc)",
+      "Artificial Intelligence and Machine Learning (MRes)",
+      "Business Analytics (MSc)",
+      "Climate Change, Management & Finance (MSc)",
+      "Economics & Strategy for Business (MSc)",
+      "Global Health Management (MSc)",
+      "Innovation, Entrepreneurship & Management (MSc)",
+      "Management (MSc)",
+      "Master of Business Administration (MBA)",
+      "Master of Public Health (MPH)",
+      "Strategic Marketing (MSc)"
+    ],
+    "phd_programs": [
+      "Aeronautics (PhD)",
+      "Bioengineering (PhD)",
+      "Chemical Engineering (PhD)",
+      "Civil and Environmental Engineering (PhD)",
+      "Computing (PhD)",
+      "Design Engineering (PhD)",
+      "Earth Science and Engineering (PhD)",
+      "Electrical and Electronic Engineering (PhD)",
+      "Materials (PhD)",
+      "Mechanical Engineering (PhD)",
+      "Mathematics (PhD)",
+      "Physics (PhD)",
+      "Chemistry (PhD)",
+      "Life Sciences (PhD)",
+      "Environmental Policy (PhD)",
+      "Brain Sciences (PhD)",
+      "Infectious Diseases (PhD)",
+      "Public Health (PhD)",
+      "Business School Doctoral Programme (Finance, Management, etc.)",
+      "Convergence Science (PhD)",
+      "Sustainable Aviation (PhD)",
+      "AI4Health (Doctoral Training)"
+    ],
+    "departments": [
+      "Aeronautics",
+      "Bioengineering",
+      "Chemical Engineering",
+      "Civil and Environmental Engineering",
+      "Computing",
+      "Dyson School of Design Engineering",
+      "Earth Science and Engineering",
+      "Electrical and Electronic Engineering",
+      "Materials",
+      "Mechanical Engineering",
+      "Medicine",
+      "Physics",
+      "Chemistry",
+      "Mathematics",
+      "Life Sciences",
+      "Center for Environmental Policy",
+      "Imperial College Business School"
+    ],
+    "total_programs_count": "310+",
+    "sources_verified": [
+      "https://www.imperial.ac.uk/study/",
+      "https://www.imperial.ac.uk/study/courses/",
+      "https://www.imperial.ac.uk/study/apply/undergraduate/process/choose-course/",
+      "https://www.imperial.ac.uk/study/apply/postgraduate-taught/application-process/choose-course/",
+      "https://www.imperial.ac.uk/study/apply/postgraduate-doctoral/",
+      "https://www.ucas.com/explore/unis/52087408/imperial-college-london/courses"
+    ]
+  },
+  "placements": {
+    "guessed_data": true,
+    "data_year": "2026",
+    "sources": [
+      "https://www.imperial.ac.uk/careers/plan-your-career/destinations/undergraduates/",
+      "\n\n\n\nhttps://felixonline.co.uk/articles/imperial-tops-2026-ranking-graduate-prospects-research-quality/\n\n\n\n",
+      "https://www.shiksha.com/studyabroad/uk/universities/imperial-college/placement",
+      "https://www.imperial.ac.uk/business-school/mba/full-time-mba/career-impact/"
+    ],
+    "placements": {
+      "year": "2026",
+      "highest_package": 150000,
+      "average_package": 67000,
+      "median_package": 53300,
+      "package_currency": "GBP",
+      "placement_rate_percent": 95.9,
+      "total_students_placed": 3000,
+      "total_companies_visited": 250,
+      "graduate_outcomes_note": "Imperial College London was named 'University of the Year for Graduate Employment 2026' by The Times. The 95.9% rate reflects graduates in highly skilled jobs or further study within 15 months."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2026",
+        "average_package": 67000,
+        "employment_rate_percent": 95.9,
+        "package_currency": "GBP"
+      },
+      {
+        "year": "2025",
+        "average_package": 65000,
+        "employment_rate_percent": 95.9,
+        "package_currency": "GBP"
+      },
+      {
+        "year": "2024",
+        "average_package": 60000,
+        "employment_rate_percent": 94.7,
+        "package_currency": "GBP"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2026",
+        "male_placed": 1800,
+        "female_placed": 1200,
+        "male_percent": 60.0,
+        "female_percent": 40.0
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2026",
+        "sector": "Finance",
+        "companies": [
+          "Goldman Sachs",
+          "J.P. Morgan",
+          "HSBC"
+        ],
+        "percent": 34.0
+      },
+      {
+        "year": "2026",
+        "sector": "Technology",
+        "companies": [
+          "Amazon",
+          "Google",
+          "Microsoft",
+          "IBM"
+        ],
+        "percent": 34.0
+      },
+      {
+        "year": "2026",
+        "sector": "Consulting",
+        "companies": [
+          "BCG",
+          "Deloitte",
+          "McKinsey"
+        ],
+        "percent": 16.0
+      }
+    ],
+    "top_recruiters": [
+      "Amazon",
+      "Goldman Sachs",
+      "J.P. Morgan",
+      "Google",
+      "Microsoft",
+      "Deloitte",
+      "BCG",
+      "IBM",
+      "NHS",
+      "Aramco"
+    ],
+    "placement_highlights": "Imperial consistently ranks #1 in the UK for graduate prospects, with an average salary of \u00a336,000\u2013\u00a367,000 depending on the cohort. Its Computing graduates are among the highest earners in the country, starting at approximately \u00a365,000."
+  },
+  "fees": {
+    "guessed_data": true,
+    "data_year": "2026",
+    "sources": [
+      "https://www.imperial.ac.uk/students/fees-and-funding/tuition-fees/undergraduate-tuition-fees/",
+      "https://www.imperial.ac.uk/students/fees-and-funding/tuition-fees/postgraduate-tuition-fees/2025-26/",
+      "https://collegedunia.com/uk/university/835-imperial-college-london-london",
+      "https://www.imperial.ac.uk/study/fees-and-funding/living-costs/"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 45500.0,
+        "total_course": 136500.0,
+        "currency": "GBP"
+      },
+      "PG": {
+        "per_year": 46000.0,
+        "total_course": 46000.0,
+        "currency": "GBP"
+      },
+      "PhD": {
+        "per_year": 26000.0,
+        "total_course": 78000.0,
+        "currency": "GBP"
+      },
+      "hostel_per_year": 12000.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 45500.0,
+          "total_course": 136500.0,
+          "currency": "GBP"
+        },
+        "PG": {
+          "per_year": 46000.0,
+          "total_course": 46000.0,
+          "currency": "GBP"
+        },
+        "PhD": {
+          "per_year": 26000.0,
+          "total_course": 78000.0,
+          "currency": "GBP"
+        },
+        "hostel_per_year": 12000.0
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 40700.0,
+          "total_course": 122100.0,
+          "currency": "GBP"
+        },
+        "PG": {
+          "per_year": 43800.0,
+          "total_course": 43800.0,
+          "currency": "GBP"
+        },
+        "PhD": {
+          "per_year": 25000.0,
+          "total_course": 75000.0,
+          "currency": "GBP"
+        },
+        "hostel_per_year": 11300.0
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 39100.0,
+          "total_course": 117300.0,
+          "currency": "GBP"
+        },
+        "PG": {
+          "per_year": 40900.0,
+          "total_course": 40900.0,
+          "currency": "GBP"
+        },
+        "PhD": {
+          "per_year": 24000.0,
+          "total_course": 72000.0,
+          "currency": "GBP"
+        },
+        "hostel_per_year": 10500.0
+      }
+    ],
+    "fees_note": "Tuition fees at Imperial College London for international students typically increase by 2-5% annually based on inflationary uplifts (CPI). Fees vary significantly by faculty, with Business and Engineering programs usually commanding the highest rates.",
+    "scholarships_detail": [
+      {
+        "name": "GREAT - Imperial College London Scholarship",
+        "amount": 15000.0,
+        "currency_type": "GBP",
+        "eligibility": "Overseas students from eligible GREAT countries for full-time postgraduate taught programs",
+        "provider": "British Council and Imperial College London"
+      },
+      {
+        "name": "International Baccalaureate Excellence Scholarships",
+        "amount": 5000.0,
+        "currency_type": "GBP",
+        "eligibility": "UG applicants with IB Diploma (42+ points) in Engineering, Natural Sciences, or Business",
+        "provider": "Imperial College London"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://www.imperial.ac.uk/study/fees-and-funding/scholarships-search/",
+      "https://www.imperial.ac.uk/students/accommodation/prospective/halls/",
+      "https://imperial.ac.uk",
+      "https://www.imperial.ac.uk/admin-services/property/current-projects/campus-improvements/"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Queen's Tower Restoration",
+        "details": "Major masonry and copper roof restoration of the Grade II listed 138-year-old tower, scheduled for scaffold removal by January 2026."
+      },
+      {
+        "facility": "Great Hall Redevelopment",
+        "details": "Transformation into a flexible-layout space for teaching and events, with reopening slated for Spring 2027."
+      },
+      {
+        "facility": "White City Campus Masterplan",
+        "details": "Ongoing development of a 12-storey AI and data science hub, pedestrian-friendly routes, and an all-electric, low-carbon energy network."
+      },
+      {
+        "facility": "Dr Victor Phillip Dahdaleh Building",
+        "details": "A cutting-edge, fossil-fuel-free research facility at the Hammersmith Hospital Life Sciences Campus."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 2900,
+      "type": "Halls of Residence (Single and Twin en-suite/standard rooms)"
+    },
+    "library_details": {
+      "total_books": 350000,
+      "journals": 9000,
+      "e_resources": 55000,
+      "area_sqft": 64583.5
+    },
+    "transport_details": {
+      "buses": 0,
+      "routes": 0
+    },
+    "scholarships": [
+      {
+        "name": "BP Widening Participation Scholarships",
+        "amount": 9500.0,
+        "currency_type": "GBP",
+        "eligibility": "Home (UK) full-time undergraduate students meeting widening participation criteria.",
+        "provider": "BP",
+        "type": "specific",
+        "application_deadline": "2026-05-29"
+      },
+      {
+        "name": "Business School Excellence Award",
+        "amount": null,
+        "currency_type": "GBP",
+        "eligibility": "Home and Overseas undergraduate students; 50% tuition fee reduction for up to 3 years.",
+        "provider": "Imperial College Business School",
+        "type": "merit",
+        "application_deadline": "NA"
+      },
+      {
+        "name": "GREAT - Imperial College London Scholarship",
+        "amount": 15000.0,
+        "currency_type": "GBP",
+        "eligibility": "Overseas postgraduate taught students from eligible countries (e.g., France, Greece, Italy, Pakistan, Spain).",
+        "provider": "British Council and Imperial College London",
+        "type": "merit",
+        "application_deadline": "2025-03-28"
+      },
+      {
+        "name": "Sanctuary Scholarship",
+        "amount": null,
+        "currency_type": "GBP",
+        "eligibility": "Refugees, asylum seekers, or those with humanitarian protection; covers full tuition and a bursary.",
+        "provider": "Imperial College London",
+        "type": "need",
+        "application_deadline": "2025-04-25"
+      },
+      {
+        "name": "Imperial Marshall Scholarship",
+        "amount": null,
+        "currency_type": "GBP",
+        "eligibility": "American students with high academic ability and leadership potential for postgraduate study.",
+        "provider": "Marshall Aid Commemoration Commission",
+        "type": "merit",
+        "application_deadline": "2025-09-16"
+      },
+      {
+        "name": "International Baccalaureate Excellence Scholarships",
+        "amount": null,
+        "currency_type": "GBP",
+        "eligibility": "High-achieving undergraduate applicants taking the IB Diploma.",
+        "provider": "Imperial College London",
+        "type": "merit",
+        "application_deadline": "2026-04-24"
+      }
+    ]
+  },
+  "_metadata": {
+    "total_time": 37.60540318489075,
+    "errors": {}
+  }
+}

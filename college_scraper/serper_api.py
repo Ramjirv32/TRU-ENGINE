@@ -25,6 +25,7 @@ from serper import (
     extract_structured_json, extract_reconstructed_markdown,
     normalize_college
 )
+from groq_college_validator import validate_college_name
 
 # WebSocket connections manager
 class ConnectionManager:
@@ -480,6 +481,26 @@ async def get_college_statistics(request: CollegeSearchRequest):
     """Get college statistics - this triggers scraping if needed"""
     return await process_college_statistics(request.college_name, request.country, request.city)
 
+@app.get("/api/validate-college")
+async def validate_college_endpoint(college_name: str, country: str = None, city: str = None):
+    """Validate college name using Groq before scraping"""
+    try:
+        validated_college = validate_college_name(college_name, country or "", city or "")
+        return {
+            "success": True,
+            "original_input": {
+                "college_name": college_name,
+                "country": country,
+                "city": city
+            },
+            "validated_result": validated_college
+        }
+    except Exception as e:
+        return {
+            "success": False,
+            "error": str(e)
+        }
+
 @app.get("/api/college-statistics")
 async def get_college_statistics_get(college_name: str, country: str = None, city: str = None):
     """Get college statistics via GET method - for frontend compatibility"""
@@ -488,35 +509,55 @@ async def get_college_statistics_get(college_name: str, country: str = None, cit
 async def process_college_statistics(college_name: str, country: str = None, city: str = None):
     """Process college statistics request - shared logic for GET and POST"""
     try:
-        # Check cache first
-        cached_data = get_cached_college_data(college_name)
+        print(f"🔍 Validating college name: {college_name}")
+        
+        # Step 1: Validate college name with Groq
+        validated_college = validate_college_name(college_name, country or "", city or "")
+        
+        if not validated_college.get("is_valid", False):
+            raise HTTPException(status_code=400, detail=f"Invalid college name: {validated_college.get('error', 'Unknown error')}")
+        
+        validated_college_name = validated_college["name"]
+        validated_country = validated_college["country"]
+        validated_location = validated_college["location"]
+        
+        print(f"✅ College validated: {validated_college_name} ({validated_country}, {validated_location})")
+        
+        # Step 2: Check cache first using validated name
+        cached_data = get_cached_college_data(validated_college_name)
         if cached_data:
-            print(f"📋 Serving cached data for: {college_name}")
+            print(f"📋 Serving cached data for: {validated_college_name}")
             return cached_data
         
-        # Check MongoDB
+        # Step 3: Check MongoDB using validated name
         if college_collection is not None:
-            existing = college_collection.find_one({"college_name": college_name})
+            existing = college_collection.find_one({"college_name": validated_college_name})
             if existing and existing.get("approval_status") == "approved":
-                print(f"📋 Serving MongoDB data for: {college_name}")
+                print(f"📋 Serving MongoDB data for: {validated_college_name}")
                 # Convert ObjectId to string for JSON serialization
                 existing["_id"] = str(existing["_id"])
                 # Convert all datetime objects to strings recursively
                 existing = convert_datetime_to_str(existing)
                 
+                # Ensure basic_info has the validated college information
+                if "basic_info" in existing:
+                    existing["basic_info"]["college_name"] = validated_college_name
+                    existing["basic_info"]["country"] = validated_country
+                    existing["basic_info"]["location"] = validated_location
+                
                 # Transform data structure to match frontend expectations
                 transformed_data = transform_data_for_frontend(existing)
-                cache_college_data(college_name, transformed_data)
+                cache_college_data(validated_college_name, transformed_data)
                 return transformed_data
         
-        # If not found, trigger scraping
-        print(f"🔍 Starting scraping for: {college_name}")
+        # Step 4: If not found, trigger scraping with validated data
+        print(f"🔍 Starting scraping for: {validated_college_name}")
         
-        # Create a temporary college entry for scraping
+        # Create a validated college entry for scraping
         temp_college = {
-            "name": college_name,
-            "country": country or "Unknown",
-            "location": city or "Unknown"
+            "name": validated_college_name,
+            "country": validated_country,
+            "location": validated_location
         }
         
         # Run the scraper in a separate thread
@@ -534,7 +575,7 @@ async def process_college_statistics(college_name: str, country: str = None, cit
                 scrape_main()
                 
                 # Read the generated file
-                safe_name = re.sub(r'[^\w\s-]', '', college_name).strip().replace(' ', '_')
+                safe_name = re.sub(r'[^\w\s-]', '', validated_college_name).strip().replace(' ', '_')
                 file_path = f"/home/ramji/Videos/scap/college_scraper/{safe_name}_normalized.json"
                 
                 if os.path.exists(file_path):
@@ -543,8 +584,8 @@ async def process_college_statistics(college_name: str, country: str = None, cit
                     
                     # Prepare data for MongoDB
                     mongo_data = {
-                        "college_name": college_name,
-                        "country": country or "Unknown",
+                        "college_name": validated_college_name,
+                        "country": validated_country,
                         "approval_status": "pending",
                         "created_at": datetime.now(timezone.utc),
                         "updated_at": datetime.now(timezone.utc),
@@ -557,8 +598,8 @@ async def process_college_statistics(college_name: str, country: str = None, cit
                     # Transform data for frontend before caching and returning
                     transformed_data = transform_data_for_frontend(mongo_data)
                     
-                    # Cache the transformed data
-                    cache_college_data(college_name, transformed_data)
+                    # Cache the transformed data using validated name
+                    cache_college_data(validated_college_name, transformed_data)
                     
                     return transformed_data
                     

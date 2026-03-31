@@ -1,0 +1,466 @@
+{
+  "basic_info": {
+    "college_name": "National Institute of Technology Tiruchirappalli",
+    "short_name": "NIT Trichy",
+    "established": 1964,
+    "institution_type": "Public/Government University",
+    "country": "India",
+    "location": "Tiruchirappalli, Tamil Nadu",
+    "website": "https://www.nitt.edu/",
+    "about": "National Institute of Technology Tiruchirappalli is a premier technical institution of national importance. Established as Regional Engineering College in 1964, it was granted deemed university status in 2003 and renamed to its current form.",
+    "summary": "NIT Trichy is consistently ranked as the top National Institute of Technology in India, focusing on engineering, management, and architecture. It is an Institute of National Importance funded by the Ministry of Education.",
+    "rankings": {
+      "nirf_latest": 30,
+      "nirf_previous": 31,
+      "qs_world": -1,
+      "national_rank": 9,
+      "state_rank": 4,
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 7600,
+      "ug_students": 4585,
+      "pg_students": 1511,
+      "phd_students": 1504,
+      "annual_intake": 1622,
+      "male_percent": 77.0,
+      "female_percent": 23.0,
+      "total_ug_courses": 10,
+      "total_pg_courses": 31,
+      "total_phd_courses": 17,
+      "guessed_data": false
+    },
+    "faculty_staff": {
+      "total_faculty": 340,
+      "student_faculty_ratio": 14.0,
+      "phd_faculty_percent": 97.0,
+      "guessed_data": false
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "latest_year": -1,
+        "previous_year": -1,
+        "year_before_previous": -1
+      },
+      "international_students": 125,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 4585,
+          "pg_students": 1511,
+          "phd_students": 1504,
+          "international_students": 125,
+          "domestic_students": 7475,
+          "male_students": 5852,
+          "female_students": 1748
+        },
+        {
+          "year": "2025",
+          "ug_students": 4304,
+          "pg_students": 1569,
+          "phd_students": 1343,
+          "international_students": 150,
+          "domestic_students": 7066,
+          "male_students": 5556,
+          "female_students": 1660
+        },
+        {
+          "year": "2024",
+          "ug_students": 4304,
+          "pg_students": 1569,
+          "phd_students": 1200,
+          "international_students": 144,
+          "domestic_students": 5729,
+          "male_students": 4522,
+          "female_students": 1351
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "NBA, NAAC",
+        "grade": "A+",
+        "year": 2023
+      }
+    ],
+    "affiliations": "Institute of National Importance",
+    "recognition": "UGC, AICTE, MHRD",
+    "campus_area": "800 Acres",
+    "contact_info": {
+      "phone": "+91-431-2503000",
+      "email": "registrar@nitt.edu",
+      "address": "Tanjore Main Road, National Highway 67, Tiruchirappalli - 620015, Tamil Nadu, India"
+    },
+    "sources_verified": [
+      "https://www.nitt.edu/",
+      "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html",
+      "https://www.shiksha.com/university/nit-trichy-national-institute-of-technology-tiruchirappalli-2996/ranking",
+      "https://www.nitt.edu/home/academics/iday/INSTITUTE%20DAY%202025%20REPORT.pdf"
+    ]
+  },
+  "programs": {
+    "ug_programs": [
+      "B.Arch. (Architecture)",
+      "B.Tech. in Chemical Engineering",
+      "B.Tech. in Civil Engineering",
+      "B.Tech. in Computer Science and Engineering",
+      "B.Tech. in Electrical and Electronics Engineering",
+      "B.Tech. in Electronics and Communication Engineering",
+      "B.Tech. in Instrumentation and Control Engineering",
+      "B.Tech. in Mechanical Engineering",
+      "B.Tech. in Metallurgical and Materials Engineering",
+      "B.Tech. in Production Engineering",
+      "B.Sc. B.Ed. (Integrated Teacher Education Programme - ITEP)"
+    ],
+    "pg_programs": [
+      "M.Arch. (Energy Efficient and Sustainable Architecture)",
+      "M.Tech. (Various specializations in Engg.)",
+      "M.Sc. (Chemistry, Comp. Science, Math, Physics)",
+      "M.A. in English",
+      "Master of Business Administration (MBA)",
+      "Master of Computer Applications (MCA)",
+      "M.S. (By Research) in Engineering & Science Departments"
+    ],
+    "phd_programs": [
+      "Ph.D. in Architecture",
+      "Ph.D. in Chemical Engineering",
+      "Ph.D. in Chemistry",
+      "Ph.D. in Civil Engineering",
+      "Ph.D. in Computer Applications",
+      "Ph.D. in Computer Science and Engineering",
+      "Ph.D. in Electrical and Electronics Engineering",
+      "Ph.D. in Electronics and Communication Engineering",
+      "Ph.D. in Energy and Environment",
+      "Ph.D. in Humanities and Social Sciences",
+      "Ph.D. in Instrumentation and Control Engineering",
+      "Ph.D. in Management Studies",
+      "Ph.D. in Mathematics",
+      "Ph.D. in Mechanical Engineering",
+      "Ph.D. in Metallurgical and Materials Engineering",
+      "Ph.D. in Physics",
+      "Ph.D. in Production Engineering"
+    ],
+    "departments": [
+      "Architecture",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Applications",
+      "Computer Science and Engineering",
+      "Electrical and Electronics Engineering",
+      "Electronics and Communication Engineering",
+      "Energy and Environment",
+      "Humanities and Social Sciences",
+      "Instrumentation and Control Engineering",
+      "Management Studies",
+      "Mathematics",
+      "Mechanical Engineering",
+      "Metallurgical and Materials Engineering",
+      "Physics",
+      "Production Engineering"
+    ],
+    "sources_verified": [
+      "https://www.nitt.edu/",
+      "https://www.nitt.edu/academics/programmes",
+      "https://nitt.edu"
+    ]
+  },
+  "placements": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "NIT Trichy Official UG Placement Brochure 2025-2026",
+      "NIT Trichy NIRF 2025 Engineering Report",
+      "Careers360 - NIT Trichy Placement Report 2025",
+      "Shiksha - NIT Trichy Placement Statistics 2026 Overview",
+      "CollegeDekho - NIT Trichy Placement Trends 2025"
+    ],
+    "placements": {
+      "year": "2026",
+      "highest_package": 64.3,
+      "average_package": 17.5,
+      "median_package": 15.76,
+      "package_currency": "LPA",
+      "placement_rate_percent": 85.0,
+      "total_students_placed": 1300,
+      "total_companies_visited": 220,
+      "graduate_outcomes_note": "Data for 2025-26 reflects early session reports and 2025 concluding stats. The 2026 full report is pending official release."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2026",
+        "average_package": 17.5,
+        "employment_rate_percent": 85.0,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2025",
+        "average_package": 17.0,
+        "employment_rate_percent": 82.5,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2024",
+        "average_package": 16.43,
+        "employment_rate_percent": 88.9,
+        "package_currency": "LPA"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2026",
+        "male_placed": -1,
+        "female_placed": -1,
+        "male_percent": 72.0,
+        "female_percent": 28.0
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2026",
+        "sector": "Analytics/IT",
+        "companies": [
+          "Google",
+          "Microsoft",
+          "Amazon",
+          "Oracle"
+        ],
+        "percent": 31.0
+      },
+      {
+        "year": "2026",
+        "sector": "Engineering",
+        "companies": [
+          "Larsen & Toubro",
+          "Volvo",
+          "Reliance Industries"
+        ],
+        "percent": 23.0
+      },
+      {
+        "year": "2026",
+        "sector": "Sales & Marketing",
+        "companies": [
+          "HUL",
+          "ITC",
+          "Flipkart"
+        ],
+        "percent": 8.0
+      }
+    ],
+    "top_recruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Nvidia",
+      "Goldman Sachs",
+      "Qualcomm",
+      "Deloitte",
+      "Tata Consultancy Services",
+      "Morgan Stanley",
+      "Larsen & Toubro"
+    ],
+    "placement_highlights": "NIT Trichy maintained its Tier-1 status with a 2025-26 highest package of 64.3 LPA, primarily in the MCA and B.Tech CSE streams. Core branches like ECE and EEE achieved nearly 90% placement, while the overall undergraduate placement rate hovered around 85-89% across recent cycles. Top global tech giants and consulting firms continue to lead recruitment, often providing average packages exceeding 20 LPA for circuital branches."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://www.nitt.edu/home/academics/fees_section/ug_courses_fee_structure/B.Tech%202026.pdf",
+      "https://www.nitt.edu/home/admissions/btech/B.Tech._Fee%20Structure_2025.pdf",
+      "https://www.nitt.edu/home/academics/fees_section/ug_courses_fee_structure/B.Tech%202024.pdf",
+      "https://collegedunia.com/university/25889-nit-trichy-tiruchirappalli/courses-fees",
+      "https://www.nitt.edu/home/academics/fees_section/ms_phd_fee_structure/Ph.D.%20Institute%20Fee%20Structure%20for%20AY%202024%20-%2025%20%20(July%20Session).pdf"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 166100.0,
+        "total_course": 664400.0,
+        "currency": "INR"
+      },
+      "PG": {
+        "per_year": 120000.0,
+        "total_course": 240000.0,
+        "currency": "INR"
+      },
+      "hostel_per_year": 112000.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 166100.0,
+          "total_course": 664400.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 120000.0,
+          "total_course": 240000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 112000.0
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 163000.0,
+          "total_course": 652000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 117500.0,
+          "total_course": 235000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 105000.0
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 157500.0,
+          "total_course": 630000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 115000.0,
+          "total_course": 230000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 98000.0
+      }
+    ],
+    "fees_note": "The fee structure includes tuition fees, one-time admission charges, and recurring institute annual fees. Tuition fee waivers are available for SC/ST/PwD categories and students from lower-income backgrounds (below 1-5 Lakhs per annum). Total course fees vary by specialization, particularly for PG programs like MBA and MCA compared to M.Tech.",
+    "scholarships_detail": [
+      {
+        "name": "Tuition Fee Remission (UG)",
+        "amount": 125000.0,
+        "currency_type": "INR",
+        "eligibility": "Family income < 1 Lakh per annum (100% waiver) or 1-5 Lakhs (2/3rd waiver)",
+        "provider": "NIT Tiruchirappalli / Ministry of Education"
+      },
+      {
+        "name": "Post Matric Scholarship",
+        "amount": 0.0,
+        "currency_type": "INR",
+        "eligibility": "SC/ST students as per state/central government norms",
+        "provider": "Various State Governments"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://www.nitt.edu/home/academics/nirf/nirf2025/",
+      "https://www.nitt.edu/home/students/facilitiesnservices/hostelsnmess/hostels",
+      "https://nitt.edu",
+      "https://nitt.edu",
+      "https://www.nitt.edu/students/facilitiesnservices/transport/",
+      "https://www.nitt.edu/home/pd/projects"
+    ],
+    "infrastructure": [
+      {
+        "facility": "The Octagon - Computer Support Group (CSG)",
+        "content": "A high-tech computing center with a Local Area Network (LAN) connecting over 7,500 users, housing 7 labs with 600+ computers and 40 high-end servers."
+      },
+      {
+        "facility": "Param Porul Supercomputer",
+        "content": "A high-performance computing facility established under the National Supercomputing Mission (NSM)."
+      },
+      {
+        "facility": "Sports Complex & Swimming Pool",
+        "content": "Multi-facility complex including an indoor stadium with shuttle courts, fitness center, and a 25-meter swimming pool."
+      },
+      {
+        "facility": "Hospital",
+        "content": "A 24/7 campus hospital providing medical services to students, staff, and faculty."
+      },
+      {
+        "facility": "Lecture Hall Complexes",
+        "content": "Modern facilities including the Orion PG-LHC and other lecture hall complexes equipped with audio-visual aids."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 6966,
+      "type": "Separate Boys (22 hostels) and Girls (6 hostels) including PG and PhD specific blocks."
+    },
+    "library_details": {
+      "total_books": 182750,
+      "journals": 83,
+      "e_resources": 17205,
+      "area_sqft": 30000.0
+    },
+    "transport_details": {
+      "buses": 4,
+      "routes": 5
+    },
+    "scholarships": [
+      {
+        "name": "Fee Remission (General/OBC/EWS)",
+        "amount": 62500.0,
+        "currency_type": "INR",
+        "eligibility": "Annual family income ≤ ₹5 lakh (Full waiver for < ₹1 lakh; 2/3 waiver for ₹1-5 lakh)",
+        "provider": "NIT Tiruchirappalli / Ministry of Education",
+        "type": "need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Student Aid Fund (SAF)",
+        "amount": 20000.0,
+        "currency_type": "INR",
+        "eligibility": "Annual family income ≤ ₹6 lakh; regular Indian students not receiving other scholarships",
+        "provider": "NIT Tiruchirappalli",
+        "type": "need",
+        "application_deadline": "2026-03-28"
+      },
+      {
+        "name": "Central Sector Scholarship Scheme for SC Students",
+        "amount": 45000.0,
+        "currency_type": "INR",
+        "eligibility": "SC category; family income ≤ ₹8 lakh; covers full tuition plus laptop (one-time) and living expenses",
+        "provider": "Ministry of Social Justice and Empowerment",
+        "type": "specific",
+        "application_deadline": "2025-10-15"
+      },
+      {
+        "name": "Central Sector Scholarship Scheme for ST Students",
+        "amount": 45000.0,
+        "currency_type": "INR",
+        "eligibility": "ST category; family income ≤ ₹6 lakh; covers full tuition plus laptop and living expenses",
+        "provider": "Ministry of Tribal Affairs",
+        "type": "specific",
+        "application_deadline": "2025-10-15"
+      },
+      {
+        "name": "RECT '78 Alumni Scholarship",
+        "amount": 30000.0,
+        "currency_type": "INR",
+        "eligibility": "Second-year B.Tech students based on merit-cum-means",
+        "provider": "RECT '78 Alumni",
+        "type": "merit/need",
+        "application_deadline": "2025-07-18"
+      },
+      {
+        "name": "Engineers India Limited (EIL) Scholarship",
+        "amount": 3000.0,
+        "currency_type": "INR",
+        "eligibility": "SC/ST students with family income ≤ ₹3 lakh (per month benefit)",
+        "provider": "Engineers India Limited",
+        "type": "specific",
+        "application_deadline": "N/A"
+      }
+    ]
+  },
+  "_metadata": {
+    "scraped_at": "2026-03-31T18:01:10.087387",
+    "total_time": 52.033756494522095,
+    "errors": {},
+    "validation_warnings": [
+      "FIX: accreditations was a dict; converted to array."
+    ],
+    "college_name": "N/A",
+    "country": "N/A",
+    "schema_version": "v1.1"
+  }
+}
