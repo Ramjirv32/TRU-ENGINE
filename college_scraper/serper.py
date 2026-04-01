@@ -866,7 +866,8 @@ def normalize_college(college_raw: Dict) -> Dict:
     return normalized
 
 def main():
-    output_file = "/home/ramji/Videos/scap/college_scraper/serper_results.json"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_file = os.path.join(script_dir, "serper_results.json")
     colleges_data = {}
     
     # Load existing data to merge
@@ -949,9 +950,10 @@ def main():
     for college, data in colleges_data.items():
         # Sanitize college name for filename
         safe_college_name = re.sub(r'[^\w\s-]', '', college).strip().replace(' ', '_')
+        script_dir = os.path.dirname(os.path.abspath(__file__))
         
         # First, save the raw scraped data
-        raw_output_file = f"/home/ramji/Videos/scap/college_scraper/{safe_college_name}.json"
+        raw_output_file = os.path.join(script_dir, f"{safe_college_name}.json")
         with open(raw_output_file, "w") as f:
             json.dump(data, f, indent=2)
         
@@ -959,7 +961,7 @@ def main():
         print(f"\n🔧 Normalizing {college}...")
         try:
             normalized_data = normalize_college(data)
-            normalized_output_file = f"/home/ramji/Videos/scap/college_scraper/{safe_college_name}_normalized.json"
+            normalized_output_file = os.path.join(script_dir, f"{safe_college_name}_normalized.json")
             
             with open(normalized_output_file, "w") as f:
                 json.dump(normalized_data, f, indent=2, ensure_ascii=False)

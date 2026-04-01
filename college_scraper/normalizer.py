@@ -702,8 +702,9 @@ def extract_structured_json(md_text):
 
 def normalize_existing_scraped_files():
     """Normalize existing scraped JSON files from serper.py"""
-    input_dir = "/home/ramji/Videos/scap/college_scraper"
-    output_dir = "/home/ramji/Videos/scap/college_scraper"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    input_dir = script_dir
+    output_dir = script_dir
     os.makedirs(output_dir, exist_ok=True)
     
     print(f"🔧 NORMALIZING EXISTING SCRAPED FILES...")

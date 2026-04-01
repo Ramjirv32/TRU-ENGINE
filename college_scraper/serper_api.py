@@ -23,7 +23,8 @@ load_dotenv()
 
 # Import existing serper functionality
 import sys
-sys.path.append('/home/ramji/Videos/scap/college_scraper')
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, script_dir)
 from serper import (
     COLLEGES, QUERIES, build_curl_command, run_curl, 
     extract_structured_json, extract_reconstructed_markdown,
