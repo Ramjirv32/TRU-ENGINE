@@ -77,17 +77,42 @@ REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", "")
 # API Configuration
 API_HOST = os.getenv("API_HOST", "0.0.0.0")
 API_PORT = int(os.getenv("API_PORT", "8501"))
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8080")  # Go backend URL
-CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*").split(",")
+BACKEND_URL = os.getenv("BACKEND_URL", "https://api.cloudlab.works")  # Go backend URL
+FRONTEND_URL = os.getenv("FRONTEND_URL", "https://tru.cloudlab.works")  # Frontend URL
+
+# Allowed origins for CORS (Security: Only these domains can access the API)
+ALLOWED_ORIGINS = [
+    # Production domains
+    "https://ai.cloudlab.works",
+    "https://tru.cloudlab.works",
+    "https://api.cloudlab.works",
+    # Local development
+    "http://localhost:3000",
+    "http://localhost:9000",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:9000",
+]
 
 # CORS Middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=CORS_ORIGINS,  # Use environment variable
+    allow_origins=ALLOWED_ORIGINS,  # Restrict to specific domains only
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+    allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
 )
+
+# Custom middleware to log security events
+@app.middleware("http")
+async def log_security_events(request, call_next):
+    origin = request.headers.get("origin", "Unknown")
+    
+    # Check if origin is allowed
+    if origin != "Unknown" and origin not in ALLOWED_ORIGINS:
+        print(f"⚠️  SECURITY: Rejected request from unauthorized origin: {origin} | Path: {request.url.path} | Method: {request.method}")
+    
+    response = await call_next(request)
+    return response
 
 # Database Connections
 mongo_client = None
@@ -218,6 +243,11 @@ def transform_data_for_frontend(data: Dict[str, Any]) -> Dict[str, Any]:
             "phd_students": get_value(student_stats, "phdStudents", "phd_students", 0),
             "male_percent": get_value(student_stats, "malePercent", "male_percent", 0),
             "female_percent": get_value(student_stats, "femalePercent", "female_percent", 0),
+            "total_ug_courses": get_value(student_stats, "totalUgCourses", "total_ug_courses", 0),
+            "total_pg_courses": get_value(student_stats, "totalPgCourses", "total_pg_courses", 0),
+            "total_phd_courses": get_value(student_stats, "totalPhdCourses", "total_phd_courses", 0),
+            "total_faculty_count": get_value(student_stats, "totalFacultyCount", "total_faculty_count", 0),
+            "total_departments_count": get_value(student_stats, "totalDepartmentsCount", "total_departments_count", 0),
         }
         transformed["student_statistics"] = [
             {"category": "Total students", "value": transformed["student_statistics_detail"]["total_enrollment"]},
@@ -226,6 +256,11 @@ def transform_data_for_frontend(data: Dict[str, Any]) -> Dict[str, Any]:
             {"category": "PhD Students", "value": transformed["student_statistics_detail"]["phd_students"]},
             {"category": "Male students", "value": transformed["student_statistics_detail"]["male_percent"]},
             {"category": "Female students", "value": transformed["student_statistics_detail"]["female_percent"]},
+            {"category": "UG Courses", "value": transformed["student_statistics_detail"]["total_ug_courses"]},
+            {"category": "PG Courses", "value": transformed["student_statistics_detail"]["total_pg_courses"]},
+            {"category": "PhD Courses", "value": transformed["student_statistics_detail"]["total_phd_courses"]},
+            {"category": "Total Faculty", "value": transformed["student_statistics_detail"]["total_faculty_count"]},
+            {"category": "Departments", "value": transformed["student_statistics_detail"]["total_departments_count"]},
         ]
     
     # Faculty staff (handle camelCase)

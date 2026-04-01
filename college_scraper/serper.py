@@ -166,6 +166,8 @@ def get_default_schema() -> Dict[str, Any]:
                 "total_ug_courses": -1,
                 "total_pg_courses": -1,
                 "total_phd_courses": -1,
+                "total_faculty_count": -1,
+                "total_departments_count": -1,
                 "guessed_data": False
             },
             "faculty_staff": {
@@ -439,6 +441,8 @@ def normalize_basic_info(raw: Dict) -> Dict:
         "total_ug_courses": to_int(ss_raw.get("total_ug_courses"), -1),
         "total_pg_courses": to_int(ss_raw.get("total_pg_courses"), -1),
         "total_phd_courses":to_int(ss_raw.get("total_phd_courses"), -1),
+        "total_faculty_count": to_int(ss_raw.get("total_faculty_count"), -1),
+        "total_departments_count": to_int(ss_raw.get("total_departments_count"), -1),
         "guessed_data":     to_bool(ss_raw.get("guessed_data"), False),
     }
 
