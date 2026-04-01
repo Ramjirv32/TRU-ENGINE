@@ -14,7 +14,7 @@ load_dotenv()
 API_KEY = os.getenv("SERPER_API_KEY", "34a1d2a034385b46ef853771af21b0270113dbae01021bd548f0309d65a0d264")
 
 COLLEGES = [
-    {"name": "PSG College of Technology", "country": "India", "location": "Coimbatore"},
+    {"name": "Kumaraguru College of Technology", "country": "India", "location": "Coimbatore"},
 ]
 
 QUERIES = {
@@ -26,7 +26,7 @@ QUERIES = {
  "pg_programs": "For %COLLEGE_NAME% in %COUNTRY% (%LOCATION%), search the official website, graduate programs directory, and course listings to find postgraduate degree programs (Master's/M.Tech/M.A./M.Sc./MBA programs offered). Include program names like 'Master of Science in Computer Science', 'M.Tech in Engineering', 'Master's in Economics', etc. You can also infer programs based on faculty/departments listed on their site. Return valid JSON with this format: { \"pg_programs\": [\"program1\", \"program2\", ...], \"total_count\": number, \"source\": \"url or 'inferred from departments'\" }. Return an empty array if genuinely no data is available.",
  "phd_programs": "List all officially offered PhD/Doctoral programs at %COLLEGE_NAME%, %COUNTRY% (%LOCATION%), as of 2026. Include only real programs. Do not invent. Return only JSON: { \"phd_programs\": [\"program_name\", ...] }",
     
- "departments": "List all academic departments and schools at %COLLEGE_NAME%, %COUNTRY% (%LOCATION%), as of 2026. Return only JSON: { \"departments\": [\"department_name\", ...] }",
+ "departments": "Return ONLY valid JSON with NO other text. Format: { \"departments\": [\"Department Name 1\", \"Department Name 2\", ...] }. List all academic departments at %COLLEGE_NAME%, %COUNTRY%. Example: Aeronautical Engineering, Civil Engineering, Computer Science, etc.",
     
  "programs": "What are the main academic programs offered at %COLLEGE_NAME% in %COUNTRY% (%LOCATION%)? List the undergraduate, postgraduate, and PhD programs available.",
     
@@ -589,12 +589,27 @@ def normalize_programs(raw: Dict) -> Dict:
     def extract_programs(section_key):
         section_data = raw.get(section_key, {})
         if isinstance(section_data, dict):
-            # If it has error key, return empty
-            if "error" in section_data:
+            # If it has error key, try to extract from extracted_content
+            if "error" in section_data and "extracted_content" in section_data:
+                try:
+                    import json
+                    # Fix escaped quotes in extracted_content
+                    extracted_str = section_data["extracted_content"]
+                    # Replace escaped quotes and backslashes using raw strings
+                    extracted_str = extracted_str.replace(r'\[', '[').replace(r'\]', ']').replace(r'\"', '"')
+                    extracted = json.loads(extracted_str)
+                    if section_key in extracted:
+                        result = flatten_list(extracted[section_key])
+                        return result
+                except Exception as e:
+                    pass
                 return []
             # If it has the key matching the section (e.g., "ug_programs" inside "ug_programs"), use that
             if section_key in section_data:
                 return flatten_list(section_data[section_key])
+            # For departments, check if it's a direct departments array
+            if section_key == "departments" and "departments" in section_data:
+                return flatten_list(section_data["departments"])
             # Otherwise just try to flatten the dict values
             return flatten_list(section_data)
         # If it's already a list, flatten it
@@ -800,23 +815,32 @@ def normalize_college(college_raw: Dict) -> Dict:
         all_warnings.extend(result.pop("_warnings", []))
         normalized[section] = result
 
-    # Special handling for programs: if programs section has error, 
-    # try to extract from separate ug_programs, pg_programs, phd_programs, departments sections
-    if normalized["programs"].get("ug_programs") == [] and normalized["programs"].get("pg_programs") == []:
-        # Try to extract from separate sections
-        separate_programs = {}
-        for program_type in ["ug_programs", "pg_programs", "phd_programs", "departments"]:
-            if program_type in college_raw:
-                section_data = college_raw[program_type]
-                if isinstance(section_data, dict) and program_type in section_data:
+    # Special handling for programs: ALWAYS extract from separate sections for complete data
+    separate_programs = {}
+    for program_type in ["ug_programs", "pg_programs", "phd_programs", "departments"]:
+        if program_type in college_raw:
+            section_data = college_raw[program_type]
+            if isinstance(section_data, dict):
+                # Handle error case with extracted_content
+                if "error" in section_data and "extracted_content" in section_data:
+                    try:
+                        import json
+                        extracted_str = section_data["extracted_content"]
+                        extracted_str = extracted_str.replace(r'\[', '[').replace(r'\]', ']').replace(r'\"', '"')
+                        extracted = json.loads(extracted_str)
+                        if program_type in extracted:
+                            separate_programs[program_type] = extracted[program_type]
+                    except:
+                        pass
+                elif program_type in section_data:
                     separate_programs[program_type] = section_data[program_type]
-                elif isinstance(section_data, list):
-                    separate_programs[program_type] = section_data
-        
-        if separate_programs:
-            # Re-normalize with the extracted data
-            normalized["programs"] = normalize_programs(separate_programs)
-            all_warnings.append("FIX: Extracted programs from separate top-level sections.")
+            elif isinstance(section_data, list):
+                separate_programs[program_type] = section_data
+    
+    if separate_programs:
+        # Always re-normalize with extracted data to ensure completeness
+        normalized["programs"] = normalize_programs(separate_programs)
+        all_warnings.append("FIX: Extracted programs from separate top-level sections.")
 
     # Extract college name and country from basic_info for metadata
     basic_info = normalized.get("basic_info", {})

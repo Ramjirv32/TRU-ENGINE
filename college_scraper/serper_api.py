@@ -29,6 +29,7 @@ from serper import (
     extract_structured_json, extract_reconstructed_markdown,
     normalize_college
 )
+from json_formatter import normalize_college_data, JSONNormalizer
 from groq_college_validator import validate_college_name
 
 # WebSocket connections manager
@@ -146,169 +147,148 @@ def init_database():
 
 # Helper Functions
 def transform_data_for_frontend(data: Dict[str, Any]) -> Dict[str, Any]:
-    """Transform the normalized data structure to match frontend expectations"""
+    """
+    Transform data for frontend - handles both camelCase (normalized) and snake_case (legacy)
+    Always returns snake_case for frontend compatibility
+    """
     transformed = {}
     
-    # First, try to use data from root level, fallback to serper_sections
-    basic_source = data.get("basic_info", {})
-    if not basic_source or len(basic_source) < 5:
-        # Fallback to serper_sections if basic_info is empty
-        serper = data.get("serper_sections", {})
-        basic_source = serper.get("basic_info", serper)
+    # Helper to get value from either camelCase or snake_case key
+    def get_value(obj, camel_key, snake_key, default=None):
+        return obj.get(camel_key) or obj.get(snake_key, default)
     
-    programs_source = data.get("programs", {})
-    if not programs_source or (not programs_source.get("ug_programs") and not programs_source.get("pg_programs")):
-        serper = data.get("serper_sections", {})
-        programs_source = serper.get("programs", serper)
+    # Detect if data is in camelCase (normalized) or snake_case (legacy)
+    is_normalized = "collegeName" in data or "basicInfo" in data
     
-    placements_source = data.get("placements", {})
-    if not placements_source or (placements_source.get("highest_package", 0) == 0 and placements_source.get("year", 0) == 0):
-        serper = data.get("serper_sections", {})
-        placements_source = serper.get("placements", serper.get("placements_data", {}))
-        if "placements" in placements_source:
-            placements_source = placements_source["placements"]
+    # Get base info (handle both camelCase and snake_case)
+    basic_source = get_value(data, "basicInfo", "basic_info", {})
+    if not basic_source or len(basic_source) < 2:
+        serper = get_value(data, "serperSections", "serper_sections", {})
+        basic_source = get_value(serper, "basicInfo", "basic_info", serper)
     
-    fees_source = data.get("fees", {})
-    if not fees_source or (not fees_source.get("UG", {}).get("per_year")):
-        serper = data.get("serper_sections", {})
-        fees_source = serper.get("fees", serper.get("fees_data", {}))
-        if "fees" in fees_source:
-            fees_source = fees_source["fees"]
+    # Get programs (handle both formats)
+    programs_source = get_value(data, "programs", "programs", {})
+    if not programs_source or (not programs_source.get("ug_programs") and not programs_source.get("ugPrograms")):
+        serper = get_value(data, "serperSections", "serper_sections", {})
+        programs_source = get_value(serper, "programs", "programs", serper)
     
-    infrastructure_source = data.get("infrastructure") or data.get("serper_sections", {}).get("infrastructure_data", {}) or data.get("serper_sections", {}).get("infrastructure", {})
+    # Get placements
+    placements_source = get_value(data, "placements", "placements", {})
+    if not placements_source:
+        serper = get_value(data, "serperSections", "serper_sections", {})
+        placements_source = get_value(serper, "placements", "placements", serper.get("placements_data", {}))
     
-    # Extract basic info
+    # Get fees
+    fees_source = get_value(data, "fees", "fees", {})
+    if not fees_source:
+        serper = get_value(data, "serperSections", "serper_sections", {})
+        fees_source = get_value(serper, "fees", "fees", serper.get("fees_data", {}))
+    
+    # Get infrastructure
+    infrastructure_source = get_value(data, "infrastructure", "infrastructure") or \
+                           get_value(data, "serperSections", "serper_sections", {}).get("infrastructure_data", {})
+    
+    # Extract basic info (convert from camelCase if needed)
+    college_name = get_value(basic_source, "collegeName", "college_name") or get_value(data, "collegeName", "college_name", "")
+    
     transformed.update({
-        "college_name": basic_source.get("college_name", data.get("college_name", "")),
-        "short_name": basic_source.get("short_name", ""),
-        "established": basic_source.get("established", ""),
-        "institution_type": basic_source.get("institution_type", ""),
-        "country": basic_source.get("country", data.get("country", "")),
-        "location": basic_source.get("location", data.get("location", "")),
-        "website": basic_source.get("website", ""),
-        "about": basic_source.get("about", ""),
-        "summary": basic_source.get("summary", ""),
-        "rankings": basic_source.get("rankings", {}),
-        "accreditations": basic_source.get("accreditations", []),
-        "affiliations": basic_source.get("affiliations", "").split(", ") if basic_source.get("affiliations") else [],
-        "recognition": basic_source.get("recognition", ""),
-        "campus_area": basic_source.get("campus_area", ""),
-        "contact_info": basic_source.get("contact_info", {}),
+        "college_name": college_name,
+        "short_name": get_value(basic_source, "shortName", "short_name", ""),
+        "established": get_value(basic_source, "established", "established", ""),
+        "institution_type": get_value(basic_source, "institutionType", "institution_type", ""),
+        "country": get_value(basic_source, "country", "country") or get_value(data, "country", "country", ""),
+        "location": get_value(basic_source, "location", "location") or get_value(data, "location", "location", ""),
+        "website": get_value(basic_source, "website", "website", ""),
+        "about": get_value(basic_source, "about", "about", ""),
+        "summary": get_value(basic_source, "summary", "summary", ""),
+        "rankings": get_value(basic_source, "rankings", "rankings", {}),
+        "accreditations": get_value(basic_source, "accreditations", "accreditations", []),
+        "recognition": get_value(basic_source, "recognition", "recognition", ""),
+        "campus_area": get_value(basic_source, "campusArea", "campus_area", ""),
+        "contact_info": get_value(basic_source, "contactInfo", "contact_info", {}),
     })
     
-    # Student statistics
-    if "student_statistics" in basic_source:
-        student_stats = basic_source["student_statistics"]
-        transformed["student_statistics_detail"] = student_stats
+    # Student statistics (handle camelCase)
+    student_stats = get_value(basic_source, "studentStatistics", "student_statistics", {})
+    if student_stats:
+        transformed["student_statistics_detail"] = {
+            "total_enrollment": get_value(student_stats, "totalEnrollment", "total_enrollment", 0),
+            "ug_students": get_value(student_stats, "ugStudents", "ug_students", 0),
+            "pg_students": get_value(student_stats, "pgStudents", "pg_students", 0),
+            "phd_students": get_value(student_stats, "phdStudents", "phd_students", 0),
+            "male_percent": get_value(student_stats, "malePercent", "male_percent", 0),
+            "female_percent": get_value(student_stats, "femalePercent", "female_percent", 0),
+        }
         transformed["student_statistics"] = [
-            {"category": "Total students", "value": student_stats.get("total_enrollment", 0)},
-            {"category": "UG Students", "value": student_stats.get("ug_students", 0)},
-            {"category": "PG Students", "value": student_stats.get("pg_students", 0)},
-            {"category": "PhD Students", "value": student_stats.get("phd_students", 0)},
-            {"category": "Annual Intake", "value": student_stats.get("annual_intake", 0)},
-            {"category": "Male students", "value": student_stats.get("male_percent", 0)},
-            {"category": "Female students", "value": student_stats.get("female_percent", 0)},
-            {"category": "Total UG Courses", "value": student_stats.get("total_ug_courses", 0)},
-            {"category": "Total PG Courses", "value": student_stats.get("total_pg_courses", 0)},
-            {"category": "Total PhD Courses", "value": student_stats.get("total_phd_courses", 0)},
+            {"category": "Total students", "value": transformed["student_statistics_detail"]["total_enrollment"]},
+            {"category": "UG Students", "value": transformed["student_statistics_detail"]["ug_students"]},
+            {"category": "PG Students", "value": transformed["student_statistics_detail"]["pg_students"]},
+            {"category": "PhD Students", "value": transformed["student_statistics_detail"]["phd_students"]},
+            {"category": "Male students", "value": transformed["student_statistics_detail"]["male_percent"]},
+            {"category": "Female students", "value": transformed["student_statistics_detail"]["female_percent"]},
         ]
-        
-        if "faculty_staff" in basic_source:
-            faculty = basic_source["faculty_staff"]
-            transformed["student_statistics"].extend([
-                {"category": "Faculty", "value": faculty.get("total_faculty", 0)},
-            ])
-        
-        if "student_history" in basic_source and "international_students" in basic_source["student_history"]:
-            transformed["student_statistics"].append({
-                "category": "International students",
-                "value": basic_source["student_history"]["international_students"]
-            })
     
-    # Faculty staff
-    if "faculty_staff" in basic_source:
-        transformed["faculty_staff_detail"] = basic_source["faculty_staff"]
+    # Faculty staff (handle camelCase)
+    faculty = get_value(basic_source, "facultyStaff", "faculty_staff", {})
+    if faculty:
+        transformed["faculty_staff_detail"] = {
+            "total_faculty": get_value(faculty, "totalFaculty", "total_faculty", 0),
+            "phd_faculty_percent": get_value(faculty, "phdFacultyPercent", "phd_faculty_percent", 0),
+        }
     
-    # Student history
-    if "student_history" in basic_source:
-        transformed["student_history"] = basic_source["student_history"]
-    
-    # Programs - extract from proper location
+    # Programs (handle both formats)
     if programs_source:
         transformed["programs_data"] = {
-            "ug_programs": programs_source.get("ug_programs", []),
-            "pg_programs": programs_source.get("pg_programs", []),
-            "phd_programs": programs_source.get("phd_programs", []),
-            "departments": programs_source.get("departments", []),
+            "ug_programs": get_value(programs_source, "ugPrograms", "ug_programs", []),
+            "pg_programs": get_value(programs_source, "pgPrograms", "pg_programs", []),
+            "phd_programs": get_value(programs_source, "phdPrograms", "phd_programs", []),
+            "departments": get_value(programs_source, "departments", "departments", []),
         }
-        transformed.update({
-            "ug_programs": programs_source.get("ug_programs", []),
-            "pg_programs": programs_source.get("pg_programs", []),
-            "phd_programs": programs_source.get("phd_programs", []),
-            "departments": programs_source.get("departments", []),
-        })
+        transformed.update(transformed["programs_data"])
     
-    # Placements - extract properly
+    # Departments fallback - check root level if not found in programs_data
+    if not transformed.get("departments") or len(transformed.get("departments", [])) == 0:
+        transformed["departments"] = get_value(data, "departments", "departments", [])
+    
+    # Placements (handle both formats)
     if placements_source:
-        # Handle different placements structures
         placements_obj = placements_source.get("placements", placements_source) if "placements" in placements_source else placements_source
         
         transformed["placements_data"] = {
             "placements": placements_obj,
-            "placement_comparison_last_3_years": placements_source.get("placement_comparison_last_3_years", []),
-            "gender_based_placement_last_3_years": placements_source.get("gender_based_placement_last_3_years", []),
-            "sector_wise_placement_last_3_years": placements_source.get("sector_wise_placement_last_3_years", []),
-            "top_recruiters": placements_source.get("top_recruiters", []),
-            "placement_highlights": placements_source.get("placement_highlights", ""),
+            "placement_comparison_last_3_years": get_value(placements_source, "placementComparisonLast3Years", "placement_comparison_last_3_years", []),
+            "gender_based_placement_last_3_years": get_value(placements_source, "genderBasedPlacementLast3Years", "gender_based_placement_last_3_years", []),
+            "sector_wise_placement_last_3_years": get_value(placements_source, "sectorWisePlacementLast3Years", "sector_wise_placement_last_3_years", []),
+            "top_recruiters": get_value(placements_source, "topRecruiters", "top_recruiters", []),
+            "placement_highlights": get_value(placements_source, "placementHighlights", "placement_highlights", ""),
         }
-        transformed.update({
-            "placements": placements_obj,
-            "placement_comparison_last_3_years": placements_source.get("placement_comparison_last_3_years", []),
-            "gender_based_placement_last_3_years": placements_source.get("gender_based_placement_last_3_years", []),
-            "sector_wise_placement_last_3_years": placements_source.get("sector_wise_placement_last_3_years", []),
-            "top_recruiters": placements_source.get("top_recruiters", []),
-            "placement_highlights": placements_source.get("placement_highlights", ""),
-        })
+        transformed.update({k: v for k, v in transformed["placements_data"].items() if k != "placements_data"})
     
-    # Fees - extract properly
+    # Fees (handle both formats)
     if fees_source:
         fees_obj = fees_source.get("fees", fees_source) if "fees" in fees_source else fees_source
         
         transformed["fees_data"] = {
             "fees": fees_obj,
-            "fees_by_year": fees_source.get("fees_by_year", []),
-            "fees_note": fees_source.get("fees_note", ""),
-            "scholarships_detail": fees_source.get("scholarships_detail", []),
+            "fees_by_year": get_value(fees_source, "feesByYear", "fees_by_year", []),
+            "fees_note": get_value(fees_source, "feesNote", "fees_note", ""),
+            "scholarships_detail": get_value(fees_source, "scholarshipDetails", "scholarships_detail", []),
         }
-        transformed.update({
-            "fees": fees_obj,
-            "fees_by_year": fees_source.get("fees_by_year", []),
-            "fees_note": fees_source.get("fees_note", ""),
-            "scholarships_detail": fees_source.get("scholarships_detail", []),
-        })
+        transformed.update({k: v for k, v in transformed["fees_data"].items() if k != "fees_data"})
     
-    # Infrastructure - extract properly
+    # Infrastructure (handle both formats)
     if infrastructure_source and isinstance(infrastructure_source, dict):
         transformed["infrastructure_data"] = {
-            "infrastructure": infrastructure_source.get("infrastructure", []),
-            "hostel_details": infrastructure_source.get("hostel_details", {}),
-            "library_details": infrastructure_source.get("library_details", {}),
-            "transport_details": infrastructure_source.get("transport_details", {}),
-            "scholarships": infrastructure_source.get("scholarships", []),
+            "infrastructure": get_value(infrastructure_source, "infrastructure", "infrastructure", []),
+            "hostel_details": get_value(infrastructure_source, "hostelDetails", "hostel_details", {}),
+            "library_details": get_value(infrastructure_source, "libraryDetails", "library_details", {}),
+            "transport_details": get_value(infrastructure_source, "transportDetails", "transport_details", {}),
+            "scholarships": get_value(infrastructure_source, "scholarships", "scholarships", []),
         }
-        transformed.update({
-            "infrastructure": infrastructure_source.get("infrastructure", []),
-            "hostel_details": infrastructure_source.get("hostel_details", {}),
-            "library_details": infrastructure_source.get("library_details", {}),
-            "transport_details": infrastructure_source.get("transport_details", {}),
-            "scholarships": infrastructure_source.get("scholarships", []),
-        })
-    
-    # Keep metadata
-    if "_metadata" in data:
-        transformed["_metadata"] = data["_metadata"]
+        transformed.update({k: v for k, v in transformed["infrastructure_data"].items() if k != "infrastructure_data"})
     
     return transformed
+
 
 def convert_datetime_to_str(obj):
     """Recursively convert datetime objects to strings"""
@@ -337,28 +317,35 @@ def get_cached_college_data(college_name: str) -> Optional[Dict[str, Any]]:
     return None
 
 def save_college_to_mongodb(college_data: Dict[str, Any]):
-    """Save college data to MongoDB"""
+    """Save college data to MongoDB with normalized JSON structure"""
     if college_collection is not None:
         try:
-            # Check if college already exists
-            existing = college_collection.find_one({"college_name": college_data["college_name"]})
+            # Normalize data to consistent structure (camelCase, ISO dates, predictable nesting)
+            normalized_data = normalize_college_data(college_data)
             
-            # Add timestamps
-            college_data["updated_at"] = datetime.now(timezone.utc)
-            if not existing:
-                college_data["created_at"] = datetime.now(timezone.utc)
-                college_data["approval_status"] = "pending"
+            # Add timestamps with ISO format
+            normalized_data["updated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            if "created_at" not in normalized_data or not normalized_data["created_at"]:
+                normalized_data["created_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            
+            # Set approval status if not present
+            if "approval_status" not in normalized_data:
+                normalized_data["approval_status"] = "pending"
+            
+            # Get college name from either camelCase or snake_case key
+            college_name = normalized_data.get("collegeName") or normalized_data.get("college_name") or "Unknown"
             
             # Use upsert to either insert or update
             college_collection.replace_one(
-                {"college_name": college_data["college_name"]},
-                college_data,
+                {"college_name": college_name},
+                normalized_data,
                 upsert=True
             )
-            print(f"✅ Saved to MongoDB: {college_data['college_name']}")
+            print(f"✅ Saved to MongoDB (normalized): {college_name}")
             
         except Exception as e:
             print(f"❌ Error saving to MongoDB: {e}")
+
 
 def extract_college_list_from_db() -> List[CollegeListItem]:
     """Extract college list from MongoDB"""

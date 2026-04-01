@@ -1,0 +1,56 @@
+{
+  "basic_info": {},
+  "programs": {},
+  "placements": {
+    "guessed_data": false,
+    "data_year": "N/A",
+    "sources": [],
+    "placements": {
+      "year": "N/A",
+      "highest_package": -1.0,
+      "average_package": -1.0,
+      "median_package": -1.0,
+      "package_currency": "N/A",
+      "placement_rate_percent": -1.0,
+      "total_students_placed": -1,
+      "total_companies_visited": -1,
+      "graduate_outcomes_note": "N/A"
+    },
+    "placement_comparison_last_3_years": [],
+    "gender_based_placement_last_3_years": [],
+    "sector_wise_placement_last_3_years": [],
+    "top_recruiters": [],
+    "placement_highlights": "N/A"
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "N/A",
+    "sources": [],
+    "fees": {
+      "UG": {
+        "per_year": -1.0,
+        "total_course": -1.0,
+        "currency": "N/A"
+      },
+      "PG": {
+        "per_year": -1.0,
+        "total_course": -1.0,
+        "currency": "N/A"
+      },
+      "hostel_per_year": -1.0
+    },
+    "fees_by_year": [],
+    "fees_note": "N/A",
+    "scholarships_detail": []
+  },
+  "infrastructure": {},
+  "_metadata": {
+    "scraped_at": "2026-04-01T13:26:53.712646",
+    "total_time": 0,
+    "errors": {},
+    "validation_warnings": [],
+    "college_name": "N/A",
+    "country": "N/A",
+    "schema_version": "v1.1"
+  }
+}

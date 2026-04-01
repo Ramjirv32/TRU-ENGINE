@@ -1,0 +1,538 @@
+{
+  "basic_info": {
+    "college_name": "University of Rwanda",
+    "short_name": "UR",
+    "established": 2013,
+    "institution_type": "Public",
+    "country": "Rwanda",
+    "location": "Kigali",
+    "website": "https://ur.ac.rw/",
+    "about": "The University of Rwanda (UR) is the largest higher education institution in Rwanda, formed in 2013 through a merger of seven previously independent public institutions. It operates across multiple campuses and is organized into six specialized colleges: Arts and Social Sciences (CASS), Agriculture, Animal Sciences and Veterinary Medicine (CAVM), Business and Economics (CBE), Education (CE), Medicine and Health Sciences (CMHS), and Science and Technology (CST).",
+    "summary": "University of Rwanda is Rwanda's leading public university, significantly contributing to the nation's human capital development. It hosts several World Bank African Centres of Excellence and is recognized for its strong focus on STEM education, research output, and regional academic leadership in Sub-Saharan Africa.",
+    "rankings": {
+      "nirf_latest": null,
+      "nirf_previous": null,
+      "qs_world": "37 (Sub-Saharan Africa 2026)",
+      "national_rank": 1,
+      "state_rank": null,
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 31267,
+      "ug_students": 27827,
+      "pg_students": 3116,
+      "phd_students": 324,
+      "annual_intake": 14152,
+      "male_percent": 62,
+      "female_percent": 38,
+      "total_ug_courses": 105,
+      "total_pg_courses": 85,
+      "total_phd_courses": 25,
+      "guessed_data": true
+    },
+    "faculty_staff": {
+      "total_faculty": 1357,
+      "student_faculty_ratio": 23,
+      "phd_faculty_percent": 33,
+      "guessed_data": false
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "2026": 32500,
+        "2025": 31267,
+        "2024": 31506
+      },
+      "international_students": 1150,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 28900,
+          "pg_students": 3250,
+          "phd_students": 350,
+          "international_students": 1200,
+          "domestic_students": 31300,
+          "male_students": 20150,
+          "female_students": 12350
+        },
+        {
+          "year": "2025",
+          "ug_students": 27827,
+          "pg_students": 3116,
+          "phd_students": 324,
+          "international_students": 1150,
+          "domestic_students": 30117,
+          "male_students": 19385,
+          "female_students": 11882
+        },
+        {
+          "year": "2024",
+          "ug_students": 28040,
+          "pg_students": 3142,
+          "phd_students": 324,
+          "international_students": 1100,
+          "domestic_students": 30406,
+          "male_students": 19533,
+          "female_students": 11973
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "Higher Education Council (HEC) Rwanda",
+        "grade": "Accredited",
+        "year": 2024
+      }
+    ],
+    "affiliations": "Association of African Universities (AAU), Inter-University Council for East Africa (IUCEA)",
+    "recognition": "World Bank African Centres of Excellence (ACE)",
+    "campus_area": "Multiple Campuses (Main: Gikondo, Kigali)",
+    "contact_info": {
+      "phone": "+250 788 381 211",
+      "email": "info@ur.ac.rw",
+      "address": "KN 73 St, Kigali, Rwanda"
+    },
+    "sources_verified": [
+      "https://ur.ac.rw/documents/Facts%20and%20Figures_2024.pdf",
+      "https://www.topuniversities.com/universities/university-rwanda",
+      "https://www.timeshighereducation.com/world-university-rankings/university-rwanda",
+      "https://newtimes.co.rw"
+    ]
+  },
+  "programs": {
+    "raw_output": "The University of Rwanda \\(UR\\) is organized into six specialized colleges that offer a combined total of over 130 undergraduate degrees and 138 postgraduate programs. While the university has campuses across Rwanda, many of its key administrative and advanced academic programs are based in Kigali at campuses like [Gikondo](https://www.google.com/search?kgmid=/g/11b6z3sj1w&q=gikondo,%20kigali), [Nyarugenge](https://www.google.com/search?kgmid=/m/02wbq_n&q=nyarugenge,%20kigali), and [Remera](https://www.google.com/search?kgmid=/g/1th46sdc&q=remera,%20kigali). [8] [7] [4] [2] [3]\n\n### Undergraduate Programs\n\nUndergraduate studies typically lead to a Bachelor\u2019s degree with Honours \\(3\u20135 years\\) or an Advanced Diploma \\(2 years\\). [0] [9]\n\n- Arts & Social Sciences: Linguistics, Literature, Journalism, Communication, and Law.\n- Business & Economics: Accounting, Banking, Finance, Marketing, Economics, and Business Information Technology.\n- Education: Science Education \\(Biology, Chemistry, Physics, Math\\), Humanities, and Special Needs Education.\n- Medicine & Health Sciences: Medicine & Surgery \\(MBBS\\), Pharmacy, Nursing, Midwifery, Dentistry, and Clinical Psychology.\n- Science & Technology: Civil, Electrical, and Mechanical Engineering; Computer Science; Architecture; Mining; and Pure Sciences \\(Math, Chemistry, Biology\\).\n\n### Postgraduate Programs \\(Masters\\)\n\nMaster's programs generally last 18 to 24 months and are offered via coursework or research. [0] [6]\n\n- Professional Masters: Master of Business Administration \\(MBA\\) with specializations in Project Management, Finance, and Human Resources.\n- Specialized Sciences: MSc in Data Science \\(Data Mining, Biostatistics\\), Renewable Energy, and Internet of Things \\(IoT\\).\n- Medical Specializations: Master of Medicine \\(MMed\\) in fields like Pediatrics, Internal Medicine, and Surgery \\(usually 4 years\\).\n- Social Sciences & Law: Masters in Gender and Development, Security Studies, and LLM in Business Law or International Criminal Justice.\n\n### PhD Programs\n\nPhD studies at the University of Rwanda are primarily research\\-based, typically requiring a minimum of 3 to 4 years. [0] [7] [6]\n\n- Science & Technology: PhD by Research in Renewable Energy, Power Systems, Computer Science, and Water Resources Engineering.\n- Data Science: PhD in Biostatistics, Econometrics, and Actuarial Science through the [African Centre of Excellence in Data Science](https://www.ur.ac.rw/spip.php?page=programmes).\n- Social Sciences: PhD in Peace, Conflict and Security Studies; Social and Political Sciences; and History.\n- Education: PhD by Research in Mathematics, Biology, and Physics Education.\n- Medicine: PhD in Public Health, Medical Sciences, and Pharmaceutical Sciences.\n\nFor the most up\\-to\\-date list of available intakes, you can visit the [Official University of Rwanda Admissions Portal](https://www.ur.ac.rw/?Apply-for-Postgraduate-Studies). [12]\n\nAre you looking for details on admission requirements or tuition fees for a specific program?\n\n\n### References\n\n[0] [Academic Programmes \\- College of Education \\- University of Rwanda](https://ce.ur.ac.rw/?Academic-Programmes) \u2014 May 23, 2019 \u2014 UR programmes are offered in the following three categories : \\* Undergraduate programmes : Bachelor degrees with Honours and Advan...\n\n[1] [Programmes \\- University of Rwanda](https://www.ur.ac.rw/spip.php?page=programmes) \u2014 Programmes and African Centres of Excellence. ... Master's Programmes: \\* Master of Education in Biology Education. \\* Master of Edu...\n\n[2] [University of Rwanda \\- WHED \\- IAU's World Higher Education ...](https://www.whed.net/institutions/IAU-020463) \u2014 Feb 11, 2025 \u2014 University of Rwanda \\(UR\\) ... General Information. ... The University of Rwanda \\(UR\\) was established in 2013 through a merger of t...\n\n[3] [Call for applications for postgraduate academic programmes \\( ...](https://ur.ac.rw/?Call-for-applications-for-postgraduate-academic-programmes-September-Intake) \u2014 Table\\_title: Call for applications for postgraduate academic programmes \\(September Intake 2025\\) at the University of Rwanda Table\\_\n\n[4] [University of Rwanda \\- Wikipedia](https://en.wikipedia.org/wiki/University_of_Rwanda) \u2014 History. Initial work to establish the institution was undertaken by Professor Paul Davenport, a member of Paul Kagame's President...\n\n[5] [Postgraduate \\- University of Rwanda](https://ur.ac.rw/?Postgraduate) \u2014 Postgraduate \\* COLLEGE OF ARTS AND SOCIAL SCIENCES \\(UR\\-CASS\\) \\* Masters in : \\* PhD in Translation and Interpretation Studies. \\* COL...\n\n[6] [Postgraduate Programmes](https://cass.ur.ac.rw/?Postgraduate-Programmes) \u2014 Jul 16, 2019 \u2014 Postgraduate Programmes \\* Masters Programmes. The duration of Masters Programmes varies between eighteen \\(18\\) and twenty four \\(24\\)\n\n[7] [University of Rwanda Postgraduate Programs 2026](https://www.libertify.com/universities/university-of-rwanda-postgraduate-programs-guide/) \u2014 Mar 15, 2026 \u2014 CAVM offers 5 Masters and 6 PhD programs, and it leads the university's research cluster on agricultural transformation and food s...\n\n[8] [University of Rwanda \\- Colleges](https://ur.ac.rw/spip.php?page=college) \u2014 College of Agriculture, Forestry and Food Science \\(CAFF\\) Busogo Campus. info.caff@ur.ac.rw. www.caff.ur.ac.rw. 4,145 Students. Rea...\n\n[9] [UNDERGRADUATE PROGRAMS AT A GLANCE](https://cass.ur.ac.rw/IMG/pdf/undergraduate_programs_at_a_glance.pdf) \u2014 is a public Higher Learning Institution established by the law n\u00b0 71/2013 of 10/09/2013. It resulted from the merger of the former...\n\n[10] [2018 \\- 2020 \\- University of Rwanda](https://ur.ac.rw/documents/UR%20Academics%20info%20Pack%20numbers.pdf) \u2014 MISSION: To support the development of Rwanda by discovering and advancing knowledge, committed to the highest standards of academ...\n\n[11] [School of Medicine and Pharmacy](https://cmhs.ur.ac.rw/spip.php?rubrique24) \u2014 Table\\_title: Programmes \\- Undergraduate Table\\_content: header: \\| Programme Name \\| Programme Description \\| row: \\| Programme Name: B...\n\n[12] [Apply for Postgraduate Studies \\- University of Rwanda](https://www.ur.ac.rw/?Apply-for-Postgraduate-Studies) \u2014 Apr 4, 2024 \u2014 71253 Views. \ud83d\udce2 Postgraduate Studies Application .Call Now Open \\! \ud83d\udce2 Are you ready to take the next step in your academic journey ...\n\n[13] [Postgraduate Programmes \\- Kigali \\- University of Rwanda](https://ur.ac.rw/documents/new%20edition%20postgraduate%20programs%20for%20UNIVERSITY%20OF%20RWANDA.pdf) \u2014 \\* \u2022 PhD in Development Studies \\(Full. \\* \u019fme\\) Dura\u019fon: Four years. \\* \u2022 PhD in Social Sciences \\(Social Work\\) \\* \\(Full \u019fme\\) Dura\u019fon: F...\n",
+    "error": "No JSON braces found"
+  },
+  "placements": {
+    "guessed_data": true,
+    "data_year": "2026",
+    "sources": [
+      "https://ur.ac.rw/documents/Facts%20and%20Figures_2024.pdf",
+      "https://www.timeshighereducation.com/world-university-rankings/university-rwanda",
+      "http://alpha.statistics.gov.rw/sites/default/files/documents/2025-05/Annual%20Report%20LFS%202024.pdf",
+      "https://english.news.cn/20260327/5fdabf94bb0e49ff9fb8aef0f661d911/c.html"
+    ],
+    "placements": {
+      "year": "2026",
+      "highest_package": 12000,
+      "average_package": 4200,
+      "median_package": 3600,
+      "package_currency": "USD",
+      "placement_rate_percent": 88.5,
+      "total_students_placed": 7800,
+      "total_companies_visited": 145,
+      "graduate_outcomes_note": "Placement data for 2026 is projected based on early graduation outcomes and national labor market trends showing a decreasing unemployment rate for advanced degree holders."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2026",
+        "average_package": 4200,
+        "employment_rate_percent": 88.5,
+        "package_currency": "USD"
+      },
+      {
+        "year": "2025",
+        "average_package": 3950,
+        "employment_rate_percent": 87.6,
+        "package_currency": "USD"
+      },
+      {
+        "year": "2024",
+        "average_package": 3800,
+        "employment_rate_percent": 88.65,
+        "package_currency": "USD"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2026",
+        "male_placed": 4900,
+        "female_placed": 2900,
+        "male_percent": 63.0,
+        "female_percent": 37.0
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2026",
+        "sector": "Services",
+        "companies": [
+          "Bank of Kigali",
+          "MTN Rwanda",
+          "RwandAir"
+        ],
+        "percent": 44.4
+      },
+      {
+        "year": "2026",
+        "sector": "Education & Research",
+        "companies": [
+          "Rwanda Basic Education Board",
+          "Higher Education Council"
+        ],
+        "percent": 25.0
+      },
+      {
+        "year": "2026",
+        "sector": "Industry & Construction",
+        "companies": [
+          "CIMERWA",
+          "Inyange Industries"
+        ],
+        "percent": 17.5
+      }
+    ],
+    "top_recruiters": [
+      "Bank of Kigali",
+      "MTN Rwanda",
+      "I&M Bank Rwanda",
+      "RwandAir",
+      "Kigali King Faisal Hospital",
+      "Rwanda Revenue Authority"
+    ],
+    "placement_highlights": "The University of Rwanda continues to see strong employment outcomes in the services sector, which absorbs over 44% of its graduates. While 2026 figures are estimates, they reflect a positive national trend where unemployment among individuals with advanced education remains significantly lower than the national average at approximately 11.35%."
+  },
+  "fees": {
+    "guessed_data": true,
+    "data_year": "2026",
+    "sources": [
+      "https://ur.ac.rw/?Fee-structure-and-payment-information",
+      "https://ur.ac.rw/IMG/pdf/registration_announcement_all_students_29_august_2024_.pdf",
+      "https://whed.net/institutions/IAU-020463",
+      "https://www.scribd.com/document/842938177/University-of-Rwanda-pdf"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 900000.0,
+        "total_course": 3600000.0,
+        "currency": "RWF"
+      },
+      "PG": {
+        "per_year": 1250000.0,
+        "total_course": 2500000.0,
+        "currency": "RWF"
+      },
+      "PhD": {
+        "per_year": 1000000.0,
+        "total_course": 3000000.0,
+        "currency": "RWF"
+      },
+      "hostel_per_year": 144000.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 900000.0,
+          "total_course": 3600000.0,
+          "currency": "RWF"
+        },
+        "PG": {
+          "per_year": 1250000.0,
+          "total_course": 2500000.0,
+          "currency": "RWF"
+        },
+        "PhD": {
+          "per_year": 1000000.0,
+          "total_course": 3000000.0,
+          "currency": "RWF"
+        },
+        "hostel_per_year": 144000.0
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 900000.0,
+          "total_course": 3600000.0,
+          "currency": "RWF"
+        },
+        "PG": {
+          "per_year": 1250000.0,
+          "total_course": 2500000.0,
+          "currency": "RWF"
+        },
+        "PhD": {
+          "per_year": 1000000.0,
+          "total_course": 3000000.0,
+          "currency": "RWF"
+        },
+        "hostel_per_year": 144000.0
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 600000.0,
+          "total_course": 1800000.0,
+          "currency": "RWF"
+        },
+        "PG": {
+          "per_year": 1200000.0,
+          "total_course": 2400000.0,
+          "currency": "RWF"
+        },
+        "PhD": {
+          "per_year": -1,
+          "total_course": -1,
+          "currency": "RWF"
+        },
+        "hostel_per_year": 144000.0
+      }
+    ],
+    "fees_note": "The University of Rwanda categorizes fees into administrative (registration, insurance) and tuition components. Tuition varies by college, with STEM programs generally costing 900,000 RWF per year compared to 600,000 RWF for non-STEM undergraduate programs. Postgraduate fees for Master's programs average around 2,500,000 RWF for the full two-year duration.",
+    "scholarships_detail": [
+      {
+        "name": "Government of Rwanda (HEC) Bursary",
+        "amount": -1,
+        "currency_type": "RWF",
+        "eligibility": "Rwandan citizens with high academic performance in national exams",
+        "provider": "Higher Education Council (HEC)"
+      },
+      {
+        "name": "Mastercard Foundation Scholarship",
+        "amount": -1,
+        "currency_type": "USD",
+        "eligibility": "Economically disadvantaged students with leadership potential",
+        "provider": "Mastercard Foundation"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://ur.ac.rw/?-Scholarship-and-grant-programs-",
+      "https://ur.ac.rw/?Library",
+      "https://library.ur.ac.rw/",
+      "https://ur.ac.rw/img/pdf/announcement_updated.pdf",
+      "https://help.unhcr.org/rwanda/2025/07/24/call-for-applications-mastercard-foundation-scholarship-to-university-of-rwanda-deadline-22-08/",
+      "https://ur.ac.rw/img/pdf/ur_library_policy_-_signed.pdf"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Multi-Campus Library System",
+        "details": "Consists of 10 libraries across 8 campuses serving over 35,000 students and researchers, featuring physical collections and remote access via EZproxy."
+      },
+      {
+        "facility": "ICT Infrastructure",
+        "details": "Equipped with specialized ICT units for research and innovation, including access to a Research and Innovation Portal for publications and grants."
+      },
+      {
+        "facility": "Campus Hostels",
+        "details": "On-campus residential facilities provided across various campuses (e.g., Rukara, Gondo, Nyarugenge) with a digitized booking system."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 0,
+      "type": "University Residences (limited capacity)"
+    },
+    "library_details": {
+      "total_books": 0,
+      "journals": 0,
+      "e_resources": 0,
+      "area_sqft": 0.0
+    },
+    "transport_details": {
+      "buses": 0,
+      "routes": 0
+    },
+    "scholarships": [
+      {
+        "name": "Mastercard Foundation Scholars Program",
+        "amount": null,
+        "currency_type": "USD",
+        "eligibility": "African students (including refugees and persons with disabilities) under 28 years old with leadership potential and financial need.",
+        "provider": "Mastercard Foundation",
+        "type": "need",
+        "application_deadline": "2025-08-22"
+      },
+      {
+        "name": "Master's Scholarships in Educational Technology",
+        "amount": null,
+        "currency_type": "USD",
+        "eligibility": "Postgraduate applicants for the EdTech program at the University of Rwanda.",
+        "provider": "University of Rwanda",
+        "type": "merit",
+        "application_deadline": "2026-03-31"
+      },
+      {
+        "name": "PhD Scholarship in Biomedical Sciences (Tuberculosis focus)",
+        "amount": null,
+        "currency_type": "USD",
+        "eligibility": "PhD students focusing on Tuberculosis research under the TASP Project.",
+        "provider": "TASP Project / UR",
+        "type": "specific",
+        "application_deadline": "2025-12-10"
+      },
+      {
+        "name": "DAAD Scholarships",
+        "amount": null,
+        "currency_type": "USD",
+        "eligibility": "African students for specific postgraduate courses like Tropical Forestry.",
+        "provider": "DAAD (German Academic Exchange Service)",
+        "type": "merit",
+        "application_deadline": "NA"
+      }
+    ]
+  },
+  "_metadata": {
+    "total_time": 57.542094230651855,
+    "errors": {}
+  },
+  "departments": {
+    "raw_output": "{\"departments\": \\[\"Department of Crop Science\",\"Department of Soil Science\",\"Department of Agricultural Economics and Rural Development\",\"Department of Food Sciences\",\"Department of Foundations, Management & Curriculum Studies\",\"Department of Humanities and Language Education\",\"Department of Maths, Science and Physical Education\",\"Department of Early Childhood & Primary Education\",\"Department of Educational Studies\",\"Department of African Virtual University Centre\",\"Department of Pan African Tele\\-Education Network\",\"Department of Computer Engineering\",\"Department of Information Technology\",\"Department of Information System\",\"Department of Computer Science\",\"Department of Construction Management\",\"Department of Architecture\",\"Department of Estate Management & Valuation\",\"Department of Geography and Urban Planning\",\"Department of Chemistry\",\"Department of Biology\",\"Department of Mathematics\",\"Department of Mathematics and Statistics\",\"Department of Physics\",\"Department of Geology\",\"Department of Mining\",\"Department of Civil, Environmental and Geomatic Engineering\",\"Department of Mechanical Engineering\",\"Department of Electrical \\- electronics & telecom Engineering\"\\]}\n\nContinue your inquiry if you need a breakdown by College or specific program details.\n",
+    "error": "JSON parse error: Expecting value: line 1 column 17 (char 16)",
+    "extracted_content": "{\"departments\": \\[\"Department of Crop Science\",\"Department of Soil Science\",\"Department of Agricultural Economics and Rural Development\",\"Department of Food Sciences\",\"Department of Foundations, Management & Curriculum Studies\",\"Department of Humanities and Language Education\",\"Department of Maths, Science and Physical Education\",\"Department of Early Childhood & Primary Education\",\"Department of Educational Studies\",\"Department of African Virtual University Centre\",\"Department of Pan African Tele-Education Network\",\"Department of Computer Engineering\",\"Department of Information Technology\",\"Department of Information System\",\"Department of Computer Science\",\"Department of Construction Management\",\"Department of Architecture\",\"Department of Estate Management & Valuation\",\"Department of Geography and Urban Planning\",\"Department of Chemistry\",\"Department of Biology\",\"Department of Mathematics\",\"Department of Mathematics and Statistics\",\"Department of Physics\",\"Department of Geology\",\"Department of Mining\",\"Department of Civil, Environmental and Geomatic Engineering\",\"Department of Mechanical Engineering\",\"Department of Electrical - electronics & telecom Engineering\"\\]}"
+  },
+  "phd_programs": {
+    "phd_programs": [
+      "PhD by Research in Social Sciences (Sociology)",
+      "PhD by Research in Agricultural Engineering",
+      "PhD by Research in Agricultural Sciences",
+      "PhD by Research in Agroforestry",
+      "PhD in Management (General Management, Entrepreneurship and Strategy, Marketing, Accounting, Human Resource Management, Finance)",
+      "PhD in Economics by Research",
+      "PhD in Economics by Coursework and Dissertation",
+      "PhD by Research in Data Science (Data Mining, Biostatistics, Econometrics, Actuarial Science, Demography)",
+      "PhD by Research in ICT (Software Engineering)",
+      "PhD by Research in ICT (Computer Science)",
+      "PhD in IoT: Wireless Intelligent Sensor Networking (WSN)",
+      "PhD in IoT: Embedded Computing Systems (ECS)",
+      "PhD by Research in Electrical Power Systems",
+      "PhD by Research in Renewable Energy",
+      "PhD by Research in Energy Economics",
+      "PhD by Research in Civil Engineering (Water Resources Engineering, Environmental Engineering, Transportation Engineering)",
+      "PhD in Clinical Anatomy by Coursework",
+      "PhD by Research in Medical Sciences",
+      "PhD by Research in Pharmaceutical Sciences",
+      "PhD by Research in Nursing",
+      "PhD by Research in Clinical Psychology and Therapeutics (including Neuropsychology)",
+      "PhD by Research in Anatomy",
+      "PhD by Research in Public Health",
+      "PhD by Research in Public Epidemiology",
+      "PhD by Research in Biology Education",
+      "PhD by Research in Chemistry Education",
+      "PhD by Research in Mathematics Education",
+      "PhD by Research in Physics Education",
+      "PhD by Research in Education (Curriculum and Instruction, Philosophy of Education, Educational Leadership and Management)",
+      "PhD by Research in Educational Psychology",
+      "PhD by Research in English Education",
+      "PhD by Research in French Education",
+      "PhD by Research in Kinyarwanda Education",
+      "PhD by Research in Geography Education",
+      "PhD by Research in History Education",
+      "PhD by Research in ICT Education",
+      "PhD in Peace, Conflict and Security Studies",
+      "PhD in Peace and Development",
+      "PhD in Leadership and Reconciliation",
+      "PhD in Social and Political Sciences",
+      "PhD in Translation and Interpretation Studies",
+      "PhD in Development Studies",
+      "PhD in International Relations",
+      "PhD in Political Sciences",
+      "PhD in Governance and Public Administration",
+      "PhD by Research in Linguistics",
+      "PhD by Research in Literature",
+      "PhD by Research in International Criminal Law",
+      "PhD by Research in Animal Production and Veterinary Sciences"
+    ]
+  },
+  "pg_programs": {
+    "pg_programs": [
+      "Master of Social Sciences in Gender and Development",
+      "Master of Arts in Translation and Interpretation Studies",
+      "Master of Arts in Media and Communication Studies",
+      "LL.M. in Business Law",
+      "LL.M. in International Criminal Justice and Law of Human Rights",
+      "Master of Arts in Development Studies",
+      "Master of Social Sciences in Local Governance Studies",
+      "Master of Arts in Genocide Studies and Prevention",
+      "Master of Arts in Peace Studies and Conflict Transformation",
+      "Master of Arts in Security Studies",
+      "Master of Arts in Intelligence and Security Studies",
+      "MSc in Agribusiness",
+      "MSc in Crop Sciences",
+      "MSc in Agroforestry and Soil Management",
+      "Master of Science in Animal Production",
+      "MSc Economics (Options: Monetary, Rural and Agricultural, Health, Industrial, Environmental)",
+      "Master of Business Administration (Options: Project Management, Finance, Entrepreneurship, Tourism, Management, HRM, Public Procurement)",
+      "Master of Science in Data Science (Options: Data Mining, Biostatistics, Econometrics, Actuarial Sciences, Demography)",
+      "Master of Education in Biology Education",
+      "Master of Education in Chemistry Education",
+      "Master of Education in Mathematics Education",
+      "Master of Education in Physics Education",
+      "Master of Educational Leadership and Management",
+      "Master of Education in Curriculum and Instruction",
+      "Master of Educational Technology",
+      "Master of Education in English Education",
+      "Master of Education in Kinyarwanda Education",
+      "Master of Education in Kiswahili Education",
+      "Master de l'Education en Enseignement du Fran\u00e7ais",
+      "Master of Education in Special Needs Education",
+      "Master of Science in Nursing (Options: Neonatology, Pediatric, Oncology, Nephrology, Critical Care, and Trauma)",
+      "Master of Science in Nursing Anesthesia",
+      "Master of Science in Midwifery",
+      "MMed in Internal Medicine",
+      "MMed in Pediatrics",
+      "MMed in Anesthesia",
+      "MMed in Emergency Medicine and Critical Care Medicine",
+      "MMed in Anatomical Pathology",
+      "MMed in Diagnostic Radiology",
+      "MMed in Psychiatry",
+      "MMed in Ear, Nose and Throat",
+      "MMed in General Surgery",
+      "MMed in Urology",
+      "MMed in Neurosurgery",
+      "MMed in Orthopedic Surgery",
+      "MMed in Neurology",
+      "MMed in Dermatology",
+      "MMed in Plastic and Reconstructive Surgery",
+      "MMed in Pediatric Surgery",
+      "MSc in Clinical Anatomy",
+      "MSc in Pharmaceutical Sciences, Quality Assurance and Quality Control",
+      "MSc in Medical Physiology",
+      "Master of Science in Clinical Psychology and Therapeutics",
+      "Master of Dental Surgery in Oral and Maxillofacial Surgery",
+      "Master of Dental Public Health",
+      "Master of Public Health",
+      "Master of Science in Epidemiology",
+      "MSc in Wireless Intelligent Sensor Networking (WSN)",
+      "MSc in Embedded Computing Systems (ECS)",
+      "Master of Science in Electrical Power Systems",
+      "Master of Science in Renewable Energies",
+      "Master of Science in Energy Economics",
+      "MSc in Highway Engineering and Management (HEM)",
+      "MSc in Civil Engineering (Options: Structural, Infrastructure Engineering and Management)",
+      "MSc in Geo-Information Sciences",
+      "MSc in Information Systems (Options: e-Government, Internet Technology)",
+      "MSc in Information Technology (Operations and Communication)",
+      "MSc in Software Engineering",
+      "Master of Science in Biomedical Engineering",
+      "Master of Science in Health Informatics (e-Health)",
+      "Master of Science in Rehabilitation and Mobility Sciences",
+      "MSc in Health Supply Chain Management"
+    ],
+    "total_count": 72,
+    "source": "https://ur.ac.rw/?Postgraduate"
+  },
+  "ug_programs": {
+    "ug_programs": [
+      "Bachelor of Science in Agriculture and Forestry (various options)",
+      "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+      "Bachelor of Pharmacy",
+      "Bachelor of Science in Nursing and Midwifery",
+      "Bachelor of Science in Allied Health Sciences",
+      "Bachelor of Science in Computer Science/Engineering/IT/Information Systems",
+      "Bachelor of Science in Civil, Electrical, Mechanical, and Mining Engineering",
+      "Bachelor of Science in Architecture, Surveying, and Construction",
+      "Bachelor of Science in Applied Sciences (Chemistry, Math, Physics, Biology, Stats)",
+      "Bachelor of Arts in Journalism, History, and Police Studies",
+      "Bachelor of Laws (LLB)",
+      "Bachelor of Social Sciences (Sociology, Social Work, IR, Public Admin)",
+      "Bachelor of Business Administration and Information Technology",
+      "Bachelor of Science in Economics",
+      "Bachelor of Education (Science, Arts, Physical Education)"
+    ],
+    "total_count": 69,
+    "source": "https://ur.ac.rw/IMG/pdf/undergraduate_entry_requirements_2025_2026.pdf"
+  }
+}

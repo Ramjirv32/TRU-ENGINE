@@ -1,0 +1,279 @@
+{
+  "college_name": "string",
+  "short_name": "string",
+  "established": "number",
+  "institution_type": "string",
+  "country": "string",
+  "about": "string",
+  "location": "string",
+  "website": "string",
+  "summary": "string",
+  "ug_programs": ["string"],
+  "pg_programs": ["string"],
+  "phd_programs": ["string"],
+  
+  "rankings": {
+    "nirf_2025": "string|number",
+    "nirf_2024": "string|number",
+    "nirf_rank": "string|number",
+    "qs_world": "string|number",
+    "qs_asia": "string|number",
+    "the_world": "string|number",
+    "national_rank": "string|number",
+    "state_rank": "string|number"
+  },
+  
+  "rankings_history": [
+    {
+      "year": "number",
+      "ranking_body": "string",
+      "rank": "string|number",
+      "category": "string"
+    }
+  ],
+  
+  "global_ranking": {
+    "qs_world": "string|number",
+    "the_world": "string|number",
+    "us_news_global": "string|number",
+    "arwu": "string|number",
+    "webometrics": "string|number"
+  },
+  
+  "student_statistics_detail": {
+    "total_enrollment": "number",
+    "ug_students": "number",
+    "pg_students": "number",
+    "phd_students": "number",
+    "annual_intake": "number",
+    "male_percent": "number",
+    "female_percent": "number",
+    "total_ug_courses": "number",
+    "total_pg_courses": "number",
+    "total_phd_courses": "number"
+  },
+  
+  "faculty_staff_detail": {
+    "total_faculty": "number",
+    "student_faculty_ratio": "number",
+    "phd_faculty_percent": "number"
+  },
+  
+  "placements": {
+    "year": "string|number",
+    "highest_package": "string|number",
+    "average_package": "string|number",
+    "median_package": "string|number",
+    "package_currency": "string",
+    "placement_rate_percent": "string|number",
+    "total_students_placed": "string|number",
+    "total_companies_visited": "string|number",
+    "graduate_outcomes_note": "string"
+  },
+  
+  "placement_comparison_last_3_years": [
+    {
+      "year": "string|number",
+      "year_string": "string",
+      "average_package": "string|number",
+      "highest_package": "string|number",
+      "median_package": "string|number",
+      "employment_rate_percent": "string|number",
+      "package_currency": "string"
+    }
+  ],
+  
+  "gender_based_placement_last_3_years": [
+    {
+      "year": "string|number",
+      "male_placed": "string|number",
+      "female_placed": "string|number",
+      "male_percent": "string|number",
+      "female_percent": "string|number"
+    }
+  ],
+  
+  "sector_wise_placement_last_3_years": [
+    {
+      "year": "string|number",
+      "sector": "string",
+      "companies": "string|array",
+      "percent": "string|number"
+    }
+  ],
+  
+  "top_recruiters": ["string"],
+  "placement_highlights": "string",
+  
+  "fees": {
+    "UG": {
+      "per_year": "string|number",
+      "total_course": "string|number",
+      "currency": "string"
+    },
+    "PG": {
+      "per_year": "string|number",
+      "total_course": "string|number",
+      "currency": "string"
+    },
+    "PhD": {
+      "per_year": "string|number",
+      "total_course": "string|number",
+      "currency": "string"
+    },
+    "hostel_per_year": "string",
+    "ug_yearly_min": "number",
+    "ug_yearly_max": "number",
+    "pg_yearly_min": "number",
+    "pg_yearly_max": "number",
+    "phd_yearly_min": "number",
+    "phd_yearly_max": "number"
+  },
+  
+  "fees_by_year": [
+    {
+      "year": "string",
+      "UG": {
+        "per_year": "string|number",
+        "total_course": "string|number",
+        "currency": "string"
+      },
+      "PG": {
+        "per_year": "string|number",
+        "total_course": "string|number",
+        "currency": "string"
+      },
+      "PhD": {
+        "per_year": "string|number",
+        "total_course": "string|number",
+        "currency": "string"
+      },
+      "hostel_per_year": "number"
+    }
+  ],
+  
+  "fees_note": "string",
+  
+  "scholarships_detail": [
+    {
+      "name": "string",
+      "amount": "string|number",
+      "eligibility": "string",
+      "provider": "string"
+    }
+  ],
+  
+  "infrastructure": [
+    {
+      "facility": "string",
+      "details": "string"
+    }
+  ],
+  
+  "hostel_details": {
+    "available": "boolean",
+    "boys_capacity": "string|number",
+    "girls_capacity": "string|number",
+    "total_capacity": "string|number",
+    "type": "string"
+  },
+  
+  "transport_details": {
+    "buses": "string",
+    "routes": "string"
+  },
+  
+  "library_details": {
+    "total_books": "string",
+    "journals": "string",
+    "e_resources": "string",
+    "area_sqft": "string"
+  },
+  
+  "student_history": {
+    "student_count_comparison_last_3_years": [
+      {
+        "year": "string|number",
+        "year_string": "string",
+        "total_enrolled": "string|number",
+        "ug": "string|number",
+        "pg": "string|number",
+        "phd": "string|number"
+      }
+    ],
+    "student_gender_ratio": {
+      "total_male": "number",
+      "total_female": "number",
+      "male_percent": "number",
+      "female_percent": "number"
+    },
+    "international_students": {
+      "total_count": "number",
+      "countries_represented": ["string"],
+      "international_percent": "number"
+    },
+    "notable_faculty": [
+      {
+        "name": "string",
+        "designation": "string",
+        "specialization": "string"
+      }
+    ],
+    "faculty_achievements": "string"
+  },
+  
+  "accreditations": [
+    {
+      "body": "string",
+      "grade": "string|number",
+      "year": "string|number"
+    }
+  ],
+  
+  "affiliations": ["string"],
+  "recognition": "string",
+  "campus_area": "string",
+  "contact_info": {
+    "phone": "string",
+    "email": "string",
+    "address": "string"
+  },
+  "additional_details_list": ["string"],
+  
+  "legacy_fields": {
+    "global_ranking_legacy": "string",
+    "departments": ["string"],
+    "student_statistics": [
+      {
+        "category": "string",
+        "value": "string|number"
+      }
+    ],
+    "additional_details": [
+      {
+        "category": "string",
+        "value": "string|number"
+      }
+    ],
+    "sources": ["string"],
+    "student_gender_ratio": {
+      "male_percentage": "number",
+      "female_percentage": "number"
+    },
+    "international_students": "number",
+    "faculty_staff": "number"
+  },
+  
+  "metadata": {
+    "approval_status": "string",
+    "created_at": "ISO 8601 datetime",
+    "updated_at": "ISO 8601 datetime",
+    "approved_at": "ISO 8601 datetime (optional)",
+    "approved_by": "string (optional)"
+  },
+  
+  "raw_data": {
+    "serper_sections": "object (any additional fields)",
+    "additional_fields": "object (catch-all for undefined fields)"
+  }
+}

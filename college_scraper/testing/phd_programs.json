@@ -1,0 +1,30 @@
+{
+  "search_metadata": {
+    "id": "69cd12f9b6a867aef0705d8e",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/sQJ8DdUvbV6gHS-RetkdBQ/69cd12f9b6a867aef0705d8e.json",
+    "created_at": "2026-04-01 12:43:37 UTC",
+    "processed_at": "2026-04-01 12:43:37 UTC",
+    "google_ai_mode_url": "https://www.google.com/search?q=List+all+officially+offered+PhD%2FDoctoral+programs+at+Kumaraguru+College+of+Technology%2C+India+%28Coimbatore%29%2C+as+of+2026.+Include+only+real+programs.+Do+not+invent.+Return+only+JSON%3A+%7B+%22phd_programs%22%3A+%5B%22program_name%22%2C+...%5D+%7D&udm=50",
+    "raw_html_file": "https://serpapi.com/searches/sQJ8DdUvbV6gHS-RetkdBQ/69cd12f9b6a867aef0705d8e.html",
+    "prettify_html_file": "https://serpapi.com/searches/sQJ8DdUvbV6gHS-RetkdBQ/69cd12f9b6a867aef0705d8e.prettify",
+    "total_time_taken": 3.55
+  },
+  "search_parameters": {
+    "engine": "google_ai_mode",
+    "q": "List all officially offered PhD/Doctoral programs at Kumaraguru College of Technology, India (Coimbatore), as of 2026. Include only real programs. Do not invent. Return only JSON: { \"phd_programs\": [\"program_name\", ...] }",
+    "device": "desktop"
+  },
+  "text_blocks": [
+    {
+      "type": "code_block",
+      "language": "json",
+      "code": "{\n  \"phd_programs\": [\n    \"Aeronautical Engineering\",\n    \"Biotechnology\",\n    \"Chemistry\",\n    \"Civil Engineering\",\n    \"Computer Science and Engineering\",\n    \"Electrical and Electronics Engineering\",\n    \"Electronics and Communication Engineering\",\n    \"Fashion Technology\",\n    \"Management Studies\",\n    \"Mathematics\",\n    \"Mechanical Engineering\",\n    \"Physics\",\n    \"Textile Technology\"\n  ]\n}\n"
+    },
+    {
+      "type": "paragraph",
+      "snippet": "Would you like more details on the admission criteria or research supervisors for any of these specific departments?"
+    }
+  ],
+  "reconstructed_markdown": "```json\n{\n  \"phd_programs\": [\n    \"Aeronautical Engineering\",\n    \"Biotechnology\",\n    \"Chemistry\",\n    \"Civil Engineering\",\n    \"Computer Science and Engineering\",\n    \"Electrical and Electronics Engineering\",\n    \"Electronics and Communication Engineering\",\n    \"Fashion Technology\",\n    \"Management Studies\",\n    \"Mathematics\",\n    \"Mechanical Engineering\",\n    \"Physics\",\n    \"Textile Technology\"\n  ]\n}\n\n```\n\nWould you like more details on the admission criteria or research supervisors for any of these specific departments?\n"
+}

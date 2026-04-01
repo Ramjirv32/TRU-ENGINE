@@ -1,0 +1,29 @@
+{
+  "search_metadata": {
+    "id": "69cd24145b92f897aea71df7",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/SWZB0cOHtkylVSWUHwNTag/69cd24145b92f897aea71df7.json",
+    "created_at": "2026-04-01 13:56:36 UTC",
+    "processed_at": "2026-04-01 13:56:36 UTC",
+    "google_ai_mode_url": "https://www.google.com/search?q=Return+ONLY+valid+JSON+with+NO+other+text.+Format%3A+%7B+%22departments%22%3A+%5B%22Department+Name+1%22%2C+%22Department+Name+2%22%2C+...%5D+%7D.+List+all+academic+departments+at+University+of+Lucknow%2C+India.+Example%3A+Aeronautical+Engineering%2C+Civil+Engineering%2C+Computer+Science%2C+etc.&udm=50",
+    "raw_html_file": "https://serpapi.com/searches/SWZB0cOHtkylVSWUHwNTag/69cd24145b92f897aea71df7.html",
+    "prettify_html_file": "https://serpapi.com/searches/SWZB0cOHtkylVSWUHwNTag/69cd24145b92f897aea71df7.prettify",
+    "total_time_taken": 4.63
+  },
+  "search_parameters": {
+    "engine": "google_ai_mode",
+    "q": "Return ONLY valid JSON with NO other text. Format: { \"departments\": [\"Department Name 1\", \"Department Name 2\", ...] }. List all academic departments at University of Lucknow, India. Example: Aeronautical Engineering, Civil Engineering, Computer Science, etc.",
+    "device": "desktop"
+  },
+  "text_blocks": [
+    {
+      "type": "paragraph",
+      "snippet": "{\"departments\": [\"Abhinavgupt Institute of Aesthetics and Shaiva Philosophy\",\"Ancient Indian History and Archaeology\",\"Anthropology\",\"Applied Economics\",\"Applied Science & Humanities\",\"Arabic\",\"Ayurveda\",\"Biochemistry\",\"Botany\",\"Business Administration\",\"Chemistry\",\"Civil Engineering\",\"Commerce\",\"Commercial Arts\",\"Computer Science\",\"Computer Science & Engineering\",\"Defence Studies\",\"Economics\",\"Education\",\"Electrical Engineering\",\"Electronics and Communication Engineering\",\"English and Modern European Languages\",\"Fine Arts\",\"Geography\",\"Geology\",\"Hindi and Modern Indian Languages\",\"Home Science\",\"Journalism and Mass Communication\",\"Jyotir Vigyan\",\"Law\",\"Library and Information Science\",\"Linguistics\",\"Mathematics and Astronomy\",\"Mechanical Engineering\",\"Medieval and Modern Indian History\",\"Naturopathy\",\"Oriental Studies in Arabic and Persian\",\"Oriental Studies in Sanskrit\",\"Persian\",\"Philosophy\",\"Physical Education\",\"Physics\",\"Political Science\",\"Psychology\",\"Public Administration\",\"Sanskrit and Prakrit Languages\",\"Sculpture\",\"Social Work\",\"Sociology\",\"Statistics\",\"Unani\",\"Urdu\",\"Western History\",\"Yoga\",\"Zoology\"]}"
+    },
+    {
+      "type": "paragraph",
+      "snippet": "Would you like a breakdown of these departments by their respective faculties or information on admission procedures for any specific program?"
+    }
+  ],
+  "reconstructed_markdown": "{\"departments\": \\[\"Abhinavgupt Institute of Aesthetics and Shaiva Philosophy\",\"Ancient Indian History and Archaeology\",\"Anthropology\",\"Applied Economics\",\"Applied Science & Humanities\",\"Arabic\",\"Ayurveda\",\"Biochemistry\",\"Botany\",\"Business Administration\",\"Chemistry\",\"Civil Engineering\",\"Commerce\",\"Commercial Arts\",\"Computer Science\",\"Computer Science & Engineering\",\"Defence Studies\",\"Economics\",\"Education\",\"Electrical Engineering\",\"Electronics and Communication Engineering\",\"English and Modern European Languages\",\"Fine Arts\",\"Geography\",\"Geology\",\"Hindi and Modern Indian Languages\",\"Home Science\",\"Journalism and Mass Communication\",\"Jyotir Vigyan\",\"Law\",\"Library and Information Science\",\"Linguistics\",\"Mathematics and Astronomy\",\"Mechanical Engineering\",\"Medieval and Modern Indian History\",\"Naturopathy\",\"Oriental Studies in Arabic and Persian\",\"Oriental Studies in Sanskrit\",\"Persian\",\"Philosophy\",\"Physical Education\",\"Physics\",\"Political Science\",\"Psychology\",\"Public Administration\",\"Sanskrit and Prakrit Languages\",\"Sculpture\",\"Social Work\",\"Sociology\",\"Statistics\",\"Unani\",\"Urdu\",\"Western History\",\"Yoga\",\"Zoology\"\\]}\n\nWould you like a breakdown of these departments by their respective faculties or information on admission procedures for any specific program?\n"
+}

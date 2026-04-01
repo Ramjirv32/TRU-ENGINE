@@ -1,0 +1,549 @@
+{
+  "basic_info": {
+    "college_name": "Kumaraguru College of Technology",
+    "short_name": "KCT",
+    "established": 1984,
+    "institution_type": "Private – Self Financing, Autonomous",
+    "country": "India",
+    "location": "Coimbatore, Tamil Nadu",
+    "website": "https://kct.ac.in/",
+    "about": "Kumaraguru College of Technology (KCT), Coimbatore is an autonomous engineering college established in 1984 under the Ramanandha Adigalar Foundation. It is affiliated with Anna University and approved by AICTE.",
+    "summary": "KCT is a premier private engineering institution in South India, known for its strong focus on research, innovation, and industry-aligned technical education across its 156-acre campus.",
+    "rankings": {
+      "nirf_latest": "151-200 (Engineering, 2025)",
+      "nirf_previous": "151-200 (Engineering, 2024)",
+      "qs_world": "N/A",
+      "national_rank": "66",
+      "state_rank": "15",
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 8000,
+      "ug_students": 6000,
+      "pg_students": 1500,
+      "phd_students": 500,
+      "annual_intake": 1674,
+      "male_percent": 65.0,
+      "female_percent": 35.0,
+      "total_ug_courses": 15,
+      "total_pg_courses": 13,
+      "total_phd_courses": 12,
+      "guessed_data": true
+    },
+    "faculty_staff": {
+      "total_faculty": 400,
+      "student_faculty_ratio": -1.0,
+      "phd_faculty_percent": 54.0,
+      "guessed_data": true
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "latest_year": 8200,
+        "previous_year": 8000,
+        "year_before_previous": 7800
+      },
+      "international_students": 50,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 6150,
+          "pg_students": 1550,
+          "phd_students": 500,
+          "international_students": 55,
+          "domestic_students": 8145,
+          "male_students": 5330,
+          "female_students": 2870
+        },
+        {
+          "year": "2025",
+          "ug_students": 6000,
+          "pg_students": 1500,
+          "phd_students": 500,
+          "international_students": 50,
+          "domestic_students": 7950,
+          "male_students": 5200,
+          "female_students": 2800
+        },
+        {
+          "year": "2024",
+          "ug_students": 5800,
+          "pg_students": 1500,
+          "phd_students": 500,
+          "international_students": 45,
+          "domestic_students": 7755,
+          "male_students": 5070,
+          "female_students": 2730
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "NAAC",
+        "grade": "A++",
+        "year": 2022
+      },
+      {
+        "body": "NBA",
+        "grade": "Accredited (Multiple Programs)",
+        "year": 2025
+      }
+    ],
+    "affiliations": "Anna University, Chennai",
+    "recognition": "Approved by AICTE, Autonomous Status by UGC",
+    "campus_area": "156 Acres",
+    "contact_info": {
+      "phone": "+91 422 2661100",
+      "email": "info@kct.ac.in",
+      "address": "Chinnavedampatti, Coimbatore, Tamil Nadu 641049"
+    },
+    "sources_verified": [
+      "https://kct.ac.in/",
+      "https://kct.ac.in/wp-content/uploads/2025/09/Mandatory-Disclosure-2024-25.pdf",
+      "https://www.nirfindia.org/Rankings/2025/EngineeringRanking200.html",
+      "https://www.shiksha.com/college/kumaraguru-college-of-technology-coimbatore-47886/ranking",
+      "https://admissions.kct.ac.in/"
+    ]
+  },
+  "programs": {
+    "ug_programs": [
+      "B.E. in Aeronautical Engineering",
+      "B.E. in Automobile Engineering",
+      "B.Tech. in Biotechnology",
+      "B.E. in Civil Engineering",
+      "B.E. in Computer Science and Engineering",
+      "B.E. in Electrical and Electronics Engineering",
+      "B.E. in Electronics and Communication Engineering",
+      "B.E. in Electronics and Instrumentation Engineering",
+      "B.Tech. in Fashion Technology",
+      "B.Tech. in Information Technology",
+      "B.E. in Mechanical Engineering",
+      "B.E. in Mechatronics Engineering",
+      "B.Tech. in Textile Technology",
+      "B.Tech. in Artificial Intelligence and Data Science"
+    ],
+    "pg_programs": [
+      "M.E. in Applied Electronics",
+      "M.E. in CAD/CAM",
+      "M.E. in Communication Systems",
+      "M.E. in Computer Science and Engineering",
+      "M.E. in Construction Management",
+      "M.E. in Embedded Systems Technologies",
+      "M.E. in Energy Engineering",
+      "M.E. in Environmental Engineering",
+      "M.E. in Industrial Engineering",
+      "M.E. in Power Electronics and Drives",
+      "M.E. in Structural Engineering",
+      "M.E. in VLSI Design",
+      "M.Tech. in Apparel Technology",
+      "M.Tech. in Biotechnology",
+      "M.Tech. in Data Science",
+      "M.Tech. in Defence Technology",
+      "M.Tech. in Masters of Technology Management",
+      "M.Tech. in Technical Textile",
+      "M.Tech. in Textile Technology",
+      "Master of Business Administration (MBA)",
+      "Master of Business Administration (Agri Business Management)",
+      "Master of Business Administration (Innovation, Entrepreneurship & Venture Development)",
+      "Master of Business Administration (Logistics & Supply Chain Management)",
+      "Master of Business Administration (Project Management)",
+      "Master of Computer Applications (MCA)",
+      "Master of Social Work (MSW)"
+    ],
+    "phd_programs": [
+      "Biotechnology",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Electrical and Electronics Engineering",
+      "Electronics and Communication Engineering",
+      "Fashion Technology",
+      "Management Studies",
+      "Mechanical Engineering",
+      "Textile Technology",
+      "Chemistry",
+      "Mathematics",
+      "Physics"
+    ],
+    "departments": [
+      "Aeronautical Engineering",
+      "Artificial Intelligence & Data Science",
+      "Automobile Engineering",
+      "Biotechnology",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Electrical and Electronics Engineering",
+      "Electronics and Communication Engineering",
+      "Electronics and Instrumentation Engineering",
+      "Fashion Technology",
+      "Information Technology",
+      "Mechanical Engineering",
+      "Mechatronics Engineering",
+      "Textile Technology",
+      "Computer Applications",
+      "Management Studies",
+      "School of Foundational Sciences"
+    ],
+    "total_programs_count": -1,
+    "sources_verified": []
+  },
+  "placements": {
+    "guessed_data": false,
+    "data_year": "2025",
+    "sources": [
+      "https://kct.ac.in/placement/",
+      "https://www.shiksha.com/college/kumaraguru-college-of-technology-coimbatore-47886/placement",
+      "https://www.careers360.com/colleges/kumaraguru-college-of-technology-coimbatore/placement",
+      "https://collegedunia.com/college/14052-kumaraguru-college-of-technology-kct-coimbatore/placement"
+    ],
+    "placements": {
+      "year": "2025",
+      "highest_package": 50.0,
+      "average_package": 5.7,
+      "median_package": 5.0,
+      "package_currency": "LPA",
+      "placement_rate_percent": 85.0,
+      "total_students_placed": 832,
+      "total_companies_visited": 558,
+      "graduate_outcomes_note": "The 2025 placement drive is currently ongoing. While the highest package saw a significant 138% increase compared to 2024, the overall placement percentage and number of students placed have shown a downward trend compared to previous record-high years."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2025",
+        "average_package": 5.7,
+        "employment_rate_percent": 85.0,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2024",
+        "average_package": 5.0,
+        "employment_rate_percent": 91.0,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2023",
+        "average_package": 4.5,
+        "employment_rate_percent": 96.0,
+        "package_currency": "LPA"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2025",
+        "male_placed": -1,
+        "female_placed": -1,
+        "male_percent": -1.0,
+        "female_percent": -1.0
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2025",
+        "sector": "Core Engineering",
+        "companies": [
+          "Bosch",
+          "L&T",
+          "TVS",
+          "Renault Nissan"
+        ],
+        "percent": 53.0
+      },
+      {
+        "year": "2025",
+        "sector": "Product Development",
+        "companies": [
+          "Amazon",
+          "Microsoft",
+          "SAP",
+          "Morgan Stanley"
+        ],
+        "percent": 27.0
+      },
+      {
+        "year": "2025",
+        "sector": "IT Services",
+        "companies": [
+          "TCS",
+          "Cognizant",
+          "Wipro",
+          "Accenture"
+        ],
+        "percent": 11.0
+      },
+      {
+        "year": "2025",
+        "sector": "Management",
+        "companies": [
+          "Aditya Birla Group",
+          "Decathlon",
+          "Jockey"
+        ],
+        "percent": 9.0
+      }
+    ],
+    "top_recruiters": [
+      "Amazon",
+      "Bosch",
+      "Microsoft",
+      "Cognizant",
+      "Accenture",
+      "TCS",
+      "Larsen & Toubro",
+      "Soliton",
+      "Morgan Stanley",
+      "Zoho"
+    ],
+    "placement_highlights": "Kumaraguru College of Technology maintained a strong placement record through 2025 with a notable peak highest package of 50 LPA. While the placement rate moderated to approximately 85% in 2025 compared to nearly 96-99% in previous years, the institution continues to secure significant participation from over 500 recruiters across core, product, and IT sectors."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://admissions.kct.ac.in/images/UG_REGULAR_FEES.pdf",
+      "https://collegedunia.com/college/14052-kumaraguru-college-of-technology-kct-coimbatore/courses-fees",
+      "https://www.shiksha.com/college/kumaraguru-college-of-technology-coimbatore-47886/fees",
+      "https://www.campusoption.com/fee-structure/engineering/kumaraguru-college-of-technology"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 116250.0,
+        "total_course": 465000.0,
+        "currency": "INR"
+      },
+      "PG": {
+        "per_year": 50000.0,
+        "total_course": 100000.0,
+        "currency": "INR"
+      },
+      "PhD": {
+        "per_year": 50000.0,
+        "total_course": 150000.0,
+        "currency": "INR"
+      },
+      "hostel_per_year": 105000.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 116250.0,
+          "total_course": 465000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 50000.0,
+          "total_course": 100000.0,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 50000.0,
+          "total_course": 150000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 105000.0
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 111200.0,
+          "total_course": 444800.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 50000.0,
+          "total_course": 100000.0,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 50000.0,
+          "total_course": 150000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 100000.0
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 55000.0,
+          "total_course": 220000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 50000.0,
+          "total_course": 100000.0,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": -1.0,
+          "total_course": -1.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 95000.0
+      }
+    ],
+    "fees_note": "Fees vary significantly by admission quota; government quota (TNEA) for UG is approximately ₹55,000–₹1,16,200 per year, while management quota can reach ₹1,40,000–₹1,50,000 per year. PG tuition for ME/MTech is generally consistent at ₹50,000 per year for non-accredited courses, and MBA ranges from ₹35,000 (tuition only) to higher total packages. Hostel fees include room rent, mess charges, and a one-time caution deposit.",
+    "scholarships_detail": [
+      {
+        "name": "Mahatma Gandhi Scholarship",
+        "amount": 10000.0,
+        "currency_type": "INR",
+        "eligibility": "Academic excellence and 75% attendance",
+        "provider": "Kumaraguru Institutions"
+      },
+      {
+        "name": "NSP (PM-USP) Yojana",
+        "amount": 82000.0,
+        "currency_type": "INR",
+        "eligibility": "80% in Class 12, parental income ≤ ₹4.5 Lakhs",
+        "provider": "Central Government"
+      },
+      {
+        "name": "KCT Sports Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Excellence in sports at state/national levels",
+        "provider": "Kumaraguru College of Technology"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://kct.ac.in/wp-content/uploads/2025/09/Mandatory-Disclosure-2024-25.pdf",
+      "https://kct.ac.in/the-campus/",
+      "https://kct.ac.in/nirf-nba/",
+      "https://www.kct.ac.in/wp-content/themes/twentytwenty/assets/pdf/Scholarship-Scheme-2020.pdf",
+      "https://www.shiksha.com/college/kumaraguru-college-of-technology-coimbatore-47886/infrastructure"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Campus Area",
+        "details": "Sprawling 150-acre lush green campus with modern academic blocks and research facilities."
+      },
+      {
+        "facility": "Auditorium",
+        "details": "Air-conditioned Swami Vivekanandham Auditorium with a seating capacity of 1800."
+      },
+      {
+        "facility": "Seminar Halls",
+        "details": "Four seminar halls with 200-person capacity and four smaller halls with 150-person capacity."
+      },
+      {
+        "facility": "Sports Facilities",
+        "details": "Includes KRAFT (Gymnasium), 23 acres of paved playgrounds, and separate indoor game facilities."
+      },
+      {
+        "facility": "Laboratories",
+        "details": "165 specialized labs including 10 Government and Industry sponsored Excellence Centres."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 3394,
+      "type": "Separate Boys (6 blocks) and Girls (3 blocks) hostels"
+    },
+    "library_details": {
+      "total_books": 111182,
+      "journals": 245,
+      "e_resources": 31500,
+      "area_sqft": 15000.0
+    },
+    "transport_details": {
+      "buses": 14,
+      "routes": 8
+    },
+    "scholarships": [
+      {
+        "name": "Mahatma Gandhi Merit Scholarship",
+        "amount": 10000.0,
+        "currency_type": "INR",
+        "eligibility": "Awarded to top performers based on academic excellence (CGPA ≥ 8.5 for renewal).",
+        "provider": "Kumaraguru Institutions",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Merit Scholarship – Category Cut-off",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Highest cut-off in program (min. 190/200), admitted via single window counseling.",
+        "provider": "Kumaraguru College of Technology",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Centum Score Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Centum in Mathematics in qualifying exam, admitted via single window counseling.",
+        "provider": "Kumaraguru College of Technology",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Rural Students Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Topper from rural school with min. cut-off 180/200; requires Headmaster certificate.",
+        "provider": "Kumaraguru College of Technology",
+        "type": "specific",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Sports Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Outstanding records in National/International level competitions; admitted under Management Quota.",
+        "provider": "Kumaraguru College of Technology",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Sakthi Grant",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Offered to students in significant financial need to cover tuition fees.",
+        "provider": "Kumaraguru Institutions",
+        "type": "need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Military Grant",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Exclusively for children of parents serving or who have served in Indian Defense/Police forces.",
+        "provider": "Kumaraguru Institutions",
+        "type": "specific",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Government of Tamil Nadu Scholarship (BC/MBC/DNC)",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Based on community criteria and annual family income within government limits.",
+        "provider": "Tamil Nadu State Government",
+        "type": "specific",
+        "application_deadline": "As per Govt notification"
+      },
+      {
+        "name": "AICTE Pragati & Saksham Scholarships",
+        "amount": 50000.0,
+        "currency_type": "INR",
+        "eligibility": "Pragati: Merit-based for girls; Saksham: For specially-abled students.",
+        "provider": "AICTE",
+        "type": "specific",
+        "application_deadline": "December annually"
+      }
+    ]
+  },
+  "_metadata": {
+    "scraped_at": "2026-04-01T14:41:27.174748",
+    "total_time": 1.7691726684570312,
+    "errors": {},
+    "validation_warnings": [
+      "FIX: Extracted programs from separate top-level sections."
+    ],
+    "college_name": "Kumaraguru College of Technology",
+    "country": "India",
+    "schema_version": "v1.1"
+  }
+}

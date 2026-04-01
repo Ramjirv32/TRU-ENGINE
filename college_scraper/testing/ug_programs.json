@@ -1,0 +1,30 @@
+{
+  "search_metadata": {
+    "id": "69cd12f9d355cc1a7b130f14",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/85-N-yQeqUJ3z3Uy7B5xVg/69cd12f9d355cc1a7b130f14.json",
+    "created_at": "2026-04-01 12:43:37 UTC",
+    "processed_at": "2026-04-01 12:43:37 UTC",
+    "google_ai_mode_url": "https://www.google.com/search?q=For+Kumaraguru+College+of+Technology+in+India+%28Coimbatore%29%2C+search+the+official+website%2C+academic+programs+directory%2C+and+course+listings+to+find+undergraduate+degree+programs+%28Bachelor%27s%2FB.Tech%2FB.A.%2FB.Sc.+programs%29.+Include+program+names+like+%27Computer+Science%27%2C+%27Bachelor+of+Engineering%27%2C+%27B.A.+in+Economics%27%2C+etc.+You+can+also+infer+programs+based+on+faculty%2Fdepartments+listed+on+their+site.+Return+valid+JSON+with+this+format%3A+%7B+%22ug_programs%22%3A+%5B%22program1%22%2C+%22program2%22%2C+...%5D%2C+%22total_count%22%3A+number%2C+%22source%22%3A+%22url+or+%27inferred+from+departments%27%22+%7D.+Return+an+empty+array+if+genuinely+no+data+is+available.&udm=50",
+    "raw_html_file": "https://serpapi.com/searches/85-N-yQeqUJ3z3Uy7B5xVg/69cd12f9d355cc1a7b130f14.html",
+    "prettify_html_file": "https://serpapi.com/searches/85-N-yQeqUJ3z3Uy7B5xVg/69cd12f9d355cc1a7b130f14.prettify",
+    "total_time_taken": 4.81
+  },
+  "search_parameters": {
+    "engine": "google_ai_mode",
+    "q": "For Kumaraguru College of Technology in India (Coimbatore), search the official website, academic programs directory, and course listings to find undergraduate degree programs (Bachelor's/B.Tech/B.A./B.Sc. programs). Include program names like 'Computer Science', 'Bachelor of Engineering', 'B.A. in Economics', etc. You can also infer programs based on faculty/departments listed on their site. Return valid JSON with this format: { \"ug_programs\": [\"program1\", \"program2\", ...], \"total_count\": number, \"source\": \"url or 'inferred from departments'\" }. Return an empty array if genuinely no data is available.",
+    "device": "desktop"
+  },
+  "text_blocks": [
+    {
+      "type": "code_block",
+      "language": "json",
+      "code": "{\n  \"ug_programs\": [\n    \"B.E. Aeronautical Engineering\",\n    \"B.E. Automobile Engineering\",\n    \"B.E. Civil Engineering\",\n    \"B.E. Computer Science and Engineering\",\n    \"B.E. Electrical and Electronics Engineering\",\n    \"B.E. Electronics and Communication Engineering\",\n    \"B.E. Electronics and Instrumentation Engineering\",\n    \"B.E. Mechanical Engineering\",\n    \"B.E. Mechatronics Engineering\",\n    \"B.Tech. Artificial Intelligence and Data Science\",\n    \"B.Tech. Biotechnology\",\n    \"B.Tech. Fashion Technology\",\n    \"B.Tech. Information Technology\",\n    \"B.Tech. Textile Technology\"\n  ],\n  \"total_count\": 14,\n  \"source\": \"https://kct.ac.in/our-programmes/\"\n}\n"
+    },
+    {
+      "type": "paragraph",
+      "snippet": "Would you like to see details on postgraduate offerings or admission requirements for these specific engineering tracks?"
+    }
+  ],
+  "reconstructed_markdown": "```json\n{\n  \"ug_programs\": [\n    \"B.E. Aeronautical Engineering\",\n    \"B.E. Automobile Engineering\",\n    \"B.E. Civil Engineering\",\n    \"B.E. Computer Science and Engineering\",\n    \"B.E. Electrical and Electronics Engineering\",\n    \"B.E. Electronics and Communication Engineering\",\n    \"B.E. Electronics and Instrumentation Engineering\",\n    \"B.E. Mechanical Engineering\",\n    \"B.E. Mechatronics Engineering\",\n    \"B.Tech. Artificial Intelligence and Data Science\",\n    \"B.Tech. Biotechnology\",\n    \"B.Tech. Fashion Technology\",\n    \"B.Tech. Information Technology\",\n    \"B.Tech. Textile Technology\"\n  ],\n  \"total_count\": 14,\n  \"source\": \"https://kct.ac.in/our-programmes/\"\n}\n\n```\n\nWould you like to see details on postgraduate offerings or admission requirements for these specific engineering tracks?\n"
+}

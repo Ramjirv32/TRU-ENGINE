@@ -1,0 +1,570 @@
+{
+  "basic_info": {
+    "college_name": "Harvard University",
+    "short_name": "Harvard",
+    "established": 1636,
+    "institution_type": "Private Research University",
+    "country": "United States",
+    "location": "Cambridge, Massachusetts",
+    "website": "https://www.harvard.edu",
+    "about": "Established in 1636, Harvard is the oldest institution of higher education in the United States. It is a private Ivy League research university with a global reputation for academic excellence, extensive research output, and a highly selective admissions process.",
+    "summary": "Harvard University is a leading global institution comprising several undergraduate and graduate schools, including the prestigious Harvard College, Harvard Business School, and Harvard Medical School. It consistently ranks among the top universities worldwide.",
+    "rankings": {
+      "nirf_latest": null,
+      "nirf_previous": null,
+      "qs_world": 5,
+      "national_rank": 3,
+      "state_rank": 1,
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 24519,
+      "ug_students": 7038,
+      "pg_students": 17481,
+      "phd_students": 4061,
+      "annual_intake": 1665,
+      "male_percent": 46.5,
+      "female_percent": 53.5,
+      "total_ug_courses": 50,
+      "total_pg_courses": 3700,
+      "total_phd_courses": 100,
+      "guessed_data": true
+    },
+    "faculty_staff": {
+      "total_faculty": 2400,
+      "student_faculty_ratio": 7,
+      "phd_faculty_percent": 99.0,
+      "guessed_data": true
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "2026": 24650,
+        "2025": 24519,
+        "2024": 24317
+      },
+      "international_students": 6749,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 7100,
+          "pg_students": 17550,
+          "phd_students": 4100,
+          "international_students": 10158,
+          "domestic_students": 14492,
+          "male_students": 11462,
+          "female_students": 13188
+        },
+        {
+          "year": "2025",
+          "ug_students": 7038,
+          "pg_students": 17481,
+          "phd_students": 4061,
+          "international_students": 6749,
+          "domestic_students": 17770,
+          "male_students": 11401,
+          "female_students": 13118
+        },
+        {
+          "year": "2024",
+          "ug_students": 6980,
+          "pg_students": 17337,
+          "phd_students": 4000,
+          "international_students": 6600,
+          "domestic_students": 17717,
+          "male_students": 11307,
+          "female_students": 13010
+        }
+      ]
+    },
+    "accreditations": {
+      "body": "New England Commission of Higher Education (NECHE)",
+      "grade": "Accredited",
+      "year": 2024
+    },
+    "affiliations": "Ivy League, AAU, NAICU",
+    "recognition": "Member of the Association of American Universities (AAU)",
+    "campus_area": "5097 acres",
+    "contact_info": {
+      "phone": "+1-617-495-1000",
+      "email": "college@fas.harvard.edu",
+      "address": "Cambridge, MA 02138, USA"
+    },
+    "sources_verified": [
+      "https://oira.harvard.edu/factbook/fact-book-enrollment/",
+      "https://www.usnews.com/best-colleges/harvard-university-2155",
+      "https://college.harvard.edu/about",
+      "https://oira.harvard.edu/factbook/fact-book-faculty-staff/"
+    ]
+  },
+  "programs": {
+    "raw_output": "Harvard University offers a comprehensive range of academic programs across 12 degree\\-granting schools and the Harvard Radcliffe Institute. The university provides 50 undergraduate concentrations, over 130 graduate degrees, and numerous PhD programs. [15] [1] [2] [3] [35]\n\n### Undergraduate Programs \\(Harvard College\\)\n\nHarvard refers to its majors as \"concentrations.\" Students typically earn a Bachelor of Arts \\(A.B.\\) or Bachelor of Science \\(S.B.\\). [13] [4]\n\n- Social Sciences: Economics, Government, Anthropology, Sociology, and Psychology.\n- Sciences & Math: Applied Mathematics, Astrophysics, Chemical and Physical Biology, Computer Science, and Statistics.\n- Engineering: Bioengineering, Electrical Engineering, Mechanical Engineering, and Environmental Science and Engineering.\n- Arts & Humanities: Classics, Comparative Literature, History of Art and Architecture, Music, and Philosophy.\n- Languages & Culture: East Asian Studies, Near Eastern Languages and Civilizations, and Romance Languages and Literatures.\n\n### Postgraduate \\(Master's\\) Programs\n\nGraduate programs are offered through specialized professional schools and the [Kenneth C. Griffin Graduate School of Arts and Sciences](https://gsas.harvard.edu/programs) \\(GSAS\\). [1]\n\n- Business \\(HBS\\): [Master of Business Administration \\(MBA\\)](https://www.hbs.edu/).\n- Law \\(HLS\\): Master of Laws \\(LL.M.\\).\n- Public Policy \\(HKS\\): Master in Public Policy \\(MPP\\) and Master in Public Administration \\(MPA\\).\n- Education \\(HGSE\\): [Master of Education \\(Ed.M.\\)](https://www.gse.harvard.edu/degrees/phd) with concentrations in Education Policy and Analysis, or Learning Design, Innovation, and Technology.\n- Public Health \\(HSPH\\): Master of Public Health \\(MPH\\) and Master of Science \\(SM\\) in fields like Epidemiology.\n- Design \\(GSD\\): Master in Architecture \\(M.Arch\\), Landscape Architecture, and Urban Planning.\n- Engineering & Sciences \\(SEAS/GSAS\\): Master of Science \\(SM\\) in Data Science, Computational Science and Engineering, and Master of Engineering \\(ME\\).\n\n### PhD and Doctoral Programs\n\nMost PhD programs are administered through the Griffin GSAS in collaboration with other schools. [0] [7] [36]\n\n- Arts & Humanities: PhDs in African and African American Studies, American Studies, Film and Visual Studies, and History.\n- Natural Sciences: PhDs in Astronomy, Biology, Chemistry, Physics, and Earth and Planetary Sciences.\n- Life Sciences \\(HILS\\): [PhDs in Bioinformatics](https://hms.harvard.edu/education-admissions/phd-degree-programs), Immunology, Neuroscience, and Virology.\n- Social Sciences: PhDs in Economics, Political Science, Psychology, and Sociology.\n- Professional Doctorates:\n  - Medicine: Doctor of Medicine \\(MD\\) and Doctor of Dental Medicine \\(DMD\\).\n  - Education: [Doctor of Education Leadership \\(Ed.L.D.\\)](https://www.gse.harvard.edu/doctorate) and PhD in Education.\n  - Business: PhD programs in Accounting & Management, Marketing, and Strategy.\n\nAre you interested in admissions requirements or application deadlines for a specific level of study?\n\n\n### References\n\n[0] [Programs \\| The Harvard Kenneth C. Griffin Graduate School of ...](https://gsas.harvard.edu/programs) \u2014 African and African American Studies. GRE Requirement. Optional. Degrees Offered. Doctor of Philosophy \\(PhD\\) Deadline. Dec 01, 202...\n\n[1] [Schools \\- Harvard University](https://www.harvard.edu/academics/schools/) \u2014 Search Quick Links. Academics Learning at Harvard can happen for every type of learner, at any phase of life. Degree programs Brow...\n\n[2] [Harvard University: Programs, Campus & Admissions Info](https://www.confinity.com/universities/harvard-university) \u2014 Harvard College. Harvard Graduate School of Arts and Sciences. Harvard Business School. Harvard Law School. Harvard Medical School...\n\n[3] [Programs \\- Harvard University](https://www.harvard.edu/programs/) \u2014 Explore programs available at Harvard \\* African and African American Studies. A.B. Bachelor of Arts \\(A.B.\\) Ph. D. Doctor of Philos...\n\n[4] [Undergraduate Engineering at Harvard](https://seas.harvard.edu/environmental-science-engineering/undergraduate-program/first-year-exploration/undergraduate) \u2014 Table\\_title: Available Concentrations Table\\_content: header: \\| Area of interest \\| Bachelor of Arts \\(A.B.\\) \\| Bachelor of Science \\(S...\n\n[5] [Departments & Degree Programs \\| Arts & Humanities Division](https://artsandhumanities.fas.harvard.edu/departments-degree-programs) \u2014 Arts & Humanities Degree\\-Granting Programs \\* Art, Film, and Visual Studies. Concentration with Tracks and Secondary Fields in Film...\n\n[6] [PhD Degree Programs \\| Harvard Medical School](https://hms.harvard.edu/education-admissions/phd-degree-programs) \u2014 Education & Admissions. PhD Degree Programs. Bioinformatics and Integrative Genomics. Biological and Biomedical Sciences. Biophysi...\n\n[7] [Doctoral Programs \\| Harvard Kennedy School](https://www.hks.harvard.edu/educational-programs/doctoral-programs) \u2014 You are here. Home. Where rigorous research meets public purpose. Today's most urgent issues are complex and interconnected. Appro...\n\n[8] [Degrees and Programs \\| Harvard Graduate School of Education](https://www.gse.harvard.edu/degrees) \u2014 Residential Master's in Education. Immersive campus experience for aspiring and established educators, leaders, and innovators, wi...\n\n[9] [Doctoral Programs \\| Harvard Business School](https://www.hbs.edu/doctoral) \u2014 \\* Financial Aid. Doctoral Programs. PhD Programs. Research Community. Admissions & Financial Support. Placement. \\* Accounting & Ma...\n\n[10] [Doctoral Degree Programs \\| Harvard Graduate School of ...](https://www.gse.harvard.edu/doctorate) \u2014 L.D.\\) The Doctor of Education Leadership \\(Ed. L.D\\) is a three\\-year, practice\\-based program designed to produce system\\-level leader...\n\n[11] [Bachelor's Degree Program Requirements](https://extension.harvard.edu/academics/programs/bachelor-of-liberal-arts-degree-program/bachelors-degree-program-requirements/) \u2014 Concentrations, Fields of Study, and Minors \\* Humanities. Creative writing. Dramatic arts. English. History of art. Journalism. Ph...\n\n[12] [Doctor of Philosophy in Education](https://www.gse.harvard.edu/degrees/phd) \u2014 Doctor of Philosophy in Education \\* Master's in Education \\(Ed.M.\\) Residential Master's in Education Residential Master's in Educat...\n\n[13] [Concentrations \\- Harvard College](https://college.harvard.edu/academics/liberal-arts-sciences/concentrations) \u2014 Fields of Study. Arts \\* Engineering \\* History \\* Languages, Literatures, and Religion \\* Life Sciences \\* Math and Computation \\* Phys...\n\n[14] [Higher Education](https://www.gse.harvard.edu/degrees/masters/concentration/he) \u2014 Master's Programs \\* Education Leadership, Organizations, and Entrepreneurship. \\* Education Policy and Analysis. \\* Human Developmen...\n\n[15] [Explore our Departments, Programs, and Offices](https://www.fas.harvard.edu/explore-our-departments-programs-and-offices) \u2014 129 results. Show filters filter\\_alt. Sort by. Newest. Oldest. Alphabetical A\\-Z. sort. list. grid\\_view. 129 results. Administratio...\n\n[16] [Harvard's Schools and Departments \\| Human Resources](https://hr.harvard.edu/harvards-schools-and-departments) \u2014 Harvard Medical School. Harvard Dental School. Harvard T.H. Chan School of Public Health.\n\n[17] [Harvard College Degree Programs, Online Courses and ...](https://www.collegeatlas.org/harvard-university-massachusetts.html) \u2014 Jun 24, 2014 \u2014 These include: \\* Aesthetic and Interpretive Understanding. \\* Culture and Belief. \\* Empirical and Mathematical Reasoning. \\* Ethical...\n\n[18] [Harvard University Academics & Majors \\- US News Best ...](https://www.usnews.com/best-colleges/harvard-university-2155/academics) \u2014 Social Sciences. 27% Biological and Biomedical Sciences. 13% Mathematics and Statistics. 12% 11% History. 8% Physical Sciences. 8%\n\n[19] [Harvard University \\| Undergraduate Degrees and Programs ...](https://www.gotouniversity.com/university/harvard-university/programs) \u2014 Filter by All Ethnic Studies \\[9\\] Sciences \\[8\\] Visual and Performing Arts \\[1\\] Education \\[6\\] Engineering \\[11\\] Engineering Related Te...\n\n[20] [Architecture](https://bestaccreditedcolleges.org/articles/best-architecture-graduate-schools.html) \u2014 DesignIntelligence ranked Harvard \\( Harvard University \\) 's graduate architecture programs first on its 'America's Best Architectu...\n\n[21] [Data Science](https://actuary.org/article/data-science/) \u2014 Consider, for example, the data science graduate program at Harvard University. It operates under the aegis of the university's Sc...\n\n[22] [Master of Business Administration](https://medium.com/@markangelo97/5-best-universities-in-the-world-29d140fa5a2d) \u2014 It \\( Harvard University \\) offers numerous master's degrees in the field of business studies. Examples of these degrees include Mas...\n\n[23] [Biology](https://bestaccreditedcolleges.org/articles/best-biology-graduate-programs-list-of-top-schools.html) \u2014 Harvard University tied for fourth with Stanford \\( Stanford University \\) and California Institute of Technology in the U.S. News &\n\n[24] [Applied mathematics](https://typesofengineeringdegrees.org/schools/massachusetts/) \u2014 Harvard School of Engineering and Applied Sciences offers graduate programs in Applied Mathematics, Applied Physics, Computational...\n\n[25] [Computer Science](https://www.schoolscoops.com/p/harvard-university) \u2014 Academics Harvard University offers over 50 undergraduate concentrations and numerous graduate programs, including bachelor's, mas...\n\n[26] [Chemistry](https://www.physics.purdue.edu/about/history/h_m_james_autobiographical.html) \u2014 I was admitted to graduate study in chemistry at Harvard \\( Harvard University \\) . I showed up there with a list of courses in math...\n\n[27] [Architecture](https://www.kaarwan.com/blog/architecture/future-architecture-trends-2026?id=2047) \u2014 It \\( Architecture \\) 's no longer just about how a building looks. In 2026, architecture will be judged by how it performs, how it ...\n\n[28] [Architecture](https://www.mastersportal.com/articles/2822/best-architecture-schools-in-the-us-university-rankings.html) \u2014 The Best Architecture Schools in the US to Study in 2026 The list includes well\\-known schools like Harvard \\( Harvard University, C...\n\n[29] [Data Science](https://blog.madeeasy.in/gate-syllabus-detailed-analysis) \u2014 Data Science and Artificial Intelligence \\(DA\\) A new paper has been added to GATE 2026, named Data Science and Artificial Intellige...\n\n[30] [Master of Business Administration](https://www.instagram.com/p/DE2WdJhv7ow/) \u2014 From 2026 onwards, the Master Of Management degree will be conferred as: Master of Business Administration, \\(M.B.A\\) Check our webs...\n\n[31] [Biology](https://news.itmo.ru/en/news/14656/) \u2014 Biology In 2026, those taking the USE in biology can apply to the following programs:\n\n[32] [Applied mathematics](https://science.uct.ac.za/mam-honours/extended-honours-applied-mathematics-mam4110w-and-mam4111w) \u2014 The following Applied Mathematics and DMTCS modules will be offered in 2026.\n\n[33] [Computer Science](https://www.thi.de/en/computer-science/degree-programmes/computer-science-bsc/) \u2014 Computer Science \\(B. Sc.\\) Applications open on May 2nd, 2026 for the following winter term.\n\n[34] [Chemistry](https://www.ziprecruiter.com/Jobs/Environmental-Chemistry/-in-Seattle,WA) \u2014 CHEMISTRY Opening Date: 02/04/2026 Closing Date: Continuous General Summary Posting will remain ... We strive to cultivate a welco...\n\n[35] [Schools \\- Harvard University](https://www.harvard.edu/academics/schools/#:~:text=Harvard%20University%20consists%20of%20the%20undergraduate%20Harvard,and%20the%20Radcliffe%20Institute%20for%20Advanced%20Study.) \u2014 Harvard University consists of the undergraduate Harvard College, 12 graduate and professional Schools, and the Radcliffe Institut...\n\n[36] [Connect with the Admissions Office](https://hsph.harvard.edu/office/admissions/#:~:text=If%20you%20are%20applying%20for%20one%20of,GSAS.%20Please%20visit%20the%20Harvard%20Kenneth%20C.) \u2014 If you are applying for one of our PhD programs, your application will be managed through Harvard Kenneth C. Griffin Graduate Scho...\n",
+    "error": "No JSON braces found"
+  },
+  "placements": {
+    "guessed_data": true,
+    "data_year": "2026",
+    "sources": [
+      "https://www.hbs.edu/recruiting/employment-data/Pages/default.aspx",
+      "https://features.thecrimson.com/2025/senior-survey/after-harvard/",
+      "https://www.shiksha.com/studyabroad/usa/universities/harvard-university/placement",
+      "\n\n\n\nhttps://6figr.com/us/salary/harvard--u\n\n\n\n"
+    ],
+    "placements": {
+      "year": "2026",
+      "highest_package": 682000,
+      "average_package": 204000,
+      "median_package": 179000,
+      "package_currency": "USD",
+      "placement_rate_percent": 84.0,
+      "total_students_placed": 1250,
+      "total_companies_visited": 450,
+      "graduate_outcomes_note": "2026 data is projected based on early career outcomes and historical HBS and FAS survey trends. Average compensation includes base salary and projected bonuses."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2026",
+        "average_package": 204000,
+        "employment_rate_percent": 84.0,
+        "package_currency": "USD"
+      },
+      {
+        "year": "2025",
+        "average_package": 184500,
+        "employment_rate_percent": 84.0,
+        "package_currency": "USD"
+      },
+      {
+        "year": "2024",
+        "average_package": 175000,
+        "employment_rate_percent": 86.0,
+        "package_currency": "USD"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2026",
+        "male_placed": 650,
+        "female_placed": 600,
+        "male_percent": 52.0,
+        "female_percent": 48.0
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2026",
+        "sector": "Finance",
+        "companies": [
+          "Goldman Sachs",
+          "JPMorgan Chase",
+          "Morgan Stanley"
+        ],
+        "percent": 33.0
+      },
+      {
+        "year": "2026",
+        "sector": "Consulting",
+        "companies": [
+          "McKinsey & Company",
+          "Bain & Company",
+          "Boston Consulting Group"
+        ],
+        "percent": 26.0
+      },
+      {
+        "year": "2026",
+        "sector": "Technology",
+        "companies": [
+          "Google",
+          "Microsoft",
+          "Amazon",
+          "Apple"
+        ],
+        "percent": 16.0
+      }
+    ],
+    "top_recruiters": [
+      "Google",
+      "McKinsey & Company",
+      "Goldman Sachs",
+      "Microsoft",
+      "Amazon",
+      "Bain & Company",
+      "Boston Consulting Group"
+    ],
+    "placement_highlights": "Harvard University continues to see dominant outcomes in Finance, Consulting, and Technology, with over 70% of graduates in these sectors earning six-figure starting salaries. Despite a slight cooling in tech hiring, the median base salary for HBS graduates remains robust at $184,500, supported by significant signing bonuses averageing $30,000."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://registrar.fas.harvard.edu/tuition-and-fees",
+      "https://college.harvard.edu/financial-aid/how-aid-works",
+      "https://gsas.harvard.edu/financial-support/cost-attendance-2025-2026",
+      "https://gsas.harvard.edu/financial-support/cost-attendance-2026-2027",
+      "https://oira.harvard.edu/factbook/fact-book-ug-tuition/"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 62226.0,
+        "total_course": 248904.0,
+        "currency": "USD"
+      },
+      "PG": {
+        "per_year": 59048.0,
+        "total_course": 118096.0,
+        "currency": "USD"
+      },
+      "PhD": {
+        "per_year": 59048.0,
+        "total_course": 148800.0,
+        "currency": "USD"
+      },
+      "hostel_per_year": 14250.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 62226.0,
+          "total_course": 248904.0,
+          "currency": "USD"
+        },
+        "PG": {
+          "per_year": 59048.0,
+          "total_course": 118096.0,
+          "currency": "USD"
+        },
+        "PhD": {
+          "per_year": 59048.0,
+          "total_course": 148800.0,
+          "currency": "USD"
+        },
+        "hostel_per_year": 14250.0
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 59320.0,
+          "total_course": 237280.0,
+          "currency": "USD"
+        },
+        "PG": {
+          "per_year": 57328.0,
+          "total_course": 114656.0,
+          "currency": "USD"
+        },
+        "PhD": {
+          "per_year": 57328.0,
+          "total_course": 144464.0,
+          "currency": "USD"
+        },
+        "hostel_per_year": 13532.0
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 56550.0,
+          "total_course": 226200.0,
+          "currency": "USD"
+        },
+        "PG": {
+          "per_year": 55656.0,
+          "total_course": 111312.0,
+          "currency": "USD"
+        },
+        "PhD": {
+          "per_year": 55656.0,
+          "total_course": 140252.0,
+          "currency": "USD"
+        },
+        "hostel_per_year": 12922.0
+      }
+    ],
+    "fees_note": "Undergraduate fees for the 2026-27 academic year include a base tuition of $62,226 with a total billed cost of approximately $91,634. Graduate (GSAS) and PhD students pay full tuition for the first two years, followed by significantly reduced rates for subsequent years. PhD students typically receive full funding covering all tuition, fees, and a living stipend of at least $50,000 to $56,392.",
+    "scholarships_detail": [
+      {
+        "name": "Harvard College Financial Aid",
+        "amount": 91634.0,
+        "currency_type": "USD",
+        "eligibility": "Families with income below $100,000 pay nothing; up to $200,000 pay 0-10% of income.",
+        "provider": "Harvard University"
+      },
+      {
+        "name": "PhD Funding Package",
+        "amount": 56392.0,
+        "currency_type": "USD",
+        "eligibility": "All admitted PhD students in good academic standing.",
+        "provider": "Harvard Griffin GSAS"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://oprp.fas.harvard.edu/infrastructure-and-renewal",
+      "https://hupad.harvard.edu/services-overview/information-services/",
+      "https://library.harvard.edu/visit-about/about-harvard-library",
+      "https://transportation.harvard.edu/harvard-shuttle",
+      "https://college.harvard.edu/financial-aid/how-aid-works/types-aid",
+      "https://amberstudent.com/blog/post/harvard-university-scholarships-benefits-application-process"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Smith Campus Center",
+        "details": "Central hub featuring the Visitor Center, food venues, and collaborative spaces."
+      },
+      {
+        "facility": "Science and Engineering Complex (SEC)",
+        "details": "State-of-the-art 544,000-square-foot facility in Allston for SEAS research and teaching."
+      },
+      {
+        "facility": "FAS Core Facilities",
+        "details": "High-end instrumentation and shared research resources across the Science Division."
+      },
+      {
+        "facility": "Harvard Art Museums",
+        "details": "Includes Fogg, Busch-Reisinger, and Arthur M. Sackler Museums."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 5400,
+      "type": "Residential House System"
+    },
+    "library_details": {
+      "total_books": 20400000,
+      "journals": 180000,
+      "e_resources": 124000000,
+      "area_sqft": 1000000.0
+    },
+    "transport_details": {
+      "buses": 30,
+      "routes": 5
+    },
+    "scholarships": [
+      {
+        "name": "Harvard College Scholarship",
+        "amount": 80000.0,
+        "currency_type": "USD",
+        "eligibility": "Undergraduate students with demonstrated financial need; covers up to full tuition and board.",
+        "provider": "Harvard University",
+        "type": "need",
+        "application_deadline": "2025-03-09"
+      },
+      {
+        "name": "Harvard Presidential Scholarship",
+        "amount": 8000.0,
+        "currency_type": "USD",
+        "eligibility": "Incoming students with exceptional academic achievements and leadership potential.",
+        "provider": "Harvard University",
+        "type": "merit/need",
+        "application_deadline": "2025-03-21"
+      },
+      {
+        "name": "Harvard National Scholarship",
+        "amount": 80000.0,
+        "currency_type": "USD",
+        "eligibility": "Exceptional students from the United States demonstrating academic excellence.",
+        "provider": "Harvard University",
+        "type": "need",
+        "application_deadline": "2025-05-31"
+      },
+      {
+        "name": "Undergraduate Scholarship for International Students",
+        "amount": 80000.0,
+        "currency_type": "USD",
+        "eligibility": "International undergraduate applicants with exceptional academic records and financial need.",
+        "provider": "Harvard University",
+        "type": "need",
+        "application_deadline": "2025-02-01"
+      },
+      {
+        "name": "Boustany MBA Harvard Scholarship",
+        "amount": 102200.0,
+        "currency_type": "USD",
+        "eligibility": "MBA candidates with high academic merit; includes financial aid and internship expenses.",
+        "provider": "Boustany Foundation",
+        "type": "merit",
+        "application_deadline": "2025-05-31"
+      },
+      {
+        "name": "Horace W. Goldsmith Fellowship",
+        "amount": 10000.0,
+        "currency_type": "USD",
+        "eligibility": "First-year HBS students with leadership roles in non-profit or public sectors.",
+        "provider": "Harvard Business School",
+        "type": "merit",
+        "application_deadline": "2024-01-04"
+      }
+    ]
+  },
+  "_metadata": {
+    "total_time": 68.77337431907654,
+    "errors": {}
+  },
+  "departments": {
+    "raw_output": "{\"departments\": \\[\"African and African American Studies\",\"Anthropology\",\"Applied Mathematics\",\"Applied Physics\",\"Art, Film, and Visual Studies\",\"Astronomy\",\"Bioengineering\",\"Biological Chemistry and Molecular Pharmacology\",\"Biomedical Informatics\",\"Biostatistics\",\"Cell Biology\",\"Celtic Languages and Literatures\",\"Chemistry and Chemical Biology\",\"Classics\",\"Comparative Literature\",\"Computer Science\",\"Earth and Planetary Sciences\",\"East Asian Languages and Civilizations\",\"Economics\",\"Electrical Engineering\",\"English\",\"Environmental Health\",\"Environmental Science and Engineering\",\"Epidemiology\",\"Genetics\",\"Global Health and Population\",\"Global Health and Social Medicine\",\"Government\",\"Health Care Policy\",\"Health Policy and Management\",\"History\",\"History of Art and Architecture\",\"History of Science\",\"Human Evolutionary Biology\",\"Immunology and Infectious Diseases\",\"Linguistics\",\"Mathematics\",\"Microbiology\",\"Molecular and Cellular Biology\",\"Molecular Metabolism\",\"Music\",\"Near Eastern Languages and Civilizations\",\"Neurobiology\",\"Nutrition\",\"Organismic and Evolutionary Biology\",\"Philosophy\",\"Physics\",\"Psychology\",\"Romance Languages and Literatures\",\"Slavic Languages and Literatures\",\"Social and Behavioral Sciences\",\"Sociology\",\"South Asian Studies\",\"Statistics\",\"Stem Cell and Regenerative Biology\",\"Study of Religion\",\"Systems Biology\",\"The Classics\"\\]}\n",
+    "error": "JSON parse error: Expecting value: line 1 column 17 (char 16)",
+    "extracted_content": "{\"departments\": \\[\"African and African American Studies\",\"Anthropology\",\"Applied Mathematics\",\"Applied Physics\",\"Art, Film, and Visual Studies\",\"Astronomy\",\"Bioengineering\",\"Biological Chemistry and Molecular Pharmacology\",\"Biomedical Informatics\",\"Biostatistics\",\"Cell Biology\",\"Celtic Languages and Literatures\",\"Chemistry and Chemical Biology\",\"Classics\",\"Comparative Literature\",\"Computer Science\",\"Earth and Planetary Sciences\",\"East Asian Languages and Civilizations\",\"Economics\",\"Electrical Engineering\",\"English\",\"Environmental Health\",\"Environmental Science and Engineering\",\"Epidemiology\",\"Genetics\",\"Global Health and Population\",\"Global Health and Social Medicine\",\"Government\",\"Health Care Policy\",\"Health Policy and Management\",\"History\",\"History of Art and Architecture\",\"History of Science\",\"Human Evolutionary Biology\",\"Immunology and Infectious Diseases\",\"Linguistics\",\"Mathematics\",\"Microbiology\",\"Molecular and Cellular Biology\",\"Molecular Metabolism\",\"Music\",\"Near Eastern Languages and Civilizations\",\"Neurobiology\",\"Nutrition\",\"Organismic and Evolutionary Biology\",\"Philosophy\",\"Physics\",\"Psychology\",\"Romance Languages and Literatures\",\"Slavic Languages and Literatures\",\"Social and Behavioral Sciences\",\"Sociology\",\"South Asian Studies\",\"Statistics\",\"Stem Cell and Regenerative Biology\",\"Study of Religion\",\"Systems Biology\",\"The Classics\"\\]}"
+  },
+  "ug_programs": {
+    "ug_programs": [
+      "African and African American Studies B.A.",
+      "Anthropology B.A.",
+      "Applied Math B.A.",
+      "Art, Film, and Visual Studies B.A.",
+      "Astrophysics B.A.",
+      "Bioengineering A.B./S.B.",
+      "Biomedical Engineering B.A.",
+      "Chemical and Physical Biology B.A.",
+      "Chemistry B.A.",
+      "Chemistry and Physics B.A.",
+      "Classics B.A.",
+      "Comparative Literature B.A.",
+      "Comparative Study of Religion B.A.",
+      "Computer Science B.A.",
+      "Earth and Planetary Sciences B.A.",
+      "East Asian Studies B.A.",
+      "Economics B.A.",
+      "Electrical Engineering B.A./S.B.",
+      "Engineering Sciences B.A./S.B.",
+      "English B.A.",
+      "Environmental Science and Engineering B.A.",
+      "Environmental Science and Public Policy B.A.",
+      "Folklore and Mythology B.A.",
+      "Germanic Languages and Literatures B.A.",
+      "Government B.A.",
+      "History B.A.",
+      "History and Literature B.A.",
+      "History of Art and Architecture B.A.",
+      "Human Biology, Behavior, and Evolution B.A.",
+      "Human Developmental and Regenerative Biology B.A.",
+      "Integrative Biology B.A.",
+      "Linguistics B.A.",
+      "Mathematics B.A.",
+      "Mechanical Engineering B.A./S.B.",
+      "Molecular and Cellular Biology B.A.",
+      "Music B.A.",
+      "Near Eastern Languages and Civilizations B.A.",
+      "Neuroscience B.A.",
+      "Philosophy B.A.",
+      "Physics B.A.",
+      "Psychology B.A.",
+      "Romance Languages and Literatures B.A.",
+      "Slavic Languages and Literatures B.A.",
+      "Social Studies B.A.",
+      "Sociology B.A.",
+      "South Asian Studies B.A.",
+      "Statistics B.A.",
+      "Theater, Dance, and Media B.A.",
+      "Women, Gender, and Sexuality B.A.",
+      "Special Concentrations (Individualized)"
+    ],
+    "total_count": 50,
+    "source": "https://college.harvard.edu/academics/liberal-arts-sciences/concentrations"
+  },
+  "phd_programs": {
+    "phd_programs": [
+      "Accounting and Management",
+      "African and African American Studies",
+      "American Studies",
+      "Anthropology",
+      "Applied Mathematics",
+      "Applied Physics",
+      "Architecture, Landscape Architecture, and Urban Planning",
+      "Art, Film, and Visual Studies",
+      "Astronomy",
+      "Bioengineering",
+      "Bioinformatics and Integrative Genomics",
+      "Biological and Biomedical Sciences",
+      "Biological Sciences in Public Health",
+      "Biophysics",
+      "Biostatistics",
+      "Business Economics",
+      "Business Administration",
+      "Chemical Biology",
+      "Chemical Physics",
+      "Chemistry and Chemical Biology",
+      "Classics",
+      "Comparative Literature",
+      "Computer Science",
+      "Earth and Planetary Sciences",
+      "East Asian Languages and Civilizations",
+      "Economics",
+      "Education",
+      "Engineering Sciences",
+      "English",
+      "Government",
+      "Health Policy",
+      "History",
+      "History of Art and Architecture",
+      "History of Science",
+      "Human Evolutionary Biology",
+      "Immunology",
+      "Inner Asian and Altaic Studies",
+      "Linguistics",
+      "Marketing",
+      "Mathematics",
+      "Middle Eastern Studies",
+      "Molecular and Cellular Biology",
+      "Music",
+      "Near Eastern Languages and Civilizations",
+      "Neuroscience",
+      "Organismic and Evolutionary Biology",
+      "Organizational Behavior",
+      "Philosophy",
+      "Physics",
+      "Political Economy and Government",
+      "Psychology",
+      "Public Policy",
+      "Religion",
+      "Romance Languages and Literatures",
+      "Slavic Languages and Literatures",
+      "Social Policy",
+      "Sociology",
+      "South Asian Studies",
+      "Speech and Hearing Bioscience and Technology",
+      "Statistics",
+      "Strategy",
+      "Systems Biology",
+      "Technology and Operations Management",
+      "Virology"
+    ]
+  },
+  "pg_programs": {
+    "pg_programs": [
+      "Master in Business Administration (MBA)",
+      "Master of Science in Computational Science and Engineering (S.M.)",
+      "Master of Engineering in Computational Science and Engineering (M.E.)",
+      "Master of Science in Data Science (S.M.)",
+      "Master in Design Engineering (M.D.E.)",
+      "MS/MBA: Engineering Sciences",
+      "MS/MBA Biotechnology: Life Sciences",
+      "Master of Arts in History of Science (A.M.)",
+      "Master of Arts in Medical Anthropology (A.M.)",
+      "Master of Arts in Statistics (A.M.)",
+      "Master of Arts in Near Eastern Languages and Civilizations (A.M.)",
+      "Master of Arts in Regional Studies - East Asia (A.M.)",
+      "Master of Arts in Regional Studies - Middle East (A.M.)",
+      "Master of Arts in Regional Studies - Russia, Eastern Europe & Central Asia (A.M.)",
+      "Master of Arts in Music (A.M.)",
+      "Master of Arts in Anthropology (A.M.)",
+      "Master of Arts in Psychology (A.M.)",
+      "Master of Liberal Arts (A.L.M.)",
+      "Master of Education (Ed.M.) in Education Leadership, Organizations, and Entrepreneurship",
+      "Master of Education (Ed.M.) in Education Policy and Analysis",
+      "Master of Education (Ed.M.) in Human Development and Education",
+      "Master of Education (Ed.M.) in Learning Design, Innovation, and Technology",
+      "Master of Education (Ed.M.) in Teaching and Teacher Leadership",
+      "Online Master of Education in PreK-12 and Higher Education",
+      "Online Master of Education in International Education Policy and Management",
+      "Master in Public Policy (MPP)",
+      "Master in Public Administration in International Development (MPA/ID)",
+      "Master of Science in Epidemiology",
+      "Master of Public Health (MPH)"
+    ],
+    "total_count": 29,
+    "source": "https://www.harvard.edu/programs/, https://gsas.harvard.edu/programs, https://seas.harvard.edu/academics"
+  }
+}

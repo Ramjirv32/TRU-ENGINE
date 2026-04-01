@@ -1,0 +1,12 @@
+{
+  "name": "college-scraper",
+  "version": "1.0.0",
+  "description": "College data scraper with consistent JSON formatting",
+  "scripts": {
+    "format": "prettier --write *.json",
+    "format-check": "prettier --check *.json"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}

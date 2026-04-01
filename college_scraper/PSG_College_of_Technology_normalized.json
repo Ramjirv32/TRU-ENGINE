@@ -1,0 +1,509 @@
+{
+  "basic_info": {
+    "college_name": "PSG College of Technology",
+    "short_name": "PSGCT",
+    "established": 1951,
+    "institution_type": "Government Aided, Autonomous",
+    "country": "India",
+    "location": "Coimbatore, Tamil Nadu",
+    "website": "https://www.psgtech.edu",
+    "about": "PSG College of Technology is an ISO 9001:2015 certified autonomous institution affiliated with Anna University. It is one of the foremost engineering colleges in India, established by PSG & Sons' Charities Trust. The campus is known for its strong industry-institute interaction and research focus.",
+    "summary": "A premier technical institution in Coimbatore offering a wide range of undergraduate, postgraduate, and doctoral programs in engineering, technology, computer applications, and management.",
+    "rankings": {
+      "nirf_latest": "67",
+      "nirf_previous": "63",
+      "qs_world": "N/A",
+      "national_rank": "67",
+      "state_rank": "9",
+      "guessed_data": false
+    },
+    "student_statistics": {
+      "total_enrollment": 8518,
+      "ug_students": 7650,
+      "pg_students": 522,
+      "phd_students": 346,
+      "annual_intake": 1434,
+      "male_percent": 66.0,
+      "female_percent": 34.0,
+      "total_ug_courses": 23,
+      "total_pg_courses": 22,
+      "total_phd_courses": 28,
+      "guessed_data": true
+    },
+    "faculty_staff": {
+      "total_faculty": 468,
+      "student_faculty_ratio": 15.0,
+      "phd_faculty_percent": 75.0,
+      "guessed_data": true
+    },
+    "student_history": {
+      "student_count_comparison_last_3_years": {
+        "latest_year": 8518,
+        "previous_year": 8450,
+        "year_before_previous": 8300
+      },
+      "international_students": 45,
+      "guessed_data": true,
+      "categorywise_student_comparison_last_3_years": [
+        {
+          "year": "2026",
+          "ug_students": 7650,
+          "pg_students": 522,
+          "phd_students": 346,
+          "international_students": 45,
+          "domestic_students": 8473,
+          "male_students": 5622,
+          "female_students": 2896
+        },
+        {
+          "year": "2025",
+          "ug_students": 7580,
+          "pg_students": 524,
+          "phd_students": 346,
+          "international_students": 42,
+          "domestic_students": 8408,
+          "male_students": 5577,
+          "female_students": 2873
+        },
+        {
+          "year": "2024",
+          "ug_students": 7450,
+          "pg_students": 505,
+          "phd_students": 345,
+          "international_students": 38,
+          "domestic_students": 8262,
+          "male_students": 5478,
+          "female_students": 2822
+        }
+      ]
+    },
+    "accreditations": [
+      {
+        "body": "NAAC",
+        "grade": "A",
+        "year": 2024
+      },
+      {
+        "body": "NBA",
+        "grade": "Accredited",
+        "year": 2023
+      }
+    ],
+    "affiliations": "Anna University",
+    "recognition": "AICTE, ISO 9001:2015",
+    "campus_area": "45 acres",
+    "contact_info": {
+      "phone": "+91-422-2572177",
+      "email": "principal@psgtech.edu",
+      "address": "Post Box No. 1611, Peelamedu, Coimbatore - 641004, Tamil Nadu, India"
+    },
+    "sources_verified": [
+      "https://www.psgtech.edu/files/nirf/NIRF%20Management%20Data%202025.pdf",
+      "https://www.nirfindia.org/Rankings/2024/EngineeringRanking.html",
+      "https://www.shiksha.com/college/psgct-coimbatore-19398/ranking",
+      "https://www.careers360.com/colleges/psg-college-of-technology-coimbatore"
+    ]
+  },
+  "programs": {
+    "ug_programs": [
+      "B.E. Automobile Engineering",
+      "B.E. Biomedical Engineering",
+      "B.E. Civil Engineering",
+      "B.E. Computer Science and Engineering",
+      "B.E. Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+      "B.E. Electrical and Electronics Engineering",
+      "B.E. Electrical and Electronics Engineering (Sandwich)",
+      "B.E. Electronics and Communication Engineering",
+      "B.E. Instrumentation and Control Engineering",
+      "B.E. Mechanical Engineering",
+      "B.E. Mechanical Engineering (Sandwich)",
+      "B.E. Metallurgical Engineering",
+      "B.E. Production Engineering",
+      "B.E. Production Engineering (Sandwich)",
+      "B.E. Robotics and Automation",
+      "B.Tech. Bio Technology",
+      "B.Tech. Fashion Technology",
+      "B.Tech. Information Technology",
+      "B.Tech. Textile Technology",
+      "B.Sc. Applied Science",
+      "B.Sc. Computer Systems and Design",
+      "Integrated M.Sc. Software Systems (5 Years)",
+      "Integrated M.Sc. Theoretical Computer Science (5 Years)",
+      "Integrated M.Sc. Data Science (5 Years)",
+      "Integrated M.Sc. Cyber Security (5 Years)",
+      "Integrated M.Sc. Fashion Design & Merchandising (5 Years)"
+    ],
+    "pg_programs": [
+      "M.E. Automotive Engineering",
+      "M.E. Biometrics and Cybersecurity",
+      "M.E. Computer Science and Engineering",
+      "M.E. Control Systems",
+      "M.E. Embedded & Real-Time Systems",
+      "M.E. Engineering Design",
+      "M.E. Industrial Engineering",
+      "M.E. Manufacturing Engineering",
+      "M.E. Power Electronics and Drives",
+      "M.E. Structural Engineering",
+      "M.E. VLSI Design",
+      "M.Tech. Bio Technology",
+      "M.Tech. Nano Science and Technology",
+      "M.Tech. Textile Technology",
+      "Master of Computer Applications (MCA)",
+      "Master of Business Administration (MBA)",
+      "MBA (Waste Management & Social Entrepreneurship)",
+      "M.Sc. Applied Mathematics",
+      "M.Sc. Fashion Design & Merchandising (5 Years Integrated)",
+      "M.Sc. Software Systems (5 Years Integrated)",
+      "M.Sc. Theoretical Computer Science (5 Years Integrated)",
+      "M.Sc. Data Science (5 Years Integrated)",
+      "M.Sc. Cyber Security (5 Years Integrated)",
+      "Post Graduate Diploma in Management (PGDM)"
+    ],
+    "phd_programs": [
+      "Applied Science",
+      "Automobile Engineering",
+      "Biotechnology",
+      "Biomedical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Electronics and Communication Engineering",
+      "Electrical and Electronics Engineering",
+      "English",
+      "Fashion Technology",
+      "Humanities",
+      "Instrumentation and Control Systems Engineering",
+      "Information Technology",
+      "Mathematics",
+      "Computer Applications",
+      "Mechanical Engineering",
+      "Metallurgical Engineering",
+      "Physics",
+      "Production Engineering",
+      "Robotics and Automation Engineering",
+      "Management Sciences"
+    ],
+    "departments": [],
+    "total_programs_count": -1,
+    "sources_verified": []
+  },
+  "placements": {
+    "guessed_data": true,
+    "data_year": "2026",
+    "sources": [
+      "https://psgtech.edu/placements/",
+      "https://www.psgtech.edu/files/nirf/NIRF-Engineering-Data-2024.pdf",
+      "https://www.careers360.com/colleges/psg-college-of-technology-coimbatore/placement",
+      "https://jeecounselling.in/college/psgtech-coimbatore"
+    ],
+    "placements": {
+      "year": "2026",
+      "highest_package": 52.0,
+      "average_package": 8.5,
+      "median_package": 7.5,
+      "package_currency": "LPA",
+      "placement_rate_percent": 92.0,
+      "total_students_placed": 980,
+      "total_companies_visited": 450,
+      "graduate_outcomes_note": "The 2026 placement cycle is currently ongoing; figures are projected based on mid-season trends and early-day offers from top-tier product companies."
+    },
+    "placement_comparison_last_3_years": [
+      {
+        "year": "2026",
+        "average_package": 8.5,
+        "employment_rate_percent": 92.0,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2025",
+        "average_package": 7.8,
+        "employment_rate_percent": 90.0,
+        "package_currency": "LPA"
+      },
+      {
+        "year": "2024",
+        "average_package": 7.2,
+        "employment_rate_percent": 88.0,
+        "package_currency": "LPA"
+      }
+    ],
+    "gender_based_placement_last_3_years": [
+      {
+        "year": "2026",
+        "male_placed": 610,
+        "female_placed": 370,
+        "male_percent": 62.2,
+        "female_percent": 37.8
+      }
+    ],
+    "sector_wise_placement_last_3_years": [
+      {
+        "year": "2026",
+        "sector": "Core Engineering",
+        "companies": [
+          "L&T",
+          "Mercedes-Benz",
+          "Caterpillar",
+          "Bosch"
+        ],
+        "percent": 35.0
+      },
+      {
+        "year": "2026",
+        "sector": "IT & Software",
+        "companies": [
+          "Google",
+          "Microsoft",
+          "Amazon",
+          "TCS"
+        ],
+        "percent": 45.0
+      },
+      {
+        "year": "2026",
+        "sector": "Consulting & Analytics",
+        "companies": [
+          "Deloitte",
+          "Goldman Sachs",
+          "JPMorgan Chase"
+        ],
+        "percent": 20.0
+      }
+    ],
+    "top_recruiters": [
+      "Texas Instruments",
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Goldman Sachs",
+      "Bosch",
+      "Caterpillar",
+      "Mercedes-Benz R&D",
+      "TCS",
+      "Infosys"
+    ],
+    "placement_highlights": "PSG College of Technology continues to maintain a robust placement record with a median salary of 7 LPA for UG programs and up to 13.32 LPA for integrated PG programs according to NIRF 2025 data. Top offers frequently exceed 35-50 LPA from product giants like Texas Instruments and Microsoft, while core engineering placements remain a distinct strength due to the on-campus industrial institute."
+  },
+  "fees": {
+    "guessed_data": false,
+    "data_year": "2026",
+    "sources": [
+      "https://www.psgtech.edu/files/general/Mandatory%20Disclosure24-25.pdf",
+      "https://www.shiksha.com/college/psgct-coimbatore-19398/courses/be-btech-bc",
+      "https://collegedunia.com/college/24312-psg-college-of-technology-psgct-coimbatore/courses-fees",
+      "https://www.careers360.com/colleges/psg-college-of-technology-coimbatore/fees"
+    ],
+    "fees": {
+      "UG": {
+        "per_year": 55000.0,
+        "total_course": 220000.0,
+        "currency": "INR"
+      },
+      "PG": {
+        "per_year": 46000.0,
+        "total_course": 92000.0,
+        "currency": "INR"
+      },
+      "PhD": {
+        "per_year": 14000.0,
+        "total_course": 42000.0,
+        "currency": "INR"
+      },
+      "hostel_per_year": 72000.0
+    },
+    "fees_by_year": [
+      {
+        "year": "2026",
+        "UG": {
+          "per_year": 55000.0,
+          "total_course": 220000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 46000.0,
+          "total_course": 92000.0,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 14000.0,
+          "total_course": 42000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 72000.0
+      },
+      {
+        "year": "2025",
+        "UG": {
+          "per_year": 55000.0,
+          "total_course": 220000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 46000.0,
+          "total_course": 92000.0,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 14000.0,
+          "total_course": 42000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 72000.0
+      },
+      {
+        "year": "2024",
+        "UG": {
+          "per_year": 55000.0,
+          "total_course": 220000.0,
+          "currency": "INR"
+        },
+        "PG": {
+          "per_year": 30750.0,
+          "total_course": 61500.0,
+          "currency": "INR"
+        },
+        "PhD": {
+          "per_year": 14000.0,
+          "total_course": 42000.0,
+          "currency": "INR"
+        },
+        "hostel_per_year": 72000.0
+      }
+    ],
+    "fees_note": "Fee structure varies significantly between Government-Aided (approx. ₹25,000/year) and Self-Supporting courses (approx. ₹85,000–₹90,000/year). Listed values represent the average accredited fee as per TNEA and TANCET norms, which have remained relatively stable for regular programs over the last three cycles.",
+    "scholarships_detail": [
+      {
+        "name": "First Graduate Concession",
+        "amount": 27500.0,
+        "currency_type": "INR",
+        "eligibility": "First graduate in the family admitted through TNEA counselling",
+        "provider": "Tamil Nadu State Government"
+      },
+      {
+        "name": "Post-Matric Scholarship",
+        "amount": 250000.0,
+        "currency_type": "INR",
+        "eligibility": "SC/ST candidates with family income below 2.5 Lakhs",
+        "provider": "Adi Dravidar and Tribal Welfare Department"
+      },
+      {
+        "name": "Merit cum Means Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Minority students with family income below 2.5 Lakhs",
+        "provider": "Central Government"
+      }
+    ]
+  },
+  "infrastructure": {
+    "guessed_data": false,
+    "sources_verified": [
+      "https://www.psgtech.edu/StateGvtScholarships.php",
+      "https://www.psgtech.edu/AluScholarships.php",
+      "https://library.psgtech.ac.in/books.php",
+      "https://www.psgtech.edu/files/approvals/AICTE%20Approval%202024-25.pdf",
+      "https://www.collegebatch.com/55-psg-college-of-technology-hostel-fees-facilities-coimbatore",
+      "\n\n\n\nhttps://esi.in/nirf/engineering-colleges-india/college/psg-college-of-technology\n\n\n\n"
+    ],
+    "infrastructure": [
+      {
+        "facility": "Dr. GRD Memorial Library",
+        "details": "Three-storied building with a total area of approximately 57,720 sq. ft., featuring digital library segments, reference sections, and separate reading halls."
+      },
+      {
+        "facility": "Laboratories",
+        "details": "Specialized centers including the PSG-SIEMENS Center of Excellence, Industrial Institute, and various department-specific research labs."
+      },
+      {
+        "facility": "Sports Complex",
+        "details": "Extensive facilities including tennis courts, gymnasiums, and multiple playgrounds for outdoor sports."
+      },
+      {
+        "facility": "ICT Infrastructure",
+        "details": "Campus-wide Wi-Fi, high-speed internet connectivity, and fully air-conditioned seminar halls with advanced audio-visual aids."
+      }
+    ],
+    "hostel_details": {
+      "available": true,
+      "total_capacity": 6939,
+      "type": "Separate Boys (7 blocks) and Girls (2 blocks) hostels"
+    },
+    "library_details": {
+      "total_books": 213551,
+      "journals": 195,
+      "e_resources": 1078,
+      "area_sqft": 57720.0
+    },
+    "transport_details": {
+      "buses": 0,
+      "routes": 0
+    },
+    "scholarships": [
+      {
+        "name": "BC/MBC/DNC Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "BC/MBC/DNC students; annual income not exceeding 2.50 lakhs",
+        "provider": "Tamil Nadu State Government",
+        "type": "need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "SC/ST/SCC Post Matric Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "SC/ST/SCC students; annual income not exceeding 2.50 lakhs",
+        "provider": "Tamil Nadu State Government",
+        "type": "need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Pragati Scholarship Scheme for Girl Students",
+        "amount": 50000.0,
+        "currency_type": "INR",
+        "eligibility": "Female students pursuing technical degree; family income < 8 lakhs",
+        "provider": "AICTE",
+        "type": "merit",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Saksham Scholarship Scheme",
+        "amount": 50000.0,
+        "currency_type": "INR",
+        "eligibility": "Specially-abled students (disability > 40%); family income < 8 lakhs",
+        "provider": "AICTE",
+        "type": "specific",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Alumni Endowment Scholarship",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Meritorious and needy students as per specific endowment criteria",
+        "provider": "PSG Tech Alumni Association",
+        "type": "merit/need",
+        "application_deadline": "N/A"
+      },
+      {
+        "name": "Central Sector Scheme of Scholarships",
+        "amount": -1.0,
+        "currency_type": "INR",
+        "eligibility": "Students above 80th percentile in relevant Class XII board exams",
+        "provider": "Central Government (NSP)",
+        "type": "merit",
+        "application_deadline": "N/A"
+      }
+    ]
+  },
+  "_metadata": {
+    "scraped_at": "2026-04-01T14:38:31.445685",
+    "total_time": 70.68890833854675,
+    "errors": {},
+    "validation_warnings": [
+      "FIX: Extracted programs from separate top-level sections."
+    ],
+    "college_name": "PSG College of Technology",
+    "country": "India",
+    "schema_version": "v1.1"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "search_metadata": {
+    "id": "69cd12f9e396ebb3052efada",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/hkrDTq4ZD8cko4LzMGAKrw/69cd12f9e396ebb3052efada.json",
+    "created_at": "2026-04-01 12:43:37 UTC",
+    "processed_at": "2026-04-01 12:43:37 UTC",
+    "google_ai_mode_url": "https://www.google.com/search?q=What+are+the+main+academic+programs+offered+at+Kumaraguru+College+of+Technology+in+India+%28Coimbatore%29%3F+List+the+undergraduate%2C+postgraduate%2C+and+PhD+programs+available.&udm=50",
+    "raw_html_file": "https://serpapi.com/searches/hkrDTq4ZD8cko4LzMGAKrw/69cd12f9e396ebb3052efada.html",
+    "prettify_html_file": "https://serpapi.com/searches/hkrDTq4ZD8cko4LzMGAKrw/69cd12f9e396ebb3052efada.prettify",
+    "total_time_taken": 6.48
+  },
+  "search_parameters": {
+    "engine": "google_ai_mode",
+    "q": "What are the main academic programs offered at Kumaraguru College of Technology in India (Coimbatore)? List the undergraduate, postgraduate, and PhD programs available.",
+    "device": "desktop"
+  },
+  "text_blocks": [
+    {
+      "type": "paragraph",
+      "snippet": "Kumaraguru College of Technology (KCT) in Coimbatore offers a wide range of academic programs at the undergraduate (UG), postgraduate (PG), and doctoral (PhD) levels, primarily focused on engineering, technology, and management.",
+      "reference_indexes": [
+        0,
+        7,
+        4
+      ]
+    },
+    {
+      "type": "heading",
+      "snippet": "Undergraduate Programs (B.E. / B.Tech)"
+    },
+    {
+      "type": "paragraph",
+      "snippet": "KCT offers 4-year B.E. and B.Tech degrees across 14 specializations. These include Aeronautical, Automobile, Civil, CSE, EEE, ECE, EIE, Mechanical, and Mechatronics Engineering, along with Biotechnology, Fashion Tech, IT, and Textile Tech.",
+      "reference_indexes": [
+        0,
+        2,
+        1,
+        3,
+        8
+      ]
+    },
+    {
+      "type": "heading",
+      "snippet": "Postgraduate Programs (M.E. / M.Tech / MBA / MCA)"
+    },
+    {
+      "type": "paragraph",
+      "snippet": "The college provides 2-year specialized PG degrees:",
+      "reference_indexes": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "list",
+      "list": [
+        {
+          "snippet": "M.E./M.Tech: Structural Engineering, Environmental Engineering, Construction Management, Industrial Engineering, Embedded Systems, VLSI Design, Biotechnology, Data Science, Defence Tech, and Technical Textile."
+        },
+        {
+          "snippet": "MBA & MCA: MBA (General, Project Management, Logistics & Supply Chain, Innovation/Entrepreneurship) and Master of Computer Applications."
+        }
+      ],
+      "reference_indexes": [
+        0,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "type": "heading",
+      "snippet": "Doctoral Programs (PhD)"
+    },
+    {
+      "type": "paragraph",
+      "snippet": "KCT supports research in 11+ fields, including Biotechnology, Civil, CSE, EEE, ECE, Fashion, Mechanical, Textile Technology, Chemistry, Math, Physics, and Management Studies.",
+      "reference_indexes": [
+        0,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "type": "paragraph",
+      "snippet": "Would you like more information on the admission process or entrance exams required for any of these specific programs?"
+    }
+  ],
+  "references": [
+    {
+      "title": "Kumaraguru College of Technology, Coimbatore Courses ...",
+      "link": "https://www.careers360.com/colleges/kumaraguru-college-of-technology-coimbatore/courses",
+      "snippet": "Mar 16, 2026 — Welcome to Careers360.com * IIM's in IndiaIIT's in IndiaNLU's in IndiaAIIMS Colleges in IndiaColleges in India. * Engineering and ...",
+      "source": "Careers360",
+      "thumbnail": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/XS2J7dvisbRguUPOqWfqM8PeH_61DDXNIlNEc7wAnhw.jpeg",
+      "source_icon": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/eoRdnn2FkO6X4DeU4wN5COEkgA4YZbGjiKKT15XowbA.png",
+      "index": 0
+    },
+    {
+      "title": "Kumaraguru College Of Technology: A Comprehensive Guide",
+      "link": "https://ftp.broadwayinfosys.com/blog/kumaraguru-college-of-technology-a-comprehensive-guide-1767648353",
+      "snippet": "Jan 6, 2026 — Postgraduate Programs. Okay, let's talk about postgraduate programs, the next step on the academic ladder. For those looking to de...",
+      "source": "Broadwayinfosys",
+      "source_icon": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/LfasFvErrmQxFdZ2rAUbjvEc9unz9lM2MiEjAchvTs0.png",
+      "index": 1
+    },
+    {
+      "title": "KCT Coimbatore: Admission 2026, Courses, Fees, Cutoff ...",
+      "link": "https://www.collegedekho.com/colleges/kumaraguru-college-of-technology",
+      "snippet": "Mar 19, 2026 — About KCT Coimbatore. Kumaraguru College of Technology, also known as KCT, is a private college, established in 1984. Located in C...",
+      "source": "CollegeDekho",
+      "thumbnail": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/bqacdc5f8G-yP-NJgMu8oltwOYQugu-Boq_zol1_DsM.jpeg",
+      "index": 2
+    },
+    {
+      "title": "Ph.D at Kumaraguru College of Technology, Coimbatore",
+      "link": "https://www.careers360.com/colleges/kumaraguru-college-of-technology-coimbatore/courses/phd-idpg",
+      "snippet": "Mar 16, 2026 — Welcome to Careers360.com * IIM's in IndiaIIT's in IndiaNLU's in IndiaAIIMS Colleges in IndiaColleges in India. * Engineering and ...",
+      "source": "Careers360",
+      "source_icon": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/_RDu1R9PjCHzqhKM1wXgWqeiKpljoOpur62UubD4WYc.png",
+      "index": 3
+    },
+    {
+      "title": "KCT Coimbatore: Courses, Fees, Admission 2026 ... - Shiksha",
+      "link": "https://www.shiksha.com/college/kumaraguru-college-of-technology-coimbatore-47886",
+      "snippet": "Mar 2, 2026 — KCT Coimbatore Highlights 2026. The Kumaraguru College of Technology, also known as KCT, is a private institute, founded in 1984. ...",
+      "source": "Shiksha",
+      "thumbnail": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/1WCSGZMtsxqk4eUSqliBOH8q9ZXi-isVBZjhCacTVkI.jpeg",
+      "source_icon": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/6LJJFLpsdUWHl2PacNS60-odvWDFJMsmBxyrgoSjU-Q.png",
+      "index": 4
+    },
+    {
+      "title": "Research - Management Studies - Kumaraguru College of Technology",
+      "link": "https://kct.ac.in/research-management-studies/",
+      "snippet": "28,76,500. ... The Anna University approved research centre at the KCT B-School has a vibrant research culture leading to stimulat...",
+      "source": "Kumaraguru College of Technology",
+      "thumbnail": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/eVL8Cs_SVouu8A8sxzqTwM3Zbsk94X_kdF3E_VReuYU.jpeg",
+      "source_icon": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/4gswjAe-yWt-aQdiSjlNQi33yQoHxq4GbNUd_H2MUOk.png",
+      "index": 5
+    },
+    {
+      "title": "Kumaraguru College of Technology Courses and Fees 2026",
+      "link": "https://www.kollegeapply.com/college/kumaraguru-college-of-technology-coimbatore-courses-and-fees",
+      "snippet": "Feb 26, 2026 — Total Fees * Aeronautical Engineering. * Automobile Engineering. * Biotechnology. * Civil Engineering. * Computer Science & Engine...",
+      "source": "KollegeApply",
+      "thumbnail": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/s1RRIhmDp4F2KKkxDxsHERmwCYNVlytVYPmEDEafiEs.jpeg",
+      "source_icon": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/45SNeZMYIYgWzNQWNJg465IlzbXd_cRXhWNkc4OXPx0.png",
+      "index": 6
+    },
+    {
+      "title": "KCT Coimbatore Courses & Fees 2026 - CollegeDekho",
+      "link": "https://www.collegedekho.com/colleges/kumaraguru-college-of-technology-courses",
+      "snippet": "Jun 17, 2025 — Kumaraguru College of Technology Courses 2026. KCT Coimbatore courses are offered at undergraduate, postgraduate, and doctoral lev...",
+      "source": "CollegeDekho",
+      "thumbnail": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/igZLlJXuFtPK3-h8r8iHknoNXVzQjQypfaHqmwvs6E0.jpeg",
+      "source_icon": "https://serpapi.com/searches/69cd12f9e396ebb3052efada/images/e-2JC9uyjA_IOfHvPNC37BG65_7ENPKCy325GDrfFd4.png",
+      "index": 7
+    },
+    {
+      "title": "KCT 2026 | Admissions, Cutoff, Placements, Fees",
+      "link": "https://jeecounselling.in/college/kct-coimbatore#:~:text=KCT%20Coimbatore%20offers%204%2Dyear%20B.E.%20programs%20in,Electrical%20&%20Electronics%20Engineering%20through%20TNEA%20counselling.",
+      "snippet": "KCT Coimbatore offers 4-year B.E. programs in Computer Science \\u0026 Engineering, Information Technology, Electronics \\u0026 Communication ...",
+      "source": "jeecounselling.in",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7wC2qhxsyMrh9pMcgqqQSmzv1MnOZ3LbApwkA4Sb0WgyqsiUT",
+      "source_icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://jeecounselling.in&client=AIM&size=128&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+      "index": 8
+    }
+  ],
+  "reconstructed_markdown": "Kumaraguru College of Technology \\(KCT\\) in Coimbatore offers a wide range of academic programs at the undergraduate \\(UG\\), postgraduate \\(PG\\), and doctoral \\(PhD\\) levels, primarily focused on engineering, technology, and management. [0] [7] [4]\n\n### Undergraduate Programs \\(B.E. / B.Tech\\)\n\nKCT offers 4\\-year B.E. and B.Tech degrees across 14 specializations. These include Aeronautical, Automobile, Civil, CSE, EEE, ECE, EIE, Mechanical, and Mechatronics Engineering, along with Biotechnology, Fashion Tech, IT, and Textile Tech. [0] [2] [1] [3] [8]\n\n### Postgraduate Programs \\(M.E. / M.Tech / MBA / MCA\\)\n\nThe college provides 2\\-year specialized PG degrees: [0] [1]\n\n- M.E./M.Tech: Structural Engineering, Environmental Engineering, Construction Management, Industrial Engineering, Embedded Systems, VLSI Design, Biotechnology, Data Science, Defence Tech, and Technical Textile.\n- MBA & MCA: MBA \\(General, Project Management, Logistics & Supply Chain, Innovation/Entrepreneurship\\) and Master of Computer Applications.\n\n### Doctoral Programs \\(PhD\\)\n\nKCT supports research in 11\\+ fields, including Biotechnology, Civil, CSE, EEE, ECE, Fashion, Mechanical, Textile Technology, Chemistry, Math, Physics, and Management Studies. [0] [3] [5] [6]\n\nWould you like more information on the admission process or entrance exams required for any of these specific programs?\n\n\n### References\n\n[0] [Kumaraguru College of Technology, Coimbatore Courses ...](https://www.careers360.com/colleges/kumaraguru-college-of-technology-coimbatore/courses) — Mar 16, 2026 — Welcome to Careers360.com \\* IIM's in IndiaIIT's in IndiaNLU's in IndiaAIIMS Colleges in IndiaColleges in India. \\* Engineering and ...\n\n[1] [Kumaraguru College Of Technology: A Comprehensive Guide](https://ftp.broadwayinfosys.com/blog/kumaraguru-college-of-technology-a-comprehensive-guide-1767648353) — Jan 6, 2026 — Postgraduate Programs. Okay, let's talk about postgraduate programs, the next step on the academic ladder. For those looking to de...\n\n[2] [KCT Coimbatore: Admission 2026, Courses, Fees, Cutoff ...](https://www.collegedekho.com/colleges/kumaraguru-college-of-technology) — Mar 19, 2026 — About KCT Coimbatore. Kumaraguru College of Technology, also known as KCT, is a private college, established in 1984. Located in C...\n\n[3] [Ph.D at Kumaraguru College of Technology, Coimbatore](https://www.careers360.com/colleges/kumaraguru-college-of-technology-coimbatore/courses/phd-idpg) — Mar 16, 2026 — Welcome to Careers360.com \\* IIM's in IndiaIIT's in IndiaNLU's in IndiaAIIMS Colleges in IndiaColleges in India. \\* Engineering and ...\n\n[4] [KCT Coimbatore: Courses, Fees, Admission 2026 ... \\- Shiksha](https://www.shiksha.com/college/kumaraguru-college-of-technology-coimbatore-47886) — Mar 2, 2026 — KCT Coimbatore Highlights 2026. The Kumaraguru College of Technology, also known as KCT, is a private institute, founded in 1984. ...\n\n[5] [Research \\- Management Studies \\- Kumaraguru College of Technology](https://kct.ac.in/research-management-studies/) — 28,76,500. ... The Anna University approved research centre at the KCT B\\-School has a vibrant research culture leading to stimulat...\n\n[6] [Kumaraguru College of Technology Courses and Fees 2026](https://www.kollegeapply.com/college/kumaraguru-college-of-technology-coimbatore-courses-and-fees) — Feb 26, 2026 — Total Fees \\* Aeronautical Engineering. \\* Automobile Engineering. \\* Biotechnology. \\* Civil Engineering. \\* Computer Science & Engine...\n\n[7] [KCT Coimbatore Courses & Fees 2026 \\- CollegeDekho](https://www.collegedekho.com/colleges/kumaraguru-college-of-technology-courses) — Jun 17, 2025 — Kumaraguru College of Technology Courses 2026. KCT Coimbatore courses are offered at undergraduate, postgraduate, and doctoral lev...\n\n[8] [KCT 2026 \\| Admissions, Cutoff, Placements, Fees](https://jeecounselling.in/college/kct-coimbatore#:~:text=KCT%20Coimbatore%20offers%204-year%20B.E.%20programs%20in,Electrical%20&%20Electronics%20Engineering%20through%20TNEA%20counselling.) — KCT Coimbatore offers 4\\-year B.E. programs in Computer Science \\u0026 Engineering, Information Technology, Electronics \\u0026 Communication ...\n"
+}

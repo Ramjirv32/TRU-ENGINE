@@ -1,0 +1,40 @@
+{
+  "search_metadata": {
+    "id": "69cd12f969819d0ed6c3caa0",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/nGqbCaq1R0eFsTD3BnH27Q/69cd12f969819d0ed6c3caa0.json",
+    "created_at": "2026-04-01 12:43:37 UTC",
+    "processed_at": "2026-04-01 12:43:37 UTC",
+    "google_ai_mode_url": "https://www.google.com/search?q=For+Kumaraguru+College+of+Technology+in+India+%28Coimbatore%29%2C+search+the+official+website%2C+graduate+programs+directory%2C+and+course+listings+to+find+postgraduate+degree+programs+%28Master%27s%2FM.Tech%2FM.A.%2FM.Sc.%2FMBA+programs+offered%29.+Include+program+names+like+%27Master+of+Science+in+Computer+Science%27%2C+%27M.Tech+in+Engineering%27%2C+%27Master%27s+in+Economics%27%2C+etc.+You+can+also+infer+programs+based+on+faculty%2Fdepartments+listed+on+their+site.+Return+valid+JSON+with+this+format%3A+%7B+%22pg_programs%22%3A+%5B%22program1%22%2C+%22program2%22%2C+...%5D%2C+%22total_count%22%3A+number%2C+%22source%22%3A+%22url+or+%27inferred+from+departments%27%22+%7D.+Return+an+empty+array+if+genuinely+no+data+is+available.&udm=50",
+    "raw_html_file": "https://serpapi.com/searches/nGqbCaq1R0eFsTD3BnH27Q/69cd12f969819d0ed6c3caa0.html",
+    "prettify_html_file": "https://serpapi.com/searches/nGqbCaq1R0eFsTD3BnH27Q/69cd12f969819d0ed6c3caa0.prettify",
+    "total_time_taken": 3.92
+  },
+  "search_parameters": {
+    "engine": "google_ai_mode",
+    "q": "For Kumaraguru College of Technology in India (Coimbatore), search the official website, graduate programs directory, and course listings to find postgraduate degree programs (Master's/M.Tech/M.A./M.Sc./MBA programs offered). Include program names like 'Master of Science in Computer Science', 'M.Tech in Engineering', 'Master's in Economics', etc. You can also infer programs based on faculty/departments listed on their site. Return valid JSON with this format: { \"pg_programs\": [\"program1\", \"program2\", ...], \"total_count\": number, \"source\": \"url or 'inferred from departments'\" }. Return an empty array if genuinely no data is available.",
+    "device": "desktop"
+  },
+  "text_blocks": [
+    {
+      "type": "code_block",
+      "language": "json",
+      "code": "{\n  \"pg_programs\": [\n    \"M.E. Structural Engineering\",\n    \"M.E. Environmental Engineering\",\n    \"M.E. Construction Management\",\n    \"M.E. Industrial Engineering\",\n    \"M.E. Embedded Systems Technologies\",\n    \"M.E. VLSI Design\",\n    \"M.E. Communication Systems\",\n    \"M.E. Computer Science and Engineering\",\n    \"M.Tech. Data Science\",\n    \"M.Tech. Biotechnology\",\n    \"M.Tech. Defence Technology\",\n    \"M.Tech. Technical Textiles\",\n    \"M.Tech. Technology Management\",\n    \"Master of Computer Applications (MCA)\",\n    \"Master of Business Administration (MBA)\",\n    \"MBA Innovation, Entrepreneurship & Venture Development (IEVD)\",\n    \"MBA Project Management\",\n    \"MBA Logistics & Supply Chain Management (LSCM)\",\n    \"MBA Agri Business Management (ABM)\"\n  ],\n  \"total_count\": 19,\n  \"source\": \""
+    },
+    {
+      "type": "code_block",
+      "language": "json",
+      "code": "https://kumaraguru.edu.in/kct-admissions/"
+    },
+    {
+      "type": "code_block",
+      "language": "json",
+      "code": "\"\n}\n"
+    },
+    {
+      "type": "paragraph",
+      "snippet": "Would you like to explore the admission criteria or fee structures for any of these specific postgraduate programs?"
+    }
+  ],
+  "reconstructed_markdown": "```json\n{\n  \"pg_programs\": [\n    \"M.E. Structural Engineering\",\n    \"M.E. Environmental Engineering\",\n    \"M.E. Construction Management\",\n    \"M.E. Industrial Engineering\",\n    \"M.E. Embedded Systems Technologies\",\n    \"M.E. VLSI Design\",\n    \"M.E. Communication Systems\",\n    \"M.E. Computer Science and Engineering\",\n    \"M.Tech. Data Science\",\n    \"M.Tech. Biotechnology\",\n    \"M.Tech. Defence Technology\",\n    \"M.Tech. Technical Textiles\",\n    \"M.Tech. Technology Management\",\n    \"Master of Computer Applications (MCA)\",\n    \"Master of Business Administration (MBA)\",\n    \"MBA Innovation, Entrepreneurship & Venture Development (IEVD)\",\n    \"MBA Project Management\",\n    \"MBA Logistics & Supply Chain Management (LSCM)\",\n    \"MBA Agri Business Management (ABM)\"\n  ],\n  \"total_count\": 19,\n  \"source\": \"\n```\n\n```json\nhttps://kumaraguru.edu.in/kct-admissions/\n```\n\n```json\n\"\n}\n\n```\n\nWould you like to explore the admission criteria or fee structures for any of these specific postgraduate programs?\n"
+}
