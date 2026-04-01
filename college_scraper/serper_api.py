@@ -67,16 +67,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Serper College Scraper API", version="1.0.0", lifespan=lifespan)
 
-# CORS Middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=CORS_ORIGINS,  # Use environment variable
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-# Database Configuration
+# Configuration Variables
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
 REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
@@ -87,6 +78,15 @@ API_HOST = os.getenv("API_HOST", "0.0.0.0")
 API_PORT = int(os.getenv("API_PORT", "8501"))
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8080")  # Go backend URL
 CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*").split(",")
+
+# CORS Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=CORS_ORIGINS,  # Use environment variable
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Database Connections
 mongo_client = None
