@@ -669,6 +669,14 @@ def extract_structured_json(md_text):
     # Clean LLM formatting issues
     json_str = json_str.replace('\\_', '_').replace('\\-', '-')
     
+    # Fix common escape character issues
+    json_str = json_str.replace('\\"', '"')  # Fix escaped quotes
+    json_str = json_str.replace('\\\\', '\\')  # Fix double backslashes
+    
+    # Fix LaTeX-style escapes that shouldn't be escaped in JSON
+    json_str = json_str.replace('\\(', '(').replace('\\)', ')')
+    json_str = json_str.replace('\\[', '[').replace('\\]', ']')
+    
     # Try parsing
     try:
         return json.loads(json_str)
@@ -676,11 +684,17 @@ def extract_structured_json(md_text):
         try:
             return json.loads(json_str, strict=False)
         except Exception as second_error:
-            return {
-                "raw_output": md_text, 
-                "error": f"JSON parse error: {str(first_error)}",
-                "extracted_content": json_str
-            }
+            # Try more aggressive cleaning
+            try:
+                # Remove problematic escape sequences except valid JSON escapes
+                json_str = re.sub(r'\\[^"\\bfnrt/]', '', json_str)
+                return json.loads(json_str)
+            except Exception as third_error:
+                return {
+                    "raw_output": md_text, 
+                    "error": f"JSON parse error: {str(first_error)}",
+                    "extracted_content": json_str
+                }
 
 # ============================================================================
 # MAIN SCRAPER

@@ -149,181 +149,159 @@ def transform_data_for_frontend(data: Dict[str, Any]) -> Dict[str, Any]:
     """Transform the normalized data structure to match frontend expectations"""
     transformed = {}
     
-    # Basic info
-    if "basic_info" in data:
-        basic = data["basic_info"]
-        transformed.update({
-            "college_name": basic.get("college_name", ""),
-            "short_name": basic.get("short_name", ""),
-            "established": basic.get("established", ""),
-            "institution_type": basic.get("institution_type", ""),
-            "country": basic.get("country", ""),
-            "location": basic.get("location", ""),
-            "website": basic.get("website", ""),
-            "about": basic.get("about", ""),
-            "summary": basic.get("summary", ""),
-            "rankings": basic.get("rankings", {}),
-            "accreditations": basic.get("accreditations", []),
-            "affiliations": basic.get("affiliations", "").split(", ") if basic.get("affiliations") else [],
-            "recognition": basic.get("recognition", ""),
-            "campus_area": basic.get("campus_area", ""),
-            "contact_info": basic.get("contact_info", {}),
-        })
-        
-        # Student statistics detail
-        if "student_statistics" in basic:
-            student_stats = basic["student_statistics"]
-            transformed["student_statistics_detail"] = student_stats
-            transformed["student_statistics"] = [{
-                "category": "Total students",
-                "value": student_stats.get("total_enrollment", 0)
-            }, {
-                "category": "UG Students",
-                "value": student_stats.get("ug_students", 0)
-            }, {
-                "category": "PG Students", 
-                "value": student_stats.get("pg_students", 0)
-            }, {
-                "category": "PhD Students",
-                "value": student_stats.get("phd_students", 0)
-            }, {
-                "category": "Annual Intake",
-                "value": student_stats.get("annual_intake", 0)
-            }, {
-                "category": "Male students",
-                "value": student_stats.get("male_percent", 0)
-            }, {
-                "category": "Female students",
-                "value": student_stats.get("female_percent", 0)
-            }, {
-                "category": "Total UG Courses",
-                "value": student_stats.get("total_ug_courses", 0)
-            }, {
-                "category": "Total PG Courses",
-                "value": student_stats.get("total_pg_courses", 0)
-            }, {
-                "category": "Total PhD Courses",
-                "value": student_stats.get("total_phd_courses", 0)
-            }]
-            
-            # Add faculty staff for pie chart
-            if "faculty_staff" in basic:
-                faculty = basic["faculty_staff"]
-                transformed["student_statistics"].extend([
-                    {
-                        "category": "Faculty",
-                        "value": faculty.get("total_faculty", 0)
-                    },
-                    {
-                        "category": "Staff",
-                        "value": faculty.get("total_faculty", 0)
-                    }
-                ])
-            
-            # Add international students if available
-            if "student_history" in basic and "international_students" in basic["student_history"]:
-                transformed["student_statistics"].append({
-                    "category": "International students",
-                    "value": basic["student_history"]["international_students"]
-                })
-                
-            # Add placement data if available
-            if "placements" in data:
-                placements = data["placements"]
-                if "placements" in placements:
-                    placement_data = placements["placements"]
-                    transformed["student_statistics"].extend([
-                        {
-                            "category": "Total students placed",
-                            "value": placement_data.get("total_students_placed", 0)
-                        },
-                        {
-                            "category": "Placement rate",
-                            "value": placement_data.get("placement_rate_percent", 0)
-                        }
-                    ])
-        
-        # Faculty staff detail
-        if "faculty_staff" in basic:
-            faculty = basic["faculty_staff"]
-            transformed["faculty_staff_detail"] = faculty
-        
-        # Student history
-        if "student_history" in basic:
-            transformed["student_history"] = basic["student_history"]
+    # First, try to use data from root level, fallback to serper_sections
+    basic_source = data.get("basic_info", {})
+    if not basic_source or len(basic_source) < 5:
+        # Fallback to serper_sections if basic_info is empty
+        serper = data.get("serper_sections", {})
+        basic_source = serper.get("basic_info", serper)
     
-    # Programs data
-    if "programs" in data:
-        programs = data["programs"]
+    programs_source = data.get("programs", {})
+    if not programs_source or (not programs_source.get("ug_programs") and not programs_source.get("pg_programs")):
+        serper = data.get("serper_sections", {})
+        programs_source = serper.get("programs", serper)
+    
+    placements_source = data.get("placements", {})
+    if not placements_source or (placements_source.get("highest_package", 0) == 0 and placements_source.get("year", 0) == 0):
+        serper = data.get("serper_sections", {})
+        placements_source = serper.get("placements", serper.get("placements_data", {}))
+        if "placements" in placements_source:
+            placements_source = placements_source["placements"]
+    
+    fees_source = data.get("fees", {})
+    if not fees_source or (not fees_source.get("UG", {}).get("per_year")):
+        serper = data.get("serper_sections", {})
+        fees_source = serper.get("fees", serper.get("fees_data", {}))
+        if "fees" in fees_source:
+            fees_source = fees_source["fees"]
+    
+    infrastructure_source = data.get("infrastructure") or data.get("serper_sections", {}).get("infrastructure_data", {}) or data.get("serper_sections", {}).get("infrastructure", {})
+    
+    # Extract basic info
+    transformed.update({
+        "college_name": basic_source.get("college_name", data.get("college_name", "")),
+        "short_name": basic_source.get("short_name", ""),
+        "established": basic_source.get("established", ""),
+        "institution_type": basic_source.get("institution_type", ""),
+        "country": basic_source.get("country", data.get("country", "")),
+        "location": basic_source.get("location", data.get("location", "")),
+        "website": basic_source.get("website", ""),
+        "about": basic_source.get("about", ""),
+        "summary": basic_source.get("summary", ""),
+        "rankings": basic_source.get("rankings", {}),
+        "accreditations": basic_source.get("accreditations", []),
+        "affiliations": basic_source.get("affiliations", "").split(", ") if basic_source.get("affiliations") else [],
+        "recognition": basic_source.get("recognition", ""),
+        "campus_area": basic_source.get("campus_area", ""),
+        "contact_info": basic_source.get("contact_info", {}),
+    })
+    
+    # Student statistics
+    if "student_statistics" in basic_source:
+        student_stats = basic_source["student_statistics"]
+        transformed["student_statistics_detail"] = student_stats
+        transformed["student_statistics"] = [
+            {"category": "Total students", "value": student_stats.get("total_enrollment", 0)},
+            {"category": "UG Students", "value": student_stats.get("ug_students", 0)},
+            {"category": "PG Students", "value": student_stats.get("pg_students", 0)},
+            {"category": "PhD Students", "value": student_stats.get("phd_students", 0)},
+            {"category": "Annual Intake", "value": student_stats.get("annual_intake", 0)},
+            {"category": "Male students", "value": student_stats.get("male_percent", 0)},
+            {"category": "Female students", "value": student_stats.get("female_percent", 0)},
+            {"category": "Total UG Courses", "value": student_stats.get("total_ug_courses", 0)},
+            {"category": "Total PG Courses", "value": student_stats.get("total_pg_courses", 0)},
+            {"category": "Total PhD Courses", "value": student_stats.get("total_phd_courses", 0)},
+        ]
+        
+        if "faculty_staff" in basic_source:
+            faculty = basic_source["faculty_staff"]
+            transformed["student_statistics"].extend([
+                {"category": "Faculty", "value": faculty.get("total_faculty", 0)},
+            ])
+        
+        if "student_history" in basic_source and "international_students" in basic_source["student_history"]:
+            transformed["student_statistics"].append({
+                "category": "International students",
+                "value": basic_source["student_history"]["international_students"]
+            })
+    
+    # Faculty staff
+    if "faculty_staff" in basic_source:
+        transformed["faculty_staff_detail"] = basic_source["faculty_staff"]
+    
+    # Student history
+    if "student_history" in basic_source:
+        transformed["student_history"] = basic_source["student_history"]
+    
+    # Programs - extract from proper location
+    if programs_source:
         transformed["programs_data"] = {
-            "ug_programs": programs.get("ug_programs", []),
-            "pg_programs": programs.get("pg_programs", []),
-            "phd_programs": programs.get("phd_programs", []),
-            "departments": programs.get("departments", []),
+            "ug_programs": programs_source.get("ug_programs", []),
+            "pg_programs": programs_source.get("pg_programs", []),
+            "phd_programs": programs_source.get("phd_programs", []),
+            "departments": programs_source.get("departments", []),
         }
-        # Also flatten to top level for frontend compatibility
         transformed.update({
-            "ug_programs": programs.get("ug_programs", []),
-            "pg_programs": programs.get("pg_programs", []),
-            "phd_programs": programs.get("phd_programs", []),
-            "departments": programs.get("departments", []),
+            "ug_programs": programs_source.get("ug_programs", []),
+            "pg_programs": programs_source.get("pg_programs", []),
+            "phd_programs": programs_source.get("phd_programs", []),
+            "departments": programs_source.get("departments", []),
         })
     
-    # Placements data
-    if "placements" in data:
-        placements = data["placements"]
+    # Placements - extract properly
+    if placements_source:
+        # Handle different placements structures
+        placements_obj = placements_source.get("placements", placements_source) if "placements" in placements_source else placements_source
+        
         transformed["placements_data"] = {
-            "placements": placements.get("placements", {}),
-            "placement_comparison_last_3_years": placements.get("placement_comparison_last_3_years", []),
-            "gender_based_placement_last_3_years": placements.get("gender_based_placement_last_3_years", []),
-            "sector_wise_placement_last_3_years": placements.get("sector_wise_placement_last_3_years", []),
-            "top_recruiters": placements.get("top_recruiters", []),
-            "placement_highlights": placements.get("placement_highlights", ""),
+            "placements": placements_obj,
+            "placement_comparison_last_3_years": placements_source.get("placement_comparison_last_3_years", []),
+            "gender_based_placement_last_3_years": placements_source.get("gender_based_placement_last_3_years", []),
+            "sector_wise_placement_last_3_years": placements_source.get("sector_wise_placement_last_3_years", []),
+            "top_recruiters": placements_source.get("top_recruiters", []),
+            "placement_highlights": placements_source.get("placement_highlights", ""),
         }
-        # Also flatten to top level for frontend compatibility
         transformed.update({
-            "placements": placements.get("placements", {}),
-            "placement_comparison_last_3_years": placements.get("placement_comparison_last_3_years", []),
-            "gender_based_placement_last_3_years": placements.get("gender_based_placement_last_3_years", []),
-            "sector_wise_placement_last_3_years": placements.get("sector_wise_placement_last_3_years", []),
-            "top_recruiters": placements.get("top_recruiters", []),
-            "placement_highlights": placements.get("placement_highlights", ""),
+            "placements": placements_obj,
+            "placement_comparison_last_3_years": placements_source.get("placement_comparison_last_3_years", []),
+            "gender_based_placement_last_3_years": placements_source.get("gender_based_placement_last_3_years", []),
+            "sector_wise_placement_last_3_years": placements_source.get("sector_wise_placement_last_3_years", []),
+            "top_recruiters": placements_source.get("top_recruiters", []),
+            "placement_highlights": placements_source.get("placement_highlights", ""),
         })
     
-    # Fees data
-    if "fees" in data:
-        fees = data["fees"]
+    # Fees - extract properly
+    if fees_source:
+        fees_obj = fees_source.get("fees", fees_source) if "fees" in fees_source else fees_source
+        
         transformed["fees_data"] = {
-            "fees": fees.get("fees", {}),
-            "fees_by_year": fees.get("fees_by_year", []),
-            "fees_note": fees.get("fees_note", ""),
-            "scholarships_detail": fees.get("scholarships_detail", []),
+            "fees": fees_obj,
+            "fees_by_year": fees_source.get("fees_by_year", []),
+            "fees_note": fees_source.get("fees_note", ""),
+            "scholarships_detail": fees_source.get("scholarships_detail", []),
         }
-        # Also flatten to top level for frontend compatibility
         transformed.update({
-            "fees": fees.get("fees", {}),
-            "fees_by_year": fees.get("fees_by_year", []),
-            "fees_note": fees.get("fees_note", ""),
-            "scholarships_detail": fees.get("scholarships_detail", []),
+            "fees": fees_obj,
+            "fees_by_year": fees_source.get("fees_by_year", []),
+            "fees_note": fees_source.get("fees_note", ""),
+            "scholarships_detail": fees_source.get("scholarships_detail", []),
         })
     
-    # Infrastructure data
-    if "infrastructure" in data:
-        infra = data["infrastructure"]
+    # Infrastructure - extract properly
+    if infrastructure_source and isinstance(infrastructure_source, dict):
         transformed["infrastructure_data"] = {
-            "infrastructure": infra.get("infrastructure", []),
-            "hostel_details": infra.get("hostel_details", {}),
-            "library_details": infra.get("library_details", {}),
-            "transport_details": infra.get("transport_details", {}),
-            "scholarships": infra.get("scholarships", []),
+            "infrastructure": infrastructure_source.get("infrastructure", []),
+            "hostel_details": infrastructure_source.get("hostel_details", {}),
+            "library_details": infrastructure_source.get("library_details", {}),
+            "transport_details": infrastructure_source.get("transport_details", {}),
+            "scholarships": infrastructure_source.get("scholarships", []),
         }
-        # Also flatten to top level for frontend compatibility
         transformed.update({
-            "infrastructure": infra.get("infrastructure", []),
-            "hostel_details": infra.get("hostel_details", {}),
-            "library_details": infra.get("library_details", {}),
-            "transport_details": infra.get("transport_details", {}),
-            "scholarships": infra.get("scholarships", []),
+            "infrastructure": infrastructure_source.get("infrastructure", []),
+            "hostel_details": infrastructure_source.get("hostel_details", {}),
+            "library_details": infrastructure_source.get("library_details", {}),
+            "transport_details": infrastructure_source.get("transport_details", {}),
+            "scholarships": infrastructure_source.get("scholarships", []),
         })
     
     # Keep metadata
@@ -592,24 +570,32 @@ async def process_college_statistics(college_name: str, country: str = None, cit
                     with open(file_path, 'r') as f:
                         scraped_data = json.load(f)
                     
-                    # Prepare data for MongoDB
+                    print(f"📖 Scraped data loaded for: {validated_college_name}")
+                    print(f"📊 Sections found in scraped data: {list(scraped_data.keys())}")
+                    
+                    # Prepare data for MongoDB - simple approach with raw serper sections
                     mongo_data = {
                         "college_name": validated_college_name,
                         "country": validated_country,
+                        "location": validated_location,
                         "approval_status": "pending",
                         "created_at": datetime.now(timezone.utc),
                         "updated_at": datetime.now(timezone.utc),
-                        **scraped_data
+                        # Store raw scraped data
+                        "serper_sections": scraped_data
                     }
                     
                     # Save to MongoDB
                     save_college_to_mongodb(mongo_data)
+                    print(f"💾 Saved college data to MongoDB")
                     
                     # Transform data for frontend before caching and returning
                     transformed_data = transform_data_for_frontend(mongo_data)
+                    print(f"🔄 Transformed for frontend compatibility")
                     
                     # Cache the transformed data using validated name
                     cache_college_data(validated_college_name, transformed_data)
+                    print(f"⚡ Cached data in Redis")
                     
                     return transformed_data
                     
