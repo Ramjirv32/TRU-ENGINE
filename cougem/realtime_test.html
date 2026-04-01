@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time College Scraper Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .status-indicator {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .log-container {
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+        }
+        .section-card {
+            transition: all 0.3s ease;
+        }
+        .section-card.completed {
+            border-color: #10b981;
+            background-color: #f0fdf4;
+        }
+        .section-card.error {
+            border-color: #ef4444;
+            background-color: #fef2f2;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+                🎓 Real-time College Data Scraper
+            </h1>
+            
+            <!-- Input Section -->
+            <div class="mb-6">
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    College Name:
+                </label>
+                <div class="flex gap-2">
+                    <input 
+                        type="text" 
+                        id="collegeName" 
+                        value="University of Rwanda"
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Enter college name"
+                    >
+                    <button 
+                        id="startScraping"
+                        class="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition duration-200 font-medium disabled:bg-gray-400"
+                    >
+                        Start Scraping
+                    </button>
+                    <button 
+                        id="stopScraping"
+                        class="bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition duration-200 font-medium disabled:bg-gray-400"
+                        disabled
+                    >
+                        Stop
+                    </button>
+                </div>
+            </div>
+
+            <!-- Status Indicator -->
+            <div id="statusSection" class="mb-6 hidden">
+                <div class="flex items-center gap-2 p-3 bg-blue-50 rounded-lg">
+                    <div class="status-indicator w-3 h-3 bg-blue-600 rounded-full"></div>
+                    <span id="statusText" class="text-blue-800 font-medium">Ready to start...</span>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <div id="progressSection" class="mb-6 hidden">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Progress</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div id="basic_info" class="section-card border-2 border-gray-200 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">📋</div>
+                        <div class="font-medium">Basic Info</div>
+                        <div class="text-sm text-gray-500 status">Pending</div>
+                    </div>
+                    <div id="placements" class="section-card border-2 border-gray-200 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">💼</div>
+                        <div class="font-medium">Placements</div>
+                        <div class="text-sm text-gray-500 status">Pending</div>
+                    </div>
+                    <div id="fees" class="section-card border-2 border-gray-200 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">💰</div>
+                        <div class="font-medium">Fees</div>
+                        <div class="text-sm text-gray-500 status">Pending</div>
+                    </div>
+                    <div id="infrastructure" class="section-card border-2 border-gray-200 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">🏗️</div>
+                        <div class="font-medium">Infrastructure</div>
+                        <div class="text-sm text-gray-500 status">Pending</div>
+                    </div>
+                </div>
+                
+                <!-- Programs Progress -->
+                <div class="mt-4 p-4 bg-yellow-50 rounded-lg">
+                    <div class="font-medium text-yellow-800 mb-2">🎓 Programs (UG, PG, PhD, Departments)</div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="text-center">
+                            <div class="text-sm font-medium">UG Programs</div>
+                            <div id="ugCount" class="text-lg font-bold text-blue-600">0</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm font-medium">PG Programs</div>
+                            <div id="pgCount" class="text-lg font-bold text-green-600">0</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm font-medium">PhD Programs</div>
+                            <div id="phdCount" class="text-lg font-bold text-purple-600">0</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm font-medium">Departments</div>
+                            <div id="deptCount" class="text-lg font-bold text-orange-600">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Display Section -->
+            <div id="dataSection" class="mb-6 hidden">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Scraped Data</h2>
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <pre id="dataDisplay" class="text-sm text-gray-700 whitespace-pre-wrap overflow-x-auto"></pre>
+                </div>
+            </div>
+
+            <!-- Log Section -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Live Log</h2>
+                <div class="log-container bg-gray-900 text-green-400 rounded-lg p-4 text-sm">
+                    <div id="logContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let websocket = null;
+        let isScraping = false;
+
+        const collegeNameInput = document.getElementById('collegeName');
+        const startBtn = document.getElementById('startScraping');
+        const stopBtn = document.getElementById('stopScraping');
+        const statusSection = document.getElementById('statusSection');
+        const statusText = document.getElementById('statusText');
+        const progressSection = document.getElementById('progressSection');
+        const dataSection = document.getElementById('dataSection');
+        const dataDisplay = document.getElementById('dataDisplay');
+        const logContent = document.getElementById('logContent');
+
+        function addLog(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const color = type === 'error' ? '#ef4444' : type === 'success' ? '#10b981' : '#60a5fa';
+            const logEntry = document.createElement('div');
+            logEntry.style.color = color;
+            logEntry.textContent = `[${timestamp}] ${message}`;
+            logContent.appendChild(logEntry);
+            logContent.scrollTop = logContent.scrollHeight;
+        }
+
+        function updateSectionStatus(section, status, data = null) {
+            const sectionElement = document.getElementById(section);
+            const statusElement = sectionElement.querySelector('.status');
+            
+            sectionElement.classList.remove('completed', 'error');
+            
+            if (status === 'completed') {
+                sectionElement.classList.add('completed');
+                statusElement.textContent = '✅ Completed';
+                statusElement.classList.remove('text-gray-500');
+                statusElement.classList.add('text-green-600');
+            } else if (status === 'error') {
+                sectionElement.classList.add('error');
+                statusElement.textContent = '❌ Error';
+                statusElement.classList.remove('text-gray-500');
+                statusElement.classList.add('text-red-600');
+            } else if (status === 'progress') {
+                statusElement.textContent = '⏳ In Progress...';
+                statusElement.classList.remove('text-gray-500');
+                statusElement.classList.add('text-blue-600');
+            }
+        }
+
+        function updateProgramCounts(ug, pg, phd, dept) {
+            document.getElementById('ugCount').textContent = ug;
+            document.getElementById('pgCount').textContent = pg;
+            document.getElementById('phdCount').textContent = phd;
+            document.getElementById('deptCount').textContent = dept;
+        }
+
+        function connectWebSocket(collegeName) {
+            const encodedName = encodeURIComponent(collegeName);
+            const wsUrl = `ws://localhost:8501/ws/scrape/${encodedName}`;
+            
+            addLog(`Connecting to WebSocket: ${wsUrl}`);
+            
+            websocket = new WebSocket(wsUrl);
+
+            websocket.onopen = function(event) {
+                addLog('WebSocket connected successfully', 'success');
+                isScraping = true;
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+                statusSection.classList.remove('hidden');
+                progressSection.classList.remove('hidden');
+                statusText.textContent = 'Scraping in progress...';
+            };
+
+            websocket.onmessage = function(event) {
+                try {
+                    const data = JSON.parse(event.data);
+                    handleWebSocketMessage(data);
+                } catch (e) {
+                    addLog(`Received message: ${event.data}`);
+                }
+            };
+
+            websocket.onerror = function(error) {
+                addLog(`WebSocket error: ${error}`, 'error');
+                stopScraping();
+            };
+
+            websocket.onclose = function(event) {
+                addLog('WebSocket connection closed');
+                if (isScraping) {
+                    stopScraping();
+                }
+            };
+        }
+
+        function handleWebSocketMessage(data) {
+            addLog(`[${data.type}] ${data.message || ''}`);
+
+            switch (data.type) {
+                case 'scraping_started':
+                    addLog(`Started scraping: ${data.college_name}`, 'success');
+                    break;
+
+                case 'status_update':
+                    statusText.textContent = data.message;
+                    break;
+
+                case 'section_progress':
+                    updateSectionStatus(data.section, 'progress');
+                    break;
+
+                case 'section_completed':
+                    updateSectionStatus(data.section, 'completed');
+                    addLog(`${data.section.replace('_', ' ').title()} completed!`, 'success');
+                    break;
+
+                case 'section_error':
+                    updateSectionStatus(data.section, 'error');
+                    addLog(`Error in ${data.section}: ${data.message}`, 'error');
+                    break;
+
+                case 'serper_sections_done':
+                    addLog('🎉 SerpAPI sections completed! Showing data now while programs load...', 'success');
+                    statusText.textContent = 'Basic data loaded - programs still loading...';
+                    if (data.data) {
+                        dataSection.classList.remove('hidden');
+                        dataDisplay.textContent = JSON.stringify(data.data, null, 2);
+                        
+                        // Show programs loading indicator
+                        const programsDiv = document.createElement('div');
+                        programsDiv.id = 'programsLoading';
+                        programsDiv.className = 'mt-4 p-4 bg-yellow-50 rounded-lg border border-yellow-200';
+                        programsDiv.innerHTML = `
+                            <div class="flex items-center">
+                                <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-yellow-600 mr-2"></div>
+                                <span class="text-yellow-800">Programs data is still loading in the background...</span>
+                            </div>
+                        `;
+                        dataSection.appendChild(programsDiv);
+                    }
+                    break;
+
+                case 'program_type_progress':
+                    addLog(`Fetching ${data.program_type.toUpperCase()} programs...`);
+                    // Update loading message if programs loading div exists
+                    const loadingDiv = document.getElementById('programsLoading');
+                    if (loadingDiv) {
+                        loadingDiv.querySelector('span').textContent = 
+                            `Loading ${data.program_type.toUpperCase()} programs...`;
+                    }
+                    break;
+
+                case 'program_type_completed':
+                    addLog(`${data.program_type.toUpperCase()} completed: ${data.count} programs`, 'success');
+                    break;
+
+                case 'program_type_error':
+                    addLog(`Error in ${data.program_type}: ${data.message}`, 'error');
+                    break;
+
+                case 'all_data_ready':
+                    addLog('🎉 All data including programs is now ready!', 'success');
+                    statusText.textContent = 'Completed!';
+                    
+                    // Remove programs loading indicator
+                    const loadingIndicator = document.getElementById('programsLoading');
+                    if (loadingIndicator) {
+                        loadingIndicator.remove();
+                    }
+                    
+                    if (data.data) {
+                        dataDisplay.textContent = JSON.stringify(data.data, null, 2);
+                        
+                        // Update program counts if available
+                        if (data.data.programs && data.data.programs.programs_data) {
+                            const programs = data.data.programs.programs_data;
+                            updateProgramCounts(
+                                programs.ug_programs?.length || 0,
+                                programs.pg_programs?.length || 0,
+                                programs.phd_programs?.length || 0,
+                                programs.departments?.length || 0
+                            );
+                        }
+                    }
+                    stopScraping();
+                    break;
+
+                case 'scraping_completed':
+                    addLog('🎉 All scraping completed successfully!', 'success');
+                    statusText.textContent = 'Completed!';
+                    if (data.data) {
+                        dataDisplay.textContent = JSON.stringify(data.data, null, 2);
+                        
+                        // Update program counts if available
+                        if (data.data.programs_data) {
+                            const programs = data.data.programs_data;
+                            updateProgramCounts(
+                                programs.ug_programs?.length || 0,
+                                programs.pg_programs?.length || 0,
+                                programs.phd_programs?.length || 0,
+                                programs.departments?.length || 0
+                            );
+                        }
+                    }
+                    stopScraping();
+                    break;
+
+                case 'error':
+                    addLog(`Error: ${data.message}`, 'error');
+                    statusText.textContent = 'Error occurred';
+                    stopScraping();
+                    break;
+            }
+        }
+
+        function startScraping() {
+            const collegeName = collegeNameInput.value.trim();
+            if (!collegeName) {
+                alert('Please enter a college name');
+                return;
+            }
+
+            // Clear previous data
+            logContent.innerHTML = '';
+            dataDisplay.textContent = '';
+            dataSection.classList.add('hidden');
+            
+            // Reset section statuses
+            ['basic_info', 'placements', 'fees', 'infrastructure'].forEach(section => {
+                updateSectionStatus(section, 'pending');
+                const sectionElement = document.getElementById(section);
+                const statusElement = sectionElement.querySelector('.status');
+                statusElement.textContent = 'Pending';
+                statusElement.classList.add('text-gray-500');
+                statusElement.classList.remove('text-green-600', 'text-red-600', 'text-blue-600');
+            });
+            
+            updateProgramCounts(0, 0, 0, 0);
+
+            connectWebSocket(collegeName);
+        }
+
+        function stopScraping() {
+            isScraping = false;
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            
+            if (websocket) {
+                websocket.close();
+                websocket = null;
+            }
+        }
+
+        // Event listeners
+        startBtn.addEventListener('click', startScraping);
+        stopBtn.addEventListener('click', stopScraping);
+
+        // Allow Enter key to start scraping
+        collegeNameInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !startBtn.disabled) {
+                startScraping();
+            }
+        });
+
+        // Add initial log
+        addLog('Real-time College Scraper ready. Enter a college name and click "Start Scraping".');
+    </script>
+</body>
+</html>

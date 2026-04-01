@@ -16,6 +16,10 @@ from pymongo import MongoClient
 import redis
 from concurrent.futures import ThreadPoolExecutor
 import uvicorn
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Import existing serper functionality
 import sys
@@ -66,7 +70,7 @@ app = FastAPI(title="Serper College Scraper API", version="1.0.0", lifespan=life
 # CORS Middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify your frontend domain
+    allow_origins=CORS_ORIGINS,  # Use environment variable
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -77,6 +81,12 @@ MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
 REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
 REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", "")
+
+# API Configuration
+API_HOST = os.getenv("API_HOST", "0.0.0.0")
+API_PORT = int(os.getenv("API_PORT", "8501"))
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8080")  # Go backend URL
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*").split(",")
 
 # Database Connections
 mongo_client = None
@@ -704,5 +714,5 @@ async def health_check():
     }
 
 if __name__ == "__main__":
-    print("🚀 Starting Serper API Server on port 8501...")
-    uvicorn.run(app, host="0.0.0.0", port=8501)
+    print(f"🚀 Starting Serper API Server on {API_HOST}:{API_PORT}...")
+    uvicorn.run(app, host=API_HOST, port=API_PORT)

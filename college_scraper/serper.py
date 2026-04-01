@@ -6,8 +6,12 @@ import re
 import concurrent.futures
 from typing import Dict, Any, List
 from datetime import datetime
+from dotenv import load_dotenv
 
-API_KEY = "918d9970ddb395770566bba8b2d0ef4f25b8da926652ae908a52894392c752b0"
+# Load environment variables
+load_dotenv()
+
+API_KEY = os.getenv("SERPER_API_KEY", "34a1d2a034385b46ef853771af21b0270113dbae01021bd548f0309d65a0d264")
 
 COLLEGES = [
     {"name": "PSG College of Technology", "country": "India", "location": "Coimbatore"},
@@ -16,9 +20,21 @@ COLLEGES = [
 
 QUERIES = {
     "basic_info": "For the college named '%COLLEGE_NAME%', located in %COUNTRY% (%LOCATION%), provide the latest verified institutional data for the 2026 academic year or the latest available year if 2026 data is not published. Return only valid JSON with the exact fields: college_name, short_name, established, institution_type, country, location, website, about, summary, rankings (nirf_latest, nirf_previous, qs_world, national_rank, state_rank, guessed_data), student_statistics (total_enrollment, ug_students, pg_students, phd_students, annual_intake, male_percent, female_percent, total_ug_courses, total_pg_courses, total_phd_courses, guessed_data), faculty_staff (total_faculty, student_faculty_ratio, phd_faculty_percent, guessed_data), student_history (student_count_comparison_last_3_years with 2026, 2025, 2024, international_students, guessed_data, categorywise_student_comparison_last_3_years: [{\"year\": \"2026\", \"ug_students\": integer, \"pg_students\": integer, \"phd_students\": integer, \"international_students\": integer, \"domestic_students\": integer, \"male_students\": integer, \"female_students\": integer}, {\"year\": \"2025\", \"ug_students\": integer, \"pg_students\": integer, \"phd_students\": integer, \"international_students\": integer, \"domestic_students\": integer, \"male_students\": integer, \"female_students\": integer}, {\"year\": \"2024\", \"ug_students\": integer, \"pg_students\": integer, \"phd_students\": integer, \"international_students\": integer, \"domestic_students\": integer, \"male_students\": integer, \"female_students\": integer}]), accreditations (body, grade, year), affiliations, recognition, campus_area, contact_info (phone, email, address), and sources_verified (array of URLs or document names). IMPORTANT: Find actual numerical values from official sources for 2026. For past years (2025=2026-1, 2024=2026-2), provide comparative data if available. Do not use -1 unless data is genuinely unavailable. Provide estimates based on similar institutions if exact data is not found, but mark as guessed_data: true. Do not add any extra text, only JSON.",
+    
+    "ug_programs": "For %COLLEGE_NAME% in %COUNTRY% (%LOCATION%), search the official website, academic programs directory, and course listings to find undergraduate degree programs (Bachelor's/B.Tech/B.A./B.Sc. programs). Include program names like 'Computer Science', 'Bachelor of Engineering', 'B.A. in Economics', etc. You can also infer programs based on faculty/departments listed on their site. Return valid JSON with this format: { \"ug_programs\": [\"program1\", \"program2\", ...], \"total_count\": number, \"source\": \"url or 'inferred from departments'\" }. Return an empty array if genuinely no data is available.",
+    
+    "pg_programs": "For %COLLEGE_NAME% in %COUNTRY% (%LOCATION%), search the official website, graduate programs directory, and course listings to find postgraduate degree programs (Master's/M.Tech/M.A./M.Sc./MBA programs offered). Include program names like 'Master of Science in Computer Science', 'M.Tech in Engineering', 'Master's in Economics', etc. You can also infer programs based on faculty/departments listed on their site. Return valid JSON with this format: { \"pg_programs\": [\"program1\", \"program2\", ...], \"total_count\": number, \"source\": \"url or 'inferred from departments'\" }. Return an empty array if genuinely no data is available.",
+    
+    "phd_programs": "List all officially offered PhD/Doctoral programs at %COLLEGE_NAME%, %COUNTRY% (%LOCATION%), as of 2026. Include only real programs. Do not invent. Return only JSON: { \"phd_programs\": [\"program_name\", ...] }",
+    
+    "departments": "List all academic departments and schools at %COLLEGE_NAME%, %COUNTRY% (%LOCATION%), as of 2026. Return only JSON: { \"departments\": [\"department_name\", ...] }",
+    
     "programs": "What are the main academic programs offered at %COLLEGE_NAME% in %COUNTRY% (%LOCATION%)? List the undergraduate, postgraduate, and PhD programs available.",
+    
     "placements": "For the college named '%COLLEGE_NAME%', located in %COUNTRY% (%LOCATION%), find the latest verified placement data for 2026, 2025, and 2024. Use only official placement reports, latest NIRF submissions, AICTE disclosures, or verified education portals. Return only valid JSON with: {\"guessed_data\": false, \"data_year\": \"2026\", \"sources\": [\"source URL or document name\"], \"placements\": {\"year\": \"2026\", \"highest_package\": real_number, \"average_package\": real_number, \"median_package\": real_number, \"package_currency\": \"LPA\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges, \"placement_rate_percent\": real_percent, \"total_students_placed\": integer, \"total_companies_visited\": integer, \"graduate_outcomes_note\": \"factual note\"}, \"placement_comparison_last_3_years\": [{\"year\":\"2026\", \"average_package\": real_number, \"employment_rate_percent\": real_percent, \"package_currency\": string}, {\"year\":\"2025\", \"average_package\": real_number, \"employment_rate_percent\": real_percent, \"package_currency\": string}, {\"year\":\"2024\", \"average_package\": real_number, \"employment_rate_percent\": real_percent, \"package_currency\": string}], \"gender_based_placement_last_3_years\": [{\"year\":\"2026\", \"male_placed\": integer, \"female_placed\": integer, \"male_percent\": real_percent, \"female_percent\": real_percent}], \"sector_wise_placement_last_3_years\": [{\"year\":\"2026\", \"sector\": \"sector name\", \"companies\": [\"company names\"], \"percent\": real_percent}], \"top_recruiters\": [\"company names\"], \"placement_highlights\": \"2-3 sentence factual summary\"}. IMPORTANT: Find actual placement statistics from official sources for each year. Do not use -1 unless data is genuinely unavailable. Provide reasonable estimates based on similar institutions if exact data is not found, but mark as guessed_data: true. Always include currency_type field for all monetary values.",
+    
     "fees": "For the college named '%COLLEGE_NAME%', located in %COUNTRY% (%LOCATION%), provide the latest verified fee structure for 2026, 2025, and 2024. Use only official college website, latest NIRF submissions, AICTE disclosures, or verified education portals. Return only valid JSON with: {\"guessed_data\": false, \"data_year\": \"2026\", \"sources\": [\"source URL or document name\"], \"fees\": {\"UG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PhD\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"hostel_per_year\": real_number}, \"fees_by_year\": [{\"year\": \"2026\", \"UG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PhD\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"hostel_per_year\": real_number}, {\"year\": \"2025\", \"UG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PhD\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"hostel_per_year\": real_number}, {\"year\": \"2024\", \"UG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PG\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"PhD\": {\"per_year\": real_number, \"total_course\": real_number, \"currency\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges}, \"hostel_per_year\": real_number}], \"fees_note\": \"2-3 sentence factual summary\", \"scholarships_detail\": [{\"name\": \"scholarship name\", \"amount\": real_number, \"currency_type\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges, \"eligibility\": \"eligibility criteria\", \"provider\": \"provider name\"}]}. IMPORTANT: Find actual fee amounts from official sources for each year. Do not use -1 unless data is genuinely unavailable. Provide reasonable estimates based on similar institutions if exact data is not found, but mark as guessed_data: true. Always include currency_type field for all monetary values.",
+    
     "infrastructure": "For the college named '%COLLEGE_NAME%', located in %COUNTRY% (%LOCATION%), provide the latest verified infrastructure details and available scholarships. Use only official college website, latest NIRF submissions, AICTE disclosures, or verified education portals. Return only valid JSON with: {\"guessed_data\": false, \"sources_verified\": [\"source URL or document name\"], \"infrastructure\": [{\"facility\": \"facility name\", \"details\": \"facility details\"}], \"hostel_details\": {\"available\": boolean, \"total_capacity\": integer, \"type\": \"hostel type\"}, \"library_details\": {\"total_books\": integer, \"journals\": integer, \"e_resources\": integer, \"area_sqft\": real_number}, \"transport_details\": {\"buses\": integer, \"routes\": integer}, \"scholarships\": [{\"name\": \"scholarship name\", \"amount\": real_number_or_NA, \"currency_type\": \"INR\" for Indian colleges, \"USD\" for US colleges, \"GBP\" for UK colleges, \"AUD\" for Australian colleges, \"eligibility\": \"eligibility criteria\", \"provider\": \"provider name\", \"type\": \"merit/need/specific\", \"application_deadline\": \"date_or_NA\"}]}. IMPORTANT: Always include currency_type field for all monetary amounts. List ALL available scholarships including merit-based, need-based, government, private, and international student scholarships. Do not return any extra text, only JSON."
 }
 
@@ -255,6 +271,11 @@ def get_default_schema() -> Dict[str, Any]:
                     "total_course": -1,
                     "currency": "N/A"
                 },
+                "PhD": {
+                    "per_year": -1,
+                    "total_course": -1,
+                    "currency": "N/A"
+                },
                 "hostel_per_year": -1
             },
             "fees_by_year": [],
@@ -334,7 +355,9 @@ def to_float(value: Any, default: float = -1.0) -> float:
         return default
     
     try:
-        return round(float(value_str), 2)
+        parsed = float(value_str)
+        # Only round if not -1, preserve precision for actual values
+        return round(parsed, 2) if parsed != -1.0 else parsed
     except (ValueError, TypeError):
         return default
 
@@ -432,12 +455,32 @@ def normalize_basic_info(raw: Dict) -> Dict:
     # --- Student History ---
     sh_raw = raw.get("student_history", {}) or {}
     sc_raw = sh_raw.get("student_count_comparison_last_3_years", {}) or {}
+    
+    # Handle both formats: {"2026": 28700, "2025": 28550, "2024": 28479} 
+    # and {"latest_year": 28700, "previous_year": 28550, "year_before_previous": 28479}
+    student_count_comparison = {
+        "latest_year": -1,
+        "previous_year": -1,
+        "year_before_previous": -1
+    }
+    
+    # Check if data uses year keys (2026, 2025, 2024) or standard keys
+    year_keys = ["2026", "2025", "2024"]
+    standard_keys = ["latest_year", "previous_year", "year_before_previous"]
+    
+    if any(key in sc_raw for key in year_keys):
+        # Convert year-based format to standard format
+        student_count_comparison["latest_year"] = to_int(sc_raw.get("2026"), -1)
+        student_count_comparison["previous_year"] = to_int(sc_raw.get("2025"), -1)
+        student_count_comparison["year_before_previous"] = to_int(sc_raw.get("2024"), -1)
+    else:
+        # Use standard format
+        student_count_comparison["latest_year"] = to_int(sc_raw.get("latest_year"), -1)
+        student_count_comparison["previous_year"] = to_int(sc_raw.get("previous_year"), -1)
+        student_count_comparison["year_before_previous"] = to_int(sc_raw.get("year_before_previous"), -1)
+    
     student_history = {
-        "student_count_comparison_last_3_years": {
-            "latest_year":          to_int(sc_raw.get("latest_year"), -1),
-            "previous_year":        to_int(sc_raw.get("previous_year"), -1),
-            "year_before_previous": to_int(sc_raw.get("year_before_previous"), -1),
-        },
+        "student_count_comparison_last_3_years": student_count_comparison,
         "international_students": to_int(sh_raw.get("international_students"), -1),
         "guessed_data":           to_bool(sh_raw.get("guessed_data"), False),
         "categorywise_student_comparison_last_3_years": normalize_categorywise(
@@ -530,11 +573,39 @@ def normalize_categorywise(rows: List[Dict], warnings: List[str]) -> List[Dict]:
     return normalized
 
 def normalize_programs(raw: Dict) -> Dict:
+    # Flatten all programs into single lists if they're nested, and handle error responses
+    def flatten_list(items):
+        # If items is a dict with error, return empty list
+        if isinstance(items, dict) and "error" in items:
+            return []
+        result = []
+        for item in to_list(items):
+            if isinstance(item, list):
+                result.extend(item)
+            elif isinstance(item, str):
+                result.append(item.strip())
+        return result
+    
+    # Helper to extract programs array from response (handles nested structure)
+    def extract_programs(section_key):
+        section_data = raw.get(section_key, {})
+        if isinstance(section_data, dict):
+            # If it has error key, return empty
+            if "error" in section_data:
+                return []
+            # If it has the key matching the section (e.g., "ug_programs" inside "ug_programs"), use that
+            if section_key in section_data:
+                return flatten_list(section_data[section_key])
+            # Otherwise just try to flatten the dict values
+            return flatten_list(section_data)
+        # If it's already a list, flatten it
+        return flatten_list(section_data)
+    
     return {
-        "ug_programs":          to_list(raw.get("ug_programs")),
-        "pg_programs":          to_list(raw.get("pg_programs")),
-        "phd_programs":         to_list(raw.get("phd_programs")),
-        "departments":          to_list(raw.get("departments")),
+        "ug_programs":          extract_programs("ug_programs"),
+        "pg_programs":          extract_programs("pg_programs"),
+        "phd_programs":         extract_programs("phd_programs"),
+        "departments":          extract_programs("departments"),
         "total_programs_count": to_int(raw.get("total_programs_count"), -1),
         "sources_verified":     to_list(raw.get("sources_verified")),
     }
@@ -620,6 +691,7 @@ def normalize_fees(raw: Dict) -> Dict:
     fees = {
         "UG":            norm_fee_block(fees_raw.get("UG", {})),
         "PG":            norm_fee_block(fees_raw.get("PG", {})),
+        "PhD":           norm_fee_block(fees_raw.get("PhD", {})),
         "hostel_per_year": to_float(fees_raw.get("hostel_per_year"), -1.0),
     }
 
@@ -629,6 +701,7 @@ def normalize_fees(raw: Dict) -> Dict:
             "year": to_str(entry.get("year")),
             "UG":   norm_fee_block(entry.get("UG", {})),
             "PG":   norm_fee_block(entry.get("PG", {})),
+            "PhD":  norm_fee_block(entry.get("PhD", {})),
             "hostel_per_year": to_float(entry.get("hostel_per_year"), -1.0),
         })
 
@@ -728,6 +801,29 @@ def normalize_college(college_raw: Dict) -> Dict:
         all_warnings.extend(result.pop("_warnings", []))
         normalized[section] = result
 
+    # Special handling for programs: if programs section has error, 
+    # try to extract from separate ug_programs, pg_programs, phd_programs, departments sections
+    if normalized["programs"].get("ug_programs") == [] and normalized["programs"].get("pg_programs") == []:
+        # Try to extract from separate sections
+        separate_programs = {}
+        for program_type in ["ug_programs", "pg_programs", "phd_programs", "departments"]:
+            if program_type in college_raw:
+                section_data = college_raw[program_type]
+                if isinstance(section_data, dict) and program_type in section_data:
+                    separate_programs[program_type] = section_data[program_type]
+                elif isinstance(section_data, list):
+                    separate_programs[program_type] = section_data
+        
+        if separate_programs:
+            # Re-normalize with the extracted data
+            normalized["programs"] = normalize_programs(separate_programs)
+            all_warnings.append("FIX: Extracted programs from separate top-level sections.")
+
+    # Extract college name and country from basic_info for metadata
+    basic_info = normalized.get("basic_info", {})
+    college_name = basic_info.get("college_name", "N/A")
+    country = basic_info.get("country", "N/A")
+    
     # Rebuild metadata
     meta = college_raw.get("_metadata", {})
     normalized["_metadata"] = {
@@ -735,8 +831,8 @@ def normalize_college(college_raw: Dict) -> Dict:
         "total_time":          meta.get("total_time", 0),
         "errors":              meta.get("errors", {}),
         "validation_warnings": all_warnings,
-        "college_name":        meta.get("college_name", "N/A"),
-        "country":             meta.get("country", "N/A"),
+        "college_name":        college_name,
+        "country":             country,
         "schema_version":      "v1.1",
     }
 
