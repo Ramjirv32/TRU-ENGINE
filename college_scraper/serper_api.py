@@ -586,7 +586,8 @@ async def process_college_statistics(college_name: str, country: str = None, cit
                 
                 # Read the generated file
                 safe_name = re.sub(r'[^\w\s-]', '', validated_college_name).strip().replace(' ', '_')
-                file_path = f"/home/ramji/Videos/scap/college_scraper/{safe_name}_normalized.json"
+                script_dir = os.path.dirname(os.path.abspath(__file__))
+                file_path = os.path.join(script_dir, f"{safe_name}_normalized.json")
                 
                 if os.path.exists(file_path):
                     with open(file_path, 'r') as f:
