@@ -2,7 +2,7 @@
 
 echo "🚀 Starting Serper API Server..."
 echo "📍 Port: 8500"
-echo "📍 MongoDB: erdth database"
+echo "📍 MongoDB: tru-main database"
 echo "📍 Collection: college_details"
 echo "📍 Redis: localhost:6379"
 echo ""

@@ -102,7 +102,7 @@
 **Initialization Sequence**:
 1. Load `.env` variables
 2. Initialize Cache Service (1-hour TTL)
-3. Connect to MongoDB (database "erdth")
+3. Connect to MongoDB (database "tru-main")
 4. Connect to Redis (optional, falls back gracefully)
 5. Initialize RabbitMQ for event broadcasting
 6. Create default admin user
@@ -110,7 +110,7 @@
 
 **Database Collections**:
 ```
-MongoDB (erdth)
+MongoDB (tru-main)
 ├── college_details              # Complete college information
 ├── users                        # User accounts & auth
 ├── search_analytics             # Search tracking
@@ -729,7 +729,7 @@ Raw Serper Response
 | Aspect | Technology | Details |
 |--------|-----------|---------|
 | **Core Backend** | Go + Gorilla Mux | Port 9000, handles all business logic |
-| **Primary Database** | MongoDB | "erdth" database, 10+ collections |
+| **Primary Database** | MongoDB | "tru-main" database, 10+ collections |
 | **Cache** | Redis/Dragonfly | 1-hour TTL for college data & questions |
 | **Real-time** | WebSocket + RabbitMQ | Live updates, event broadcasting |
 | **Frontends** | Next.js 16 + React 19 | University (3000), Cougem (custom) |

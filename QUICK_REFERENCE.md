@@ -139,7 +139,7 @@ scap/
 
 ## Key Database Collections
 
-### MongoDB (erdth database)
+### MongoDB (tru-main database)
 ```javascript
 // College statistics - comprehensive document
 college_details: {

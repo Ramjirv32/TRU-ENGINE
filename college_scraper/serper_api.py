@@ -154,9 +154,9 @@ def init_database():
     try:
         # MongoDB Connection
         mongo_client = MongoClient(MONGO_URI)
-        db = mongo_client["erdth"]  # Same database as go-Engine
+        db = mongo_client["tru-main"]  # Same database as go-Engine
         college_collection = db["college_details"]  # Same collection as go-Engine
-        print(f"✅ Connected to MongoDB - Database: erdth, Collection: college_details")
+        print(f"✅ Connected to MongoDB - Database: tru-main, Collection: college_details")
         
         # Redis Connection
         redis_client = redis.Redis(
