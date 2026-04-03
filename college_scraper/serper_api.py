@@ -341,15 +341,27 @@ def cache_college_data(college_name: str, data: Dict[str, Any]):
     """Cache college data in Redis"""
     if redis_client is not None:
         cache_key = f"college:{college_name.lower().replace(' ', '_')}"
-        redis_client.setex(cache_key, 3600, json.dumps(data, default=str))  # Cache for 1 hour
+        try:
+            redis_client.setex(cache_key, 3600, json.dumps(data, default=str))  # Cache for 1 hour
+            print(f"⚡ Cache SET: {cache_key} (1 hour TTL)")
+        except Exception as e:
+            print(f"⚠️ Cache setting error: {e}")
+    else:
+        print(f"⚠️ Redis not connected, cache skipped for: {college_name}")
 
 def get_cached_college_data(college_name: str) -> Optional[Dict[str, Any]]:
     """Get cached college data from Redis"""
     if redis_client is not None:
         cache_key = f"college:{college_name.lower().replace(' ', '_')}"
-        cached_data = redis_client.get(cache_key)
-        if cached_data:
-            return json.loads(cached_data)
+        try:
+            cached_data = redis_client.get(cache_key)
+            if cached_data:
+                print(f"✅ CACHE HIT: {cache_key}")
+                return json.loads(cached_data)
+            else:
+                print(f"❌ CACHE MISS: {cache_key}")
+        except Exception as e:
+            print(f"⚠️ Cache retrieval error: {e}")
     return None
 
 def save_college_to_mongodb(college_data: Dict[str, Any]):
@@ -712,6 +724,50 @@ async def websocket_colleges(websocket: WebSocket):
                 await manager.send_personal_message(f"Received: {data}", websocket)
     except WebSocketDisconnect:
         manager.disconnect(websocket)
+
+# Diagnostic Endpoints
+@app.get("/api/cache/check/{college_name}")
+async def check_cache(college_name: str):
+    """Check if a college is cached in Redis"""
+    cached = get_cached_college_data(college_name)
+    return {
+        "college_name": college_name,
+        "cached": cached is not None,
+        "data_preview": {
+            "keys": list(cached.keys()) if cached else []
+        } if cached else None
+    }
+
+@app.get("/api/cache/clear/{college_name}")
+async def clear_cache(college_name: str):
+    """Clear cache for a specific college"""
+    if redis_client is not None:
+        cache_key = f"college:{college_name.lower().replace(' ', '_')}"
+        deleted = redis_client.delete(cache_key)
+        return {
+            "success": deleted > 0,
+            "college_name": college_name,
+            "cache_key": cache_key
+        }
+    return {"success": False, "error": "Redis not connected"}
+
+@app.get("/api/cache/stats")
+async def cache_stats():
+    """Get Redis cache statistics"""
+    if redis_client is not None:
+        try:
+            # Get all cache keys
+            keys = redis_client.keys("college:*")
+            info = redis_client.info('memory')
+            return {
+                "status": "connected",
+                "total_cached_colleges": len(keys),
+                "memory_used": info.get('used_memory_human', 'N/A'),
+                "cached_colleges": [k.replace('college:', '') for k in keys][:10]  # First 10
+            }
+        except Exception as e:
+            return {"status": "error", "message": str(e)}
+    return {"status": "disconnected"}
 
 # Health check
 @app.get("/health")
